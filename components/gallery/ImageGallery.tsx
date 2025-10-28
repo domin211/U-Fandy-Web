@@ -20,6 +20,14 @@ type ImageGalleryProps = {
    * Extra Tailwind classes for the responsive grid so the layout can be reused on multiple pages.
    */
   gridClassName?: string;
+  /**
+   * Optional classes appended to the thumbnail button wrapper. Useful for overriding the default card styling.
+   */
+  thumbnailButtonClassName?: string;
+  /**
+   * Optional classes appended to the Image component inside the thumbnail.
+   */
+  thumbnailImageClassName?: string;
 };
 
 const blurPlaceholder =
@@ -28,7 +36,9 @@ const blurPlaceholder =
 export default function ImageGallery({
   images,
   thumbnailAspectClassName = 'aspect-[3/2]',
-  gridClassName
+  gridClassName,
+  thumbnailButtonClassName,
+  thumbnailImageClassName,
 }: ImageGalleryProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [failedImages, setFailedImages] = useState<Record<number, boolean>>({});
@@ -95,6 +105,11 @@ export default function ImageGallery({
   const aspectClass = thumbnailAspectClassName;
   const baseGridClasses = 'grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4';
   const gridClasses = [baseGridClasses, gridClassName].filter(Boolean).join(' ');
+  const baseButtonClasses =
+    'group relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/40 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-brand/60';
+  const buttonClasses = [baseButtonClasses, thumbnailButtonClassName].filter(Boolean).join(' ');
+  const baseImageClasses = 'object-cover transition duration-300 group-hover:scale-105';
+  const imageClasses = [baseImageClasses, thumbnailImageClassName].filter(Boolean).join(' ');
 
   const activeImage = useMemo(() => {
     if (activeIndex === null) return null;
@@ -111,12 +126,12 @@ export default function ImageGallery({
             key={image.src}
             type="button"
             onClick={() => openAt(index)}
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/40 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-brand/60"
+            className={buttonClasses}
             aria-label={`Otevřít fotografii: ${image.alt}`}
           >
             <div className={`relative ${aspectClass} w-full`}>
               {failedImages[index] ? (
-                <div className="flex h-full w-full items-center justify-center rounded-2xl bg-slate-900/70 px-4 text-center text-sm font-medium text-slate-200">
+                <div className="flex h-full w-full items-center justify-center bg-slate-900/70 px-4 text-center text-sm font-medium text-slate-200">
                   <span>{image.alt}</span>
                 </div>
               ) : (
@@ -125,7 +140,7 @@ export default function ImageGallery({
                   alt={image.alt}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
-                  className="object-cover transition duration-300 group-hover:scale-105"
+                  className={imageClasses}
                   placeholder="blur"
                   blurDataURL={blurPlaceholder}
                   priority={index === 0}
