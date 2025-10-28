@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Montserrat } from 'next/font/google';
 import { useEffect, useRef } from 'react';
+import type { NavLink } from '@/messages/cs';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useDictionary } from '@/lib/i18n/dictionary-context';
 
@@ -15,7 +16,7 @@ const montserrat = Montserrat({
 
 export default function Header() {
   const dictionary = useDictionary();
-  const navLinks = dictionary.common.header.navLinks;
+  const navLinks = dictionary.common.header.navLinks as readonly NavLink[];
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {

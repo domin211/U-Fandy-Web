@@ -1,6 +1,6 @@
 import type { Dictionary, NavLink } from './cs';
 
-const dictionary: Dictionary = {
+const dictionary = {
   common: {
     brandName: 'U Fandy',
     skipToContent: 'Skip to content',
@@ -29,7 +29,7 @@ const dictionary: Dictionary = {
           { href: '/ubytovani', label: 'Accommodation' },
           { href: '/restaurace', label: 'Restaurant' },
           { href: '/bowling', label: 'Bowling' }
-        ]
+        ] satisfies readonly NavLink[]
       },
       contact: {
         title: 'Contact',
@@ -40,7 +40,7 @@ const dictionary: Dictionary = {
         links: [
           { href: '/cookies', label: 'Cookies' },
           { href: '/zasady-ochrany-osobnich-udaju', label: 'Privacy' }
-        ]
+        ] satisfies readonly NavLink[]
       },
       rights: '© {year} U Fandy. All rights reserved.'
     }

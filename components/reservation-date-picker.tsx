@@ -1,7 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { ComponentProps, useEffect, useMemo, useRef, useState } from "react";
 import { DateRange, DayPicker } from "react-day-picker";
+
+// Temporary assertion until the upstream types include the "buttons" caption layout.
+const BUTTONS_CAPTION_LAYOUT =
+  "buttons" as ComponentProps<typeof DayPicker>["captionLayout"];
 
 const formatDisplayDate = (date?: Date | null) => {
   if (!date) {
@@ -170,7 +174,7 @@ export function ReservationDatePicker({
             weekStartsOn={1}
             numberOfMonths={1}
             className="rdp-theme"
-            captionLayout="buttons"
+            captionLayout={BUTTONS_CAPTION_LAYOUT}
             fromMonth={minDate}
             showOutsideDays
           />

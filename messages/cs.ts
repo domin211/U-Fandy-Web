@@ -34,7 +34,7 @@ const dictionary = {
           { href: '/ubytovani', label: 'Ubytování' },
           { href: '/restaurace', label: 'Restaurace' },
           { href: '/bowling', label: 'Bowling' }
-        ]
+        ] satisfies readonly NavLink[]
       },
       contact: {
         title: 'Kontakt',
@@ -45,7 +45,7 @@ const dictionary = {
         links: [
           { href: '/cookies', label: 'Cookies' },
           { href: '/zasady-ochrany-osobnich-udaju', label: 'Ochrana údajů' }
-        ]
+        ] satisfies readonly NavLink[]
       },
       rights: '© {year} U Fandy. Všechna práva vyhrazena.'
     }
@@ -128,7 +128,7 @@ const dictionary = {
         { value: '120', label: 'MÍST V RESTAURACI' },
         { value: '4', label: 'BOWLING DRÁHY' },
         { value: '2 km', label: 'NA SJEZDOVKY' }
-      ],
+      ] satisfies readonly StatItem[],
       imageAlt: 'Designové pokoje U Fandy'
     },
     hotelHighlights: [
@@ -299,7 +299,7 @@ const dictionary = {
       { label: 'Recepce', value: '+420 000 000 000', href: 'tel:+420000000000' },
       { label: 'E-mail', value: 'info@u-fandy.cz', href: 'mailto:info@u-fandy.cz' },
       { label: 'Adresa', value: 'Malá Morava 123, 788 33 Malá Morava' }
-    ],
+    ] satisfies readonly ContactInfo[],
     billing: {
       title: 'Fakturační údaje',
       description: 'U Fandy s.r.o., IČO 00000000\nDIČ CZ00000000'
@@ -396,7 +396,7 @@ const dictionary = {
       title: 'Poptejte svůj zážitek u Fandy',
       description:
         'Napište nám, pro kolik osob plánujete pobyt a jaké služby vás lákají. Ozveme se s nabídkou.',
-      align: 'center' as const
+      align: 'center' as SectionHeadingAlign
     }
   },
   cookies: {

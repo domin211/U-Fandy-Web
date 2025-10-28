@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import type { NavLink } from '@/messages/cs';
 import { useDictionary } from '@/lib/i18n/dictionary-context';
 
 export default function Footer() {
@@ -20,7 +21,7 @@ export default function Footer() {
           <div>
             <p className="mb-3 font-semibold">{footer.navigation.title}</p>
             <ul className="space-y-2">
-              {footer.navigation.links.map((link) => (
+              {footer.navigation.links.map((link: NavLink) => (
                 <li key={link.href}>
                   <Link href={link.href} className="transition hover:text-brand-light">
                     {link.label}
@@ -32,7 +33,7 @@ export default function Footer() {
           <div>
             <p className="mb-3 font-semibold">{footer.contact.title}</p>
             <ul className="space-y-2">
-              {footer.contact.items.map((item) => {
+              {footer.contact.items.map((item: string) => {
                 if (item.startsWith('+')) {
                   return (
                     <li key={item}>
@@ -60,7 +61,7 @@ export default function Footer() {
           <div>
             <p className="mb-3 font-semibold">{footer.legal.title}</p>
             <ul className="space-y-2">
-              {footer.legal.links.map((link) => (
+              {footer.legal.links.map((link: NavLink) => (
                 <li key={link.href}>
                   <Link href={link.href} className="transition hover:text-brand-light">
                     {link.label}
