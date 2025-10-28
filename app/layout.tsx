@@ -83,7 +83,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Přeskočit na obsah
         </a>
         <Header />
-        <main id="obsah" className="min-h-[60vh]">
+        <main
+          id="obsah"
+          className="min-h-[60vh]"
+          style={{ paddingTop: 'var(--header-offset, 6rem)' }}
+        >
           {children}
         </main>
         <Footer />
