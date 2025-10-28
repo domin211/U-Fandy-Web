@@ -80,7 +80,7 @@ export default function Header() {
               <li key={link.href} className="mx-[3px]">
                 <Link
                   href={link.href}
-                  className={`group relative flex items-center gap-1 px-[10px] py-3 text-[15px] font-normal uppercase text-[#969696] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand${
+                  className={`group relative inline-flex items-center justify-center gap-1 whitespace-nowrap px-[10px] py-3 text-[15px] font-normal uppercase text-[#969696] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand${
                     link.variant === 'cta'
                       ? ' outline outline-1 outline-brand text-[#bebebe] hover:bg-brand hover:text-white'
                       : ' hover:text-brand'
