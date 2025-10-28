@@ -1,13 +1,23 @@
+type Align = 'left' | 'center' | 'right';
+
 interface SectionHeadingProps {
   eyebrow?: string;
   title: string;
   description?: string;
-  align?: 'left' | 'center';
+  align?: Align;
 }
 
+const alignClass: Record<Align, string> = {
+  left: 'text-left items-start',
+  center: 'text-center items-center',
+  right: 'text-right items-end'
+};
+
 export default function SectionHeading({ eyebrow, title, description, align = 'left' }: SectionHeadingProps) {
+  const resolvedAlign: Align = align;
+
   return (
-    <header className={`mx-auto max-w-3xl space-y-3 ${align === 'center' ? 'text-center' : 'text-left'}`}>
+    <header className={`mx-auto flex max-w-3xl flex-col space-y-3 ${alignClass[resolvedAlign]}`}>
       {eyebrow ? (
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-dark/80">{eyebrow}</p>
       ) : null}
