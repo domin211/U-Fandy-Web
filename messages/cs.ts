@@ -5,19 +5,6 @@ export type NavLink = {
   variant?: 'cta' | 'default';
 };
 
-export type SectionHeadingAlign = 'left' | 'center';
-
-export type ContactInfo = {
-  label: string;
-  value: string;
-  href?: string;
-};
-
-export type StatItem = {
-  value: string;
-  label: string;
-};
-
 const dictionary = {
   common: {
     brandName: 'U Fandy',

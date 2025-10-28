@@ -1,4 +1,4 @@
-import type { NavLink } from './cs';
+import type { Dictionary, NavLink } from './cs';
 
 const dictionary = {
   common: {
