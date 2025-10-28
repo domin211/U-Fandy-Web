@@ -10,8 +10,7 @@ const nextConfig = {
   output: 'standalone',
   i18n: {
     locales: ['cs', 'en', 'pl', 'de', 'sk'],
-    defaultLocale: 'cs',
-    localeDetection: true
+    defaultLocale: 'cs'
   },
   images: {
     formats: ['image/avif', 'image/webp'],
