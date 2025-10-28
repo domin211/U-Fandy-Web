@@ -62,7 +62,7 @@ export default function HeroBackgroundSlideshow({ images }: HeroBackgroundSlides
           }`}
         />
       ))}
-      <div className="absolute inset-0 bg-slate-950/70" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-b from-topbar/80 via-topbar/60 to-topbar/85" aria-hidden="true" />
     </div>
   );
 }
