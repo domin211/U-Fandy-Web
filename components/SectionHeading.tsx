@@ -9,10 +9,10 @@ export default function SectionHeading({ eyebrow, title, description, align = 'l
   return (
     <header className={`mx-auto max-w-3xl space-y-3 ${align === 'center' ? 'text-center' : 'text-left'}`}>
       {eyebrow ? (
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-light/80">{eyebrow}</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-dark/80">{eyebrow}</p>
       ) : null}
-      <h2 className="text-3xl font-semibold text-white sm:text-4xl">{title}</h2>
-      {description ? <p className="text-base text-slate-300">{description}</p> : null}
+      <h2 className="text-3xl font-semibold text-topbar sm:text-4xl">{title}</h2>
+      {description ? <p className="text-base text-topbar/80">{description}</p> : null}
     </header>
   );
 }

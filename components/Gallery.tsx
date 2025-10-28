@@ -85,7 +85,7 @@ export default function Gallery({ images }: GalleryProps) {
       ))}
       {activeIndex !== null ? (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-topbar/95 p-4"
           role="dialog"
           aria-modal="true"
         >
@@ -109,20 +109,20 @@ export default function Gallery({ images }: GalleryProps) {
               priority={false}
             />
           </div>
-          <div className="absolute inset-x-0 bottom-8 flex items-center justify-center gap-6 text-sm text-slate-200">
+          <div className="absolute inset-x-0 bottom-8 flex items-center justify-center gap-6 text-sm text-white/80">
             <button
               type="button"
               onClick={() =>
                 setActiveIndex((prev) => (prev === null ? prev : (prev - 1 + orderedImages.length) % orderedImages.length))
               }
-              className="rounded-full border border-white/20 px-4 py-2 hover:border-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              className="rounded-full border border-white/20 px-4 py-2 hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               Předchozí
             </button>
             <button
               type="button"
               onClick={() => setActiveIndex((prev) => (prev === null ? prev : (prev + 1) % orderedImages.length))}
-              className="rounded-full border border-white/20 px-4 py-2 hover:border-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              className="rounded-full border border-white/20 px-4 py-2 hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               Další
             </button>

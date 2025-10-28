@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#0f172a'
+  themeColor: '#191919'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -75,15 +75,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="cs" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
-      <body className="bg-slate-950 text-slate-100 antialiased">
+      <body className="bg-canvas-100 text-topbar antialiased">
         <a
           href="#obsah"
-          className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:m-4 focus:rounded-md focus:bg-slate-100 focus:px-4 focus:py-2 focus:text-slate-900"
+          className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:m-4 focus:rounded-md focus:bg-canvas-200 focus:px-4 focus:py-2 focus:text-topbar"
         >
           Přeskočit na obsah
         </a>
         <Header />
-        <main id="obsah" className="min-h-[60vh] bg-slate-900/30">
+        <main id="obsah" className="min-h-[60vh]">
           {children}
         </main>
         <Footer />

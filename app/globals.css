@@ -2,13 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark light;
-}
-
 body {
   font-family: var(--font-sans);
-  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), #020617 65%);
+  background: linear-gradient(180deg, #E9E7E1 0%, #FFFFFF 30%, #F5F5F5 70%, #E9E7E1 100%);
+  color: #191919;
 }
 
 a {

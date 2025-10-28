@@ -13,7 +13,7 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-black/10 bg-topbar/95 text-white backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <Link
           href="/"
@@ -29,7 +29,7 @@ export default function Header() {
           />
           <span className="sr-only">U Fandy Hotel &amp; Restaurant</span>
         </Link>
-        <nav className="hidden items-center gap-6 text-xs font-semibold uppercase tracking-[0.32em] text-slate-200 lg:flex">
+        <nav className="hidden items-center gap-6 text-xs font-semibold uppercase tracking-[0.32em] text-white/70 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -43,16 +43,16 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <Link
             href="/darkovy-poukaz"
-            className="hidden rounded-full border border-brand px-5 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-brand transition hover:bg-brand hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand lg:inline-flex"
+            className="hidden rounded-full border border-white/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-white transition hover:border-brand hover:bg-brand hover:text-topbar focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand lg:inline-flex"
           >
             Dárkový poukaz
           </Link>
           <details className="relative lg:hidden">
-            <summary className="inline-flex cursor-pointer items-center justify-center rounded-full border border-white/20 p-2 text-slate-200 transition hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
+            <summary className="inline-flex cursor-pointer items-center justify-center rounded-full border border-white/20 p-2 text-white/80 transition hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
               Menu
             </summary>
-            <nav className="absolute right-0 mt-3 w-56 rounded-3xl border border-white/10 bg-slate-950/95 p-4 shadow-soft">
-              <ul className="space-y-3 text-sm font-medium text-slate-200">
+            <nav className="absolute right-0 mt-3 w-56 rounded-3xl border border-black/10 bg-topbar p-4 shadow-soft">
+              <ul className="space-y-3 text-sm font-medium text-white/80">
                 {navLinks.map((link) => (
                   <li key={link.href}>
                     <Link
@@ -66,7 +66,7 @@ export default function Header() {
                 <li>
                   <Link
                     href="/darkovy-poukaz"
-                    className="block rounded-2xl border border-brand px-3 py-2 text-center font-semibold text-brand transition hover:bg-brand hover:text-slate-950"
+                    className="block rounded-2xl border border-white/20 px-3 py-2 text-center font-semibold text-white transition hover:border-brand hover:bg-brand hover:text-topbar"
                   >
                     Dárkový poukaz
                   </Link>
