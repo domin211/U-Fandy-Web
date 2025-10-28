@@ -9,7 +9,7 @@ export type HeroBackgroundImage = {
 };
 
 const MAX_IMAGES = 10;
-const ROTATION_INTERVAL = 10_000;
+const ROTATION_INTERVAL = 10_000; // 10s
 
 interface HeroBackgroundSlideshowProps {
   images: HeroBackgroundImage[];
@@ -28,6 +28,11 @@ export default function HeroBackgroundSlideshow({ images }: HeroBackgroundSlides
 
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // Reset to first image whenever the image list changes
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [normalizedImages.length]);
+
   useEffect(() => {
     if (normalizedImages.length <= 1) return;
 
@@ -36,7 +41,7 @@ export default function HeroBackgroundSlideshow({ images }: HeroBackgroundSlides
     }, ROTATION_INTERVAL);
 
     return () => window.clearInterval(id);
-  }, [normalizedImages]);
+  }, [normalizedImages.length]);
 
   return (
     <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
@@ -54,6 +59,7 @@ export default function HeroBackgroundSlideshow({ images }: HeroBackgroundSlides
             }`}
           />
         ))}
+        {/* subtle darkener for legible foreground text */}
         <div className="absolute inset-0 bg-slate-950/70" />
       </div>
     </div>
