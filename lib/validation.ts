@@ -12,7 +12,7 @@ export function createReservationSchema(form: Dictionary['reservationForm']) {
         .regex(/^[0-9+ ]+$/, form.fields.phone.format),
       datum: z.string().min(1, form.fields.arrivalDate.error),
       hoste: z.coerce
-        .number({ invalid_type_error: form.fields.guests.required })
+        .number({ message: form.fields.guests.required })
         .min(1, form.fields.guests.min)
         .max(12, form.fields.guests.max),
       zprava: z.string().max(500, form.fields.note.max).optional().default(''),

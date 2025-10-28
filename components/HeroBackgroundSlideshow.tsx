@@ -26,27 +26,31 @@ export default function HeroBackgroundSlideshow({ images }: HeroBackgroundSlides
       : [{ src: '/images/placeholders/hero.svg', alt: 'Hotel U Fandy v ranním světle' }];
   }, [images]);
 
+  const slideshowKey = useMemo(
+    () => normalizedImages.map((image) => `${image.src}|${image.alt}`).join(';'),
+    [normalizedImages]
+  );
+
+  return <SlideshowContent key={slideshowKey} images={normalizedImages} />;
+}
+
+function SlideshowContent({ images }: { images: HeroBackgroundImage[] }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Reset to first image whenever the image list changes
   useEffect(() => {
-    setActiveIndex(0);
-  }, [normalizedImages.length]);
-
-  useEffect(() => {
-    if (normalizedImages.length <= 1) return;
+    if (images.length <= 1) return;
 
     const id = window.setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % normalizedImages.length);
+      setActiveIndex((prev) => (prev + 1) % images.length);
     }, ROTATION_INTERVAL);
 
     return () => window.clearInterval(id);
-  }, [normalizedImages.length]);
+  }, [images.length]);
 
   return (
     <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
       <div className="relative h-full w-full">
-        {normalizedImages.map((image, index) => (
+        {images.map((image, index) => (
           <Image
             key={`${image.src}-${index}`}
             src={image.src}

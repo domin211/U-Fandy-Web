@@ -11,7 +11,8 @@ const MAX_REQUESTS = 3;
 const localeSet = new Set<Locale>(locales);
 
 export async function createReservation(_: ActionResult | undefined, formData: FormData): Promise<ActionResult> {
-  const ip = headers().get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown';
+  const headerList = await headers();
+  const ip = headerList.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown';
   const now = Date.now();
   const entry = submissions.get(ip);
 
