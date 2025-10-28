@@ -76,23 +76,27 @@ export default function Header() {
           aria-label={dictionary.common.header.navigationLabel}
         >
           <ul className="flex items-center">
-            {navLinks.map((link) => (
-              <li key={link.href} className="mx-[3px]">
-                <Link
-                  href={link.href}
-                  className={`group relative inline-flex items-center justify-center gap-1 whitespace-nowrap px-[10px] py-3 text-[15px] font-normal uppercase text-[#969696] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand${
-                    link.variant === 'cta'
-                      ? ' outline outline-1 outline-brand text-[#bebebe] hover:bg-brand hover:text-white'
-                      : ' hover:text-brand'
-                  }`}
-                >
-                  <span>{link.label}</span>
-                  {link.hasDropdown ? (
-                    <span className="mt-[1px] text-[9px] text-white/60 transition-colors group-hover:text-brand">▼</span>
-                  ) : null}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isCTA = link.variant === 'cta';
+
+              return (
+                <li key={link.href} className="mx-[3px]">
+                  <Link
+                    href={link.href}
+                    className={`group relative inline-flex items-center justify-center gap-1 whitespace-nowrap px-[10px] py-3 text-[15px] font-normal uppercase text-[#969696] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand${
+                      isCTA
+                        ? ' outline outline-1 outline-brand text-[#bebebe] hover:bg-brand hover:text-white'
+                        : ' hover:text-brand'
+                    }`}
+                  >
+                    <span>{link.label}</span>
+                    {link.hasDropdown ? (
+                      <span className="mt-[1px] text-[9px] text-white/60 transition-colors group-hover:text-brand">▼</span>
+                    ) : null}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
         <LanguageSwitcher />
@@ -102,23 +106,27 @@ export default function Header() {
           </summary>
           <nav className="absolute right-0 mt-3 w-64 rounded-3xl border border-black/70 bg-black/90 p-4 shadow-soft">
             <ul className="space-y-3 text-sm font-medium uppercase text-white/80">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={`block rounded-2xl px-3 py-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand${
-                      link.variant === 'cta'
-                        ? ' border border-brand text-[#bebebe] hover:bg-brand hover:text-white'
-                        : ' hover:bg-white/10 hover:text-brand'
-                    }`}
-                  >
-                    <span className="flex items-center gap-1">
-                      <span>{link.label}</span>
-                      {link.hasDropdown ? <span className="text-[10px] text-white/60">▼</span> : null}
-                    </span>
-                  </Link>
-                </li>
-              ))}
+              {navLinks.map((link) => {
+                const isCTA = link.variant === 'cta';
+
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={`block rounded-2xl px-3 py-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand${
+                        isCTA
+                          ? ' border border-brand text-[#bebebe] hover:bg-brand hover:text-white'
+                          : ' hover:bg-white/10 hover:text-brand'
+                      }`}
+                    >
+                      <span className="flex items-center gap-1">
+                        <span>{link.label}</span>
+                        {link.hasDropdown ? <span className="text-[10px] text-white/60">▼</span> : null}
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
             <div className="mt-4 border-t border-white/10 pt-4">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
