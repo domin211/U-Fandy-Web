@@ -82,12 +82,8 @@ const de: Messages = {
   },
   home: {
     hero: {
-      eyebrow: 'Willkommen bei U Fandy',
-      title: 'Ein modernes Refugium für Gourmets, Reisende und Sportbegeisterte',
-      description:
-        'Wir vereinen Hotelkomfort, Signature-Küche und erstklassige Aktivitäten. Genießen Sie Bergluft ohne Abstriche beim Service.',
-      primaryCta: 'Aufenthalt buchen',
-      secondaryCta: 'Restaurant entdecken'
+      title: 'Perfekter Aufenthalt im Herzen der Beskiden',
+      subtitle: 'Große Erholung, angenehme Entspannung.'
     },
     onlineReservation: {
       eyebrow: 'Online-Reservierung',
