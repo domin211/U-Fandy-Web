@@ -1,6 +1,6 @@
-import type { Dictionary } from './cs';
+import type { NavLink } from './cs';
 
-const dictionary: Dictionary = {
+const dictionary = {
   common: {
     brandName: 'U Fandy',
     skipToContent: 'Zum Inhalt springen',
@@ -16,7 +16,7 @@ const dictionary: Dictionary = {
         { href: '/bowling', label: 'Bowling' },
         { href: '/sal', label: 'Saal' },
         { href: '/rezervovat-pobyt', label: 'Aufenthalt buchen', variant: 'cta' }
-      ],
+      ] satisfies readonly NavLink[],
       localeSwitcherLabel: 'Sprache ändern'
     },
     footer: {
@@ -29,7 +29,7 @@ const dictionary: Dictionary = {
           { href: '/ubytovani', label: 'Zimmer' },
           { href: '/restaurace', label: 'Restaurant' },
           { href: '/bowling', label: 'Bowling' }
-        ]
+        ] satisfies readonly NavLink[]
       },
       contact: {
         title: 'Kontakt',
@@ -40,7 +40,7 @@ const dictionary: Dictionary = {
         links: [
           { href: '/cookies', label: 'Cookies' },
           { href: '/zasady-ochrany-osobnich-udaju', label: 'Datenschutz' }
-        ]
+        ] satisfies readonly NavLink[]
       },
       rights: '© {year} U Fandy. Alle Rechte vorbehalten.'
     }
