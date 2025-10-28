@@ -112,7 +112,7 @@ export default function LanguageSwitcher({
   return (
     <div
       ref={containerRef}
-      className={`relative hidden lg:block ${className ?? ''}`.trim()}
+      className={`relative ${className ?? ''}`.trim()}
       aria-label={dictionary.common.header.localeSwitcherLabel}
     >
       <button
