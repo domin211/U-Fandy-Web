@@ -57,6 +57,14 @@ export function middleware(request: NextRequest) {
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-XSS-Protection', '0');
   response.headers.set(NONCE_HEADER, nonce);
+  response.cookies.set({
+    name: NONCE_HEADER,
+    value: nonce,
+    httpOnly: true,
+    sameSite: 'strict',
+    secure: process.env.NODE_ENV === 'production',
+    path: '/'
+  });
 
   if (pathname.startsWith('/images/')) {
     response.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
