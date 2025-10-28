@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase,
     title: meta.title,
     description: meta.description,
-    keywords: meta.keywords,
+    keywords: [...meta.keywords],
     authors: meta.authors,
     creator: meta.creator,
     publisher: meta.publisher,
