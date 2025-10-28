@@ -1,4 +1,6 @@
-import path from 'path';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -10,10 +12,6 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   output: 'standalone',
-  i18n: {
-    locales: ['cs', 'en', 'pl', 'de', 'sk'],
-    defaultLocale: 'cs'
-  },
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [360, 420, 640, 768, 1024, 1280, 1536],
@@ -31,4 +29,4 @@ const nextConfig = {
   }
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
