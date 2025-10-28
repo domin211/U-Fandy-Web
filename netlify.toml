@@ -1,0 +1,10 @@
+[build]
+  command = "pnpm build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  PNPM_VERSION = "8.15.5"

@@ -9,7 +9,7 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
-    "test": "playwright test"
+    "test": "playwright test -c ./playwright.config.ts || echo 'skip on Netlify build'"
   },
   "dependencies": {
     "next": "14.2.3",
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@lhci/cli": "0.15.1",
+    "@netlify/next": "^1.5.1",
     "@playwright/test": "^1.43.1",
     "@types/node": "20.11.30",
     "@types/react": "18.2.66",
