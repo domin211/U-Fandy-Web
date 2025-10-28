@@ -1,1 +1,8 @@
-export { default, revalidate, generateMetadata } from '../../../(routes)/restaurace/page';
+import Page, { generateMetadata as baseGenerateMetadata } from '../../../(routes)/restaurace/page';
+
+export const revalidate = 3600;
+export const generateMetadata: typeof baseGenerateMetadata = (
+  ...args
+) => baseGenerateMetadata(...args);
+
+export default Page;

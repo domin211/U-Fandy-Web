@@ -8,7 +8,8 @@ const nextConfig = {
   experimental: {
     serverActions: {
       bodySizeLimit: '2mb'
-    }
+    },
+    turbopackUseSystemTlsCerts: true
   },
   reactStrictMode: true,
   poweredByHeader: false,
@@ -17,9 +18,6 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [360, 420, 640, 768, 1024, 1280, 1536],
     imageSizes: [320, 480, 640, 800, 1024]
-  },
-  eslint: {
-    dirs: ['app', 'components', 'lib', 'data']
   },
   typescript: {
     ignoreBuildErrors: false

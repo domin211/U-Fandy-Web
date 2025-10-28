@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { getLocale } from 'next-intl/server';
 import SectionHeading from '@/components/SectionHeading';
 import RoomCard from '@/components/RoomCard';
@@ -40,18 +41,18 @@ export default async function HomePage() {
             <p className="text-base text-white/80 sm:text-lg">{home.hero.description}</p>
           </div>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <a
+            <Link
               href="#rezervace"
               className="inline-flex w-full items-center justify-center rounded-full bg-brand px-8 py-3 text-sm font-semibold text-topbar shadow-soft transition hover:bg-brand-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:w-auto"
             >
               {home.hero.primaryCta}
-            </a>
-            <a
+            </Link>
+            <Link
               href="/restaurace"
               className="inline-flex w-full items-center justify-center rounded-full border border-white/40 px-8 py-3 text-sm font-semibold text-white transition hover:border-brand hover:bg-brand hover:text-topbar focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:w-auto"
             >
               {home.hero.secondaryCta}
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -162,12 +163,12 @@ export default async function HomePage() {
                 </li>
               ))}
             </ul>
-            <a
+            <Link
               href="/restaurace"
               className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-topbar shadow-soft transition hover:bg-brand-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               {home.restaurantSection.cta}
-            </a>
+            </Link>
           </div>
           <div className="space-y-6">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-canvas-300">

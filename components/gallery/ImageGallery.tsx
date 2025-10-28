@@ -33,7 +33,7 @@ type ImageGalleryProps = {
 const blurPlaceholder =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Crect width='16' height='12' fill='%23212B36'/%3E%3C/svg%3E";
 
-export default function ImageGallery({
+function GalleryContent({
   images,
   thumbnailAspectClassName = 'aspect-[3/2]',
   gridClassName,
@@ -74,11 +74,6 @@ export default function ImageGallery({
   const markFailed = useCallback((index: number) => {
     setFailedImages((prev) => (prev[index] ? prev : { ...prev, [index]: true }));
   }, []);
-
-  // Když se změní vstupní seznam obrázků, smaž předchozí chybové flagy
-  useEffect(() => {
-    setFailedImages({});
-  }, [images]);
 
   // Klávesová navigace pouze při otevřené galerii
   useEffect(() => {
@@ -254,4 +249,13 @@ export default function ImageGallery({
       )}
     </>
   );
+}
+
+export default function ImageGallery(props: ImageGalleryProps) {
+  const galleryKey = useMemo(
+    () => props.images.map((image) => image.src).join(';'),
+    [props.images]
+  );
+
+  return <GalleryContent key={galleryKey} {...props} />;
 }

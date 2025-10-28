@@ -83,12 +83,6 @@ export function ReservationDatePicker({
     };
   }, [isOpen]);
 
-  useEffect(() => {
-    if (isOpen && selectedRange?.from && selectedRange?.to) {
-      setIsOpen(false);
-    }
-  }, [isOpen, selectedRange?.from, selectedRange?.to]);
-
   const buttonLabel = useMemo(() => {
     if (formattedFrom && formattedTo) {
       return `Pobyt od ${formattedFrom} do ${formattedTo}`;
@@ -108,6 +102,14 @@ export function ReservationDatePicker({
   const handleClear = () => {
     onSelect(undefined);
     setIsOpen(false);
+  };
+
+  const handleRangeSelect = (range: DateRange | undefined) => {
+    onSelect(range);
+
+    if (range?.from && range?.to) {
+      setIsOpen(false);
+    }
   };
 
   return (
@@ -169,7 +171,7 @@ export function ReservationDatePicker({
             mode="range"
             selected={selectedRange}
             defaultMonth={selectedRange?.from ?? minDate}
-            onSelect={(range) => onSelect(range ?? undefined)}
+            onSelect={(range) => handleRangeSelect(range ?? undefined)}
             disabled={{ before: minDate }}
             weekStartsOn={1}
             numberOfMonths={1}

@@ -1,1 +1,5 @@
-export { default, revalidate } from '../(routes)/(home)/page';
+import Page from '../(routes)/(home)/page';
+
+export const revalidate = 3600;
+
+export default Page;
