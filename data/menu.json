@@ -1,0 +1,49 @@
+{
+  "sections": [
+    {
+      "title": "Chefovo doporučení",
+      "items": [
+        {
+          "title": "Hovězí líčka na červeném víně",
+          "description": "Pomalé vaření, krémová bramborová kaše, kořenová zelenina, demi glace.",
+          "price": "od — Kč"
+        },
+        {
+          "title": "Pstruh z horského potoka",
+          "description": "Bylinkové máslo, citrónová emulze, šťouchané brambory s koprem.",
+          "price": "od — Kč"
+        }
+      ]
+    },
+    {
+      "title": "Vegetariánské menu",
+      "items": [
+        {
+          "title": "Pečená dýně Hokkaido",
+          "description": "Fermentované chilli, kozí sýr z lokální farmy, semínkový crumble.",
+          "price": "od — Kč"
+        },
+        {
+          "title": "Domácí těstoviny s lanýžem",
+          "description": "Krém z parmezánu, lanýžový olej, pečené lískové oříšky.",
+          "price": "od — Kč"
+        }
+      ]
+    },
+    {
+      "title": "Dezerty",
+      "items": [
+        {
+          "title": "Tvarohový cheesecake se smrkovým sirupem",
+          "description": "Pražené pistácie, borůvkový prach.",
+          "price": "od — Kč"
+        },
+        {
+          "title": "Čokoládový fondant",
+          "description": "70% čokoláda, sorbet z lesního ovoce, limetková pěna.",
+          "price": "od — Kč"
+        }
+      ]
+    }
+  ]
+}
