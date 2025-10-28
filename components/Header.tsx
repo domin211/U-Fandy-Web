@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Montserrat } from 'next/font/google';
 import { useEffect, useRef } from 'react';
-import type { NavLink } from '@/messages/cs';
+import type { NavLink } from '@/messages/schema';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useDictionary } from '@/lib/i18n/dictionary-context';
 
