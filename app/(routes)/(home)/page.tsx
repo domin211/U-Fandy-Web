@@ -7,10 +7,12 @@ import Gallery from '@/components/Gallery';
 import HoursTable from '@/components/HoursTable';
 import ReservationForm from '@/components/ReservationForm';
 import HeroBackgroundSlideshow from '@/components/HeroBackgroundSlideshow';
+
 import roomsData from '@/data/rooms';
 import menuData from '@/data/menu';
 import hoursData from '@/data/hours';
 import heroBackgroundsData from '@/data/hero-backgrounds';
+
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import type { Locale } from '@/lib/i18n/config';
 
@@ -19,10 +21,12 @@ export const revalidate = 3600;
 export default async function HomePage() {
   const locale = (await getLocale()) as Locale;
   const dictionary = await getDictionary(locale);
+
   const rooms = roomsData[locale];
   const menu = menuData[locale];
   const hours = hoursData[locale];
   const heroBackgrounds = heroBackgroundsData[locale];
+
   const home = dictionary.home;
 
   return (
@@ -53,7 +57,7 @@ export default async function HomePage() {
       </section>
 
       <section className="bg-brand text-white">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 sm:flex-row sm:items-start sm:justify-between sm:px-6">
           <div className="space-y-2">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">{home.onlineReservation.eyebrow}</p>
             <h2 className="text-2xl font-semibold">{home.onlineReservation.title}</h2>
@@ -143,6 +147,7 @@ export default async function HomePage() {
           ))}
         </div>
       </section>
+
       <section className="mx-auto max-w-6xl space-y-12 px-4 sm:px-6">
         <div className="grid gap-10 overflow-hidden rounded-3xl bg-canvas-200 p-8 shadow-soft lg:grid-cols-[1fr_1.2fr]">
           <div className="space-y-6">
@@ -247,6 +252,7 @@ export default async function HomePage() {
           />
         </div>
       </section>
+
       <section className="mx-auto max-w-6xl grid gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_1.1fr]">
         <div className="space-y-6 rounded-3xl bg-canvas-200 p-8 shadow-soft">
           <SectionHeading
