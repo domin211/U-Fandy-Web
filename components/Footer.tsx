@@ -1,75 +1,72 @@
+'use client';
+
 import Link from 'next/link';
+import { useDictionary } from '@/lib/i18n/dictionary-context';
 
 export default function Footer() {
+  const dictionary = useDictionary();
+  const { footer, brandName } = dictionary.common;
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="border-t border-black/10 bg-topbar text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 sm:px-6 lg:flex-row lg:justify-between lg:py-12">
         <div className="max-w-md space-y-4">
-          <p className="text-lg font-semibold">U Fandy</p>
-          <p className="text-sm text-white/70">
-            Hotel, restaurace a sportovní zázemí v srdci Jeseníků. Spojujeme komfortní ubytování, kulinářské zážitky a aktivní
-            odpočinek.
-          </p>
-          <p className="text-sm text-white/60">
-            © {new Date().getFullYear()} U Fandy. Všechna práva vyhrazena.
-          </p>
+          <p className="text-lg font-semibold">{brandName}</p>
+          <p className="text-sm text-white/70">{footer.description}</p>
+          <p className="text-sm text-white/60">{footer.rights.replace('{year}', currentYear.toString())}</p>
         </div>
         <div className="grid grid-cols-2 gap-8 text-sm text-white/70 sm:grid-cols-3">
           <div>
-            <p className="mb-3 font-semibold">Navigace</p>
+            <p className="mb-3 font-semibold">{footer.navigation.title}</p>
             <ul className="space-y-2">
-              <li>
-                <Link href="/" className="transition hover:text-brand-light">
-                  Domů
-                </Link>
-              </li>
-              <li>
-                <Link href="/ubytovani" className="transition hover:text-brand-light">
-                  Ubytování
-                </Link>
-              </li>
-              <li>
-                <Link href="/restaurace" className="transition hover:text-brand-light">
-                  Restaurace
-                </Link>
-              </li>
-              <li>
-                <Link href="/bowling" className="transition hover:text-brand-light">
-                  Bowling
-                </Link>
-              </li>
+              {footer.navigation.links.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="transition hover:text-brand-light">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
-            <p className="mb-3 font-semibold">Kontakt</p>
+            <p className="mb-3 font-semibold">{footer.contact.title}</p>
             <ul className="space-y-2">
-              <li>Malá Morava 123</li>
-              <li>788 33 Malá Morava</li>
-              <li>
-                <a href="tel:+420000000000" className="transition hover:text-brand-light">
-                  +420 000 000 000
-                </a>
-              </li>
-              <li>
-                <a href="mailto:info@u-fandy.cz" className="transition hover:text-brand-light">
-                  info@u-fandy.cz
-                </a>
-              </li>
+              {footer.contact.items.map((item) => {
+                if (item.startsWith('+')) {
+                  return (
+                    <li key={item}>
+                      <a href={`tel:${item.replace(/\s+/g, '')}`} className="transition hover:text-brand-light">
+                        {item}
+                      </a>
+                    </li>
+                  );
+                }
+
+                if (item.includes('@')) {
+                  return (
+                    <li key={item}>
+                      <a href={`mailto:${item}`} className="transition hover:text-brand-light">
+                        {item}
+                      </a>
+                    </li>
+                  );
+                }
+
+                return <li key={item}>{item}</li>;
+              })}
             </ul>
           </div>
           <div>
-            <p className="mb-3 font-semibold">Právní</p>
+            <p className="mb-3 font-semibold">{footer.legal.title}</p>
             <ul className="space-y-2">
-              <li>
-                <Link href="/cookies" className="transition hover:text-brand-light">
-                  Cookies
-                </Link>
-              </li>
-              <li>
-                <Link href="/zasady-ochrany-osobnich-udaju" className="transition hover:text-brand-light">
-                  Ochrana údajů
-                </Link>
-              </li>
+              {footer.legal.links.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="transition hover:text-brand-light">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

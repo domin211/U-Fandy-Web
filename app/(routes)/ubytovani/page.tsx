@@ -1,25 +1,39 @@
 import type { Metadata } from 'next';
+import { getLocale } from 'next-intl/server';
 import SectionHeading from '@/components/SectionHeading';
 import RoomCard from '@/components/RoomCard';
 import HoursTable from '@/components/HoursTable';
-import rooms from '@/data/rooms.json';
-import hours from '@/data/hours.json';
+import roomsData from '@/data/rooms';
+import hoursData from '@/data/hours';
+import { getDictionary } from '@/lib/i18n/get-dictionary';
+import type { Locale } from '@/lib/i18n/config';
 
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
-  title: 'Ubytování',
-  description:
-    'Designové pokoje, privátní wellness a servis concierge. Objevte komfortní ubytování v hotelu U Fandy.'
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = (await getLocale()) as Locale;
+  const dictionary = await getDictionary(locale);
+  const meta = dictionary.accommodation.metadata;
 
-export default function UbytovaniPage() {
+  return {
+    title: meta.title,
+    description: meta.description
+  };
+}
+
+export default async function UbytovaniPage() {
+  const locale = (await getLocale()) as Locale;
+  const dictionary = await getDictionary(locale);
+  const rooms = roomsData[locale];
+  const hours = hoursData[locale];
+  const content = dictionary.accommodation;
+
   return (
     <div className="mx-auto max-w-6xl space-y-16 px-4 py-16 sm:px-6">
       <SectionHeading
-        eyebrow="Ubytování"
-        title="Spaní, na které se budete těšit"
-        description="Vyberte si pokoj či apartmán podle své nálady. Každý má vlastní klimatizaci, kvalitní kosmetiku a chytrou televizi."
+        eyebrow={content.heading.eyebrow}
+        title={content.heading.title}
+        description={content.heading.description}
       />
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {rooms.map((room) => (
@@ -28,22 +42,18 @@ export default function UbytovaniPage() {
       </div>
       <section className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
         <div className="space-y-6">
-          <h2 className="text-2xl font-semibold text-white">Služby v ceně pobytu</h2>
+          <h2 className="text-2xl font-semibold text-white">{content.servicesTitle}</h2>
           <ul className="space-y-3 text-sm text-slate-200">
-            <li>✔️ Bohatá snídaně s domácím pečivem</li>
-            <li>✔️ Vstup do wellness zóny na 60 minut denně</li>
-            <li>✔️ Parkování u hotelu a úschovna kol</li>
-            <li>✔️ Rychlá Wi-Fi a streamingové platformy</li>
-            <li>✔️ Concierge tým připravený splnit vaše přání</li>
+            {content.services.map((service) => (
+              <li key={service}>{service}</li>
+            ))}
           </ul>
         </div>
         <div className="space-y-6">
-          <HoursTable title="Recepce" rows={hours.hotel} />
+          <HoursTable title={content.receptionHoursTitle} rows={hours.hotel} />
           <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200">
-            <h3 className="text-lg font-semibold text-white">Check-in &amp; check-out</h3>
-            <p className="mt-3">
-              Standardní check-in probíhá od 15:00, check-out do 11:00. Potřebujete jinak? Ozvěte se nám a přizpůsobíme se.
-            </p>
+            <h3 className="text-lg font-semibold text-white">{content.checkin.title}</h3>
+            <p className="mt-3">{content.checkin.description}</p>
           </div>
         </div>
       </section>

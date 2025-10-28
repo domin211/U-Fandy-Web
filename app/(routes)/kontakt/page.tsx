@@ -1,44 +1,40 @@
 import type { Metadata } from 'next';
+import { getLocale } from 'next-intl/server';
 import SectionHeading from '@/components/SectionHeading';
 import HoursTable from '@/components/HoursTable';
-import hours from '@/data/hours.json';
+import hoursData from '@/data/hours';
+import { getDictionary } from '@/lib/i18n/get-dictionary';
+import type { Locale } from '@/lib/i18n/config';
 
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
-  title: 'Kontakt',
-  description: 'Jsme tu pro vás každý den. Zavolejte, napište nebo se zastavte v hotelu U Fandy.'
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = (await getLocale()) as Locale;
+  const dictionary = await getDictionary(locale);
+  const meta = dictionary.contact.metadata;
+  return {
+    title: meta.title,
+    description: meta.description
+  };
+}
 
-const contacts = [
-  {
-    label: 'Recepce',
-    value: '+420 000 000 000',
-    href: 'tel:+420000000000'
-  },
-  {
-    label: 'E-mail',
-    value: 'info@u-fandy.cz',
-    href: 'mailto:info@u-fandy.cz'
-  },
-  {
-    label: 'Adresa',
-    value: 'Malá Morava 123, 788 33 Malá Morava'
-  }
-];
+export default async function KontaktPage() {
+  const locale = (await getLocale()) as Locale;
+  const dictionary = await getDictionary(locale);
+  const hours = hoursData[locale];
+  const content = dictionary.contact;
 
-export default function KontaktPage() {
   return (
     <div className="mx-auto max-w-5xl space-y-16 px-4 py-16 sm:px-6">
       <SectionHeading
-        eyebrow="Kontakt"
-        title="Ozvěte se, poradíme s pobytem i akcí"
-        description="Máme tým, který vám pomůže s rezervací, dárkovým voucherem nebo plánováním teambuildingu."
+        eyebrow={content.heading.eyebrow}
+        title={content.heading.title}
+        description={content.heading.description}
       />
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
         <div className="space-y-6 text-sm text-slate-200">
           <ul className="space-y-4">
-            {contacts.map((contact) => (
+            {content.contacts.map((contact) => (
               <li key={contact.label} className="rounded-3xl border border-white/10 bg-slate-950/60 p-6">
                 <p className="text-xs uppercase tracking-[0.2em] text-slate-400">{contact.label}</p>
                 {contact.href ? (
@@ -52,16 +48,17 @@ export default function KontaktPage() {
             ))}
           </ul>
           <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200">
-            <h2 className="text-lg font-semibold text-white">Fakturační údaje</h2>
-            <p className="mt-3">
-              U Fandy s.r.o., IČO 00000000<br />
-              DIČ CZ00000000
-            </p>
+            <h2 className="text-lg font-semibold text-white">{content.billing.title}</h2>
+            {content.billing.description.split('\n').map((line) => (
+              <p key={line} className="mt-3">
+                {line}
+              </p>
+            ))}
           </div>
         </div>
         <div className="space-y-6">
-          <HoursTable title="Recepce" rows={hours.hotel} />
-          <HoursTable title="Restaurace" rows={hours.restaurant} />
+          <HoursTable title={content.receptionHoursTitle} rows={hours.hotel} />
+          <HoursTable title={content.restaurantHoursTitle} rows={hours.restaurant} />
         </div>
       </div>
     </div>

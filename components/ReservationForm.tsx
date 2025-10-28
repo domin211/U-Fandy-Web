@@ -1,16 +1,24 @@
 'use client';
 
 import { useFormState, useFormStatus } from 'react-dom';
+import { useLocale } from 'next-intl';
 import { createReservation } from '@/app/actions/reservation';
 import type { ActionResult } from '@/lib/validation';
+import { useDictionary } from '@/lib/i18n/dictionary-context';
 
 const initialState: ActionResult = {
   success: false,
   message: '',
-  fieldErrors: {}
+  fieldErrors: {},
 };
 
-function SubmitButton() {
+function SubmitButton({
+  idleLabel,
+  pendingLabel,
+}: {
+  idleLabel: string;
+  pendingLabel: string;
+}) {
   const { pending } = useFormStatus();
   return (
     <button
@@ -18,20 +26,24 @@ function SubmitButton() {
       disabled={pending}
       className="inline-flex items-center justify-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-topbar shadow-soft transition hover:bg-brand-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:cursor-not-allowed disabled:opacity-70"
     >
-      {pending ? 'Odesílám…' : 'Odeslat poptávku'}
+      {pending ? pendingLabel : idleLabel}
     </button>
   );
 }
 
 export default function ReservationForm() {
+  const dictionary = useDictionary();
+  const locale = useLocale();
+  const form = dictionary.reservationForm;
   const [state, formAction] = useFormState(createReservation, initialState);
 
   return (
     <form action={formAction} className="space-y-6 rounded-3xl border border-black/5 bg-canvas-200 p-6 shadow-soft">
+      <input type="hidden" name="locale" value={locale} />
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
           <label htmlFor="jmeno" className="text-sm font-medium text-topbar">
-            Jméno a příjmení
+            {form.fields.name.label}
           </label>
           <input
             id="jmeno"
@@ -50,7 +62,7 @@ export default function ReservationForm() {
         </div>
         <div className="space-y-2">
           <label htmlFor="email" className="text-sm font-medium text-topbar">
-            E-mail
+            {form.fields.email.label}
           </label>
           <input
             id="email"
@@ -69,7 +81,7 @@ export default function ReservationForm() {
         </div>
         <div className="space-y-2">
           <label htmlFor="telefon" className="text-sm font-medium text-topbar">
-            Telefon
+            {form.fields.phone.label}
           </label>
           <input
             id="telefon"
@@ -88,7 +100,7 @@ export default function ReservationForm() {
         </div>
         <div className="space-y-2">
           <label htmlFor="datum" className="text-sm font-medium text-topbar">
-            Datum příjezdu
+            {form.fields.arrivalDate.label}
           </label>
           <input
             id="datum"
@@ -106,7 +118,7 @@ export default function ReservationForm() {
         </div>
         <div className="space-y-2">
           <label htmlFor="hoste" className="text-sm font-medium text-topbar">
-            Počet hostů
+            {form.fields.guests.label}
           </label>
           <input
             id="hoste"
@@ -128,7 +140,7 @@ export default function ReservationForm() {
       </div>
       <div className="space-y-2">
         <label htmlFor="zprava" className="text-sm font-medium text-topbar">
-          Poznámka
+          {form.fields.note.label}
         </label>
         <textarea
           id="zprava"
@@ -145,13 +157,13 @@ export default function ReservationForm() {
         ) : null}
       </div>
       <div className="hidden">
-        <label htmlFor="honey">Nechte prázdné</label>
+        <label htmlFor="honey">{form.fields.honeypot}</label>
         <input id="honey" type="text" name="honey" tabIndex={-1} autoComplete="off" />
       </div>
       {state.message ? (
         <p className={`text-sm ${state.success ? 'text-emerald-600' : 'text-brand-dark'}`}>{state.message}</p>
       ) : null}
-      <SubmitButton />
+      <SubmitButton idleLabel={form.submitIdle} pendingLabel={form.submitPending} />
     </form>
   );
 }
