@@ -1,14 +1,10 @@
 [
   {
-    "src": "/images/placeholders/hero.svg",
+    "src": "/images/hero/bazen.webp",
     "alt": "Hotel U Fandy v ranním světle"
   },
   {
-    "src": "/images/placeholders/restaurant.svg",
+    "src": "/images/hero/pizza.webp",
     "alt": "Restaurace U Fandy s čerstvě upečenou pizzou"
-  },
-  {
-    "src": "/images/placeholders/bowling.svg",
-    "alt": "Bowlingové dráhy připravené pro večerní turnaj"
   }
 ]
