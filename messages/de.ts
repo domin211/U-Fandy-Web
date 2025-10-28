@@ -1,4 +1,4 @@
-import type { Dictionary } from './cs';
+import type { Dictionary, NavLink } from './cs';
 
 const dictionary: Dictionary = {
   common: {
@@ -16,7 +16,7 @@ const dictionary: Dictionary = {
         { href: '/bowling', label: 'Bowling' },
         { href: '/sal', label: 'Saal' },
         { href: '/rezervovat-pobyt', label: 'Aufenthalt buchen', variant: 'cta' }
-      ],
+      ] satisfies readonly NavLink[],
       localeSwitcherLabel: 'Sprache ändern'
     },
     footer: {

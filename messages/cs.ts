@@ -1,5 +1,12 @@
 import type { Locale } from '@/lib/i18n/config';
 
+export type NavLink = {
+  href: string;
+  label: string;
+  hasDropdown?: boolean;
+  variant?: 'cta' | 'default';
+};
+
 const dictionary = {
   common: {
     brandName: 'U Fandy',
@@ -15,8 +22,8 @@ const dictionary = {
         { href: '/wellness', label: 'Wellness' },
         { href: '/bowling', label: 'Bowling' },
         { href: '/sal', label: 'Sál' },
-        { href: '/rezervovat-pobyt', label: 'Rezervovat pobyt', variant: 'cta' as const }
-      ],
+        { href: '/rezervovat-pobyt', label: 'Rezervovat pobyt', variant: 'cta' }
+      ] satisfies readonly NavLink[],
       localeSwitcherLabel: 'Změnit jazyk'
     },
     footer: {
