@@ -11,7 +11,7 @@ type GalleryImage = {
 };
 
 type ImageGalleryProps = {
-  images: GalleryImage[];
+  images: ReadonlyArray<GalleryImage>;
   /**
    * Tailwind class controlling the aspect ratio of the thumbnails (e.g. "aspect-[4/3]", "aspect-square").
    */
