@@ -32,3 +32,114 @@ a:focus {
     scroll-behavior: auto !important;
   }
 }
+
+.rdp-theme.rdp {
+  --rdp-accent-color: #ffffff;
+  --rdp-accent-text-color: #EF434A;
+  --rdp-background-color: rgba(255, 255, 255, 0.12);
+  --rdp-outline: 2px solid rgba(255, 255, 255, 0.4);
+  --rdp-shadow: none;
+  --rdp-cell-size: 2.75rem;
+  margin: 0;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.rdp-theme .rdp-months {
+  display: flex;
+  justify-content: center;
+}
+
+.rdp-theme .rdp-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding-inline: 0.25rem;
+  color: #ffffff;
+}
+
+.rdp-theme .rdp-caption_label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.rdp-theme .rdp-nav {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.rdp-theme .rdp-nav_button {
+  display: inline-flex;
+  height: 2rem;
+  width: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: #ffffff;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.rdp-theme .rdp-nav_button:hover,
+.rdp-theme .rdp-nav_button:focus-visible {
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.rdp-theme table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0.3rem;
+}
+
+.rdp-theme thead tr {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.rdp-theme .rdp-cell {
+  padding: 0;
+}
+
+.rdp-theme .rdp-day {
+  height: var(--rdp-cell-size);
+  width: var(--rdp-cell-size);
+  border-radius: 9999px;
+  font-weight: 600;
+  color: #ffffff;
+  transition: background 150ms ease, color 150ms ease, transform 150ms ease;
+}
+
+.rdp-theme .rdp-day:hover:not(.rdp-day_selected):not(.rdp-day_disabled):not(.rdp-day_outside),
+.rdp-theme .rdp-day:focus-visible:not(.rdp-day_selected):not(.rdp-day_disabled):not(.rdp-day_outside) {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.rdp-theme .rdp-day_selected,
+.rdp-theme .rdp-day_selected:hover,
+.rdp-theme .rdp-day_selected:focus-visible {
+  background: #ffffff;
+  color: #EF434A;
+  box-shadow: 0 12px 30px rgba(20, 20, 20, 0.2);
+}
+
+.rdp-theme .rdp-day_range_middle {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.rdp-theme .rdp-day_today:not(.rdp-day_selected) {
+  color: #FF747A;
+  font-weight: 700;
+}
+
+.rdp-theme .rdp-day_disabled,
+.rdp-theme .rdp-day_outside {
+  color: rgba(255, 255, 255, 0.28);
+}
