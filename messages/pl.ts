@@ -316,6 +316,118 @@ const pl: Messages = {
       { src: '/images/bowling/bowling4.webp', alt: 'Tor do kręgli z bandą dla dzieci', width: 1200, height: 800 }
     ]
   },
+  wellness: {
+    metadata: {
+      title: 'Wellness',
+      description: 'Prywatna strefa wellness z sauną fińską, łaźnią parową i jacuzzi w U Fandy. Zarezerwuj przestrzeń tylko dla siebie.'
+    },
+    hero: {
+      eyebrow: 'Wellness',
+      title: 'Spokój gór w prywatnym spa',
+      description:
+        'Zarezerwuj saunę fińską, kabinę parową i jacuzzi wyłącznie dla swojej grupy. Ręczniki, aromaterapia i prosecco czekają.'
+    },
+    highlights: [
+      {
+        title: 'Sauna fińska i ziołowa',
+        description: 'Sauna z cedrowego drewna z chromoterapią oraz ziołowa łaźnia parowa dla delikatnej regeneracji.'
+      },
+      {
+        title: 'Jacuzzi z widokiem',
+        description: 'Podgrzewane jacuzzi dla sześciu osób z dyszami masującymi i nastrojowym światłem.'
+      },
+      {
+        title: 'Strefa relaksu',
+        description: 'Wygodne leżanki, klimat kominka i playlisty stworzone do głębokiego wypoczynku.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    rituals: [
+      {
+        title: 'Prywatne wejście do 6 osób',
+        description: 'Cała strefa wellness wraz z szatniami jest zarezerwowana tylko dla was.'
+      },
+      {
+        title: 'Poczęstunek na życzenie',
+        description: 'Zamów prosecco, sezonowe owoce lub domowe lemoniady prosto do spa.'
+      },
+      {
+        title: 'Zabiegi i masaże',
+        description: 'Organizujemy profesjonalne masaże i rytuały przy zamówieniu minimum 24 godziny wcześniej.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    ritualsTitle: 'Rytuały na zamówienie',
+    amenities: [
+      {
+        title: 'Godziny otwarcia',
+        description: 'Codziennie 10:00–22:00. Ostatnie wejście o 20:30, aby cieszyć się pełnymi 90 minutami.'
+      },
+      {
+        title: 'Wyposażenie',
+        description: 'Dla każdego gościa przygotowujemy ręczniki, prześcieradła, kosmetyki i suszarkę.'
+      },
+      {
+        title: 'Rezerwacje',
+        description: 'Skontaktuj się z recepcją: +420 000 000 000 lub info@u-fandy.cz. Odpowiadamy w ciągu 24 godzin.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    amenitiesTitle: 'Co obejmuje wizyta',
+    cta: {
+      title: 'Zarezerwuj prywatne spa',
+      description: 'Podaj preferowany termin, a dopasujemy rytuał do waszych oczekiwań.',
+      buttonLabel: 'Zapytaj o termin'
+    },
+    gallery: [
+      { src: '/images/hero/bazen.webp', alt: 'Basen wellness w nastrojowym świetle', width: 1200, height: 800 },
+      { src: '/images/placeholders/hero.svg', alt: 'Widok na góry ze strefy relaksu', width: 1200, height: 800 },
+      { src: '/images/placeholders/room.svg', alt: 'Podgrzewane leżanki w prywatnym spa', width: 1200, height: 800 },
+      { src: '/images/placeholders/restaurant.svg', alt: 'Poczęstunek z prosecco w strefie wellness', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling2.webp', alt: 'Nastrojowe oświetlenie wieczornego rytuału', width: 1200, height: 800 },
+      { src: '/images/placeholders/hall.svg', alt: 'Strefa relaksu przygotowana dla par', width: 1200, height: 800 }
+    ] satisfies readonly { src: string; alt: string; width: number; height: number }[]
+  },
+  gallery: {
+    metadata: {
+      title: 'Galeria',
+      description: 'Zobacz zdjęcia pokoi, gastronomii, wellness i wydarzeń w hotelu U Fandy.'
+    },
+    heading: {
+      eyebrow: 'Galeria',
+      title: 'Zajrzyj do U Fandy',
+      description: 'Wybrane kadry z naszej oferty noclegów, gastronomii i atrakcji w Malá Morava.'
+    },
+    info: [
+      {
+        title: 'Designerskie pokoje',
+        description: 'Pokoje inspirowane górami, naturalne materiały i panoramiczne widoki.'
+      },
+      {
+        title: 'Gastronomia',
+        description: 'Sezonowe menu, otwarta kuchnia i degustacje win z naszym sommelierem.'
+      },
+      {
+        title: 'Wellness i sport',
+        description: 'Prywatne spa, jacuzzi oraz tory bowlingowe do aktywnego wypoczynku.'
+      },
+      {
+        title: 'Wydarzenia i uroczystości',
+        description: 'Sala bankietowa, taras i dekoracje dopasowane do wesel i eventów firmowych.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    images: [
+      { src: '/images/hero/bazen.webp', alt: 'Prywatna strefa wellness z basenem i leżakami', width: 1200, height: 800 },
+      { src: '/images/hero/pizza.webp', alt: 'Restauracja przygotowana na kolację', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling1.webp', alt: 'Strefa bowlingu z klimatycznym oświetleniem', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling2.webp', alt: 'Kolorowo podświetlone tory bowlingowe', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling3.webp', alt: 'Strefa wypoczynku przy torach bowlingowych', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling4.webp', alt: 'Tor bowlingowy z bandami dla dzieci', width: 1200, height: 800 },
+      { src: '/images/placeholders/room.svg', alt: 'Designerski pokój hotelowy z drewnianymi detalami', width: 1200, height: 800 },
+      { src: '/images/placeholders/restaurant.svg', alt: 'Szef kuchni podaje sezonowe danie', width: 1200, height: 800 },
+      { src: '/images/placeholders/hall.svg', alt: 'Sala przygotowana na przyjęcie', width: 1200, height: 800 },
+      { src: '/images/placeholders/bowling.svg', alt: 'Ilustracja doświadczenia bowlingowego', width: 1200, height: 800 },
+      { src: '/images/placeholders/hero.svg', alt: 'Hotel U Fandy otoczony drzewami', width: 1200, height: 800 },
+      { src: '/images/placeholders/career.svg', alt: 'Zespół U Fandy uśmiecha się na recepcji', width: 1200, height: 800 }
+    ] satisfies readonly { src: string; alt: string; width: number; height: number }[]
+  },
   hall: {
     metadata: {
       title: 'Sala eventowa',

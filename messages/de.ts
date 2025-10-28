@@ -316,6 +316,118 @@ const de: Messages = {
       { src: '/images/bowling/bowling4.webp', alt: 'Bowlingbahn mit Bumper-System', width: 1200, height: 800 }
     ]
   },
+  wellness: {
+    metadata: {
+      title: 'Wellness',
+      description: 'Privates Wellness mit finnischer Sauna, Dampfkabine und Whirlpool im U Fandy. Reservieren Sie den Spa-Bereich exklusiv für sich.'
+    },
+    hero: {
+      eyebrow: 'Wellness',
+      title: 'Bergruhe im privaten Spa',
+      description:
+        'Reservieren Sie finnische Sauna, Dampfkabine und Whirlpool exklusiv für Ihre Gruppe. Handtücher, Aromatherapie und Prosecco stehen bereit.'
+    },
+    highlights: [
+      {
+        title: 'Finnische & Kräutersauna',
+        description: 'Zedernholzsauna mit Chromotherapie, ergänzt durch ein Kräuterdampfbad für sanfte Regeneration.'
+      },
+      {
+        title: 'Whirlpool mit Ausblick',
+        description: 'Beheizter Whirlpool für bis zu sechs Gäste mit Massagedüsen und stimmungsvollem Licht.'
+      },
+      {
+        title: 'Ruhelounge',
+        description: 'Bequeme Liegen, Kaminatmosphäre und kuratierte Playlists zum Abschalten.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    rituals: [
+      {
+        title: 'Privater Eintritt für bis zu 6 Personen',
+        description: 'Der gesamte Wellnessbereich inklusive Umkleiden gehört nur Ihrer Gruppe.'
+      },
+      {
+        title: 'Erfrischungen auf Wunsch',
+        description: 'Bestellen Sie Prosecco, saisonales Obst oder hausgemachte Limonaden direkt in den Spa.'
+      },
+      {
+        title: 'Massageanwendungen',
+        description: 'Wir organisieren professionelle Massagen und Körperrituale bei Buchung mindestens 24 Stunden im Voraus.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    ritualsTitle: 'Maßgeschneiderte Rituale',
+    amenities: [
+      {
+        title: 'Öffnungszeiten',
+        description: 'Täglich 10:00–22:00. Letzter Einlass 20:30, damit Sie 90 Minuten voll auskosten können.'
+      },
+      {
+        title: 'Ausstattung',
+        description: 'Handtücher, Laken, Kosmetik und Föhn stehen für jeden Gast bereit.'
+      },
+      {
+        title: 'Reservierungen',
+        description: 'Kontaktieren Sie die Rezeption unter +420 000 000 000 oder info@u-fandy.cz. Wir melden uns innerhalb von 24 Stunden.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    amenitiesTitle: 'Leistungen inklusive',
+    cta: {
+      title: 'Buchen Sie Ihr privates Spa',
+      description: 'Senden Sie uns Ihren Wunschtermin und wir gestalten das Ritual nach Ihren Vorstellungen.',
+      buttonLabel: 'Termin anfragen'
+    },
+    gallery: [
+      { src: '/images/hero/bazen.webp', alt: 'Wellness-Pool mit sanfter Beleuchtung', width: 1200, height: 800 },
+      { src: '/images/placeholders/hero.svg', alt: 'Blick auf die Berge aus der Ruhezone', width: 1200, height: 800 },
+      { src: '/images/placeholders/room.svg', alt: 'Beheizte Liegen im privaten Spa', width: 1200, height: 800 },
+      { src: '/images/placeholders/restaurant.svg', alt: 'Erfrischungen mit Prosecco im Wellnessbereich', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling2.webp', alt: 'Stimmungsbeleuchtung für das Abendritual', width: 1200, height: 800 },
+      { src: '/images/placeholders/hall.svg', alt: 'Ruhelounge vorbereitet für Paare', width: 1200, height: 800 }
+    ] satisfies readonly { src: string; alt: string; width: number; height: number }[]
+  },
+  gallery: {
+    metadata: {
+      title: 'Galerie',
+      description: 'Entdecken Sie Fotos von Zimmern, Gastronomie, Wellness und Events im Hotel U Fandy.'
+    },
+    heading: {
+      eyebrow: 'Galerie',
+      title: 'Ein Blick in das U Fandy',
+      description: 'Eine kuratierte Auswahl aus Unterkunft, Kulinarik und Freizeitmomenten in Malá Morava.'
+    },
+    info: [
+      {
+        title: 'Design-Unterkünfte',
+        description: 'Zimmer im Bergstil, natürliche Materialien und Panoramablicke.'
+      },
+      {
+        title: 'Gastronomie',
+        description: 'Saisonale Menüs, offene Küche und Weinverkostungen unseres Sommeliers.'
+      },
+      {
+        title: 'Wellness & Sport',
+        description: 'Privates Spa, Whirlpool und Bowlingbahnen für aktive Erholung.'
+      },
+      {
+        title: 'Events & Feiern',
+        description: 'Bankettsaal, Terrasse und Dekorationen maßgeschneidert für Hochzeiten und Firmenfeiern.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    images: [
+      { src: '/images/hero/bazen.webp', alt: 'Privates Wellness mit Pool und Liegen', width: 1200, height: 800 },
+      { src: '/images/hero/pizza.webp', alt: 'Restaurantterrasse vorbereitet für das Abendessen', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling1.webp', alt: 'Bowling-Lounge mit stimmungsvollem Barlicht', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling2.webp', alt: 'Farbig beleuchtete Bowlingbahnen', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling3.webp', alt: 'Sitzbereich neben den Bowlingbahnen', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling4.webp', alt: 'Bowlingbahn mit kindgerechten Banden', width: 1200, height: 800 },
+      { src: '/images/placeholders/room.svg', alt: 'Design-Hotelzimmer mit Holzakzenten', width: 1200, height: 800 },
+      { src: '/images/placeholders/restaurant.svg', alt: 'Küchenchef richtet ein saisonales Gericht an', width: 1200, height: 800 },
+      { src: '/images/placeholders/hall.svg', alt: 'Festlich dekorierter Veranstaltungssaal', width: 1200, height: 800 },
+      { src: '/images/placeholders/bowling.svg', alt: 'Illustration des Bowling-Erlebnisses', width: 1200, height: 800 },
+      { src: '/images/placeholders/hero.svg', alt: 'Außenansicht des Hotels U Fandy zwischen Bäumen', width: 1200, height: 800 },
+      { src: '/images/placeholders/career.svg', alt: 'U-Fandy-Team lächelt an der Rezeption', width: 1200, height: 800 }
+    ] satisfies readonly { src: string; alt: string; width: number; height: number }[]
+  },
   hall: {
     metadata: {
       title: 'Veranstaltungssaal',

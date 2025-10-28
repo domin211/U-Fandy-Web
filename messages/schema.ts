@@ -242,6 +242,53 @@ export type Messages = {
     };
     gallery: ReadonlyArray<GalleryImage>;
   };
+  wellness: {
+    metadata: {
+      title: string;
+      description: string;
+    };
+    hero: {
+      eyebrow: string;
+      title: string;
+      description: string;
+    };
+    highlights: ReadonlyArray<{
+      title: string;
+      description: string;
+    }>;
+    rituals: ReadonlyArray<{
+      title: string;
+      description: string;
+    }>;
+    ritualsTitle: string;
+    amenities: ReadonlyArray<{
+      title: string;
+      description: string;
+    }>;
+    amenitiesTitle: string;
+    cta: {
+      title: string;
+      description: string;
+      buttonLabel: string;
+    };
+    gallery: ReadonlyArray<GalleryImage>;
+  };
+  gallery: {
+    metadata: {
+      title: string;
+      description: string;
+    };
+    heading: {
+      eyebrow: string;
+      title: string;
+      description: string;
+    };
+    info: ReadonlyArray<{
+      title: string;
+      description: string;
+    }>;
+    images: ReadonlyArray<GalleryImage>;
+  };
   hall: {
     metadata: {
       title: string;
