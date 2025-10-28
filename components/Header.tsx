@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const navLinks = [
@@ -5,7 +6,7 @@ const navLinks = [
   { href: '/ubytovani', label: 'Ubytování' },
   { href: '/restaurace', label: 'Restaurace' },
   { href: '/bowling', label: 'Bowling' },
-  { href: '/sal', label: 'Sal' },
+  { href: '/sal', label: 'Sál' },
   { href: '/kariera', label: 'Kariéra' },
   { href: '/kontakt', label: 'Kontakt' }
 ];
@@ -14,10 +15,25 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" className="text-lg font-semibold tracking-wide text-white">
-          U Fandy
+        <Link
+          href="/"
+          className="group flex items-center gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+        >
+          <Image
+            src="/images/logo.webp"
+            alt="U Fandy Hotel & Restaurant"
+            width={190}
+            height={71}
+            priority
+            className="h-[71px] w-auto transition group-hover:opacity-90"
+          />
+          <span className="sr-only">U Fandy Hotel &amp; Restaurant</span>
+          <span className="hidden flex-col leading-none text-white sm:flex">
+            <span className="text-2xl font-semibold tracking-[0.25em]">U Fandy</span>
+            <span className="text-xs uppercase tracking-[0.32em] text-white/60">Hotel &amp; Restaurant</span>
+          </span>
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium uppercase tracking-wide text-slate-200 lg:flex">
+        <nav className="hidden items-center gap-6 text-xs font-semibold uppercase tracking-[0.32em] text-slate-200 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -30,10 +46,10 @@ export default function Header() {
         </nav>
         <div className="flex items-center gap-4">
           <Link
-            href="/rezervace"
-            className="hidden rounded-full bg-brand px-5 py-2 text-sm font-semibold text-slate-950 shadow-soft transition hover:bg-brand-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light lg:inline-flex"
+            href="/darkovy-poukaz"
+            className="hidden rounded-full border border-brand px-5 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-brand transition hover:bg-brand hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand lg:inline-flex"
           >
-            Rezervace
+            Dárkový poukaz
           </Link>
           <details className="relative lg:hidden">
             <summary className="inline-flex cursor-pointer items-center justify-center rounded-full border border-white/20 p-2 text-slate-200 transition hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
@@ -53,10 +69,10 @@ export default function Header() {
                 ))}
                 <li>
                   <Link
-                    href="/rezervace"
-                    className="block rounded-2xl bg-brand px-3 py-2 text-center font-semibold text-slate-950"
+                    href="/darkovy-poukaz"
+                    className="block rounded-2xl border border-brand px-3 py-2 text-center font-semibold text-brand transition hover:bg-brand hover:text-slate-950"
                   >
-                    Rezervace
+                    Dárkový poukaz
                   </Link>
                 </li>
               </ul>
