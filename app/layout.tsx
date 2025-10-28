@@ -22,13 +22,16 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = (await getLocale()) as Locale;
   const dictionary = await getDictionary(locale);
   const meta = dictionary.layout.metadata;
+  const authors = meta.authors
+    ? Array.from(meta.authors, (author) => ({ ...author }))
+    : undefined;
 
   return {
     metadataBase,
     title: meta.title,
     description: meta.description,
     keywords: [...meta.keywords],
-    authors: meta.authors,
+    authors,
     creator: meta.creator,
     publisher: meta.publisher,
     alternates: {
