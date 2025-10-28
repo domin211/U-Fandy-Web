@@ -6,6 +6,7 @@ import Gallery, { type GalleryImage } from '@/components/Gallery';
 import HoursTable from '@/components/HoursTable';
 import ReservationForm from '@/components/ReservationForm';
 import HeroBackgroundSlideshow, { type HeroBackgroundImage } from '@/components/HeroBackgroundSlideshow';
+import { OnlineReservationForm } from '@/components/online-reservation-form';
 import rooms from '@/data/rooms.json';
 import menu from '@/data/menu.json';
 import hours from '@/data/hours.json';
@@ -144,25 +145,28 @@ export default function HomePage() {
       </section>
 
       <section className="bg-brand text-white">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 sm:flex-row sm:items-start sm:justify-between sm:px-6">
           <div className="space-y-2">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">Online rezervace</p>
             <h2 className="text-2xl font-semibold">Připraveno pro váš další útěk do hor</h2>
             <p className="text-sm text-white/80">Náš tým recepce reaguje do 24 hodin a pomůže s výběrem pokoje i doplňkových služeb.</p>
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
-              href="tel:+420000000000"
-              className="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white hover:text-topbar focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              Zavolejte nám
-            </a>
-            <a
-              href="mailto:info@u-fandy.cz"
-              className="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white hover:text-topbar focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              info@u-fandy.cz
-            </a>
+          <div className="flex w-full flex-col gap-4 sm:max-w-xl sm:items-end">
+            <OnlineReservationForm />
+            <div className="flex w-full flex-col gap-3 sm:flex-row sm:items-center sm:justify-end">
+              <a
+                href="tel:+420000000000"
+                className="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white hover:text-topbar focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                Zavolejte nám
+              </a>
+              <a
+                href="mailto:info@u-fandy.cz"
+                className="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white hover:text-topbar focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                info@u-fandy.cz
+              </a>
+            </div>
           </div>
         </div>
       </section>
