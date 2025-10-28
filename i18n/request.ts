@@ -7,5 +7,6 @@ export default getRequestConfig(({ locale }) => ({
 
 export const config = {
   locales,
-  defaultLocale
+  defaultLocale,
+  localePrefix: 'as-needed' as const
 };

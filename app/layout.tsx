@@ -91,7 +91,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang={locale} className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
       <body className="bg-canvas-100 text-topbar antialiased">
-        <DictionaryProvider dictionary={dictionary}>
+        <DictionaryProvider dictionary={dictionary} locale={locale}>
           <a
             href="#obsah"
             className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:m-4 focus:rounded-md focus:bg-canvas-200 focus:px-4 focus:py-2 focus:text-topbar"

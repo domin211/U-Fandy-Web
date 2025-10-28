@@ -1,10 +1,9 @@
 'use client';
 
 import { useFormState, useFormStatus } from 'react-dom';
-import { useLocale } from 'next-intl';
 import { createReservation } from '@/app/actions/reservation';
 import type { ActionResult } from '@/lib/validation';
-import { useDictionary } from '@/lib/i18n/dictionary-context';
+import { useCurrentLocale, useDictionary } from '@/lib/i18n/dictionary-context';
 
 const initialState: ActionResult = {
   success: false,
@@ -33,7 +32,7 @@ function SubmitButton({
 
 export default function ReservationForm() {
   const dictionary = useDictionary();
-  const locale = useLocale();
+  const locale = useCurrentLocale();
   const form = dictionary.reservationForm;
   const [state, formAction] = useFormState(createReservation, initialState);
 
