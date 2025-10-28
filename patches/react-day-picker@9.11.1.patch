@@ -1,0 +1,26 @@
+diff --git a/dist/cjs/types/props.d.ts b/dist/cjs/types/props.d.ts
+index 53900d52ffc9eea0148fe3b49308dfad6d539293..0c164a26f9e08e8d97072c242c0a16bd1cd1b6b4 100644
+--- a/dist/cjs/types/props.d.ts
++++ b/dist/cjs/types/props.d.ts
+@@ -187,7 +187,7 @@ export interface PropsBase {
+      *
+      * @see https://daypicker.dev/docs/customization#caption-layouts
+      */
+-    captionLayout?: "label" | "dropdown" | "dropdown-months" | "dropdown-years";
++    captionLayout?: "label" | "dropdown" | "dropdown-months" | "dropdown-years" | "buttons";
+     /**
+      * Reverse the order of years in the dropdown when using
+      * `captionLayout="dropdown"` or `captionLayout="dropdown-years"`.
+diff --git a/dist/esm/types/props.d.ts b/dist/esm/types/props.d.ts
+index 53900d52ffc9eea0148fe3b49308dfad6d539293..0c164a26f9e08e8d97072c242c0a16bd1cd1b6b4 100644
+--- a/dist/esm/types/props.d.ts
++++ b/dist/esm/types/props.d.ts
+@@ -187,7 +187,7 @@ export interface PropsBase {
+      *
+      * @see https://daypicker.dev/docs/customization#caption-layouts
+      */
+-    captionLayout?: "label" | "dropdown" | "dropdown-months" | "dropdown-years";
++    captionLayout?: "label" | "dropdown" | "dropdown-months" | "dropdown-years" | "buttons";
+     /**
+      * Reverse the order of years in the dropdown when using
+      * `captionLayout="dropdown"` or `captionLayout="dropdown-years"`.

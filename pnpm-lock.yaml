@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  react-day-picker@9.11.1:
+    hash: ic6ttjddbxyikbu4lf75chxt4u
+    path: patches/react-day-picker@9.11.1.patch
+
 dependencies:
   next:
     specifier: 14.2.3
@@ -16,7 +21,7 @@ dependencies:
     version: 18.2.0
   react-day-picker:
     specifier: ^9.11.1
-    version: 9.11.1(react@18.2.0)
+    version: 9.11.1(patch_hash=ic6ttjddbxyikbu4lf75chxt4u)(react@18.2.0)
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
@@ -4905,7 +4910,7 @@ packages:
       unpipe: 1.0.0
     dev: true
 
-  /react-day-picker@9.11.1(react@18.2.0):
+  /react-day-picker@9.11.1(patch_hash=ic6ttjddbxyikbu4lf75chxt4u)(react@18.2.0):
     resolution: {integrity: sha512-l3ub6o8NlchqIjPKrRFUCkTUEq6KwemQlfv3XZzzwpUeGwmDJ+0u0Upmt38hJyd7D/vn2dQoOoLV/qAp0o3uUw==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -4916,6 +4921,7 @@ packages:
       date-fns-jalali: 4.1.0-0
       react: 18.2.0
     dev: false
+    patched: true
 
   /react-dom@18.2.0(react@18.2.0):
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}

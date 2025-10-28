@@ -40,5 +40,10 @@
   "engines": {
     "node": ">=18.17"
   },
-  "packageManager": "pnpm@8.15.5"
+  "packageManager": "pnpm@8.15.5",
+  "pnpm": {
+    "patchedDependencies": {
+      "react-day-picker@9.11.1": "patches/react-day-picker@9.11.1.patch"
+    }
+  }
 }
