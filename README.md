@@ -54,5 +54,20 @@ public/images/       # optimalizované placeholdery
 ## Nasazení
 Projekt je připraven pro Vercel/edge prostředí (`runtime = 'edge'`). Po build procesu lze aplikaci nasadit na libovolný hostitel kompatibilní s Next.js 14.
 
+## Nasazení na Netlify
+1. V Netlify zvolte **Add new site → Import existing project** a propojte Git repozitář.
+2. V sekci **Build settings** nastavte:
+   - **Build command:** `pnpm build`
+   - **Publish directory:** `.next`
+3. V **Environment variables** přidejte požadované proměnné (Site settings → Build & deploy → Environment) a ujistěte se, že jejich hodnoty odpovídají lokální konfiguraci.
+4. Při prvním deployi Netlify automaticky nainstaluje `pnpm` podle `packageManager` a použije Node.js 20 dle `netlify.toml`.
+
+### FAQ
+- **Jaká verze Node.js / pnpm se používá?** Deploy běží na Node.js 20 a pnpm 8.15.5, jak je definováno v `netlify.toml`.
+- **Je nutné commitovat lockfile?** Ano, `pnpm-lock.yaml` musí být v repozitáři pro deterministickou instalaci.
+- **Funguje ISR?** Ano, ISR a revalidace běží automaticky přes Netlify Next.js Runtime.
+- **Co middleware a edge runtime?** Existující `runtime = 'edge'` exports jsou nasazeny jako Edge Functions bez dalších úprav.
+- **Jak jsou podporovány Route Handlers?** API routy a route handlers jsou převáděny na Netlify Functions v rámci pluginu `@netlify/next`.
+
 ## Licence
 © 2024 U Fandy. Všechna práva vyhrazena.
