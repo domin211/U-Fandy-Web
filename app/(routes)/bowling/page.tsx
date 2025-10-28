@@ -19,14 +19,6 @@ const galleryImages = [
   { src: '/images/bowling/bowling4.webp', alt: 'Bowlingová herna s mantinelem', width: 1200, height: 800 },
 ];
 
-const vybaveni = [
-  '4 profesionální dráhy Brunswick s možností dětských mantinelů',
-  'Soukromý salonek pro team-buildingy a oslavy',
-  'Neonový bar s autorskými koktejly',
-  'Sound system s možností vlastních playlistů',
-  'Pronájem trenéra pro firemní turnaje',
-];
-
 export default function BowlingPage() {
   return (
     <div className="mx-auto max-w-6xl space-y-16 px-4 py-16 text-slate-100 sm:px-6">
@@ -61,35 +53,14 @@ export default function BowlingPage() {
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
         {/* Vybavení + Rezervace */}
         <div className="space-y-6 text-sm leading-relaxed">
-          <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-8 shadow-xl">
-            <p>
-              Naše bowlingové centrum je navrženo pro hráče všech úrovní. Díky inteligentnímu scoringu, LED efektům a
-              pohodlnému zázemí si užijete každé roztočení koule.
-            </p>
-            <ul className="mt-6 space-y-3 text-slate-200">
-              {vybaveni.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span aria-hidden="true" className="mt-1 text-brand-light">
-                    ●
-                  </span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           <div className="rounded-3xl border border-brand/40 bg-brand/10 p-8 text-brand-light shadow-lg">
             <h2 className="text-lg font-semibold text-white">Rezervujte dráhu</h2>
             <p className="mt-4 text-slate-100">
-              Zavolejte na{' '}
-              <a href="tel:+420000000000" className="font-semibold underline decoration-brand-light">
-                +420 000 000 000
-              </a>{' '}
-              nebo napište na{' '}
-              <a href="mailto:bowling@u-fandy.cz" className="font-semibold underline decoration-brand-light">
-                bowling@u-fandy.cz
+              Rezervace přijímáme na telefonním čísle{' '}
+              <a href="tel:+420733644655" className="font-semibold underline decoration-brand-light">
+                733 644 655
               </a>
-              . Ozveme se s potvrzením.
+              . Emailové rezervace nepřijímáme.
             </p>
           </div>
         </div>
