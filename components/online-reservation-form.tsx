@@ -1,9 +1,18 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
+import { DateRange } from "react-day-picker";
+
+import { ReservationDatePicker } from "./reservation-date-picker";
 
 const TREVLIX_BASE_URL = "https://book.trevlix.com/book/app/";
 const TREVLIX_CID = "7901170";
+
+const startOfDay = (date: Date) => {
+  const value = new Date(date);
+  value.setHours(0, 0, 0, 0);
+  return value;
+};
 
 const toInputDateValue = (date: Date) => {
   const offsetDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
@@ -16,26 +25,55 @@ const formatForTrevlix = (value: string) => {
 };
 
 export function OnlineReservationForm() {
-  const todayInputValue = useMemo(() => toInputDateValue(new Date()), []);
+  const today = useMemo(() => startOfDay(new Date()), []);
 
-  const [checkIn, setCheckIn] = useState(() => todayInputValue);
-  const [checkOut, setCheckOut] = useState(() => {
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    return toInputDateValue(tomorrow);
+  const [selectedRange, setSelectedRange] = useState<DateRange | undefined>(() => {
+    const initialFrom = startOfDay(today);
+    const initialTo = startOfDay(today);
+    initialTo.setDate(initialTo.getDate() + 1);
+    return { from: initialFrom, to: initialTo };
   });
   const [error, setError] = useState<string | null>(null);
+
+  const handleRangeSelect = (range: DateRange | undefined) => {
+    if (!range?.from) {
+      setSelectedRange(undefined);
+      setError(null);
+      return;
+    }
+
+    const normalizedFrom = startOfDay(range.from);
+
+    if (!range.to) {
+      setSelectedRange({ from: normalizedFrom });
+      setError(null);
+      return;
+    }
+
+    const normalizedTo = startOfDay(range.to);
+
+    if (normalizedTo <= normalizedFrom) {
+      const adjustedDeparture = new Date(normalizedFrom);
+      adjustedDeparture.setDate(adjustedDeparture.getDate() + 1);
+      setSelectedRange({ from: normalizedFrom, to: adjustedDeparture });
+      setError(null);
+      return;
+    }
+
+    setSelectedRange({ from: normalizedFrom, to: normalizedTo });
+    setError(null);
+  };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (!checkIn || !checkOut) {
+    if (!selectedRange?.from || !selectedRange?.to) {
       setError("Vyberte prosím datum příjezdu i odjezdu.");
       return;
     }
 
-    const arrival = new Date(checkIn);
-    const departure = new Date(checkOut);
+    const arrival = selectedRange.from;
+    const departure = selectedRange.to;
 
     if (arrival >= departure) {
       setError("Datum odjezdu musí následovat po datu příjezdu.");
@@ -45,8 +83,8 @@ export function OnlineReservationForm() {
     setError(null);
 
     const params = new URLSearchParams({
-      date_from: formatForTrevlix(checkIn),
-      date_to: formatForTrevlix(checkOut),
+      date_from: formatForTrevlix(toInputDateValue(arrival)),
+      date_to: formatForTrevlix(toInputDateValue(departure)),
       cid: TREVLIX_CID,
       mode: "window",
     });
@@ -62,45 +100,11 @@ export function OnlineReservationForm() {
         onSubmit={handleSubmit}
         className="flex w-full flex-col gap-3 sm:flex-row sm:items-center"
       >
-        <label className="flex w-full flex-col gap-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/70 sm:gap-2">
-          <span className="sr-only">Datum příjezdu</span>
-          <input
-            type="date"
-            value={checkIn}
-            onChange={(event) => {
-              const value = event.target.value;
-              setCheckIn(value);
-              setError(null);
-
-              if (!value || !checkOut) {
-                return;
-              }
-
-              const nextAllowedDeparture = new Date(value);
-              nextAllowedDeparture.setDate(nextAllowedDeparture.getDate() + 1);
-              if (new Date(checkOut) <= new Date(value)) {
-                setCheckOut(toInputDateValue(nextAllowedDeparture));
-              }
-            }}
-            className="w-full rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white shadow-soft outline-none transition focus:border-white/60 focus:bg-white/20"
-            min={todayInputValue}
-            required
-          />
-        </label>
-        <label className="flex w-full flex-col gap-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/70 sm:gap-2">
-          <span className="sr-only">Datum odjezdu</span>
-          <input
-            type="date"
-            value={checkOut}
-            onChange={(event) => {
-              setCheckOut(event.target.value);
-              setError(null);
-            }}
-            className="w-full rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white shadow-soft outline-none transition focus:border-white/60 focus:bg-white/20"
-            min={checkIn || todayInputValue}
-            required
-          />
-        </label>
+        <ReservationDatePicker
+          selectedRange={selectedRange}
+          onSelect={handleRangeSelect}
+          minDate={today}
+        />
         <button
           type="submit"
           className="inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand transition hover:bg-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"

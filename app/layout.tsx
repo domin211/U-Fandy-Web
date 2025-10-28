@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { getLocale } from 'next-intl/server';
 import './globals.css';
+import 'react-day-picker/dist/style.css';
 import { Inter } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
