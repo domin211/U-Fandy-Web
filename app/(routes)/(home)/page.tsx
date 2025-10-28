@@ -1,13 +1,14 @@
-import Image from 'next/image';
 import SectionHeading from '@/components/SectionHeading';
 import RoomCard from '@/components/RoomCard';
 import MenuItemCard from '@/components/MenuItemCard';
 import Gallery, { type GalleryImage } from '@/components/Gallery';
 import HoursTable from '@/components/HoursTable';
 import ReservationForm from '@/components/ReservationForm';
+import HeroBackgroundSlideshow, { type HeroBackgroundImage } from '@/components/HeroBackgroundSlideshow';
 import rooms from '@/data/rooms.json';
 import menu from '@/data/menu.json';
 import hours from '@/data/hours.json';
+import heroBackgrounds from '@/data/hero-backgrounds.json';
 
 export const revalidate = 3600;
 
@@ -18,26 +19,13 @@ const galleryImages: GalleryImage[] = [
   { src: '/images/placeholders/hall.svg', alt: 'Společenský sál', width: 1200, height: 800 }
 ];
 
-const BLUR_DATA_URL =
-  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAuMBg5fnmWcAAAAASUVORK5CYII=';
+const heroBackgroundImages = heroBackgrounds as HeroBackgroundImage[];
 
 export default function HomePage() {
   return (
     <div className="space-y-24 pb-24">
       <section className="relative isolate overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/placeholders/hero.svg"
-            alt="Hotel U Fandy v ranním světle"
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
-            placeholder="blur"
-            blurDataURL={BLUR_DATA_URL}
-          />
-          <div className="absolute inset-0 bg-slate-950/70" />
-        </div>
+        <HeroBackgroundSlideshow images={heroBackgroundImages} />
         <div className="relative mx-auto flex max-w-5xl flex-col gap-10 px-4 py-24 sm:px-6 lg:py-32">
           <div className="max-w-3xl space-y-6">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-light">Vítejte u Fandy</p>
