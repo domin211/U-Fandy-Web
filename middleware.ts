@@ -6,7 +6,8 @@ import { defaultLocale, locales } from '@/lib/i18n/config';
 const intlMiddleware = createMiddleware({
   locales,
   defaultLocale,
-  localeDetection: true
+  localeDetection: true,
+  localePrefix: 'as-needed'
 });
 
 const NONCE_HEADER = 'x-nonce';

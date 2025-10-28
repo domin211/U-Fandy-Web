@@ -2,9 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useLocale } from 'next-intl';
 import { localeLabels, locales } from '@/lib/i18n/config';
-import { useDictionary } from '@/lib/i18n/dictionary-context';
+import { useCurrentLocale, useDictionary } from '@/lib/i18n/dictionary-context';
 
 interface LanguageSwitcherProps {
   className?: string;
@@ -19,7 +18,7 @@ export default function LanguageSwitcher({
     }`
 }: LanguageSwitcherProps) {
   const pathname = usePathname();
-  const activeLocale = useLocale();
+  const activeLocale = useCurrentLocale();
   const dictionary = useDictionary();
 
   return (
