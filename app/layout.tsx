@@ -27,8 +27,12 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase,
     title: meta.title,
     description: meta.description,
-    keywords: meta.keywords,
-    authors: meta.authors,
+    keywords: [...meta.keywords],
+    authors: meta.authors
+      ? meta.authors.length === 1
+        ? { ...meta.authors[0] }
+        : Array.from(meta.authors, (author) => ({ ...author }))
+      : undefined,
     creator: meta.creator,
     publisher: meta.publisher,
     alternates: {
