@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
 
 const navLinks = [
   { href: '/', label: 'Domů' },
@@ -12,8 +15,52 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const headerElement = headerRef.current;
+
+    if (!headerElement) {
+      return undefined;
+    }
+
+    const updateOffset = () => {
+      document.documentElement.style.setProperty(
+        '--header-offset',
+        `${headerElement.offsetHeight}px`
+      );
+    };
+
+    updateOffset();
+
+    const handleResize = () => {
+      updateOffset();
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    let resizeObserver: ResizeObserver | undefined;
+
+    if (typeof ResizeObserver !== 'undefined') {
+      resizeObserver = new ResizeObserver(() => {
+        updateOffset();
+      });
+
+      resizeObserver.observe(headerElement);
+    }
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      resizeObserver?.disconnect();
+      document.documentElement.style.removeProperty('--header-offset');
+    };
+  }, []);
+
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-black/10 bg-topbar/95 text-white backdrop-blur">
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-40 w-full border-b border-black/10 bg-topbar/95 text-white backdrop-blur"
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <Link
           href="/"
