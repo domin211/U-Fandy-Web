@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Pokoj U Fandy</title>
+  <desc id="desc">Zástupný obrázek hotelového pokoje s uklidňujícím zeleným přechodem.</desc>
+  <defs>
+    <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#14532d" />
+      <stop offset="100%" stop-color="#22c55e" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#grad)" rx="48" />
+  <g fill="#ecfdf5" font-family="'Inter', 'Segoe UI', sans-serif" text-anchor="middle">
+    <text x="600" y="360" font-size="60" font-weight="600">Pokoj</text>
+    <text x="600" y="430" font-size="30">Komfort od — Kč</text>
+  </g>
+</svg>

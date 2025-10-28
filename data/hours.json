@@ -1,0 +1,16 @@
+{
+  "hotel": [
+    { "day": "Pondělí - Neděle", "hours": "Recepce 7:00 – 22:00" },
+    { "day": "Late check-in", "hours": "Po domluvě" }
+  ],
+  "restaurant": [
+    { "day": "Pondělí - Čtvrtek", "hours": "11:00 – 22:00" },
+    { "day": "Pátek - Sobota", "hours": "11:00 – 23:30" },
+    { "day": "Neděle", "hours": "11:00 – 21:00" }
+  ],
+  "bowling": [
+    { "day": "Pondělí - Čtvrtek", "hours": "14:00 – 22:00" },
+    { "day": "Pátek - Sobota", "hours": "14:00 – 24:00" },
+    { "day": "Neděle", "hours": "14:00 – 21:00" }
+  ]
+}
