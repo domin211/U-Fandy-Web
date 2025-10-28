@@ -1,11 +1,6 @@
-export type NavLink = {
-  href: string;
-  label: string;
-  hasDropdown?: boolean;
-  variant?: 'cta' | 'default';
-};
+import type { Messages, NavLink } from './schema';
 
-const dictionary = {
+const cs: Messages = {
   common: {
     brandName: 'U Fandy',
     skipToContent: 'Přeskočit na obsah',
@@ -482,8 +477,6 @@ const dictionary = {
       honeypot: 'Nechte prázdné'
     }
   }
-} as const;
+};
 
-export type Dictionary = typeof dictionary;
-
-export default dictionary;
+export default cs;

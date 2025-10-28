@@ -1,6 +1,6 @@
-import type { Dictionary, NavLink } from './cs';
+import type { Messages, NavLink } from './schema';
 
-const dictionary: Dictionary = {
+const de: Messages = {
   common: {
     brandName: 'U Fandy',
     skipToContent: 'Zum Inhalt springen',
@@ -479,4 +479,4 @@ const dictionary: Dictionary = {
   }
 };
 
-export default dictionary;
+export default de;
