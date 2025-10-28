@@ -82,11 +82,8 @@ export type Messages = {
   };
   home: {
     hero: {
-      eyebrow: string;
       title: string;
-      description: string;
-      primaryCta: string;
-      secondaryCta: string;
+      subtitle: string;
     };
     onlineReservation: {
       eyebrow: string;

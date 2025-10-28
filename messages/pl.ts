@@ -82,12 +82,8 @@ const pl: Messages = {
   },
   home: {
     hero: {
-      eyebrow: 'Witamy w U Fandy',
-      title: 'Nowoczesne górskie schronienie dla smakoszy, podróżników i sportowców',
-      description:
-        'Łączymy hotelowy komfort, autorską kuchnię i topowe aktywności. Ciesz się górskim powietrzem bez kompromisów w jakości obsługi.',
-      primaryCta: 'Zarezerwuj pobyt',
-      secondaryCta: 'Poznaj restaurację'
+      title: 'Doskonały pobyt w sercu Beskidów',
+      subtitle: 'Świetny odpoczynek, przyjemny relaks.'
     },
     onlineReservation: {
       eyebrow: 'Rezerwacja online',
