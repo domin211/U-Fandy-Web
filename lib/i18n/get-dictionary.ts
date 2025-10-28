@@ -7,12 +7,12 @@ const dictionaries = {
   pl: () => import('@/messages/pl'),
   de: () => import('@/messages/de'),
   sk: () => import('@/messages/sk')
-} as const;
+} satisfies Record<Locale, () => Promise<{ default: unknown }>>;
 
 export type Dictionary = typeof cs;
 
 export async function getDictionary(locale: Locale): Promise<Dictionary> {
   const loadDictionary = dictionaries[locale] ?? dictionaries.cs;
   const mod = await loadDictionary();
-  return mod.default;
+  return mod.default as Dictionary;
 }

@@ -1,6 +1,6 @@
 import type { Messages, NavLink } from './schema';
 
-const pl: Messages = {
+const dictionary = {
   common: {
     brandName: 'U Fandy',
     skipToContent: 'Przejdź do treści',
@@ -29,7 +29,7 @@ const pl: Messages = {
           { href: '/ubytovani', label: 'Noclegi' },
           { href: '/restaurace', label: 'Restauracja' },
           { href: '/bowling', label: 'Kręgle' }
-        ]
+        ] satisfies readonly NavLink[]
       },
       contact: {
         title: 'Kontakt',
@@ -40,7 +40,7 @@ const pl: Messages = {
         links: [
           { href: '/cookies', label: 'Cookies' },
           { href: '/zasady-ochrany-osobnich-udaju', label: 'Ochrona danych' }
-        ]
+        ] satisfies readonly NavLink[]
       },
       rights: '© {year} U Fandy. Wszelkie prawa zastrzeżone.'
     }
