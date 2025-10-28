@@ -18,6 +18,14 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+const toHeadingAlign = (
+  a: 'start' | 'center' | 'end' | undefined
+): 'left' | 'center' | 'right' | undefined => {
+  if (a === 'start') return 'left';
+  if (a === 'end') return 'right';
+  return a;
+};
+
 export default async function RezervacePage() {
   const locale = (await getLocale()) as Locale;
   const dictionary = await getDictionary(locale);
@@ -29,7 +37,7 @@ export default async function RezervacePage() {
         eyebrow={content.heading.eyebrow}
         title={content.heading.title}
         description={content.heading.description}
-        align={content.heading.align}
+        align={toHeadingAlign(content.heading.align)}
       />
       <ReservationForm />
     </div>
