@@ -1,4 +1,4 @@
-import type { Dictionary, NavLink } from './cs';
+import type { Messages, NavLink } from './schema';
 
 const dictionary = {
   common: {
@@ -479,4 +479,4 @@ const dictionary = {
   }
 };
 
-export default dictionary;
+export default sk;
