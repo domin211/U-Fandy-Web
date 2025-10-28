@@ -1,22 +1,35 @@
 import type { Metadata } from 'next';
+import { getLocale } from 'next-intl/server';
 import SectionHeading from '@/components/SectionHeading';
 import ReservationForm from '@/components/ReservationForm';
+import { getDictionary } from '@/lib/i18n/get-dictionary';
+import type { Locale } from '@/lib/i18n/config';
 
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
-  title: 'Rezervace',
-  description: 'Pošlete nám poptávku na pobyt, firemní akci nebo oslavu. Ozveme se do 24 hodin.'
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = (await getLocale()) as Locale;
+  const dictionary = await getDictionary(locale);
+  const meta = dictionary.reservationPage.metadata;
 
-export default function RezervacePage() {
+  return {
+    title: meta.title,
+    description: meta.description
+  };
+}
+
+export default async function RezervacePage() {
+  const locale = (await getLocale()) as Locale;
+  const dictionary = await getDictionary(locale);
+  const content = dictionary.reservationPage;
+
   return (
     <div className="mx-auto max-w-3xl space-y-12 px-4 py-16 sm:px-6">
       <SectionHeading
-        eyebrow="Rezervace"
-        title="Poptejte svůj zážitek u Fandy"
-        description="Napište nám, pro kolik osob plánujete pobyt a jaké služby vás lákají. Ozveme se s nabídkou."
-        align="center"
+        eyebrow={content.heading.eyebrow}
+        title={content.heading.title}
+        description={content.heading.description}
+        align={content.heading.align}
       />
       <ReservationForm />
     </div>

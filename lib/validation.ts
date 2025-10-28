@@ -1,27 +1,31 @@
 import { z } from 'zod';
+import type { Dictionary } from '@/lib/i18n/get-dictionary';
 
-export const reservationSchema = z
-  .object({
-    jmeno: z.string().min(2, 'Zadejte prosím své jméno.'),
-    email: z.string().email('Zadejte platný e-mail.'),
-    telefon: z
-      .string()
-      .min(9, 'Telefon musí mít alespoň 9 číslic.')
-      .regex(/^[0-9+ ]+$/, 'Telefonní číslo může obsahovat pouze číslice a +.'),
-    datum: z.string().min(1, 'Vyberte prosím datum příjezdu.'),
-    hoste: z.coerce
-      .number({ invalid_type_error: 'Zadejte počet hostů.' })
-      .min(1, 'Alespoň jeden host.')
-      .max(12, 'Pro větší skupiny nás prosím kontaktujte.'),
-    zprava: z.string().max(500, 'Zpráva může mít maximálně 500 znaků.').optional().default(''),
-    honey: z.string().length(0, 'Formulář nebyl odeslán.').optional()
-  })
-  .refine((data) => !data.honey, {
-    message: 'Formulář nebyl odeslán.',
-    path: ['honey']
-  });
+export function createReservationSchema(form: Dictionary['reservationForm']) {
+  return z
+    .object({
+      jmeno: z.string().min(2, form.fields.name.error),
+      email: z.string().email(form.fields.email.error),
+      telefon: z
+        .string()
+        .min(9, form.fields.phone.min)
+        .regex(/^[0-9+ ]+$/, form.fields.phone.format),
+      datum: z.string().min(1, form.fields.arrivalDate.error),
+      hoste: z.coerce
+        .number({ invalid_type_error: form.fields.guests.required })
+        .min(1, form.fields.guests.min)
+        .max(12, form.fields.guests.max),
+      zprava: z.string().max(500, form.fields.note.max).optional().default(''),
+      honey: z.string().length(0, form.genericError).optional(),
+    })
+    .refine((data) => !data.honey, {
+      message: form.genericError,
+      path: ['honey'],
+    });
+}
 
-export type ReservationFormInput = z.infer<typeof reservationSchema>;
+export type ReservationSchema = ReturnType<typeof createReservationSchema>;
+export type ReservationFormInput = z.infer<ReservationSchema>;
 
 export interface ActionResult {
   success: boolean;

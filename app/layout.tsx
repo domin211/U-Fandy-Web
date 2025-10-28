@@ -1,8 +1,13 @@
 import type { Metadata, Viewport } from 'next';
+import { getLocale } from 'next-intl/server';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { DictionaryProvider } from '@/lib/i18n/dictionary-context';
+import { getDictionary } from '@/lib/i18n/get-dictionary';
+import type { Locale } from '@/lib/i18n/config';
+import { openGraphLocales } from '@/lib/i18n/config';
 
 const inter = Inter({
   subsets: ['latin', 'latin-ext'],
@@ -10,41 +15,43 @@ const inter = Inter({
   variable: '--font-sans'
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://www.u-fandy.cz'),
-  title: {
-    default: 'U Fandy — Hotel, Restaurace a Zážitky v srdci Orlických hor',
-    template: '%s | U Fandy'
-  },
-  description:
-    'Moderní ubytování, výborná gastronomie, bowling a společenské zázemí v Malé Moravě. Rezervujte si pobyt u Fandy ještě dnes.',
-  keywords: ['hotel', 'restaurace', 'bowling', 'Malá Morava', 'Orlické hory', 'ubytování'],
-  authors: [{ name: 'U Fandy' }],
-  creator: 'U Fandy',
-  publisher: 'U Fandy',
-  alternates: {
-    canonical: '/' 
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'cs_CZ',
-    url: 'https://www.u-fandy.cz',
-    title: 'U Fandy — Hotel, Restaurace a Zážitky',
-    description:
-      'Moderní ubytování, výborná gastronomie a volnočasové aktivity v Malé Moravě.',
-    siteName: 'U Fandy'
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'U Fandy — Hotel, Restaurace a Zážitky',
-    description:
-      'Moderní ubytování, výborná gastronomie a volnočasové aktivity v Malé Moravě.'
-  },
-  robots: {
-    index: true,
-    follow: true
-  }
-};
+const metadataBase = new URL('https://www.u-fandy.cz');
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = (await getLocale()) as Locale;
+  const dictionary = await getDictionary(locale);
+  const meta = dictionary.layout.metadata;
+
+  return {
+    metadataBase,
+    title: meta.title,
+    description: meta.description,
+    keywords: meta.keywords,
+    authors: meta.authors,
+    creator: meta.creator,
+    publisher: meta.publisher,
+    alternates: {
+      canonical: '/'
+    },
+    openGraph: {
+      type: 'website',
+      locale: openGraphLocales[locale],
+      url: metadataBase.href,
+      title: meta.openGraph.title,
+      description: meta.openGraph.description,
+      siteName: dictionary.common.brandName
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: meta.twitter.title,
+      description: meta.twitter.description
+    },
+    robots: {
+      index: true,
+      follow: true
+    }
+  };
+}
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -52,50 +59,57 @@ export const viewport: Viewport = {
   themeColor: '#191919'
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = (await getLocale()) as Locale;
+  const dictionary = await getDictionary(locale);
+  const structured = dictionary.layout.structuredData;
+
   const organizationLd = {
     '@context': 'https://schema.org',
     '@type': 'Hotel',
-    name: 'U Fandy',
-    url: 'https://www.u-fandy.cz',
-    telephone: '+420000000000',
+    name: dictionary.common.brandName,
+    url: structured.url,
+    telephone: structured.telephone,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Malá Morava 123',
-      addressLocality: 'Malá Morava',
-      postalCode: '78833',
-      addressCountry: 'CZ'
+      streetAddress: structured.address.streetAddress,
+      addressLocality: structured.address.addressLocality,
+      postalCode: structured.address.postalCode,
+      addressCountry: structured.address.addressCountry
     },
-    servesCuisine: 'Moderní česká kuchyně',
-    amenityFeature: [
-      { '@type': 'LocationFeatureSpecification', name: 'Bowlingové dráhy', value: true },
-      { '@type': 'LocationFeatureSpecification', name: 'Wellness', value: true }
-    ]
+    servesCuisine: structured.servesCuisine,
+    amenityFeature: structured.amenities.map((name) => ({
+      '@type': 'LocationFeatureSpecification',
+      name,
+      value: true
+    }))
   };
 
   return (
-    <html lang="cs" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
+    <html lang={locale} className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
       <body className="bg-canvas-100 text-topbar antialiased">
-        <a
-          href="#obsah"
-          className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:m-4 focus:rounded-md focus:bg-canvas-200 focus:px-4 focus:py-2 focus:text-topbar"
-        >
-          Přeskočit na obsah
-        </a>
-        <Header />
-        <main
-          id="obsah"
-          className="min-h-[60vh]"
-          style={{ paddingTop: 'var(--header-offset, 6rem)' }}
-        >
-          {children}
-        </main>
-        <Footer />
-        <script
-          type="application/ld+json"
-          suppressHydrationWarning
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
-        />
+        <DictionaryProvider dictionary={dictionary}>
+          <a
+            href="#obsah"
+            className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:m-4 focus:rounded-md focus:bg-canvas-200 focus:px-4 focus:py-2 focus:text-topbar"
+          >
+            {dictionary.common.skipToContent}
+          </a>
+          <Header />
+          <main
+            id="obsah"
+            className="min-h-[60vh]"
+            style={{ paddingTop: 'var(--header-offset, 6rem)' }}
+          >
+            {children}
+          </main>
+          <Footer />
+          <script
+            type="application/ld+json"
+            suppressHydrationWarning
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
+          />
+        </DictionaryProvider>
       </body>
     </html>
   );

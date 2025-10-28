@@ -8,6 +8,9 @@ dependencies:
   next:
     specifier: 14.2.3
     version: 14.2.3(@opentelemetry/api@1.9.0)(@playwright/test@1.56.1)(react-dom@18.2.0)(react@18.2.0)
+  next-intl:
+    specifier: ^4.4.0
+    version: 4.4.0(next@14.2.3)(react@18.2.0)(typescript@5.4.5)
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -143,13 +146,11 @@ packages:
       '@formatjs/intl-localematcher': 0.6.2
       decimal.js: 10.6.0
       tslib: 2.8.1
-    dev: true
 
   /@formatjs/fast-memoize@2.2.7:
     resolution: {integrity: sha512-Yabmi9nSvyOMrlSeGGWDiH7rf3a7sIwplbvo/dlz9WCIjzIQAfy1RMf4S0X3yG724n5Ghu2GmEl5NJIV6O9sZQ==}
     dependencies:
       tslib: 2.8.1
-    dev: true
 
   /@formatjs/icu-messageformat-parser@2.11.4:
     resolution: {integrity: sha512-7kR78cRrPNB4fjGFZg3Rmj5aah8rQj9KPzuLsmcSn4ipLXQvC04keycTI1F7kJYDwIXtT2+7IDEto842CfZBtw==}
@@ -157,20 +158,23 @@ packages:
       '@formatjs/ecma402-abstract': 2.3.6
       '@formatjs/icu-skeleton-parser': 1.8.16
       tslib: 2.8.1
-    dev: true
 
   /@formatjs/icu-skeleton-parser@1.8.16:
     resolution: {integrity: sha512-H13E9Xl+PxBd8D5/6TVUluSpxGNvFSlN/b3coUp0e0JpuWXXnQDiavIpY3NnvSp4xhEMoXyyBvVfdFX8jglOHQ==}
     dependencies:
       '@formatjs/ecma402-abstract': 2.3.6
       tslib: 2.8.1
-    dev: true
+
+  /@formatjs/intl-localematcher@0.5.10:
+    resolution: {integrity: sha512-af3qATX+m4Rnd9+wHcjJ4w2ijq+rAVP3CCinJQvFv1kgSu1W6jypUmvleJxcewdxmutM8dmIRZFxO/IQBZmP2Q==}
+    dependencies:
+      tslib: 2.8.1
+    dev: false
 
   /@formatjs/intl-localematcher@0.6.2:
     resolution: {integrity: sha512-XOMO2Hupl0wdd172Y06h6kLpBz6Dv+J4okPLl4LPtzbr8f66WbIoy4ev98EBuZ6ZK4h5ydTN6XneT4QVpD7cdA==}
     dependencies:
       tslib: 2.8.1
-    dev: true
 
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -1049,6 +1053,10 @@ packages:
   /@rushstack/eslint-patch@1.14.1:
     resolution: {integrity: sha512-jGTk8UD/RdjsNZW8qq10r0RBvxL8OWtoT+kImlzPDFilmozzM+9QmIJsmze9UiSBrFU45ZxhTYBypn9q9z/VfQ==}
     dev: true
+
+  /@schummar/icu-type-parser@1.21.5:
+    resolution: {integrity: sha512-bXHSaW5jRTmke9Vd0h5P7BtWZG9Znqb8gSDxZnxaGSJnGwPLDPfS+3g0BKzeWqzgZPsIVZkM7m2tbo18cm5HBw==}
+    dev: false
 
   /@sentry-internal/tracing@7.120.4:
     resolution: {integrity: sha512-Fz5+4XCg3akeoFK+K7g+d7HqGMjmnLoY2eJlpONJmaeT9pXY7yfUyXKZMmMajdE2LxxKJgQ2YKvSCaGVamTjHw==}
@@ -2325,7 +2333,6 @@ packages:
 
   /decimal.js@10.6.0:
     resolution: {integrity: sha512-YpgQiITW3JXGntzdUmyUR1V812Hn8T1YVXhCu+wO3OpS4eU9l4YdD3qjyiKdV6mvV29zapkMeD390UVEf2lkUg==}
-    dev: true
 
   /deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
@@ -3531,7 +3538,6 @@ packages:
       '@formatjs/fast-memoize': 2.2.7
       '@formatjs/icu-messageformat-parser': 2.11.4
       tslib: 2.8.1
-    dev: true
 
   /ip-address@10.0.1:
     resolution: {integrity: sha512-NWv9YLW4PoW2B7xtzaS3NCot75m6nK7Icdv0o3lfMceJVRfSoQwqD4wEH5rLwoKJwUiZ/rfpiVBhnaF0FK4HoA==}
@@ -4251,10 +4257,33 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
+  /negotiator@1.0.0:
+    resolution: {integrity: sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==}
+    engines: {node: '>= 0.6'}
+    dev: false
+
   /netmask@2.0.2:
     resolution: {integrity: sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==}
     engines: {node: '>= 0.4.0'}
     dev: true
+
+  /next-intl@4.4.0(next@14.2.3)(react@18.2.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-QHqnP9V9Pe7Tn0PdVQ7u1Z8k9yCkW5SJKeRy2g5gxzhSt/C01y3B9qNxuj3Fsmup/yreIHe6osxU6sFa+9WIkQ==}
+    peerDependencies:
+      next: ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0 || ^19.0.0
+      typescript: ^5.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@formatjs/intl-localematcher': 0.5.10
+      negotiator: 1.0.0
+      next: 14.2.3(@opentelemetry/api@1.9.0)(@playwright/test@1.56.1)(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      typescript: 5.4.5
+      use-intl: 4.4.0(react@18.2.0)
+    dev: false
 
   /next@14.2.3(@opentelemetry/api@1.9.0)(@playwright/test@1.56.1)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-dowFkFTR8v79NPJO4QsBUtxv0g9BrS/phluVpMAt2ku7H+cbcBJlopXjkWlwxrk/xGqMemr7JkGPGemPrLLX7A==}
@@ -5798,7 +5827,6 @@ packages:
     resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
     hasBin: true
-    dev: true
 
   /unbox-primitive@1.1.0:
     resolution: {integrity: sha512-nWJ91DjeOkej/TA8pXQ3myruKpKEYgqvpw9lz4OPHj/NWFNluYrjbz9j01CJ8yKQd2g4jFoOkINCTW2I5LEEyw==}
@@ -5869,6 +5897,17 @@ packages:
     dependencies:
       punycode: 2.3.1
     dev: true
+
+  /use-intl@4.4.0(react@18.2.0):
+    resolution: {integrity: sha512-smFekJWtokDRBLC5/ZumlBREzdXOkw06+56Ifj2uRe9266Mk+yWQm2PcJO+EwlOE5sHIXHixOTzN6V8E0RGUbw==}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0 || ^19.0.0
+    dependencies:
+      '@formatjs/fast-memoize': 2.2.7
+      '@schummar/icu-type-parser': 1.21.5
+      intl-messageformat: 10.7.18
+      react: 18.2.0
+    dev: false
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}

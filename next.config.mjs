@@ -8,6 +8,11 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   output: 'standalone',
+  i18n: {
+    locales: ['cs', 'en', 'pl', 'de', 'sk'],
+    defaultLocale: 'cs',
+    localeDetection: true
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [360, 420, 640, 768, 1024, 1280, 1536],
