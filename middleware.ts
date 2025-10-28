@@ -10,34 +10,24 @@ const intlMiddleware = createMiddleware({
   localePrefix: 'as-needed'
 });
 
-const NONCE_HEADER = 'x-nonce';
-
-function createNonce() {
-  const array = new Uint8Array(16);
-  crypto.getRandomValues(array);
-  return btoa(String.fromCharCode(...array));
-}
-
-function createCsp(nonce: string) {
+function createCsp() {
   return [
     "default-src 'self'",
-    `script-src 'self' 'nonce-${nonce}' 'unsafe-inline'`,
+    "script-src 'self' 'unsafe-inline'",
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: blob:",
     "font-src 'self' data:",
     "connect-src 'self'",
-    "frame-ancestors 'none'",
+    "frame-src 'self' https://app.netlify.com",
+    "frame-ancestors 'self'",
     "base-uri 'self'",
     "form-action 'self'"
   ].join('; ');
 }
 
 export function middleware(request: NextRequest) {
-  const nonce = createNonce();
-  const csp = createCsp(nonce);
-  request.headers.set(NONCE_HEADER, nonce);
+  const csp = createCsp();
   const requestHeaders = new Headers(request.headers);
-  requestHeaders.set(NONCE_HEADER, nonce);
 
   const { pathname } = request.nextUrl;
   const isAssetRequest = pathname.startsWith('/_next') || pathname.startsWith('/api') || /\.[\w.-]+$/.test(pathname);
@@ -52,19 +42,10 @@ export function middleware(request: NextRequest) {
 
   response.headers.set('Content-Security-Policy', csp);
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  response.headers.set('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
+  response.headers.set('Permissions-Policy', 'geolocation=(), microphone=(self), camera=(self)');
   response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Frame-Options', 'SAMEORIGIN');
   response.headers.set('X-XSS-Protection', '0');
-  response.headers.set(NONCE_HEADER, nonce);
-  response.cookies.set({
-    name: NONCE_HEADER,
-    value: nonce,
-    httpOnly: true,
-    sameSite: 'strict',
-    secure: process.env.NODE_ENV === 'production',
-    path: '/'
-  });
 
   if (pathname.startsWith('/images/')) {
     response.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
