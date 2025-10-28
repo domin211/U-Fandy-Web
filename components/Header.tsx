@@ -57,7 +57,7 @@ export default function Header() {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-40 w-full bg-black/90 text-white">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-5 sm:px-6">
+      <div className="mx-auto flex w-full max-w-6xl items-center gap-4 px-4 py-5 sm:px-6">
         <Link
           href="/"
           className="group flex items-center gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
@@ -73,10 +73,10 @@ export default function Header() {
           <span className="sr-only">U Fandy Hotel &amp; Restaurant</span>
         </Link>
         <nav
-          className={`hidden items-center lg:flex ${montserrat.className}`}
+          className={`flex flex-1 justify-center overflow-x-auto ${montserrat.className}`}
           aria-label={dictionary.common.header.navigationLabel}
         >
-          <ul className="flex items-center">
+          <ul className="flex min-w-max items-center">
             {navLinks.map((link) => {
               const isCTA = link.variant === 'cta';
 
@@ -100,51 +100,7 @@ export default function Header() {
             })}
           </ul>
         </nav>
-        <LanguageSwitcher />
-        <details className={`relative lg:hidden ${montserrat.className}`}>
-          <summary className="inline-flex cursor-pointer items-center justify-center rounded-full border border-white/20 px-4 py-2 text-sm font-medium uppercase text-white/80 transition hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
-            {dictionary.common.header.menuLabel}
-          </summary>
-          <nav className="absolute right-0 mt-3 w-64 rounded-3xl border border-black/70 bg-black/90 p-4 shadow-soft">
-            <ul className="space-y-3 text-sm font-medium uppercase text-white/80">
-              {navLinks.map((link) => {
-                const isCTA = link.variant === 'cta';
-
-                return (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className={`block rounded-2xl px-3 py-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand${
-                        isCTA
-                          ? ' border border-brand text-[#bebebe] hover:bg-brand hover:text-white'
-                          : ' hover:bg-white/10 hover:text-brand'
-                      }`}
-                    >
-                      <span className="flex items-center gap-1">
-                        <span>{link.label}</span>
-                        {link.hasDropdown ? <span className="text-[10px] text-white/60">▼</span> : null}
-                      </span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-            <div className="mt-4 border-t border-white/10 pt-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
-                {dictionary.common.header.localeSwitcherLabel}
-              </p>
-              <LanguageSwitcher
-                className="mt-2 flex flex-wrap gap-2 text-xs uppercase tracking-[0.2em] text-white/60"
-                linkClassName={(isActive) =>
-                  `rounded-full border border-white/10 px-3 py-1 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${
-                    isActive ? 'bg-white text-topbar shadow-soft' : 'hover:border-brand hover:text-brand'
-                  }`
-                }
-                variant="list"
-              />
-            </div>
-          </nav>
-        </details>
+        <LanguageSwitcher className="flex-shrink-0" />
       </div>
     </header>
   );
