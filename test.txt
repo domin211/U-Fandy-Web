@@ -1,0 +1,3987 @@
+
+<body id="body-pd">
+  <!DOCTYPE html>
+<html>
+<head>
+
+<script type="324681115882d2c062d5dc85-text/javascript">(function(){
+	try {
+		var head = document.getElementsByTagName('head')[0] || document.documentElement;
+		if (!head) return;
+
+		function append(tagName, attrs) {
+			var el = document.createElement(tagName);
+			for (var k in attrs) if (attrs.hasOwnProperty(k)) el.setAttribute(k, attrs[k]);
+			head.appendChild(el);
+			return el;
+		}
+
+		// PNG favicon
+		append('link', { rel: 'icon', type: 'image/png', href: '/favicons/favicon-96x96.png', sizes: '96x96' });
+
+		// SVG favicon (preferred by browsers that support it)
+		append('link', { rel: 'icon', type: 'image/svg+xml', href: '/favicons/favicon.svg' });
+
+		// ICO fallback
+		append('link', { rel: 'shortcut icon', href: '/favicons/favicon.ico' });
+
+		// Apple touch
+		append('link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicons/apple-touch-icon.png' });
+
+		// Apple web app title
+		append('meta', { name: 'apple-mobile-web-app-title', content: 'Tick Hosting' });
+
+		// Web manifest
+		append('link', { rel: 'manifest', href: '/favicons/site.webmanifest' });
+	} catch (e) {
+		// Fail silently - favicon injection is non-critical
+		if (typeof console !== 'undefined' && console.error) console.error('Favicon injector error:', e);
+	}
+})();</script>  
+<script type="324681115882d2c062d5dc85-text/javascript"> console.log("Carbon Theme by Tick Hosting - https://tickhosting.net"); </script>
+</head>
+
+
+<body id="body-pd">
+
+
+   <!--Container Main start-->
+
+</section>
+</div>
+
+<div id="alert" style="
+    max-width: 95vw;
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto 0 auto;
+    border: 2px solid #17a2b8;
+    color: #17a2b8;
+    background-color: transparent;
+    padding: 20px 25px 20px 20px;
+    border-radius: 8px;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+    font-family: sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+">
+        <button onclick="if (!window.__cfRLUnblockHandlers) return false; closeAlert()" aria-label="Close alert" style="
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: #17a2b8;
+            font-size: 1.2rem;
+            cursor: pointer;
+            line-height: 1;
+        " data-cf-modified-324681115882d2c062d5dc85-="">&times;</button>
+    
+    <div style="display: flex; align-items: center;">
+        <i class="bx bxs-info-circle" style="font-size: 1.8rem; margin-right: 15px;"></i>
+        <div style="flex-grow: 1;">
+            <div style="font-weight: 600; font-size: 1.2rem;">🚨 Huge News from Tick Hosting! 🚨
+</div>
+            <div style="font-size: 1rem; margin-top: 4px;">Are you ready to launch your own SCP: Secret Laboratory server? At Tick Hosting, we now offer super affordable, high-performance plans with full Anti-DDoS protection! 💪
+
+No matter if you&#039;re just starting out or managing a huge facility, we&#039;ve got the perfect plan for you. All plans come with unlimited storage and support for Exiled as a plugin loader!
+
+💸 Our prices are unbeatable! 💸
+Check out our new SCP: SL plans click learn more</div>
+                        <a href="https://tickhosting.com/billing/scpsl/plans" target="_blank" rel="noopener noreferrer" style="
+                display: inline-block;
+                margin-top: 10px;
+                padding: 8px 18px;
+                background: #17a2b8;
+                color: #fff;
+                border-radius: 5px;
+                text-decoration: none;
+            ">Learn more</a>
+                    </div>
+    </div>
+</div>
+
+<script type="324681115882d2c062d5dc85-text/javascript">
+    function closeAlert() {
+        document.getElementById('alert').style.display = 'none';
+        document.cookie = "alert_closed=true; max-age=86400; path=/";
+    }
+</script>
+
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+
+
+
+  <div class="grey-bg container-fluid">
+    
+
+      </div>
+
+  <style>
+  @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+  
+  /**/
+  
+  :root {
+    --header-height: 3rem;
+    --nav-width: 75px;
+    --first-color: #fff;
+    --first-color-light: #ffffff;
+    --second-background: #292434;
+    --text-color: #ffff;
+    --active-text-color: #ffff;
+    --white-hover: #f4f5f7;
+    --sidebar-bg-color: #192644;
+    --sidebar-icon-color: #111111;
+    --white-color: #ffffff;
+    --body-font: 'Nunito', sans-serif;
+    --normal-font-size: 1rem;
+    --z-fixed: 100;
+  }
+  /**/
+ 
+  .ebZQSG, .iTxXDX, .JZicT, .jleFWY {
+    display: none !important;
+  }
+
+  .hlbvqz {
+    margin-top: 80px !important;
+    max-width: 100% !important;
+  }
+
+  .gZjctj {
+    width: 100% !important
+  }
+
+  .dfrjYE {
+    width: 100% !important;
+  }
+  
+  .powerbuttons-div {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .xterm .xterm-viewport {
+    width: 100% !important;
+  }
+  
+  
+  
+  .chartjs-render-monitor {
+    height: 265px !important;
+    width: 100% !important;
+  }
+
+  
+  </style>  <style>
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: #040814;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .logo {
+        width: 150px;
+        height: 150px;
+        animation: pulse 1.5s infinite ease-in-out;
+    }
+    .loading-text {
+        margin-top: 20px;
+        font-size: 18px;
+        animation: fadeInOut 3s infinite;
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.1); opacity: 0.7; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fadeInOut {
+        0% { opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+</style>
+
+<div class="preloader">
+    <img src="https://tickhosting.com/portal/img/logo.webp" alt="Logo" class="logo">
+    <p class="loading-text" id="loadingText">Finding lost diamonds in the void...</p>
+</div>
+
+<script type="324681115882d2c062d5dc85-text/javascript">
+    const loadingPhrases = ["TickHosting is taming the Creepers...","Your server is waking up from hibernation...","Loading... Meanwhile, grab a coffee!","Convincing your server to start...","Fixing existing issues and creating new ones...","Making sacrifices to the network gods...","Generating chunks... this may take a while!","Unleashing the power of 4GB RAM...","Optimizing lag... or making it worse?","TickHosting engineers are on coffee break...","Syncing with the void... please wait!","Sending packets at the speed of light... almost!","Defragmenting the internet... or trying to!","Calibrating 10,000 chickens in a single chunk...","Finding lost diamonds in the void...","Avoiding TNT explosions... or not!"];
+    let phraseIndex = 0;
+    
+    function changeLoadingText() {
+        const textElement = document.getElementById("loadingText");
+        textElement.style.opacity = 0;
+        setTimeout(() => {
+            phraseIndex = Math.floor(Math.random() * loadingPhrases.length);
+            textElement.textContent = loadingPhrases[phraseIndex];
+            textElement.style.opacity = 1;
+        }, 500);
+    }
+    
+    setInterval(changeLoadingText, 3000);
+
+    window.addEventListener("load", function() {
+        document.querySelector(".preloader").style.display = "none";
+    });
+
+    setTimeout(() => {
+        document.querySelector(".preloader").style.display = "none";
+    }, 10000);
+</script>
+<script type="324681115882d2c062d5dc85-text/javascript">
+
+window.addEventListener('load', function() {
+  showRandomImage();
+});
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+
+    
+  const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+  const toggle = document.getElementById(toggleId),
+  nav = document.getElementById(navId),
+  bodypd = document.getElementById(bodyId),
+  headerpd = document.getElementById(headerId)
+  
+  // Validate that all variables exist
+  if(toggle && nav && bodypd && headerpd){
+  toggle.addEventListener('click', ()=>{
+  // show navbar
+  nav.classList.toggle('nav_show')
+  // change icon
+  toggle.classList.toggle('bx-x')
+  // add padding to body
+  bodypd.classList.toggle('body-pd')
+  // add padding to header
+  headerpd.classList.toggle('body-pd')
+  })
+  }
+  }
+
+  /*===== Dynamically set icon =====*/
+
+
+
+  showNavbar('header-toggle','nav-bar','body-pd','header')
+  
+  /*===== LINK ACTIVE =====*/
+  const linkColor = document.querySelectorAll('.nav_link')
+  
+  function colorLink(){
+  if(linkColor){
+  linkColor.forEach(l=> l.classList.remove('sb-active'))
+  this.classList.add('sb-active')
+  }
+  }
+  linkColor.forEach(l=> l.addEventListener('click', colorLink))
+  
+  // Your code to run since DOM is loaded and ready
+  var togglebutton = document.getElementById("header-toggle");
+  togglebutton.click('header-toggle');
+  
+
+
+
+
+  function getValueAtIndex(index){
+    var str = window.location.href; 
+    return str.split("/")[index];
+  }
+
+  function pluginPage(serversList){
+
+    try {
+      var serverID = document.getElementById("serverid").innerHTML;
+    } catch (error) {
+      return;
+    }
+    serverID = serverID.trim();
+
+    if (serversList.hasOwnProperty(serverID)) {
+        // var pluginPageStatus = serversList[serverID].plugins
+        // console.log(pluginPageStatus);
+        document.getElementById("sbPlugins").hidden = false;
+    } else {
+      // console.log(serversList);
+      document.getElementById("sbPlugins").hidden = true;
+    }
+
+  }
+
+
+  function showRandomImage() {
+  var PlanIcon = document.querySelectorAll('img[id^="plan-icon-image"]');
+  var usedNumbers = [];
+  var Imageplaceholder = document.getElementById('Imageplaceholder');
+  if (PlanIcon.length > 0) {
+    for (var i = 0; i < PlanIcon.length; i++) {
+      var n = getRandomNumber(PlanImage.length);
+      while (usedNumbers.includes(n)) {
+        n = getRandomNumber(PlanImage.length);
+      }
+      PlanIcon[i].src = "https://tickhosting.com/portal/wp-content/uploads/2024/08/2024-08-23_10.09.34-e1724400718682.png";
+      PlanIcon[i].height = 100;
+      PlanIcon[i].width = 100;
+      usedNumbers.push(n);
+    }
+  }
+  if (Imageplaceholder != null) {
+    var n1 = getRandomNumber(PlanImage.length);
+    while (usedNumbers.includes(n1)) {
+        n1 = getRandomNumber(PlanImage.length);
+      }
+    Imageplaceholder.src = PlanImage[n1];
+  }
+}
+
+function getRandomNumber(n) {
+  return Math.floor(Math.random() * n);
+}
+  
+</script>
+
+<script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer type="324681115882d2c062d5dc85-text/javascript">
+  if ('' == 'true') {
+    new Crate({
+      server: '',
+      channel: ''
+    })
+  }
+</script>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tick Hosting</title>
+
+
+            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta name="csrf-token" content="IlwJpRfrO9fk9xfBritMZRlRjEdqayTauTrYRp6Z">
+
+
+                                    <script type="324681115882d2c062d5dc85-text/javascript">
+                    console.log('User is not premium');
+                </script>
+                <script src="https://tickhosting.com/sdfsfdsfdgfdghf56t544yhyhtdx.js" type="324681115882d2c062d5dc85-text/javascript"></script>
+                        
+                
+                                <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" async type="324681115882d2c062d5dc85-text/javascript"></script>
+                <script type="324681115882d2c062d5dc85-text/javascript">
+                    stpd = window.stpd || {que: []};
+                    window.googletag = window.googletag || {};
+                    googletag.cmd = googletag.cmd || [];
+
+                    googletag.cmd.push(function() {
+                        if (window.innerWidth >= 1000){ 
+                                                            googletag.defineOutOfPageSlot('/147246189,23284407551/tickhosting.com_1000x100_anchor_desktop', googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR).addService(googletag.pubads());
+                                                        googletag.defineSlot('/147246189,23284407551/tickhosting.com_728x90_1_desktop', [[728,90],[468,60]], 'tickhosting_com_728x90_1').addService(googletag.pubads());
+                            googletag.defineSlot('/147246189,23284407551/tickhosting.com_300x600_right_sidebar_desktop', [[300,600],[160,600],[300,250],[300,300]], 'tickhosting_com_300x600_right_sidebar_desktop').addService(googletag.pubads());                     
+                            googletag.defineSlot('/147246189,23284407551/tickhosting.com_1200x300_billboard_1_desktop', [[970,250],[728,90],[970,90],[1300,300],[980,300],[1200,200],[1100,200],[1000,200],[1000,250],[970,300],[980,240],[980,120],[970,200],[970,120],[728,100],[728,250]], 'tickhosting_com_1200x300_billboard_1').addService(googletag.pubads());
+                        } else {
+                                                            googletag.defineOutOfPageSlot('/147246189,23284407551/tickhosting.com_320x100_anchor_mobile', googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR).addService(googletag.pubads());
+                                                        googletag.defineSlot('/147246189,23284407551/tickhosting.com_336x336_1_mobile', [[336,336],[336,320],[320,336],[320,320],[300,300],[336,280],[320,250],[300,250]], 'tickhosting_com_728x90_1').addService(googletag.pubads());
+                            googletag.defineSlot('/147246189,23284407551/tickhosting.com_336x600_billboard_1_mobile', [[300,600],[336,600],[300,250],[336,336],[336,280],[320,480],[336,320],[320,320],[300,300],[320,250],[160,600]], 'tickhosting_com_1200x300_billboard_1').addService(googletag.pubads()); 
+                        }
+
+                        googletag.pubads().enableSingleRequest();
+                        googletag.pubads().disableInitialLoad();
+                        googletag.enableServices();
+                        googletag.pubads().collapseEmptyDivs();
+                    });
+                </script>
+                
+        <!-- Page description -->
+        <meta name="description" content="Tick Hosting offers reliable and high-performance hosting services for your website. Discover our customized solutions for your hosting needs." />
+
+        <!-- Page keywords -->
+        <meta name="keywords" content="Tick Hosting, hosting, website, hosting services, reliability, performance, free server, minecraft, minecraft server, free minecraft server, free hosting, free hosting services, free hosting for minecraft, free hosting for minecraft server, free hosting for website, free hosting for your website, free hosting for your minecraft" />
+
+        <!-- Page author -->
+        <meta name="author" content="Tick Hosting" />
+
+        <!-- Preview image -->
+        <meta property="og:image" content="https://www.tickhosting.com/img/preview-image.jpg" />
+
+        <!-- Preview title -->
+        <meta property="og:title" content="Tick Hosting - The best hosting for your website" />
+
+        <!-- Preview description -->
+        <meta property="og:description" content="Tick Hosting offers reliable and high-performance hosting services for your website. Discover our customized solutions for your hosting needs." />
+
+        <!-- Page URL -->
+        <meta property="og:url" content="https://www.tickhosting.com/" />
+
+        <!-- Content type -->
+        <meta property="og:type" content="website" />
+
+        <!-- Page language -->
+        <meta property="og:locale" content="en_US" />
+
+        <!-- Twitter card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@TickHosting" />
+        <meta name="twitter:title" content="Tick Hosting - The best hosting for your website" />
+        <meta name="twitter:description" content="Tick Hosting offers reliable and high-performance hosting services for your website. Discover our customized solutions for your hosting needs." />
+        <meta name="twitter:image" content="https://www.tickhosting.com/img/preview-image.jpg" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.tailwindcss.com" type="324681115882d2c062d5dc85-text/javascript"></script>
+        <script src="https://cmp.setupcmp.com/cmp/cmp/cmp-stub.js" data-prop-id="8095" type="324681115882d2c062d5dc85-text/javascript"></script>
+        <script src="https://cmp.setupcmp.com/cmp/cmp/cmp-v1.js" data-prop-stpd-cmp-id="8095" async type="324681115882d2c062d5dc85-text/javascript"></script>
+
+            
+                        <script type="324681115882d2c062d5dc85-text/javascript">
+                window.PterodactylUser = {"uuid":"1a03901e-c29f-48eb-9540-8c271b1d83d1","username":"domin211","email":"domin211.211.211@gmail.com","name_first":"x","name_last":"x","language":"en","root_admin":false,"staff":0,"ad_free":false,"use_totp":false,"gravatar":true,"note":null,"created_at":"2025-03-15T10:51:13.000000Z","updated_at":"2025-06-20T12:15:52.000000Z","newsletter":1,"discord_user_token":"714156692778123266","google_id":null,"google_email":null,"needs_password_setup":0,"google_drive_token_expires_at":null,"google_drive_email":null,"google_drive_folder_id":null};
+            </script>
+                            <script type="324681115882d2c062d5dc85-text/javascript">
+                window.SiteConfiguration = {"name":"Tick Hosting","locale":"en","recaptcha":{"enabled":false,"siteKey":"6LdCHw8pAAAAAAjz59VgjJt69eJt1oGal7SNjS64"}};
+            </script>
+                <style>
+        @import url('//fonts.googleapis.com/css?family=Rubik:300,400,500&display=swap');
+        @import url('//fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:500&display=swap');
+
+        .adsbygoogle {
+            display: block !important;
+            width: 100% !important;
+            min-height: 90px;
+        }
+    </style>
+
+    
+    
+    <script type="324681115882d2c062d5dc85-text/javascript">(function(){
+	try {
+		var head = document.getElementsByTagName('head')[0] || document.documentElement;
+		if (!head) return;
+
+		function append(tagName, attrs) {
+			var el = document.createElement(tagName);
+			for (var k in attrs) if (attrs.hasOwnProperty(k)) el.setAttribute(k, attrs[k]);
+			head.appendChild(el);
+			return el;
+		}
+
+		// PNG favicon
+		append('link', { rel: 'icon', type: 'image/png', href: '/favicons/favicon-96x96.png', sizes: '96x96' });
+
+		// SVG favicon (preferred by browsers that support it)
+		append('link', { rel: 'icon', type: 'image/svg+xml', href: '/favicons/favicon.svg' });
+
+		// ICO fallback
+		append('link', { rel: 'shortcut icon', href: '/favicons/favicon.ico' });
+
+		// Apple touch
+		append('link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicons/apple-touch-icon.png' });
+
+		// Apple web app title
+		append('meta', { name: 'apple-mobile-web-app-title', content: 'Tick Hosting' });
+
+		// Web manifest
+		append('link', { rel: 'manifest', href: '/favicons/site.webmanifest' });
+	} catch (e) {
+		// Fail silently - favicon injection is non-critical
+		if (typeof console !== 'undefined' && console.error) console.error('Favicon injector error:', e);
+	}
+})();</script></head>
+
+<!-- Modale di supporto -->
+         <div id="support-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:#01040A; padding:32px 24px; border-radius:16px; text-align:center; max-width:350px; margin:auto;">
+        <h2 style="font-size:1.3rem; margin-bottom:12px;">Support Tick Hosting</h2>
+        <p id="modal-message" style="margin-bottom:18px;">Watch an ad to support Tick Hosting and keep the service free for everyone.</p>
+        <p id="modal-submessage" style="margin-bottom:24px;">Click the button below to watch an ad and support us.</p>
+        <div id="modal-loading" style="display:none; margin-bottom:24px;">
+            <i class="fas fa-circle-notch fa-spin" style="font-size:2rem; color:#3B82F6;"></i>
+            <p style="margin-top:12px; color:#888;">Loading ad...</p>
+        </div>
+        <button id="show-ad-btn" onclick="if (!window.__cfRLUnblockHandlers) return false; showAd()" style="background:#3B82F6; color:#fff; border:none; padding:10px 24px; border-radius:8px; font-size:1rem; cursor:pointer;" data-cf-modified-324681115882d2c062d5dc85-="">Watch Ad</button>
+        <button id="skip-ad-btn" onclick="if (!window.__cfRLUnblockHandlers) return false; skipAdAndClose()" style="display:none; background:#6B7280; color:#fff; border:none; padding:10px 24px; border-radius:8px; font-size:1rem; cursor:pointer; margin-top:12px;" data-cf-modified-324681115882d2c062d5dc85-="">Skip (Ad not available)</button>
+        <button id="close-modal-btn" onclick="if (!window.__cfRLUnblockHandlers) return false; hideSupportModal()" style="display:none; background:#6B7280; color:#fff; border:none; padding:10px 24px; border-radius:8px; font-size:1rem; cursor:pointer; margin-top:12px;" data-cf-modified-324681115882d2c062d5dc85-="">Close</button>
+    </div>
+</div>
+<script type="324681115882d2c062d5dc85-text/javascript">
+
+// Support modal functions
+let adLoadTimeout = null;
+let adRequested = false;
+
+function giveReward(url) {
+    googletag.pubads().removeEventListener('rewardedSlotClosed', dismissReward);
+    clearTimeout(adLoadTimeout);
+    setSupportModalSession(); // Imposta session solo quando l'utente ha visto l'ad
+    hideSupportModal();
+    setSupportModalViewed();
+}
+
+function dismissReward(evt) {
+    googletag.destroySlots([evt.rewardedSlot]);
+    clearTimeout(adLoadTimeout);
+    setSupportModalSession(); // Imposta session anche se chiude l'ad
+    // Mostra messaggio che l'ad è stato chiuso
+    showAdClosedMessage();
+}
+
+function showAdClosedMessage() {
+    document.getElementById('modal-message').textContent = 'Ad closed';
+    document.getElementById('modal-submessage').textContent = 'Thank you for your support! You can close this modal or try watching another ad.';
+    document.getElementById('modal-loading').style.display = 'none';
+    document.getElementById('show-ad-btn').style.display = 'inline-block';
+    document.getElementById('show-ad-btn').textContent = 'Watch Another Ad';
+    document.getElementById('close-modal-btn').style.display = 'inline-block';
+    document.getElementById('skip-ad-btn').style.display = 'none';
+    adRequested = false;
+}
+
+function showAdNotAvailableMessage() {
+    document.getElementById('modal-message').textContent = 'Ad not available';
+    document.getElementById('modal-submessage').textContent = 'Sorry, no ad is currently available. You can try again later or close this modal.';
+    document.getElementById('modal-loading').style.display = 'none';
+    document.getElementById('show-ad-btn').style.display = 'inline-block';
+    document.getElementById('show-ad-btn').textContent = 'Try Again';
+    document.getElementById('skip-ad-btn').style.display = 'inline-block';
+    document.getElementById('close-modal-btn').style.display = 'none';
+    adRequested = false;
+}
+
+function skipAdAndClose() {
+    setSupportModalSession(); // Imposta session quando skippa
+    hideSupportModal();
+    setSupportModalViewed(); // Segna come visto anche se non ha guardato l'ad
+}
+
+function showAd(url) {
+    if (adRequested) {
+        console.log('Ad already requested, please wait...');
+        return;
+    }
+    
+    setSupportModalSession(); // Imposta session quando tenta di vedere l'ad
+    adRequested = true;
+    
+    // Mostra loading
+    document.getElementById('show-ad-btn').style.display = 'none';
+    document.getElementById('skip-ad-btn').style.display = 'none';
+    document.getElementById('close-modal-btn').style.display = 'none';
+    document.getElementById('modal-loading').style.display = 'block';
+    document.getElementById('modal-message').textContent = 'Loading ad...';
+    document.getElementById('modal-submessage').textContent = 'Please wait while we load the ad for you.';
+    
+    // Timeout di 10 secondi per il caricamento dell'ad
+    adLoadTimeout = setTimeout(function() {
+        console.log('Ad load timeout - no ad available');
+        showAdNotAvailableMessage();
+    }, 10000);
+    
+    googletag.cmd.push(function() {
+        var rewardedSlot = googletag.defineOutOfPageSlot('/147246189,23284407551/tickhosting.com_rewarded', googletag.enums.OutOfPageFormat.REWARDED);
+        
+        if (rewardedSlot) {
+            rewardedSlot.addService(googletag.pubads());
+            
+            // Ad pronto per essere mostrato
+            googletag.pubads().addEventListener('rewardedSlotReady', function(evt) {
+                clearTimeout(adLoadTimeout);
+                console.log('Ad ready, showing...');
+                evt.makeRewardedVisible();
+                document.getElementById('modal-loading').style.display = 'none';
+            });
+            
+            // Ad chiuso dall'utente
+            googletag.pubads().addEventListener('rewardedSlotClosed', dismissReward);
+            
+            // Reward assegnato (ad completato)
+            googletag.pubads().addEventListener('rewardedSlotGranted', function() {
+                console.log('Ad completed, granting reward');
+                giveReward(url);
+            });
+            
+            googletag.display(rewardedSlot);
+            googletag.pubads().refresh([rewardedSlot]);
+        } else {
+            // Nessuno slot disponibile
+            clearTimeout(adLoadTimeout);
+            console.log('No rewarded slot available');
+            showAdNotAvailableMessage();
+        }
+    });
+}
+
+// Imposta cookie quando l'utente ha visto l'ad (dura 2 ore)
+function setSupportModalViewed() {
+    var expire = new Date();
+    expire.setTime(expire.getTime() + (2 * 60 * 60 * 1000)); // 2 ore
+    document.cookie = "supportModalViewed=true; expires=" + expire.toUTCString() + "; path=/; SameSite=Lax; Secure";
+    document.cookie = "supportModalLast=" + Date.now() + "; expires=" + expire.toUTCString() + "; path=/; SameSite=Lax; Secure";
+}
+
+// Imposta flag temporaneo per evitare che si ricarichi nella stessa sessione
+function setSupportModalSession() {
+    var expire = new Date();
+    expire.setTime(expire.getTime() + (2 * 60 * 60 * 1000)); // 2 ore
+    document.cookie = "supportModalSession=true; expires=" + expire.toUTCString() + "; path=/; SameSite=Lax; Secure";
+}
+
+// Verifica se il modal è già stato visto
+function getSupportModalViewed() {
+    return document.cookie.indexOf("supportModalViewed=true") !== -1;
+}
+
+// Verifica se il modal è già stato mostrato in questa sessione (solo sessionStorage)
+function getSupportModalSession() {
+    return document.cookie.indexOf("supportModalSession=true") !== -1;
+}
+
+function getSupportModalCookie() {
+    var name = "supportModalLast=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name) === 0) return parseInt(c.substring(name.length), 10);
+    }
+    return null;
+}
+
+function showSupportModal() {
+    var modal = document.getElementById('support-modal');
+    if (modal) {
+        console.log('Support modal - Showing modal now');
+        // Reset dello stato del modal
+        document.getElementById('modal-message').textContent = 'Support Tick Hosting';
+        document.getElementById('modal-submessage').textContent = 'Click the button below to watch an ad and support us.';
+        document.getElementById('show-ad-btn').style.display = 'inline-block';
+        document.getElementById('show-ad-btn').textContent = 'Watch Ad';
+        document.getElementById('modal-loading').style.display = 'none';
+        document.getElementById('skip-ad-btn').style.display = 'none';
+        document.getElementById('close-modal-btn').style.display = 'none';
+        adRequested = false;
+        
+        modal.style.display = 'flex';
+        // NON chiamare setSupportModalSession qui - verrà chiamato solo quando l'utente interagisce
+    }
+}
+
+function hideSupportModal() {
+    var modal = document.getElementById('support-modal');
+    if (modal) {
+        modal.style.display = 'none';
+        clearTimeout(adLoadTimeout);
+        adRequested = false;
+    }
+}
+
+// Gestione evento beforeunload per salvare lo stato
+window.addEventListener('beforeunload', function() {
+    // Se il modal non è stato visto, salva che deve essere mostrato al reload
+    if (!getSupportModalViewed() && !getSupportModalSession()) {
+        sessionStorage.setItem('supportModalPending', 'true');
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    console.log('Support modal - Checking conditions...');
+    console.log('Viewed:', getSupportModalViewed());
+    console.log('Session:', getSupportModalSession());
+    // Se l'utente ha già visto l'ad nelle ultime 2 ore
+    if (getSupportModalViewed()) {
+        var last = getSupportModalCookie();
+        var now = Date.now();
+        console.log('Support modal - Already viewed. Last:', last, 'Now:', now);
+        // Se sono passate più di 2 ore, mostra di nuovo il modal
+        if (!last || now - last > 2 * 60 * 60 * 1000) {
+            console.log('Support modal - 2 hours passed, clearing cookies and showing in 3 minutes');
+            document.cookie = "supportModalViewed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "supportModalLast=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            setTimeout(showSupportModal, 180000); // Mostra dopo 3 minuti
+        } else {
+            console.log('Support modal - Still within 2 hours, not showing');
+        }
+        return;
+    }
+    // Se il modal non è stato già mostrato in questa sessione (cookie)
+    if (!getSupportModalSession()) {
+        console.log('Support modal - First time in session (cookie), showing in 3 minutes');
+        setTimeout(showSupportModal, 180000); // Mostra dopo 3 minuti dal caricamento
+    } else {
+        console.log('Support modal - Already shown in this session (cookie)');
+    }
+});
+</script>
+    <!-- /Modale di supporto -->
+<body>
+            
+            <div id="video-container" class="fixed bottom-6 right-6 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 rounded-3xl shadow-2xl overflow-hidden w-96 max-w-full h-60 border-2 border-blue-500 z-50 animate-fade-in">
+            <div class="relative w-full h-full flex flex-col">
+                <button id="close-btn" class="absolute top-3 right-3 flex items-center justify-center w-10 h-10 bg-gradient-to-tr from-red-500 via-pink-600 to-red-700 text-white rounded-full shadow-lg z-20 opacity-0 transition-opacity duration-500 hover:scale-110 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400" disabled>
+                    <i class="fas fa-xmark fa-lg"></i>
+                </button>
+                <div id="video-player" class="relative z-0 flex-1 rounded-b-2xl overflow-hidden">
+                    <script type="324681115882d2c062d5dc85-text/javascript" src="https://video.onnetwork.tv/widgets/widget_scrolllist.php?widget=2085"></script>
+                </div>
+                <div id="timer" class="absolute top-3 left-3 flex items-center gap-2 px-3 py-1 bg-black/70 rounded-full text-white text-sm font-mono shadow-md">
+                    <i class="fas fa-clock"></i>
+                    <span id="timer-text"></span>
+                </div>
+            </div>
+        </div>
+        <style>
+            @keyframes fade-in {
+                from { opacity: 0; transform: translateY(40px) scale(0.95); }
+                to { opacity: 1; transform: translateY(0) scale(1); }
+            }
+            .animate-fade-in { animation: fade-in 0.7s cubic-bezier(.4,0,.2,1); }
+            #video-container { box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45); }
+            #close-btn[disabled] { cursor: not-allowed; filter: grayscale(0.5) brightness(0.7); }
+            #close-btn:not([disabled]) { cursor: pointer; filter: none; }
+            #close-btn i { pointer-events: none; }
+        </style>
+    
+        
+
+    <script type="324681115882d2c062d5dc85-text/javascript">
+        // Migliorato: estetica, timer, chiusura per 6 ore, FontAwesome
+        let countdown = 65;  // 60 secondi countdown
+        const timerText = document.getElementById("timer-text");
+        function updateTimer() {
+            const minutes = Math.floor(countdown / 60);
+            const seconds = countdown % 60;
+            timerText.innerText = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+            if (countdown > 0) countdown--;
+        }
+        if (timerText) {
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
+        // Abilita il bottone dopo 60 secondi
+        setTimeout(() => {
+            const closeBtn = document.getElementById("close-btn");
+            if (closeBtn) {
+                closeBtn.disabled = false;
+                closeBtn.classList.add("opacity-100");
+                closeBtn.classList.remove("opacity-0");
+            }
+        }, 60000);
+
+        // Chiusura video e cookie per 6 ore
+        const closeBtn = document.getElementById("close-btn");
+        if (closeBtn) {
+            closeBtn.addEventListener("click", () => {
+                const videoContainer = document.getElementById("video-container");
+                if (videoContainer) videoContainer.remove();
+                // Cookie per 6 ore
+                let expireDate = new Date();
+                expireDate.setTime(expireDate.getTime() + (6 * 60 * 60 * 1000));
+                document.cookie = "videoClosed=true; expires=" + expireDate.toUTCString() + "; path=/";
+                console.log("Video closed by user, removing video container for 6 hours.");
+            });
+        }
+
+        // Animazione bottone chiusura
+        const videoContainer = document.getElementById("video-container");
+        if (videoContainer && closeBtn) {
+            videoContainer.addEventListener("mouseenter", function() {
+                if (!closeBtn.disabled) closeBtn.classList.remove("opacity-0");
+            });
+            videoContainer.addEventListener("mouseleave", function() {
+                if (!closeBtn.disabled) closeBtn.classList.add("opacity-0");
+            });
+        }
+
+        // Rimuovi se già chiuso
+        window.onload = function() {
+            if (document.cookie.indexOf("videoClosed=true") !== -1) {
+                const videoContainer = document.getElementById("video-container");
+                if (videoContainer) videoContainer.remove();
+            }
+            setTimeout(function() {
+                var iframe = document.getElementById('video-player')?.getElementsByTagName('iframe')[0];
+                if (iframe) {
+                    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    var element = innerDoc.getElementById('play-click-inner');
+                    if (element) {
+                        element.click();
+                    }
+                }
+            }, 10000);
+        };
+
+        //clicca document.getElementById('play-click').click() dopo 10 secondi
+        
+    </script>
+                                    <script async src="https://stpd.cloud/saas/9680" type="324681115882d2c062d5dc85-text/javascript"></script>
+        <!-- Lazy loading -->
+        <script src="https://stpd.cloud/assets/libraries/inview.min.js" type="324681115882d2c062d5dc85-text/javascript"></script>
+        <script type="324681115882d2c062d5dc85-text/javascript">inView.offset(-200);</script>
+            
+    <div class="bg-neutral-800">
+                                                    <div id="tickhosting_com_1200x300_billboard_1">
+                        <script type="324681115882d2c062d5dc85-text/javascript">
+                        googletag.cmd.push(function() { googletag.display('tickhosting_com_1200x300_billboard_1'); });
+                        </script>
+                    </div>
+
+                                                        <div id="modal-portal"></div>
+    <div id="app"></div>
+                                                <div class="ads" style="padding-top: 20px; padding-bottom: 20px;">
+                    <div style="text-align:center;">
+                        <div id='tickhosting_com_1200x300_billboard_2' style="text-align: center;">
+                            <script type="324681115882d2c062d5dc85-text/javascript">
+                                setTimeout(function () {
+                                    var randomiser = (Math.random() + 1).toString(36).substring(7);
+                                    var adID = document.querySelector('#tickhosting_com_1200x300_billboard_2').id = "stpd-" + randomiser;
+
+                                    inView('#' + adID).once('enter', (function() {
+                                        googletag.cmd.push(function() {
+                                            if(window.innerWidth >= 770) {
+                                                googletag.defineSlot('/147246189,23284407551/tickhosting.com_1200x300_billboard_2_desktop', [[970,250],[728,90],[970,90],[1300,300],[980,300],[1200,200],[1100,200],[1000,200],[1000,250],[970,300],[980,240],[980,120],[970,200],[970,120],[728,100],[728,250]], adID).addService(googletag.pubads());        
+                                            } else {   
+                                                googletag.defineSlot('/147246189,23284407551/tickhosting.com_336x600_billboard_2_mobile', [[300,600],[336,600],[300,250],[336,336],[336,280],[320,480],[336,320],[320,320],[300,300],[320,250],[160,600]], adID).addService(googletag.pubads());            
+                                            }
+                                                googletag.display(adID);
+                                                stpd.initializeAdUnit(adID);                    
+                                        });
+                                    }));
+                                }, 60);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                            
+                                                        <!-- Import scripts. -->
+  <script src="/extensions/nebula/libraries/fetchStyle.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+  <script src="/extensions/nebula/libraries/currentPage.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+  <script src="/extensions/nebula/libraries/fetchServerId.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+  <script src="/extensions/nebula/libraries/statusOrb.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+  <script src="/extensions/nebula/libraries/customContextMenu.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+  <script src="/extensions/nebula/libraries/copyapi.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+  <script src="/extensions/nebula/libraries/assignElementIds.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+  <script src="/extensions/nebula/libraries/fileMode.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+  <script src="/extensions/nebula/libraries/insertAboveApp.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+  <script src="/extensions/nebula/libraries/sidebarMiddleClick.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+  <script src="/extensions/nebula/libraries/viewportVisibility.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+  <script src="/extensions/nebula/libraries/floatingWindows.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+        <script src="/extensions/nebula/libraries/assets/popper.min.js" type="324681115882d2c062d5dc85-text/javascript"></script>
+  <script src="/extensions/nebula/libraries/assets/tippy-bundle.umd.min.js" type="324681115882d2c062d5dc85-text/javascript"></script>
+<script src="/extensions/nebula/libraries/errorHandler.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+<script src="/extensions/nebula/libraries/locationchange.js?1733697202" type="324681115882d2c062d5dc85-text/javascript"></script>
+<script src="https://cdn.nebula.style/modules/dart.js?15949" type="324681115882d2c062d5dc85-text/javascript"></script>
+
+<!-- Import stylesheets. -->
+<style>
+  @import url("/extensions/nebula/libraries/statusOrb.css?1733697202");
+  @import url("/extensions/nebula/libraries/fixUserInterfaceBugs.css?1733697202");
+  @import url("/extensions/nebula/libraries/customContextMenu.css?1733697202");
+  @import url("/extensions/nebula/libraries/fileMode.css?1733697202");
+  @import url("/extensions/nebula/libraries/borderRadius.css?1733697202");
+  @import url("/extensions/nebula/libraries/extendedStyles.css?1733697202");
+  @import url("/extensions/nebula/libraries/tagStyling.css?1733697202");
+  @import url("/extensions/nebula/libraries/floatingWindows.css?1733697202");
+  @import url("/extensions/nebula/libraries/patterns.css?1733697202");
+  @import url("/extensions/nebula/libraries/animations.css?1733697202");
+  @import url("/extensions/nebula/libraries/sidebarAnimations.css?1733697202");
+
+      @import url("/extensions/nebula/libraries/serversCards.css?1733697202");
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    @import url("https://cdn.nebula.style/icons/bootstrap/bootstrap-icons.css");
+                   @import url("https://cdn.nebula.style/icons/feather/feather-icons.css");                           </style>  
+  
+<style>
+  /* network */
+  .pl-4.pr-6.text-neutral-400 > .svg-inline--fa.fa-network-wired {display: none;}
+  .pl-4.pr-6.text-neutral-400:has(.svg-inline--fa.fa-network-wired)::after {
+    font-family: bootstrap-icons;
+    content: "\F2EB";
+    font-size: 24px;
+    display: block;
+    color: var(--pagePrimary);
+  }
+
+  /* schedules */
+  .ScheduleRow___StyledDiv-sc-iuk2mh-0.bhGVxk > .svg-inline--fa.fa-calendar-alt {display: none;}
+  .ScheduleRow___StyledDiv-sc-iuk2mh-0.bhGVxk:has(.svg-inline--fa.fa-calendar-alt)::after {
+    font-family: bootstrap-icons;
+    content: "\F208";
+    font-size: 20px;
+    display: block;
+    color: var(--pagePrimary);
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  /* lock */
+  .BackupRow___StyledDiv2-sc-1lzi0pw-2 > .svg-inline--fa.fa-lock {display: none;}
+  .BackupRow___StyledDiv2-sc-1lzi0pw-2:has(.svg-inline--fa.fa-lock)::after {
+    font-family: bootstrap-icons;
+    content: "\F47A";
+    font-size: 20px;
+    display: block;
+    color: var(--pagePrimary);
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  /* databases */
+  .DatabaseRow___StyledDiv7-sc-1t67zwr-14.ixyFMx > .svg-inline--fa.fa-database {display: none;}
+  .DatabaseRow___StyledDiv7-sc-1t67zwr-14.ixyFMx:has(.svg-inline--fa.fa-database)::after {
+    font-family: bootstrap-icons;
+    content: "\F8BE";
+    font-size: 20px;
+    display: block;
+    color: var(--pagePrimary);
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  /* backups */
+  .BackupRow___StyledDiv2-sc-1lzi0pw-2.dQhbBy > .svg-inline--fa.fa-archive {display: none;}
+  .BackupRow___StyledDiv2-sc-1lzi0pw-2.dQhbBy:has(.svg-inline--fa.fa-archive)::after {
+    font-family: bootstrap-icons;
+    content: "\F10C";
+    font-size: 20px;
+    display: block;
+    color: var(--pagePrimary);
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  /* subusers */
+  .UserRow___StyledImg-sc-hg2wjz-2 {display: none;}
+  .UserRow___StyledDiv-sc-hg2wjz-1.bnIPCP {
+    background-color: var(--pageSecondaryActive);
+    border-color: var(--pageSecondaryActive);
+  }
+  .UserRow___StyledDiv-sc-hg2wjz-1.bnIPCP::after {
+    content: '\F4DA';
+    display: block;
+    font-size: 24px;
+    font-family: bootstrap-icons;
+    margin-left: 6px;
+    color: var(--pagePrimary);
+  }
+</style>
+<div
+  class="fixed-background"></div>
+<div id="sidebar" class="sidebar">
+    <div class="sidebarContentContainer">
+  <div class="sidebarContent">
+
+
+    
+    <!-- Item: Portal -->
+    <div class="tooltip-toggle">
+      <span class="tooltip">Portal</span>
+      <button data-tippy-content="Knowledge Base" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/billing/my-plans`)" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('https://tickhosting.com/portal/', '_blank')" id="sidebarMainDiscord" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                  <i class="sidebarIcon fa-solid fa-home"></i>
+                          <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Portal</span>
+              </button>
+    </div>
+
+    <!-- Item: Billing -->
+    <div class="tooltip-toggle">
+      <span class="tooltip">Premium Server</span>
+      <button data-tippy-content="Billing" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/billing`)" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('billingBilling')" id="sidebarMainBilling" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                  <i class="sidebarIcon fa-solid fa-server"></i>
+                          <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Premium Server</span>
+              </button>
+    </div>
+
+    <!-- Item: Free Server -->
+    <div class="tooltip-toggle">
+      <span class="tooltip">Free Server</span>
+      <button data-tippy-content="Free Server" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('freeservers')" id="sidebarMainFreeServers" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                  <i class="sidebarIcon fa-solid fa-tag"></i>
+                          <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Free Server</span>
+              </button>
+    </div>
+
+    <!-- Item: Balance -->
+    <div class="tooltip-toggle">
+      <span class="tooltip">Balance</span>
+      <button data-tippy-content="Balance" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/billing/balance`)" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('billingBalance')" id="sidebarMainBalance" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                  <i class="sidebarIcon fa-solid fa-wallet"></i>
+                          <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Balance</span>
+              </button>
+    </div>
+
+    <!-- Item: Cart -->
+    <div class="tooltip-toggle">
+      <span class="tooltip">Cart</span>
+      <button data-tippy-content="Cart" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/billing/cart`)" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('billingCart')" id="sidebarMainCart" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                  <i class="sidebarIcon fa-solid fa-cart-shopping"></i>
+                          <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Cart</span>
+              </button>
+    </div>
+
+    <!-- Item: My Plans -->
+    <div class="tooltip-toggle">
+      <span class="tooltip">My Plans</span>
+      <button data-tippy-content="My Plans" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/billing/my-plans`)" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('billingMyPlans')" id="sidebarMainPlans" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                  <i class="sidebarIcon fa-solid fa-receipt"></i>
+                          <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">My Plans</span>
+              </button>
+    </div>
+
+    <!-- Item: Knowledge -->
+    <div class="tooltip-toggle">
+      <span class="tooltip">Tutorials</span>
+      <button data-tippy-content="Knowledge Base" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/billing/my-plans`)" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('https://help.tickhosting.com/', '_blank')" id="sidebarMainDiscord" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                  <i class="sidebarIcon fa-solid fa-book"></i>
+                          <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Tutorials</span>
+              </button>
+    </div>
+
+    <!-- Item: Discord -->
+    <div class="tooltip-toggle">
+      <span class="tooltip">Discord</span>
+      <button data-tippy-content="My Plans" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/billing/my-plans`)" onclick="if (!window.__cfRLUnblockHandlers) return false; window.location.href='https://discord.gg/NsDKGWAE4Q'" id="sidebarMainDiscord" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                  <i class="sidebarIcon fa-brands fa-discord"></i>
+                          <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Discord</span>
+              </button>
+    </div>
+
+      <a href="/billing/my-plans" style="display: none;">My plans</a>
+      <a href="/billing/cart" style="display: none;">Cart</a>
+      <a href="/billing/balance" style="display: none;">Balance</a>
+      <a href="/freeservers" style="display: none;">Free Servers</a>
+      <a href="/billing" style="display: none;">Billing</a>
+      <a href="/" style="display: none;">Home</a>
+
+
+    <!-- Item: Home -->
+    <div class="tooltip-toggle">
+      <span class="tooltip">Home</span>
+      <button data-tippy-content="Home" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/`)" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('home')" id="sidebarMainHome" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                <i class="sidebarIcon ff ff-home"></i>
+                <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Home</span>      </button>
+    </div>
+
+    <!-- Item: Spacer -->
+    <div class="sidebarSpacer"></div>
+    
+    <!-- Category: Server Management -->
+    <div id="sidebarCategoryServer" class="sidebarCategory">
+
+      <div id="sidebarServerLoader" style="display: none">
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+      </div>
+
+      <!-- Item: Server Info (hidden by default, shown dynamically) -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Server</span>
+        <button data-tippy-content="Server" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/server/${fetchServerId()}/info`)" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('serverInfo')" id="sidebarServerInfo" class="sidebarButton" style="display: none;" data-cf-modified-324681115882d2c062d5dc85-="">
+                    <i class="sidebarIcon fa-solid fa-server"></i>
+                    <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Server</span>        </button>
+      </div>
+      
+      <!-- Item: Terminal/Console (always present, label changes dynamically) -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Console</span>
+        <button data-tippy-content="Console" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/server/${fetchServerId()}`)" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('serverTerminal')" id="sidebarServerTerminal" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                    <i class="sidebarIcon ff ff-terminal"></i>
+                    <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Console</span>        </button>
+      </div>
+      
+      <!-- Item: File Manager -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Files</span>
+        <button data-tippy-content="Files" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/server/${fetchServerId()}/files`)" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('serverFiles')" id="sidebarServerFilemanager" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                    <i class="sidebarIcon ff ff-folder"></i>
+                    <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Files</span>        </button>
+      </div>
+
+
+              <!-- Pulsanti Personalizzati Server -->
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Options</span>
+            <button data-tippy-content="Options" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/properties', '_self', 'server', 'Options')" id="sidebarCustomServerOptions" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/properties" data-custom-name="Options" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fa solid fa-wrench"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Options</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Mods</span>
+            <button data-tippy-content="Mods" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/mods', '_self', 'server', 'Mods')" id="sidebarCustomServerMods" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/mods" data-custom-name="Mods" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fa-solid fa-cubes"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Mods</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Versions</span>
+            <button data-tippy-content="Versions" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/minecraft/versions', '_self', 'server', 'Versions')" id="sidebarCustomServerVersions" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/minecraft/versions" data-custom-name="Versions" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fa-solid fa-code-fork"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Versions</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Plugins</span>
+            <button data-tippy-content="Plugins" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/plugin-manager', '_self', 'server', 'Plugins')" id="sidebarCustomServerPlugins" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/plugin-manager" data-custom-name="Plugins" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fa-solid fa-puzzle-piece"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Plugins</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Player Manager</span>
+            <button data-tippy-content="Player Manager" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/minecraft/player-manager', '_self', 'server', 'Player Manager')" id="sidebarCustomServerPlayerManager" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/minecraft/player-manager" data-custom-name="Player Manager" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fa-solid fa-users"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Player Manager</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Databases</span>
+            <button data-tippy-content="Databases" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/databases', '_self', 'server', 'Databases')" id="sidebarCustomServerDatabases" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/databases" data-custom-name="Databases" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fas fa-database"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Databases</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Schedules</span>
+            <button data-tippy-content="Schedules" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/schedules', '_self', 'server', 'Schedules')" id="sidebarCustomServerSchedules" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/schedules" data-custom-name="Schedules" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fas fa-calendar"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Schedules</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Users</span>
+            <button data-tippy-content="Users" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/users', '_self', 'server', 'Users')" id="sidebarCustomServerUsers" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/users" data-custom-name="Users" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fas fa-users"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Users</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Backups</span>
+            <button data-tippy-content="Backups" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/backups', '_self', 'server', 'Backups')" id="sidebarCustomServerBackups" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/backups" data-custom-name="Backups" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fas fa-archive"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Backups</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Subdomain</span>
+            <button data-tippy-content="Subdomain" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/subdomain', '_self', 'server', 'Subdomain')" id="sidebarCustomServerSubdomain" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/subdomain" data-custom-name="Subdomain" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fa-solid fa-ethernet"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Subdomain</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Network</span>
+            <button data-tippy-content="Network" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/network', '_self', 'server', 'Network')" id="sidebarCustomServerNetwork" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/network" data-custom-name="Network" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fas fa-globe"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Network</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Startup</span>
+            <button data-tippy-content="Startup" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/startup', '_self', 'server', 'Startup')" id="sidebarCustomServerStartup" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/startup" data-custom-name="Startup" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fas fa-rocket"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Startup</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Staff</span>
+            <button data-tippy-content="Staff" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/staff', '_self', 'server', 'Staff')" id="sidebarCustomServerStaff" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/staff" data-custom-name="Staff" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fas fa-user-tie"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Staff</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Settings</span>
+            <button data-tippy-content="Settings" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/settings', '_self', 'server', 'Settings')" id="sidebarCustomServerSettings" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/settings" data-custom-name="Settings" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fa-solid fa-cog"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Settings</span>
+                          </button>
+          </div>
+                  <div class="tooltip-toggle">
+            <span class="tooltip">Activity</span>
+            <button data-tippy-content="Activity" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();handleCustomButtonClick('/server/{SERVER_ID}/activity', '_self', 'server', 'Activity')" id="sidebarCustomServerActivity" class="sidebarButton" data-custom-url="/server/{SERVER_ID}/activity" data-custom-name="Activity" data-cf-modified-324681115882d2c062d5dc85-="">
+              <i class="sidebarIcon fas fa-chart-line"></i>
+                              <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Activity</span>
+                          </button>
+          </div>
+              
+      
+
+      
+
+      
+      
+            
+    </div>
+    
+    <!-- Spacer between Server and Account sections (dynamic - only when server is active) -->
+    <div id="serverAccountSpacer" class="sidebarSpacer" style="display: none;"></div>
+    
+    <!-- Category: Account -->
+    <div id="sidebarCategoryAccount" class="sidebarCategory">
+      
+      <!-- Item: Account -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Account</span>
+        <button data-tippy-content="Account" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/account`)" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('accountAccount')" id="sidebarAccountAccount" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                    <i class="sidebarIcon ff ff-settings"></i>
+                    <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Account</span>        </button>
+      </div>
+      
+      <!-- Item: API Credentials -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">API</span>
+        <button data-tippy-content="API" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/account/api`)" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('accountApi')" id="sidebarAccountApi" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                    <i class="sidebarIcon ff ff-link"></i>
+                    <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">API</span>        </button>
+      </div>
+      
+      <!-- Item: SSH Keys -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">SSH</span>
+        <button data-tippy-content="SSH" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/account/ssh`)" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('accountSsh')" id="sidebarAccountSsh" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                    <i class="sidebarIcon ff ff-key"></i>
+                    <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">SSH Keys</span>        </button>
+      </div>
+      
+      <!-- Item: Activity -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Activity</span>
+        <button data-tippy-content="Activity" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/account/activity`)" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('accountActivity')" id="sidebarAccountActivity" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                    <i class="sidebarIcon ff ff-activity"></i>
+                    <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Activity</span>        </button>
+      </div>
+      
+            
+    </div>
+
+    <!-- Category: General -->
+    <div id="sidebarCategoryGeneral">
+
+      
+      
+            
+      <!-- Item: Account -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Account</span>
+        <button data-tippy-content="Account" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showContextMenu(event, `/account`)" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('accountAccount')" id="sidebarMainAccount" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                    <i class="sidebarIcon ff ff-user"></i>
+                    <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Account</span>        </button>
+      </div>
+      
+            
+      <!-- Item: Log out -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Logout</span>
+        <button data-tippy-content="Logout" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; return false;" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('logout')" id="sidebarMainLogout" class="sidebarButton" data-cf-modified-324681115882d2c062d5dc85-="">
+                    <i class="sidebarIcon ff ff-log-out"></i>
+                    <span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Logout</span>        </button>
+      </div>
+    
+    </div> 
+    
+  </div>
+</div>
+
+<script type="324681115882d2c062d5dc85-text/javascript">
+// Ensure any collection-like payload is converted to a plain array
+function toArrayMaybe(list) {
+  if (Array.isArray(list)) return list;
+  if (!list) return [];
+  if (Array.isArray(list?.data)) return list.data;
+  if (typeof list === 'object') {
+    try {
+      return Object.values(list);
+    } catch (_) {
+      return [];
+    }
+  }
+  return [];
+}
+
+// Helpers to detect common payload shapes
+function isArrayLikeCollection(v) {
+  return Array.isArray(v) || (v && typeof v === 'object' && Array.isArray(v.data));
+}
+
+function hasSectionGroups(obj) {
+  if (!obj || typeof obj !== 'object') return false;
+  return (
+    isArrayLikeCollection(obj.server) ||
+    isArrayLikeCollection(obj.account) ||
+    isArrayLikeCollection(obj.global)
+  );
+}
+
+function findButtonsContainer(data) {
+  // Try a series of common containers where the sections may live
+  const candidates = [
+    data,
+    data?.data,
+    data?.customSidebarButtons,
+    data?.buttons,
+    data?.custom_buttons,
+    data?.customButtons,
+    data?.data?.customSidebarButtons,
+    data?.data?.buttons,
+    data?.data?.custom_buttons,
+    data?.data?.customButtons,
+  ];
+
+  for (const candidate of candidates) {
+    if (hasSectionGroups(candidate)) return candidate;
+  }
+  return null;
+}
+
+function sidebarButtonEvent(button) {
+  // Only refresh custom buttons when switching to/from server pages, not on every button click
+  const currentPath = window.location.pathname;
+  const isCurrentlyServerPage = currentPath.includes('/server/');
+  
+  // Check if this click will change server context
+  if ((button.startsWith('server') && !isCurrentlyServerPage) || 
+      (!button.startsWith('server') && isCurrentlyServerPage)) {
+    // Reset the loaded server ID when changing context
+    window.lastLoadedServerId = null;
+    setTimeout(() => {
+      if (typeof refreshCustomButtons === 'function') {
+        refreshCustomButtons();
+      }
+    }, 200);
+  } else if (button.startsWith('server') && isCurrentlyServerPage) {
+    // If we're already on a server page but clicking a different server button,
+    // also reset to force refresh
+    window.lastLoadedServerId = null;
+    setTimeout(() => {
+      if (typeof refreshCustomButtons === 'function') {
+        refreshCustomButtons();
+      }
+    }, 200);
+  }
+  
+  // ...existing code for other buttons...
+  if (button === 'serverModpack') {
+    // Custom logic for Modpack button
+    window.location.href = `/server/${fetchServerId()}/modpack`;
+    return;
+  }
+  if (button === 'serverMods') {
+    // Custom logic for Mods button
+    window.location.href = `/server/${fetchServerId()}/mods`;
+    return;
+  }
+  if (button === 'serverPlayerManager') {
+    // Custom logic for Player Manager button
+    window.location.href = `/server/${fetchServerId()}/minecraft/player-manager`;
+    return;
+  }
+  // ...existing code...
+}
+
+function buildCustomButtonUrl(templateUrl, target) {
+  // Get current user info from meta tags or global variables
+  const userId = '67081';
+  const username = 'domin211';
+  const serverId = fetchServerId() || '';
+  
+  // Replace variables in the URL
+  let finalUrl = templateUrl;
+  finalUrl = finalUrl.replace(/{SERVER_ID}/g, serverId);
+  finalUrl = finalUrl.replace(/{USER_ID}/g, userId);
+  finalUrl = finalUrl.replace(/{USERNAME}/g, username);
+  
+  return finalUrl;
+}
+
+// Utility function for React components to register their router
+window.registerReactRouter = function(navigateFunction) {
+  if (!window.ReactRouter) {
+    window.ReactRouter = {};
+  }
+  window.ReactRouter.navigate = navigateFunction;
+};
+
+// Utility function to check if React Router is available
+window.hasReactRouter = function() {
+  return !!(window.ReactRouter && window.ReactRouter.navigate);
+};
+
+function handleCustomButtonClick(templateUrl, target, section, buttonName) {
+  const finalUrl = buildCustomButtonUrl(templateUrl, target);
+  
+  // Store which custom button was clicked for state management
+  const buttonInfo = {
+    section: section,
+    name: buttonName,
+    url: finalUrl
+  };
+  
+  window.activeCustomButton = buttonInfo;
+  
+  // Also store in sessionStorage for persistence across page loads
+  sessionStorage.setItem('lastClickedCustomButton', JSON.stringify(buttonInfo));
+  
+  // For external URLs, clear the storage after 30 seconds (since we can't detect when they return)
+  if (finalUrl.startsWith('http') && !finalUrl.includes(window.location.hostname)) {
+    setTimeout(() => {
+      sessionStorage.removeItem('lastClickedCustomButton');
+    }, 30000); // 30 seconds
+  }
+  
+  // Immediately activate the button
+  const buttonId = `sidebarCustom${section.charAt(0).toUpperCase() + section.slice(1)}${buttonName.charAt(0).toUpperCase() + buttonName.slice(1)}`;
+  const button = document.getElementById(buttonId);
+  if (button) {
+    // Reset all custom buttons first
+    document.querySelectorAll('[id^="sidebarCustom"]').forEach(btn => {
+      btn.className = 'sidebarButton';
+    });
+    // Activate the clicked button
+    button.className = 'sidebarButton sidebarButtonSelected';
+  }
+  
+  // Navigate to the URL
+  if (target === '_blank') {
+    window.open(finalUrl, target);
+  } else {
+    // Check if this is an internal URL that can use React Router
+    if (finalUrl.startsWith('/') || finalUrl.includes(window.location.hostname)) {
+      // Try to use React Router for SPA navigation
+      if (window.ReactRouter && window.ReactRouter.navigate) {
+        window.ReactRouter.navigate(finalUrl);
+      } else if (window.history && window.history.pushState) {
+        // Fallback to History API for SPA-like navigation
+        
+        // Extract the path from full URL if needed
+        let path = finalUrl;
+        if (finalUrl.includes(window.location.hostname)) {
+          const url = new URL(finalUrl);
+          path = url.pathname + url.search + url.hash;
+        }
+        
+        // Push the new state
+        window.history.pushState({}, '', path);
+        
+        // Trigger a popstate event to notify React Router or other listeners
+        window.dispatchEvent(new PopStateEvent('popstate', { state: {} }));
+        
+        // Also dispatch a custom navigation event
+        window.dispatchEvent(new CustomEvent('spa-navigate', { 
+          detail: { path: path, buttonInfo: buttonInfo } 
+        }));
+      } else {
+        // Fallback to traditional navigation
+        window.location.href = finalUrl;
+      }
+    } else {
+      // External URL - use traditional navigation
+      window.location.href = finalUrl;
+    }
+  }
+}
+
+// Add listener for URL changes to update button states
+window.addEventListener('popstate', function() {
+  // Reset server ID cache when navigating
+  const currentPath = window.location.pathname;
+  const serverMatch = currentPath.match(/\/server\/([^\/]+)/);
+  const currentServerId = serverMatch ? serverMatch[1] : null;
+  
+  // Always reset if navigating to a server page, regardless of previous state
+  if (currentServerId) {
+    window.lastLoadedServerId = null;
+  }
+  
+  setTimeout(() => {
+    if (typeof updateCustomButtonStates === 'function') {
+      updateCustomButtonStates();
+    }
+    updateServerAccountSpacer();
+    
+    // Always refresh custom buttons if we're on a server page
+    if (currentServerId) {
+      if (typeof refreshCustomButtons === 'function') {
+        refreshCustomButtons();
+      }
+    }
+  }, 100);
+});
+
+// Listen for custom SPA navigation events
+window.addEventListener('spa-navigate', function(event) {
+  
+  // Reset server ID cache when navigating
+  const currentPath = window.location.pathname;
+  const serverMatch = currentPath.match(/\/server\/([^\/]+)/);
+  const currentServerId = serverMatch ? serverMatch[1] : null;
+  
+  // Always reset if navigating to a server page, regardless of previous state
+  if (currentServerId) {
+    window.lastLoadedServerId = null;
+  }
+  
+  setTimeout(() => {
+    if (typeof updateCustomButtonStates === 'function') {
+      updateCustomButtonStates();
+    }
+    updateServerAccountSpacer();
+    
+    // Always refresh custom buttons if we're on a server page
+    if (currentServerId) {
+      if (typeof refreshCustomButtons === 'function') {
+        refreshCustomButtons();
+      }
+    }
+  }, 100);
+});
+
+// Also listen for location changes (for SPA navigation)
+(function() {
+  const originalPushState = history.pushState;
+  const originalReplaceState = history.replaceState;
+  
+  history.pushState = function() {
+    originalPushState.apply(history, arguments);
+    
+    // Reset server ID cache when navigating
+    setTimeout(() => {
+      const currentPath = window.location.pathname;
+      const serverMatch = currentPath.match(/\/server\/([^\/]+)/);
+      const currentServerId = serverMatch ? serverMatch[1] : null;
+      
+      // Always reset if navigating to a server page, regardless of previous state
+      if (currentServerId) {
+        window.lastLoadedServerId = null;
+      }
+      
+      if (typeof updateCustomButtonStates === 'function') {
+        updateCustomButtonStates();
+      }
+      updateServerAccountSpacer();
+      
+      // Always refresh custom buttons if we're on a server page
+      if (currentServerId) {
+        if (typeof refreshCustomButtons === 'function') {
+          refreshCustomButtons();
+        }
+      }
+    }, 100);
+  };
+  
+  history.replaceState = function() {
+    originalReplaceState.apply(history, arguments);
+    
+    // Reset server ID cache when navigating
+    setTimeout(() => {
+      const currentPath = window.location.pathname;
+      const serverMatch = currentPath.match(/\/server\/([^\/]+)/);
+      const currentServerId = serverMatch ? serverMatch[1] : null;
+      
+      // Always reset if navigating to a server page, regardless of previous state
+      if (currentServerId) {
+        window.lastLoadedServerId = null;
+      }
+      
+      if (typeof updateCustomButtonStates === 'function') {
+        updateCustomButtonStates();
+      }
+      updateServerAccountSpacer();
+      
+      // Always refresh custom buttons if we're on a server page
+      if (currentServerId) {
+        if (typeof refreshCustomButtons === 'function') {
+          refreshCustomButtons();
+        }
+      }
+    }, 100);
+  };
+})();
+
+// Force update on page load
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(() => {
+    if (typeof updateCustomButtonStates === 'function') {
+      updateCustomButtonStates();
+    }
+    updateServerAccountSpacer();
+    
+    // Check if we're on a server page and if custom buttons are already present
+    const currentPath = window.location.pathname;
+    const serverMatch = currentPath.match(/\/server\/([^\/]+)/);
+    if (serverMatch) {
+      const serverId = serverMatch[1];
+      const existingServerButtons = document.querySelectorAll('#sidebarCategoryServer [id^="sidebarCustomServer"]');
+      
+      if (existingServerButtons.length > 0) {
+        // Mark as loaded to prevent unnecessary refresh
+        window.lastLoadedServerId = serverId;
+      } else {
+        // Only refresh if no custom buttons are present
+        if (typeof refreshCustomButtons === 'function') {
+          refreshCustomButtons();
+        }
+      }
+    }
+  }, 500);
+});
+
+// Also force update after a short delay for dynamic content
+setTimeout(() => {
+  if (typeof updateCustomButtonStates === 'function') {
+    updateCustomButtonStates();
+  }
+  updateServerAccountSpacer(); // Also update spacer
+}, 1000);
+
+// Function to manage the spacer between server and account sections
+function updateServerAccountSpacer() {
+  const spacer = document.getElementById('serverAccountSpacer');
+  if (!spacer) return;
+  
+  const currentPath = window.location.pathname;
+  const isServerPage = currentPath.includes('/server/');
+  
+  
+  if (isServerPage) {
+    spacer.style.display = 'block';
+  } else {
+    spacer.style.display = 'none';
+  }
+}
+
+function updateCustomButtonStates() {
+  // Reset all custom button states
+  document.querySelectorAll('[id^="sidebarCustom"]').forEach(button => {
+    button.className = 'sidebarButton';
+  });
+  
+  // Get current URL for comparison
+  const currentUrl = window.location.href;
+  const currentPath = window.location.pathname;
+  
+  // Debug: log current URL
+  
+  // Check if we came from a custom button click (stored in sessionStorage)
+  const lastClickedButton = sessionStorage.getItem('lastClickedCustomButton');
+  if (lastClickedButton) {
+    const buttonInfo = JSON.parse(lastClickedButton);
+    const buttonId = `sidebarCustom${buttonInfo.section.charAt(0).toUpperCase() + buttonInfo.section.slice(1)}${buttonInfo.name.charAt(0).toUpperCase() + buttonInfo.name.slice(1)}`;
+    const button = document.getElementById(buttonId);
+    if (button) {
+      button.className = 'sidebarButton sidebarButtonSelected';
+      return; // Exit early if we found a match from session storage
+    }
+  }
+  
+  document.querySelectorAll('[data-custom-url]').forEach(button => {
+    const templateUrl = button.getAttribute('data-custom-url');
+    const finalUrl = buildCustomButtonUrl(templateUrl, '_self');
+    
+    
+    // For external URLs, we can't detect if we're on them, so we skip this check
+    if (finalUrl.startsWith('http') && !finalUrl.includes(window.location.hostname)) {
+      return;
+    }
+    
+    // Multiple matching strategies for internal URLs
+    let isMatch = false;
+    
+    // Strategy 1: Exact URL match
+    if (currentUrl === finalUrl) {
+      isMatch = true;
+    }
+    
+    // Strategy 2: Path contains the final URL path
+    try {
+      const finalUrlObj = new URL(finalUrl);
+      if (currentPath === finalUrlObj.pathname) {
+        isMatch = true;
+      }
+    } catch (e) {
+      // If finalUrl is relative, try direct comparison
+      if (currentPath.includes(finalUrl) || currentUrl.includes(finalUrl)) {
+        isMatch = true;
+      }
+    }
+    
+    // Strategy 3: Check if current URL starts with the button URL (for sub-pages)
+    if (currentUrl.startsWith(finalUrl)) {
+      isMatch = true;
+    }
+    
+    if (isMatch) {
+      button.className = 'sidebarButton sidebarButtonSelected';
+    }
+  });
+}
+
+// Function to update custom buttons when server changes
+function refreshCustomButtons() {
+  const currentPath = window.location.pathname;
+  
+  // Check if we're on a server page
+  const serverMatch = currentPath.match(/\/server\/([^\/]+)/);
+  if (!serverMatch) {
+    return;
+  }
+  
+  const serverId = serverMatch[1];
+  
+  // Prevent multiple simultaneous requests
+  if (window.customButtonsLoading) {
+    return;
+  }
+  
+  // Only refresh if server has actually changed
+  if (window.lastLoadedServerId === serverId) {
+    return;
+  }
+  
+  window.customButtonsLoading = true;
+  
+  // Add timestamp to prevent caching
+  const timestamp = new Date().getTime();
+  const url = `/api/client/servers/${serverId}/custom-buttons?t=${timestamp}`;
+  
+  // Make an AJAX request to get the updated custom buttons for this server
+  fetch(url, {
+    method: 'GET',
+    headers: {
+      'X-Requested-With': 'XMLHttpRequest',
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || ''
+    },
+    credentials: 'same-origin'
+  })
+  .then(response => {
+    if (!response.ok) {
+      // Try to get the error details
+      return response.text().then(text => {
+        throw new Error(`HTTP error! status: ${response.status}, body: ${text}`);
+      });
+    }
+    return response.json();
+  })
+  .then(data => {
+
+  // Normalize payload shape across different API responses
+  // Accept arrays or paginator-like objects (with data: [...]) under
+  // server/account/global inside common containers.
+  let payload = findButtonsContainer(data) || {};
+
+  // If found container but some sections are still nested as objects,
+  // leave them as-is and let toArrayMaybe handle extraction downstream.
+
+  updateCustomButtonsDOM(payload);
+    // Mark as loaded only after DOM update kicked off
+    window.lastLoadedServerId = serverId;
+  })
+  .catch(error => {
+    // Fallback: just update button states without refreshing content
+    if (typeof updateCustomButtonStates === 'function') {
+      updateCustomButtonStates();
+    }
+  })
+  .finally(() => {
+    window.customButtonsLoading = false;
+  });
+}
+
+// Function to update the DOM with new custom buttons
+function updateCustomButtonsDOM(customButtons) {
+  
+  // Update server section custom buttons
+  updateSectionCustomButtons('server', toArrayMaybe(customButtons.server));
+  
+  // Update account section custom buttons  
+  updateSectionCustomButtons('account', toArrayMaybe(customButtons.account));
+  
+  // Update global section custom buttons
+  updateSectionCustomButtons('global', toArrayMaybe(customButtons.global));
+  
+  
+  // After updating, also update button states
+  setTimeout(() => {
+    if (typeof updateCustomButtonStates === 'function') {
+      updateCustomButtonStates();
+    }
+    
+    // Re-initialize tippy tooltips for new buttons if enabled
+      }, 50);
+}
+
+// Function to update custom buttons for a specific section
+function updateSectionCustomButtons(section, buttons) {
+  const normalized = toArrayMaybe(buttons);
+  
+  // Find the container for this section
+  let container;
+  if (section === 'server') {
+    container = document.querySelector('#sidebarCategoryServer');
+  } else if (section === 'account') {
+    container = document.querySelector('#sidebarCategoryAccount');
+  } else if (section === 'global') {
+    container = document.querySelector('#sidebarCategoryGeneral');
+  }
+  
+  if (!container) {
+
+    return;
+  }
+  
+  // Get existing custom buttons for this section
+  const existingCustomButtons = container.querySelectorAll(`[id^="sidebarCustom${section.charAt(0).toUpperCase() + section.slice(1)}"]`);
+
+  
+  // Prepare a clean list of valid buttons
+  const valid = normalized
+    .map(b => {
+      if (!b || typeof b !== 'object') return null;
+      const name = String(b.name || '').trim();
+      const label = String(b.label || b.name || '').trim();
+      const url = String(b.url || '').trim();
+      const icon = String(b.icon || 'fa-solid fa-link').trim();
+      const target = b.target && typeof b.target === 'string' ? b.target : '_self';
+      if (!name || !label || !url) return null;
+      // Sanitize name for id usage (letters/numbers only)
+      const safeName = name.replace(/[^a-zA-Z0-9]/g, '');
+      return { ...b, name: safeName || name, label, url, icon, target };
+    })
+    .filter(Boolean);
+
+  // Compare existing buttons with new buttons to see if update is needed
+  const existingButtonNames = Array.from(existingCustomButtons).map(btn => btn.getAttribute('data-custom-name')).filter(Boolean);
+  const newButtonNames = valid.map(btn => btn.name);
+  
+  // Check if the buttons are the same (same names and same order)
+  const buttonsChanged = existingButtonNames.length !== newButtonNames.length || 
+                        !existingButtonNames.every((name, index) => name === newButtonNames[index]);
+  
+  if (!buttonsChanged && existingCustomButtons.length > 0) {
+
+    return;
+  }
+
+  
+  // Remove existing custom buttons for this section
+  existingCustomButtons.forEach(button => {
+
+    const parentDiv = button.closest('.tooltip-toggle');
+    if (parentDiv) {
+      parentDiv.remove();
+    }
+  });
+  
+  // Add new custom buttons
+  // Determine anchor and method once; reverse iteration when anchored to preserve order
+  let insertPosition;
+  let anchorMethod = null; // 'afterend' or 'beforebegin'
+  if (section === 'server') {
+    insertPosition = container.querySelector('#sidebarServerFilemanager')?.closest('.tooltip-toggle');
+    anchorMethod = 'afterend';
+  } else if (section === 'account') {
+    insertPosition = container.querySelector('#sidebarAccountActivity')?.closest('.tooltip-toggle');
+    anchorMethod = 'afterend';
+  } else if (section === 'global') {
+    insertPosition = container.querySelector('#sidebarMainLogout')?.closest('.tooltip-toggle');
+    anchorMethod = 'beforebegin';
+  }
+
+  const toInsert = insertPosition && anchorMethod === 'afterend' ? [...valid].reverse() : valid;
+
+  toInsert.forEach((button, index) => {
+
+    const buttonHtml = createCustomButtonHTML(button, section);
+    if (buttonHtml) {
+      if (insertPosition && anchorMethod) {
+        if (anchorMethod === 'beforebegin') {
+
+          insertPosition.insertAdjacentHTML('beforebegin', buttonHtml);
+        } else {
+
+          insertPosition.insertAdjacentHTML('afterend', buttonHtml);
+        }
+      } else {
+        // Fallback: append to container (forward order)
+        container.insertAdjacentHTML('beforeend', buttonHtml);
+      }
+
+      // Verify the button was actually added
+      const addedButton = document.getElementById(`sidebarCustom${section.charAt(0).toUpperCase() + section.slice(1)}${button.name.charAt(0).toUpperCase() + button.name.slice(1)}`);
+      if (addedButton) {
+      } else {
+        console.error(`Failed to add button: ${button.name}`);
+      }
+    } else {
+      console.error(`Failed to create HTML for button: ${button.name}`);
+    }
+  });
+}
+
+// Function to create HTML for a custom button
+function createCustomButtonHTML(button, section) {
+  const sectionCapitalized = section.charAt(0).toUpperCase() + section.slice(1);
+  const rawName = (button.name || 'custom').toString();
+  const safeName = rawName.replace(/[^a-zA-Z0-9]/g, '') || 'custom';
+  const buttonName = safeName.charAt(0).toUpperCase() + safeName.slice(1);
+  const buttonId = `sidebarCustom${sectionCapitalized}${buttonName}`;
+  const label = (button.label || rawName || 'Custom').toString();
+  const url = (button.url || '#').toString();
+  const icon = (button.icon || 'fa-solid fa-link').toString();
+  const target = (button.target || '_self').toString();
+
+  // Basic escaping to avoid breaking HTML; DOMPurify not available, so keep simple
+  const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  
+  // Check if sidebar is in full mode
+  const isFullSidebar = document.querySelector('.wideSidebarSpan') !== null;
+  const fullSidebarContent = isFullSidebar ? `<span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">${esc(label)}</span>` : '';
+  
+  return `
+    <div class="tooltip-toggle">
+  <span class="tooltip">${esc(label)}</span>
+  <button data-tippy-content="${esc(label)}" 
+      onclick="sidebarRefresh();handleCustomButtonClick('${esc(url)}', '${esc(target)}', '${section}', '${safeName}')" 
+      id="${buttonId}" 
+              class="sidebarButton"
+      data-custom-url="${esc(url)}"
+      data-custom-name="${safeName}">
+    <i class="sidebarIcon ${esc(icon)}"></i>
+        ${fullSidebarContent}
+      </button>
+    </div>
+  `;
+}
+</script>
+
+</div>
+
+<!-- Files Context Menu -->
+<div id="filesContextMenu" class="context-container" style="width:unset;display:none">
+  <div class="context-wrapper">
+    <!-- Rename -->
+    <button id="filesContextButton" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-cursor-text" viewBox="0 0 16 16"><path d="M5 2a.5.5 0 0 1 .5-.5c.862 0 1.573.287 2.06.566.174.099.321.198.44.286.119-.088.266-.187.44-.286A4.17 4.17 0 0 1 10.5 1.5a.5.5 0 0 1 0 1c-.638 0-1.177.213-1.564.434a3.5 3.5 0 0 0-.436.294V7.5H9a.5.5 0 0 1 0 1h-.5v4.272c.1.08.248.187.436.294.387.221.926.434 1.564.434a.5.5 0 0 1 0 1 4.17 4.17 0 0 1-2.06-.566A5 5 0 0 1 8 13.65a5 5 0 0 1-.44.285 4.17 4.17 0 0 1-2.06.566.5.5 0 0 1 0-1c.638 0 1.177-.213 1.564-.434.188-.107.335-.214.436-.294V8.5H7a.5.5 0 0 1 0-1h.5V3.228a3.5 3.5 0 0 0-.436-.294A3.17 3.17 0 0 0 5.5 2.5.5.5 0 0 1 5 2m2.648 10.645"/></svg>
+      Rename
+    </button><br>
+    <!-- Move -->
+    <button id="filesContextButton2" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-arrows-move" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8"/></svg>
+      Move
+    </button><br>
+    <!-- Permissions -->
+    <button id="filesContextButton3" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16"><path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5"/><path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>
+      Permissions
+    </button><br>
+    <!-- Duplicate (copy) -->
+    <button id="filesContextButton4" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg>
+      Duplicate
+    </button><br>
+    <!-- Archive -->
+    <button id="filesContextButton5" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16"><path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/></svg>
+      Archive
+    </button><br>
+    <!-- Unarchive -->
+    <button id="filesContextButton6" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16"><path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/></svg>
+      Unarchive
+    </button><br>
+    <!-- Download -->
+    <button id="filesContextButton7" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-cloud-download" viewBox="0 0 16 16"><path d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383"/><path d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708z"/></svg>
+      Download
+    </button><br>
+    <!-- Restore -->
+    <button id="filesContextButton9" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/><path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/></svg>
+      Restore
+    </button><br>
+    <!-- Lock -->
+    <button id="filesContextButton10" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1"/></svg>
+      Lock
+    </button><br>
+    <!-- Unlock -->
+    <button id="filesContextButton11" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-unlock" viewBox="0 0 16 16"><path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2M3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1z"/></svg>
+      Unlock
+    </button><br>
+    <!-- Delete -->
+    <button id="filesContextButton8" class="context-button context-button-danger">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16"><path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/></svg>
+      Delete
+    </button><br>
+
+
+    <div class="item-loader">
+      <button class="context-button context-preloader anim-delay-0">loading..</button><br>
+      <button class="context-button context-preloader anim-delay-1">loading..</button><br>
+      <button class="context-button context-preloader anim-delay-2">loading..</button><br>
+      <button class="context-button context-preloader anim-delay-3">loading..</button><br>
+      <button class="context-button context-preloader anim-delay-4">loading..</button><br>
+    </div>
+  </div>
+</div><!-- More Context Menu -->
+<div id="moreContextMenu" class="context-container" style="width:unset;height:0px;display:none">
+  <div class="context-wrapper">
+  </div>
+</div><!-- Sidebar Context Menu -->
+<div id="nebulaContextMenu" class="context-container" style="width:unset;display:none">
+  <div class="context-wrapper">
+    <button id="nebulaContextButton" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right context-icon" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/></svg>
+      Open in new tab
+    </button><br>
+    <button id="nebulaContextButton3" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window-plus context-icon" viewBox="0 0 16 16"><path d="M2.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M4 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"></path><path d="M0 4a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4a.5.5 0 0 1-1 0V7H1v5a1 1 0 0 0 1 1h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-2zm1 2h13V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"></path><path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5"></path></svg>
+      Open in floating window
+    </button>
+    <button id="nebulaContextButton2" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy context-icon" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg>
+      Copy link
+    </button><br>
+  </div>
+</div>
+<style id="nebula-components">
+
+  #nebulaContextMenu,
+  #filesContextMenu,
+  #moreContextMenu {
+    display: none
+  }
+
+  .nebulaFooter {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    color: #9aa5b1;
+    text-decoration: none;
+    padding-bottom: 10px;
+  }
+
+      div.sidebarContent > div.tooltip-toggle > span.tooltip,
+    div.sidebarContent > #sidebarCategoryServer > div.tooltip-toggle > span.tooltip,
+    div.sidebarContent > #sidebarCategoryAccount > div.tooltip-toggle > span.tooltip,
+    div.sidebarContent > #sidebarCategoryGeneral > div.tooltip-toggle > span.tooltip,
+    div.sidebarContent > #sidebarCategoryGeneral > a > div.tooltip-toggle > span.tooltip {
+      display: none
+    }
+  
+  /* Sidebar */
+    .sidebar {
+    transition: 
+      left 0.5s,
+      width 1s !important;
+    position: fixed;
+    left: 0; top: 0px;
+    width: 75px; height: 100%;
+    background-color: unset !important;
+    background: linear-gradient(to bottom, color-mix(in hsl, var(--sidebarBackground) 30%, transparent), color-mix(in hsl, var(--sidebarBackground) 5%, transparent) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    will-change: transform;
+    z-index: 5;
+    border-radius: 0px;
+  }
+  
+  .sidebarContentContainer {
+    margin: 0px 0px 10px 10px;
+    overflow: visible;
+  }
+
+  .sidebarContent {
+    height: 100vh;
+    padding-top: 10px;
+    overflow-y: scroll;
+    overflow-x: visible;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  /* Sidebar preloader */
+  @keyframes sidebar-preloader {
+    0%   { background-color: var(--sidebarSecondary) }
+    20%  { background-color: color-mix(in hsl, var(--sidebarSecondary) 87%, white) }
+    40%  { background-color: var(--sidebarSecondary) }
+    100% { background-color: var(--sidebarSecondary) }
+  }
+  .sidebar-placeholder-animated {
+    animation: sidebar-preloader 1s linear infinite;
+    color: transparent;
+    background-color: var(--sidebarSecondary);
+  }
+
+  .sidebar-placeholder-animated:nth-child(0) { animation-delay: 0s }
+  .sidebar-placeholder-animated:nth-child(1) { animation-delay: .05s }
+  .sidebar-placeholder-animated:nth-child(2) { animation-delay: .1s }
+  .sidebar-placeholder-animated:nth-child(3) { animation-delay: .15s }
+  .sidebar-placeholder-animated:nth-child(4) { animation-delay: .2s }
+  .sidebar-placeholder-animated:nth-child(5) { animation-delay: .25s }
+  .sidebar-placeholder-animated:nth-child(6) { animation-delay: .3s }
+  .sidebar-placeholder-animated:nth-child(7) { animation-delay: .35s }
+  .sidebar-placeholder-animated:nth-child(8) { animation-delay: .4s }
+  .sidebar-placeholder-animated:nth-child(9) { animation-delay: .45s }
+  .sidebar-placeholder-animated:nth-child(10) { animation-delay: .5s }
+
+  /* Sidebar items */
+  .sidebarButton {
+    border: none;
+          background-color: transparent;
+        width: calc(75px - 10px - 10px);
+    height: calc(75px - 10px - 10px);
+    border-radius: var(--borderRadiusSidebar);
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    left: 0px;
+    transition: 
+      background-color 0.3s,
+      border .2s,
+      border-left .2s,
+      margin-left .3s,
+      left .3s,
+      padding-top .3s,
+      padding-bottom .3s,
+      height .3s !important;
+  }
+  .sidebarButton:hover {
+          background-color: #ffffff20;
+      }
+  .sidebarButton:active {
+          background-color: #ffffff15;
+      }
+
+  .sidebarButtonSelected {
+          background-color: color-mix(in hsl, var(--sidebarButtonActive) 50%, transparent);
+      --border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      }
+
+  .sidebarIcon {
+    color: var(--sidebarPrimary);
+    transition:
+      color 0.3s,
+      opacity 0.3s !important;
+    
+          font-size: calc(32px * 0.9);
+      }
+  .sidebarIcon:hover {
+    color: var(--sidebarPrimaryHover);
+  }
+
+  .customicon {
+    width: 100%;
+    height: 100%;
+    scale: calc(0.9);
+      }
+
+      .sidebarSpacer {
+      padding-bottom: 12px;
+      margin-left: 12.5%;
+      margin-right: 12.5%;
+      width: calc(75% - 10px);
+      border-top: 1px solid var(--sidebarSecondary);
+    }
+  
+  .sidebarCategory {
+    display: none;
+  }
+
+                    body, body.bg-neutral-800 {
+          padding-left: 75px;
+          color: #fff;
+          background-color: var(--pageBackground);
+        }
+            
+  html:not([multitasking]) {
+    background-color: var(--pageBackground) !important;
+    background: var(--pageBackground) !important;
+    z-index: -2 !important;
+  }
+
+  
+      /* 
+      wide sidebar
+    */
+
+    .sidebarIcon {
+      float: left;
+      margin-left: 15px;
+      margin-top: -2px;
+      padding-right: 13px;
+      line-height: 55px;
+      font-size: calc(32px * 0.8);
+      width: calc(32px * 0.8 + 15px);
+    }
+    .nebula-mobile-nav { display: none; }
+    .sidebar {
+      width: 200px;
+      display: block;
+    }
+    div.ProgressBar___StyledDiv-sc-14ayc3f-1.jleFWY {
+      left: 195px !important;
+      width: calc(100% - 195px) !important;
+    }
+    .sidebarContentContainer {
+      width: 100%;
+    }
+    
+    .customicon {
+      height: 100%;
+      aspect-ratio: 1/1;
+      float: left;
+      width: auto;
+    }
+    body, body.bg-neutral-800 {
+      padding-left: 200px;
+    }
+    .sidebarSpacer {
+      width: calc(100% - 31px);
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .wideSidebarSpan {
+      text-align: left;
+      display: block;
+      width: 100%;
+      font-size: 17px;
+      font-weight: 500;
+      height: 100%;
+      line-height: 55px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+    .sidebarButton {
+      width: calc(100% - 10px - 10px);
+      transition:
+        border .2s,
+        border-left .2s;
+    }
+              .sidebarButton {
+        border-left: 0px solid transparent;
+      }
+      .sidebarButtonSelected {
+                border-left: 10px solid var(--sidebarButtonActive) !important;
+        transition: border .2s, border-left .2s;
+      }
+      
+  @media screen and (min-width: 760px) {
+    /* Sidebar hover animations */
+          .sidebarButton:hover {
+        position: relative;
+        left: 7px;
+      }
+      }
+</style>
+<style id="nebula-mobile-navigation">
+  .nebula-mobile-nav { display: none }
+
+  @media screen and (max-width: 760px) {
+    body, body.bg-neutral-800 {
+      padding-left: unset !important;
+    }
+
+    .sidebar {
+      display: none;
+      z-index: 101;
+    }
+    div.ProgressBar___StyledDiv-sc-14ayc3f-1.jleFWY {
+      left: 0 !important;
+      width: 100% !important;
+    }
+    .nebula-mobile-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      z-index: 99;
+      /*background-color: var(--sidebarBackground);
+      border-top: 1px solid var(--sidebarSecondaryHover);*/
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      background: transparent;
+      background: linear-gradient(180deg, transparent 0%, var(--pageBackground) 100%); 
+    }
+    .mobile-nav-container {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    .mobile-nav-icon {
+      font-size: 20px;
+      color: var(--sidebarPrimary);
+    }
+    .mobile-nav-button {
+      background-color: var(--sidebarSecondary);
+      border-radius: 100px;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .nebula-mobile-overlay {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      display: none;
+      position: fixed;
+      left: -200px;
+      top: 0;
+      transition: opacity .4s, left .4s;
+      z-index: 100;
+      background: var(--pageBackground);
+      background: linear-gradient(90deg, var(--pageBackground) 75%, transparent 100%);
+    }
+
+    .pointer-events-none.fixed.bottom-0.mb-6.flex.justify-center.w-full.z-50:has(.ipOPTy) {
+      margin-bottom: 0px !important;
+      margin-top: 20px !important;
+      bottom: unset !important;
+      top: 0px !important;
+    }
+    #fileMode {
+      bottom: unset !important;
+      top: 20px !important;
+    }
+
+     /* loading bar styling */
+    .CbttB {
+      top: 0;
+      bottom: unset !important;
+    }
+
+    .Pagination___StyledDiv-sc-7j9cqz-1 {
+      bottom: 105px !important;
+      width: 100vw !important;
+      left: 0px !important;
+      right: unset !important;
+    }
+  }
+</style>
+
+  <div class="nebula-mobile-overlay" onclick="if (!window.__cfRLUnblockHandlers) return false; closeMobileNav()" data-cf-modified-324681115882d2c062d5dc85-=""></div>
+  <div class="nebula-mobile-nav">
+    <div class="mobile-nav-container">
+      <!-- Home -->
+      <button class="mobile-nav-button" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('home')" data-cf-modified-324681115882d2c062d5dc85-=""><i class="mobile-nav-icon bi bi-house-fill"></i></button>
+    </div>
+    <div class="mobile-nav-container">
+      <!-- Account -->
+      <button class="mobile-nav-button" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();sidebarButtonEvent('accountAccount')" data-cf-modified-324681115882d2c062d5dc85-=""><i class="mobile-nav-icon bi bi-person-fill"></i></button>
+    </div>
+    <div class="mobile-nav-container">
+      <!-- Navigation -->
+      <button class="mobile-nav-button" onclick="if (!window.__cfRLUnblockHandlers) return false; sidebarRefresh();openMobileNav()" data-cf-modified-324681115882d2c062d5dc85-=""><i class="mobile-nav-icon bi bi-list"></i></button>
+    </div>
+  </div>
+  <script type="324681115882d2c062d5dc85-text/javascript">
+    mobileNavigationVisible=false
+    navPossible=true
+    function toggleMobileNav() {
+      if(mobileNavigationVisible) {
+        closeMobileNav()
+      } else {
+        openMobileNav()
+      }
+    }
+    function closeMobileNav() {
+      if(navPossible == false) {return;}
+      navPossible = false
+      let sidebar = document.querySelector(".sidebar")
+      let overlay = document.querySelector(".nebula-mobile-overlay")
+      sidebar.style.left = "-200px"
+      overlay.style.left = null
+      overlay.style.opacity = null
+      setTimeout(() => {
+        sidebar.style.display = null
+        overlay.style.display = null
+        navPossible = true
+      },300)
+      mobileNavigationVisible=false
+    }
+    function openMobileNav() {
+      if(navPossible == false) {return;}
+      navPossible = false
+      let sidebar = document.querySelector(".sidebar")
+      let overlay = document.querySelector(".nebula-mobile-overlay")
+      sidebar.style.left = "-200px"
+      overlay.style.left = "-200px"
+      overlay.style.opacity = "0"
+      sidebar.style.display = "block"
+      overlay.style.display = "block"
+      setTimeout(() => {
+        overlay.style.opacity = ".7"
+        sidebar.style.left = "0px"
+        overlay.style.left = "0px"
+        navPossible = true
+      },50)
+      mobileNavigationVisible=true
+    }
+  </script>
+<style id="nebula-variables">
+  
+  /* Variables */
+  :root {
+    --sidebarPrimary: #ffffff;
+    --sidebarPrimaryHover: #ffffff;
+    --sidebarSecondary: #251f30;
+    --sidebarSecondaryHover: #23293e;
+    --sidebarSecondaryActive: #23293e;
+    --sidebarSecondarySelected: #7a98ff;
+    --sidebarButtonActive: #7a98ff;
+
+    --pagePrimary: #e9eaee;
+    --pagePrimaryHover: #7a98ff;
+    --pageSecondary: #251f30;
+    --pageSecondaryHover: #2b2f3e;
+    --pageSecondaryActive: #303443;
+    --pageSecondarySelected: #363e57;
+    --pageButtonDefault: #3a435c;
+    --pageButtonHover: #4f6295;
+
+    --statusOffline: #787474;
+    --statusError: #bc362f;
+    --statusStarting: #dbc025;
+    --statusOnline: #2cdd2f;
+
+    --authA: #040814;
+    --authB: #251f30;
+    --authC: #2b2f3e;
+    --authD: #3a435c;
+    --authE: #e18989;
+    --authF: #4f6295;
+    --authG: #47526a;
+    --authH: #e9eaee;
+    
+    --sidebarBackground: #040814;
+    --pageBackground: #040814;
+
+    --borderRadius: 10px;
+    --borderRadiusSidebar: 10px;
+    --borderRadiusAuth: 10px;
+
+    --patternSizeAuth: 215px;
+    --patternSizeDashboard: 215px;
+  }
+
+</style>  <script type="324681115882d2c062d5dc85-text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log(
+        "\n%cPowered by TickHosting - © 2023-2024 TickHosting\n%c\nYour free 24/7 Minecraft hosting solution with 4GB RAM!\nLearn more at https://tickhosting.com \nTerms and policies at https://tickhosting.com/UserAgreement.html/\n\n",
+        'font-weight: 900; font-size: 24px; color: #4caf50;',
+        'font-weight: 900; color: #ffffff;'
+    );
+
+  });
+</script>
+<script type="324681115882d2c062d5dc85-text/javascript">
+  window.MultitaskingEnabled = false
+  const params = new URL(window.location).searchParams;
+  if(params.get('multitasking') == "true") {
+    window.MultitaskingEnabled = true
+    document.querySelector("html").setAttribute("multitasking", "")
+    fetchStyle("/extensions/nebula/libraries/floatingWindowStyles.css", "Multitasking")
+  }
+
+      const rootAdmin = false
+  
+  // Funzione per animare la visibilità degli elementi della sidebar
+  function animateElementVisibility(elementOrId, show) {
+    let element;
+    if (typeof elementOrId === 'string') {
+      element = document.getElementById(elementOrId);
+    } else {
+      element = elementOrId;
+    }
+    
+    if (!element) return;
+    
+    // Aggiungi classe per transizioni smooth
+    if (!element.classList.contains('nebula-smooth-transition')) {
+      element.classList.add('nebula-smooth-transition');
+    }
+    
+    if (show) {
+      // Se l'elemento è già visibile, non fare nulla
+      if (element.style.display !== 'none' && element.style.opacity !== '0') {
+        return;
+      }
+      
+      // Mostra l'elemento con animazione fade in
+      element.style.opacity = '0';
+      element.style.display = 'inline';
+      element.style.transform = 'translateY(-10px)';
+      
+      // Forza il reflow per applicare gli stili iniziali
+      element.offsetHeight;
+      
+      // Anima verso lo stato visibile
+      requestAnimationFrame(() => {
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+      });
+    } else {
+      // Se l'elemento è già nascosto, non fare nulla
+      if (element.style.display === 'none') {
+        return;
+      }
+      
+      // Nascondi l'elemento con animazione fade out
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(-10px)';
+      
+      // Nascondi completamente dopo l'animazione
+      setTimeout(() => {
+        if (element.style.opacity === '0') {
+          element.style.display = 'none';
+        }
+      }, 300);
+    }
+  }
+
+  window.onload = function() {
+    setInterval(() => { sidebarRefresh() }, 1000)
+    filesRefresh()
+  }
+
+  window.addEventListener('locationchange', function () {
+    setTimeout(() => {sidebarRefresh()}, 200)
+  });
+
+  function sidebarButtonEvent(btn) {
+    // Clear custom button session storage when navigating to regular pages
+    if (btn !== 'customButton') {
+      sessionStorage.removeItem('lastClickedCustomButton');
+    }
+    
+    currentPage = nebulaCurrentPage()
+    serverId = fetchServerId()
+    if(btn === "home") { document.querySelector("a:not([blueprint])[href='/']").click() };
+    if(btn === "billingMyPlans") { document.querySelector("a:not([blueprint])[href='/billing/my-plans']").click() };
+    if(btn === "billingBilling") { document.querySelector("a:not([blueprint])[href='/billing']").click() };
+    if (btn === "freeservers") { document.querySelector("a:not([blueprint])[href='/freeservers']").click() };
+    if(btn === "billingBalance") { document.querySelector("a:not([blueprint])[href='/billing/balance']").click() };
+    if(btn === "billingCart") { document.querySelector("a:not([blueprint])[href='/billing/cart']").click() };
+     if(btn === "logout") { document.querySelector(".NavigationBar__RightNavigation-sc-tupl2x-0 > button:nth-child(4)").click() };     // servers
+    if (currentPage !== "serverPlugins") {
+      if(btn === "serverTerminal") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"']").click() };
+      if(btn === "serverTerminalSecondary") { 
+        const terminalLink = document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/terminal']");
+        if(terminalLink) terminalLink.click(); else window.location.href = "/server/"+serverId+"/terminal";
+      };
+      if(btn === "serverInfo") { 
+        const infoLink = document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/info']");
+        if(infoLink) {
+          infoLink.click();
+        } else {
+          window.history.pushState({}, '', "/server/"+serverId+"/info");
+          window.dispatchEvent(new PopStateEvent('popstate'));
+        }
+      };
+      if(btn === "serverMain") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"']").click() };
+      if(btn === "serverFiles") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/files']").click() };
+      if(btn === "serverDatabases") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/databases']").click() };
+      if(btn === "serverSchedules") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/schedules']").click() };
+      if(btn === "serverUsers") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/users']").click() };
+      if(btn === "serverBackups") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/backups']").click() };
+      if(btn === "serverNetwork") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/network']").click() };
+      if(btn === "serverStartup") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/startup']").click() };
+      if(btn === "serverSettings") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/settings']").click() };
+      if(btn === "serverActivity") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/activity']").click() };
+      if(btn === "serverVersions") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/minecraft/versions']").click() };
+      if(btn === "serverStaff") { window.location.href = "/server/"+serverId+"/staff" };
+      if(btn === "serverProperties") { window.location.href = "/server/"+serverId+"/properties" };
+      if(btn === "serverSubdomain") { window.location.href = "/server/"+serverId+"/subdomain" };
+      if(btn === "serverPlugins") { window.location.href = "/server/"+serverId+"/plugin-manager" };
+      if(btn === "serverPlayerManager") { window.location.href = "/server/"+serverId+"/minecraft/player-manager" };
+      if(btn === "serverModpack") { window.location.href = "/server/"+serverId+"/modpack" };
+      if(btn === "serverMods") { window.location.href = "/server/"+serverId+"/mods" };
+    } else if(currentPage !== "serverStaff"){
+      if(btn === "serverTerminal") { window.location.href = "/server/"+serverId };
+      if(btn === "serverTerminalSecondary") { 
+        const terminalLink = document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/terminal']");
+        if(terminalLink) terminalLink.click(); else window.location.href = "/server/"+serverId+"/terminal";
+      };
+      if(btn === "serverInfo") { 
+        const infoLink = document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/info']");
+        if(infoLink) {
+          infoLink.click();
+        } else {
+          window.history.pushState({}, '', "/server/"+serverId+"/info");
+          window.dispatchEvent(new PopStateEvent('popstate'));
+        }
+      };
+      if(btn === "serverMain") { window.location.href = "/server/"+serverId };
+      if(btn === "serverFiles") { window.location.href = "/server/"+serverId+"/files" };
+      if(btn === "serverDatabases") { window.location.href = "/server/"+serverId+"/databases" };
+      if(btn === "serverSchedules") { window.location.href = "/server/"+serverId+"/schedules" };
+      if(btn === "serverUsers") { window.location.href = "/server/"+serverId+"/users" };
+      if(btn === "serverBackups") { window.location.href = "/server/"+serverId+"/backups" };
+      if(btn === "serverNetwork") { window.location.href = "/server/"+serverId+"/network" };
+      if(btn === "serverStartup") { window.location.href = "/server/"+serverId+"/startup" };
+      if(btn === "serverSettings") { window.location.href = "/server/"+serverId+"/settings" };
+      if(btn === "serverActivity") { window.location.href = "/server/"+serverId+"/activity" };
+      if(btn === "serverVersions") { window.location.href = "/server/"+serverId+"/minecraft/versions" };
+      if(btn === "serverStaff") { window.location.href = "/server/"+serverId+"/staff" };
+      if(btn === "serverProperties") { window.location.href = "/server/"+serverId+"/properties" };
+      if(btn === "serverSubdomain") { window.location.href = "/server/"+serverId+"/subdomain" };
+      if(btn === "serverPlugins") { window.location.href = "/server/"+serverId+"/plugin-manager" };
+      if(btn === "serverPlayerManager") { window.location.href = "/server/"+serverId+"/minecraft/player-manager" };
+      if(btn === "serverModpack") { window.location.href = "/server/"+serverId+"/modpack" };
+      if(btn === "serverMods") { window.location.href = "/server/"+serverId+"/mods" };
+    } else if(currentPage !== "serverSubdomain"){
+      if(btn === "serverTerminal") { window.location.href = "/server/"+serverId };
+      if(btn === "serverTerminalSecondary") { 
+        const terminalLink = document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/terminal']");
+        if(terminalLink) terminalLink.click(); else window.location.href = "/server/"+serverId+"/terminal";
+      };
+      if(btn === "serverInfo") { 
+        const infoLink = document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/info']");
+        if(infoLink) {
+          infoLink.click();
+        } else {
+          window.history.pushState({}, '', "/server/"+serverId+"/info");
+          window.dispatchEvent(new PopStateEvent('popstate'));
+        }
+      };
+      if(btn === "serverMain") { window.location.href = "/server/"+serverId };
+      if(btn === "serverFiles") { window.location.href = "/server/"+serverId+"/files" };
+      if(btn === "serverDatabases") { window.location.href = "/server/"+serverId+"/databases" };
+      if(btn === "serverSchedules") { window.location.href = "/server/"+serverId+"/schedules" };
+      if(btn === "serverUsers") { window.location.href = "/server/"+serverId+"/users" };
+      if(btn === "serverBackups") { window.location.href = "/server/"+serverId+"/backups" };
+      if(btn === "serverNetwork") { window.location.href = "/server/"+serverId+"/network" };
+      if(btn === "serverStartup") { window.location.href = "/server/"+serverId+"/startup" };
+      if(btn === "serverSettings") { window.location.href = "/server/"+serverId+"/settings" };
+      if(btn === "serverActivity") { window.location.href = "/server/"+serverId+"/activity" };
+      if(btn === "serverVersions") { window.location.href = "/server/"+serverId+"/minecraft/versions" };
+      if(btn === "serverStaff") { window.location.href = "/server/"+serverId+"/staff" };
+      if(btn === "serverSubdomain") { window.location.href = "/server/"+serverId+"/subdomain" };
+      if(btn === "serverPlugins") { window.location.href = "/server/"+serverId+"/plugin-manager" };
+      if(btn === "serverPlayerManager") { window.location.href = "/server/"+serverId+"/minecraft/player-manager" };
+    } else {
+      if(btn === "serverTerminal") { window.location.href = "/server/"+serverId };
+      if(btn === "serverTerminalSecondary") { 
+        const terminalLink = document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/terminal']");
+        if(terminalLink) terminalLink.click(); else window.location.href = "/server/"+serverId+"/terminal";
+      };
+      if(btn === "serverInfo") { 
+        const infoLink = document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/info']");
+        if(infoLink) {
+          infoLink.click();
+        } else {
+          window.history.pushState({}, '', "/server/"+serverId+"/info");
+          window.dispatchEvent(new PopStateEvent('popstate'));
+        }
+      };
+      if(btn === "serverMain") { window.location.href = "/server/"+serverId };
+      if(btn === "serverFiles") { window.location.href = "/server/"+serverId+"/files" };
+      if(btn === "serverDatabases") { window.location.href = "/server/"+serverId+"/databases" };
+      if(btn === "serverSchedules") { window.location.href = "/server/"+serverId+"/schedules" };
+      if(btn === "serverUsers") { window.location.href = "/server/"+serverId+"/users" };
+      if(btn === "serverBackups") { window.location.href = "/server/"+serverId+"/backups" };
+      if(btn === "serverNetwork") { window.location.href = "/server/"+serverId+"/network" };
+      if(btn === "serverStartup") { window.location.href = "/server/"+serverId+"/startup" };
+      if(btn === "serverSettings") { window.location.href = "/server/"+serverId+"/settings" };
+      if(btn === "serverActivity") { window.location.href = "/server/"+serverId+"/activity" };
+      if(btn === "serverVersions") { window.location.href = "/server/"+serverId+"/minecraft/versions" };
+      if(btn === "serverStaff") { window.location.href = "/server/"+serverId+"/staff" };
+      if(btn === "serverProperties") { window.location.href = "/server/"+serverId+"/properties" };
+      if(btn === "serverSubdomain") { window.location.href = "/server/"+serverId+"/subdomain" };
+      if(btn === "serverPlugins") { window.location.href = "/server/"+serverId+"/plugin-manager" };
+      if(btn === "serverPlayerManager") { window.location.href = "/server/"+serverId+"/minecraft/player-manager" };
+
+    }
+    // users
+    if(btn === "accountAccount") { document.querySelector("a:not([blueprint])[href='/account']").click() };
+    if(btn === "accountApi") { document.querySelector("a:not([blueprint])[href='/account/api']").click() };
+    if(btn === "accountSsh") { document.querySelector("a:not([blueprint])[href='/account/ssh']").click() };
+    if(btn === "accountActivity") { document.querySelector("a:not([blueprint])[href='/account/activity']").click() };
+
+    if(mobileNavigationVisible == true) { closeMobileNav() }
+
+    sidebarRefresh()
+  }
+  async function sidebarRefresh() {
+    // Get current window path and assign it to a variable.
+    currentPage = nebulaCurrentPage()
+    fileModeHide()
+    assignElements(currentPage)
+    
+    // Refresh custom buttons when sidebar refreshes
+    if (typeof refreshCustomButtons === 'function') {
+      setTimeout(() => {
+        refreshCustomButtons();
+      }, 100);
+    }
+    
+    // Show selected button.
+    if(currentPage === "home") {document.getElementById('sidebarMainHome').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarMainHome').className = 'sidebarButton';}
+    
+    if(currentPage === "billingMyPlans") {document.getElementById('sidebarMainPlans').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarMainPlans').className = 'sidebarButton';}
+    if(currentPage === "billingBilling") {document.getElementById('sidebarMainBilling').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarMainBilling').className = 'sidebarButton';}
+    if(currentPage === "freeServers") {document.getElementById('sidebarMainFreeServers').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarMainFreeServers').className = 'sidebarButton';}
+    if(currentPage === "billingBalance") {document.getElementById('sidebarMainBalance').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarMainBalance').className = 'sidebarButton';}
+    if(currentPage === "billingCart") {document.getElementById('sidebarMainCart').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarMainCart').className = 'sidebarButton';}
+    
+
+    if(currentPage && currentPage.startsWith("account")){
+      document.getElementById('sidebarCategoryAccount').style.display = "inline";
+      if(currentPage === "accountAccount") {document.getElementById('sidebarAccountAccount').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarAccountAccount').className = 'sidebarButton';}
+      if(currentPage === "accountApi") {document.getElementById('sidebarAccountApi').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarAccountApi').className = 'sidebarButton';}
+      if(currentPage === "accountSsh") {document.getElementById('sidebarAccountSsh').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarAccountSsh').className = 'sidebarButton';}
+      if(currentPage === "accountActivity") {document.getElementById('sidebarAccountActivity').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarAccountActivity').className = 'sidebarButton';}
+      if(currentPage === "accountMore") {document.getElementById('sidebarAccountMore').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarAccountMore').className = 'sidebarButton';}
+      setTimeout(() => {
+        sidebarMoreRefresh()
+      }, 300);
+    } else {
+      document.getElementById('sidebarCategoryAccount').style.display = "none";}
+    if(currentPage && currentPage.startsWith("server")) {
+      document.getElementById('sidebarCategoryServer').style.display = "inline";
+      
+      // Refresh Server/Terminal buttons visibility based on server configuration
+      refreshServerInfoButtons();
+      
+      // Dynamic button highlighting based on server configuration and installation state
+      setTimeout(() => {
+        const serverId = fetchServerId();
+        if (serverId) {
+          fetch(`/api/client/servers/${serverId}`)
+            .then(response => response.json())
+            .then(data => {
+              const serverStatus = data.attributes?.status;
+              const isInstalling = serverStatus === 'installing' || serverStatus === 'install_failed';
+              const showServerInfoFirst = data.attributes?.show_server_info_first || false;
+              
+              // Check if server is installing - hide all sidebar buttons except Installing
+              if (isInstalling) {
+                handleInstallingServerSidebar();
+                return;
+              }
+              
+              // Clear any installation-specific sidebar modifications
+              clearInstallingServerSidebar();
+              
+              if (showServerInfoFirst) {
+                // Configuration: Server Info first, Terminal second
+                if(currentPage === "serverMain" || currentPage === "serverInfo") {
+                  document.getElementById('sidebarServerInfo').className = 'sidebarButton sidebarButtonSelected';
+                  document.getElementById('sidebarServerTerminal').className = 'sidebarButton';
+                  refreshStatusOrb();
+                } else if(currentPage === "serverTerminal") {
+                  document.getElementById('sidebarServerInfo').className = 'sidebarButton';
+                  document.getElementById('sidebarServerTerminal').className = 'sidebarButton sidebarButtonSelected';
+                } else {
+                  if(document.getElementById('sidebarServerInfo')) document.getElementById('sidebarServerInfo').className = 'sidebarButton';
+                  document.getElementById('sidebarServerTerminal').className = 'sidebarButton';
+                }
+              } else {
+                // Standard configuration: Console/Terminal only
+                if(currentPage === "serverMain" || currentPage === "serverTerminal") {
+                  document.getElementById('sidebarServerTerminal').className = 'sidebarButton sidebarButtonSelected';
+                  refreshStatusOrb();
+                } else {
+                  document.getElementById('sidebarServerTerminal').className = 'sidebarButton';
+                }
+                if(document.getElementById('sidebarServerInfo')) document.getElementById('sidebarServerInfo').className = 'sidebarButton';
+              }
+            })
+            .catch(error => {
+              // Fallback to standard behavior
+              clearInstallingServerSidebar();
+              if(currentPage === "serverMain" || currentPage === "serverTerminal") {document.getElementById('sidebarServerTerminal').className = 'sidebarButton sidebarButtonSelected';refreshStatusOrb() } else {document.getElementById('sidebarServerTerminal').className = 'sidebarButton';}
+              if(currentPage === "serverInfo") {if(document.getElementById('sidebarServerInfo')) document.getElementById('sidebarServerInfo').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerInfo')) document.getElementById('sidebarServerInfo').className = 'sidebarButton';}
+            });
+        }
+      }, 100);
+      if(currentPage === "serverFiles") {if(document.getElementById('sidebarServerFilemanager')) document.getElementById('sidebarServerFilemanager').className = 'sidebarButton sidebarButtonSelected';fileModeShow() }
+      if(currentPage === "serverFilesEdit") {if(document.getElementById('sidebarServerFilemanager')) document.getElementById('sidebarServerFilemanager').className = 'sidebarButton sidebarButtonSelected'; }
+      if((currentPage != "serverFiles") && (currentPage != "serverFilesEdit")) { if(document.getElementById('sidebarServerFilemanager')) document.getElementById('sidebarServerFilemanager').className = 'sidebarButton'; }
+      if(currentPage === "serverDatabases") {if(document.getElementById('sidebarServerDatabases')) document.getElementById('sidebarServerDatabases').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerDatabases')) document.getElementById('sidebarServerDatabases').className = 'sidebarButton';}
+      if(currentPage === "serverSchedules") {if(document.getElementById('sidebarServerSchedules')) document.getElementById('sidebarServerSchedules').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerSchedules')) document.getElementById('sidebarServerSchedules').className = 'sidebarButton';}
+      if(currentPage === "serverUsers") {if(document.getElementById('sidebarServerUsers')) document.getElementById('sidebarServerUsers').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerUsers')) document.getElementById('sidebarServerUsers').className = 'sidebarButton';}
+      if(currentPage === "serverBackups") {if(document.getElementById('sidebarServerBackups')) document.getElementById('sidebarServerBackups').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerBackups')) document.getElementById('sidebarServerBackups').className = 'sidebarButton';}
+      if(currentPage === "serverNetwork") {if(document.getElementById('sidebarServerNetwork')) document.getElementById('sidebarServerNetwork').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerNetwork')) document.getElementById('sidebarServerNetwork').className = 'sidebarButton';}
+      if(currentPage === "serverStartup") {if(document.getElementById('sidebarServerStartup')) document.getElementById('sidebarServerStartup').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerStartup')) document.getElementById('sidebarServerStartup').className = 'sidebarButton';}
+      if(currentPage === "serverSettings") {if(document.getElementById('sidebarServerSettings')) document.getElementById('sidebarServerSettings').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerSettings')) document.getElementById('sidebarServerSettings').className = 'sidebarButton';}
+      if(currentPage === "serverActivity") {if(document.getElementById('sidebarServerActivity')) document.getElementById('sidebarServerActivity').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerActivity')) document.getElementById('sidebarServerActivity').className = 'sidebarButton';}
+      if(currentPage === "serverVersions") {if(document.getElementById('sidebarServerVersions')) document.getElementById('sidebarServerVersions').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerVersions')) document.getElementById('sidebarServerVersions').className = 'sidebarButton';}
+      if(currentPage === "serverSubdomain") {if(document.getElementById('sidebarServerSubdomain')) document.getElementById('sidebarServerSubdomain').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerSubdomain')) document.getElementById('sidebarServerSubdomain').className = 'sidebarButton';}
+      if(currentPage === "serverProperties") {if(document.getElementById('sidebarServerProperties')) document.getElementById('sidebarServerProperties').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerProperties')) document.getElementById('sidebarServerProperties').className = 'sidebarButton';}
+      if(currentPage === "serverStaff") {if(document.getElementById('sidebarServerStaff')) document.getElementById('sidebarServerStaff').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerStaff')) document.getElementById('sidebarServerStaff').className = 'sidebarButton';}
+      if(currentPage === "serverPlugins") {if(document.getElementById('sidebarServerPlugins')) document.getElementById('sidebarServerPlugins').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerPlugins')) document.getElementById('sidebarServerPlugins').className = 'sidebarButton';}
+      if(currentPage === "serverPlayerManager") {if(document.getElementById('sidebarServerPlayerManager')) document.getElementById('sidebarServerPlayerManager').className = 'sidebarButton sidebarButtonSelected';} else {if(document.getElementById('sidebarServerPlayerManager')) document.getElementById('sidebarServerPlayerManager').className = 'sidebarButton';}
+
+      setTimeout(() => {
+        serverId = fetchServerId()
+        sidebarServerButtonRefresh(serverId);
+        sidebarMoreRefresh()        
+        // Refresh custom buttons when entering a server page
+        if (typeof refreshCustomButtons === 'function') {
+          refreshCustomButtons();
+        }
+      }, 300)
+    } else {document.getElementById('sidebarCategoryServer').style.display = "none";}
+
+    // Gestione visibilità elementi generali e di navigazione principale con animazioni
+    if(currentPage && currentPage.startsWith("server")) {
+      // Se siamo in un server, nascondi sempre gli elementi generali e di billing/shop con animazione
+      animateElementVisibility('sidebarCategoryGeneral', false);
+      
+      // Nasconde tutti gli elementi di billing/shop che sono prima del separatore
+      const elementsToHide = [
+        'sidebarMainDiscord',      // Portal/Discord buttons (may have duplicate IDs)
+        'sidebarMainBilling',      // Premium Server
+        'sidebarMainFreeServers',  // Free Server
+        'sidebarMainBalance',      // Balance
+        'sidebarMainCart',         // Cart
+        'sidebarMainPlans'         // My Plans
+      ];
+      
+      elementsToHide.forEach(elementId => {
+        const elements = document.querySelectorAll('#' + elementId);
+        elements.forEach(element => {
+          const tooltipContainer = element.closest('.tooltip-toggle');
+          if (tooltipContainer) {
+            animateElementVisibility(tooltipContainer, false);
+          }
+        });
+      });
+      
+    } else {
+      // Logica normale per le altre pagine - mostra gli elementi di billing/shop
+      const elementsToShow = [
+        'sidebarMainDiscord',
+        'sidebarMainBilling', 
+        'sidebarMainFreeServers',
+        'sidebarMainBalance',
+        'sidebarMainCart',
+        'sidebarMainPlans'
+      ];
+      
+      elementsToShow.forEach(elementId => {
+        const elements = document.querySelectorAll('#' + elementId);
+        elements.forEach(element => {
+          const tooltipContainer = element.closest('.tooltip-toggle');
+          if (tooltipContainer) {
+            animateElementVisibility(tooltipContainer, true);
+          }
+        });
+      });
+      
+      // Logica normale per la categoria generale
+            if(currentPage == "home") { animateElementVisibility('sidebarCategoryGeneral', true) }
+      else { animateElementVisibility('sidebarCategoryGeneral', false) }
+          }
+    
+    // Update custom button states
+    if (typeof updateCustomButtonStates === 'function') {
+      setTimeout(() => {
+        updateCustomButtonStates();
+      }, 100);
+    }
+    
+    // Refresh custom buttons when changing page
+    if (typeof refreshCustomButtons === 'function') {
+      setTimeout(() => {
+        refreshCustomButtons();
+      }, 100);
+    }
+  }
+  function sidebarServerButtonRefresh(serverId) {
+    /*nopage=false
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"']") === null) {
+      document.getElementById('sidebarServerTerminal').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerTerminal').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/files']") === null) {
+      document.getElementById('sidebarServerFilemanager').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerFilemanager').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/databases']") === null) {
+      document.getElementById('sidebarServerDatabases').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerDatabases').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/schedules']") === null) {
+      document.getElementById('sidebarServerSchedules').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerSchedules').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/users']") === null) {
+      document.getElementById('sidebarServerUsers').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerUsers').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/backups']") === null) {
+      document.getElementById('sidebarServerBackups').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerBackups').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/network']") === null) {
+      document.getElementById('sidebarServerNetwork').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerNetwork').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/startup']") === null) {
+      document.getElementById('sidebarServerStartup').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerStartup').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/settings']") === null) {
+      document.getElementById('sidebarServerSettings').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerSettings').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/activity']") === null) {
+      document.getElementById('sidebarServerActivity').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerActivity').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/minecraft/versions']") === null) {
+      document.getElementById('sidebarServerVersions').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerVersions').style.display = "inline";
+      nopage=false
+    }
+    // if nopage = true then no page buttons are appearing.
+    if(nopage == true) { document.getElementById('sidebarServerLoader').style.display = 'block'; }
+    else { document.getElementById('sidebarServerLoader').style.display = 'none'; }*/
+    }
+  function sidebarMoreRefresh() {
+    // show/hide 'more' button
+    showMore=false
+    document.querySelectorAll('.SubNavigation-sc-lfuaoi-0 div a').forEach((el) => {
+      if([
+        '',
+        'Account',
+        'API Credentials',
+        'SSH Keys',
+        'Console',
+        'Files',
+        'Databases',
+        'Schedules',
+        'Users',
+        'Backups',
+        'Network',
+        'Startup',
+        'Settings',
+        'Activity',
+      ].includes(el.textContent)) { return; }
+      showMore=true;
+    });
+    if(showMore == true) { 
+      if(document.getElementById('sidebarAccountMore')) document.getElementById('sidebarAccountMore').style.display = "inline";
+      if(document.getElementById('sidebarServerMore')) document.getElementById('sidebarServerMore').style.display = "inline";
+    } else {
+      if(document.getElementById('sidebarAccountMore')) document.getElementById('sidebarAccountMore').style.display = "none";
+      if(document.getElementById('sidebarServerMore')) document.getElementById('sidebarServerMore').style.display = "none";
+    }
+  }
+
+  // Function to manage Server/Terminal buttons visibility based on server configuration
+  function refreshServerInfoButtons() {
+    const serverId = fetchServerId();
+    if (!serverId) return;
+
+    // Fetch server data to check show_server_info_first flag
+    fetch(`/api/client/servers/${serverId}`)
+      .then(response => response.json())
+      .then(data => {
+        const showServerInfoFirst = data.attributes?.show_server_info_first || false;
+        
+        const serverInfoBtn = document.getElementById('sidebarServerInfo');
+        const terminalBtn = document.getElementById('sidebarServerTerminal');
+        const terminalTooltip = terminalBtn?.parentNode?.querySelector('.tooltip');
+        
+        if (showServerInfoFirst) {
+          // Show Server button, update Terminal button as secondary
+          if (serverInfoBtn) serverInfoBtn.style.display = "inline";
+          if (terminalBtn) {
+            terminalBtn.style.display = "inline";
+            terminalBtn.setAttribute('data-tippy-content', 'Terminal');
+            terminalBtn.setAttribute('oncontextmenu', `showContextMenu(event, \`/server/\${serverId}/terminal\`)`);
+            terminalBtn.setAttribute('onclick', `sidebarRefresh();sidebarButtonEvent('serverTerminalSecondary')`);
+            if (terminalTooltip) terminalTooltip.textContent = 'Terminal';
+            
+            // Update wide sidebar text
+            const wideSpan = terminalBtn.querySelector('.wideSidebarSpan');
+            if (wideSpan) wideSpan.textContent = 'Terminal';
+          }
+        } else {
+          // Hide Server button, Terminal button becomes Console
+          if (serverInfoBtn) serverInfoBtn.style.display = "none";
+          if (terminalBtn) {
+            terminalBtn.style.display = "inline";
+            terminalBtn.setAttribute('data-tippy-content', 'Console');
+            terminalBtn.setAttribute('oncontextmenu', `showContextMenu(event, \`/server/\${serverId}\`)`);
+            terminalBtn.setAttribute('onclick', `sidebarRefresh();sidebarButtonEvent('serverTerminal')`);
+            if (terminalTooltip) terminalTooltip.textContent = 'Console';
+            
+            // Update wide sidebar text
+            const wideSpan = terminalBtn.querySelector('.wideSidebarSpan');
+            if (wideSpan) wideSpan.textContent = 'Console';
+          }
+        }
+      })
+      .catch(error => {
+        console.log('Error fetching server info for sidebar:', error);
+      });
+  }
+
+  // Function to handle sidebar during server installation
+  function handleInstallingServerSidebar() {
+        // Hide all server sidebar buttons except create an Installing button
+        const serverButtons = [
+          'sidebarServerInfo',
+          'sidebarServerTerminal', 
+          'sidebarServerFilemanager',
+          'sidebarServerDatabases',
+          'sidebarServerSchedules',
+          'sidebarServerUsers',
+          'sidebarServerBackups',
+          'sidebarServerNetwork',
+          'sidebarServerStartup',
+          'sidebarServerSettings',
+          'sidebarServerActivity',
+          'sidebarServerVersions'
+        ];
+        
+        // Hide all server buttons
+        serverButtons.forEach(buttonId => {
+          const button = document.getElementById(buttonId);
+          if (button) {
+            button.closest('.tooltip-toggle').style.display = 'none';
+          }
+        });
+        
+        // Hide custom buttons
+        const customButtons = document.querySelectorAll('[id^="sidebarCustomServer"]');
+        customButtons.forEach(button => {
+          const tooltipDiv = button.closest('.tooltip-toggle');
+          if (tooltipDiv) tooltipDiv.style.display = 'none';
+        });
+        
+        // Create or show Installing button
+        let installingButton = document.getElementById('sidebarServerInstalling');
+        if (!installingButton) {
+          // Create the installing button if it doesn't exist
+          const serverContainer = document.getElementById('sidebarCategoryServer');
+          const isFullSidebar = document.querySelector('.wideSidebarSpan') !== null;
+          
+          const installingHTML = `
+            <div class="tooltip-toggle" id="sidebarServerInstallingContainer">
+              <span class="tooltip">Installing</span>
+              <button data-tippy-content="Installing" id="sidebarServerInstalling" class="sidebarButton sidebarButtonSelected">
+                <i class="sidebarIcon fa-solid fa-circle-notch"></i>
+                ${isFullSidebar ? '<span class="wideSidebarSpan" style="color: var(--sidebarPrimary)">Installing</span>' : ''}
+              </button>
+            </div>
+          `;
+          
+          if (serverContainer) {
+            serverContainer.insertAdjacentHTML('afterbegin', installingHTML);
+          }
+        } else {
+          // Show existing installing button
+          const installingContainer = document.getElementById('sidebarServerInstallingContainer');
+          if (installingContainer) {
+            installingContainer.style.display = 'inline';
+            installingButton.className = 'sidebarButton sidebarButtonSelected';
+          }
+        }
+      }
+      
+      // Function to clear installation sidebar modifications
+      function clearInstallingServerSidebar() {
+        // Hide installing button if it exists
+        const installingContainer = document.getElementById('sidebarServerInstallingContainer');
+        if (installingContainer) {
+          installingContainer.style.display = 'none';
+        }
+        
+        // Show all server sidebar buttons
+        const serverButtons = [
+          'sidebarServerInfo',
+          'sidebarServerTerminal', 
+          'sidebarServerFilemanager',
+          'sidebarServerDatabases',
+          'sidebarServerSchedules',
+          'sidebarServerUsers',
+          'sidebarServerBackups',
+          'sidebarServerNetwork',
+          'sidebarServerStartup',
+          'sidebarServerSettings',
+          'sidebarServerActivity',
+          'sidebarServerVersions'
+        ];
+        
+        // Show all server buttons (they will be hidden/shown by other logic)
+        serverButtons.forEach(buttonId => {
+          const button = document.getElementById(buttonId);
+          if (button) {
+            const tooltipDiv = button.closest('.tooltip-toggle');
+            if (tooltipDiv) tooltipDiv.style.display = 'inline';
+          }
+        });
+        
+        // Show custom buttons
+        const customButtons = document.querySelectorAll('[id^="sidebarCustomServer"]');
+        customButtons.forEach(button => {
+          const tooltipDiv = button.closest('.tooltip-toggle');
+          if (tooltipDiv) tooltipDiv.style.display = 'inline';
+        });
+      }
+</script>  <style>
+  /* Master fade keyframes */
+  @keyframes nebula-fade-animation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+  /* Animations */
+      @keyframes nebula-animation {}
+
+    .Fade__Container-sc-1p0gm8n-0.hcgQjy:has(section) {
+      animation-name: nebula-fade-animation;
+      animation-duration: .4s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+
+    div.PageContentBlock___StyledContentContainer-sc-kbxq2g-0 > div.bg-gray-700 > div.grid.border-gray-800,
+    div.BackupRow___StyledGreyRowBox-sc-1lzi0pw-0,
+    .GreyRowBox-sc-1xo9c6v-0,
+    .nebula-animation,
+    .style-module_1WqkLT9X,
+    .ScheduleTaskRow___StyledDiv-sc-17r38ls-0 {
+      opacity: 1 !important;
+      animation: unset !important;
+    }
+  
+
+  /* Prefers reduced motion */
+  @media (prefers-reduced-motion) {
+    @keyframes nebula-animation {
+      0% {opacity: 1}
+      100 {opacity: 1}
+    }
+
+    .Fade__Container-sc-1p0gm8n-0.hcgQjy:has(section),
+    div.PageContentBlock___StyledContentContainer-sc-kbxq2g-0 > div.bg-gray-700 > div.grid.border-gray-800,
+    div.BackupRow___StyledGreyRowBox-sc-1lzi0pw-0,
+    .GreyRowBox-sc-1xo9c6v-0,
+    .nebula-animation,
+    .style-module_1WqkLT9X,
+    .ScheduleTaskRow___StyledDiv-sc-17r38ls-0 {
+      animation: unset !important;
+      opacity: 1 !important;
+    }
+  }
+</style><script type="324681115882d2c062d5dc85-text/javascript">
+  document.querySelector("head > meta[name='theme-color'][content='#0e4688']").setAttribute("content", "#040814")
+</script>
+<!-- PTERODACTYL PANEL THEMING -->
+<style id="nebula-theme">
+  ::-webkit-scrollbar {
+    width: 3px !important;
+  }
+  ::-webkit-scrollbar-thumb {
+    box-shadow: unset !important;
+    border-radius: 4px !important;
+    background-color: color-mix(in hsl, white 15%, transparent) !important;
+  }
+
+  /* Pterodactyl */
+  div.w-full.bg-neutral-900.shadow-md.overflow-x-auto { display: none; background-color: var(--pageBackground); opacity: 0; transition: none; }
+  div.SubNavigation-sc-lfuaoi-0.jZPsWO { display: none; background-color: var(--pageBackground); opacity: 0; transition: none; }
+   div.App___StyledDiv-sc-2l91w7-0.fnfeQw { background-color: var(--pageBackground) }
+    div.SubNavigation-sc-lfuaoi-0.jZPsWO { display: none; background-color: var(--pageBackground); opacity: 0; transition: none; }
+  div.ProgressBar___StyledDiv-sc-14ayc3f-1.jleFWY { position: fixed; z-index: 6; top: 0; left: 70px; width: calc(100% - 70px); }
+  .bg-neutral-900, .bg-gray-900, .bg-neutral-700 { background-color: var(--pageSecondaryActive) }
+  .ZkNLd:not([type="checkbox"]):not([type="radio"]) { background: none; background-color: var(--pageSecondaryActive); border: none; }
+  .jqTCDz:not([type="checkbox"]):not([type="radio"]) { background: none; background-color: var(--pageSecondaryActive); border: none; }
+  input.form-input.styles-module_S9h-xMSg.styles-module_AWe-iPIe.mt-3,
+  input.form-input.styles-module_S9h-xMSg.styles-module_AWe-iPIe.mt-1 { background: none; background-color: var(--pageSecondaryActive); border: none; }
+  select.Select-sc-17exaqp-0 { background-color: var(--pageSecondaryActive); border: none; }
+  div.ContentBox___StyledDiv-sc-mjlt6f-2.iGOcRf { background-color: var(--pageSecondary) }
+  .DropdownMenu___StyledDiv-sc-1ojgpy2-1 { display: none }
+  .FileDropdownMenu___StyledDiv-sc-17ln8oh-3 > .Fade__Container-sc-1p0gm8n-0 {display: none}
+  .FileEditContainer___StyledDiv5-sc-48rzpu-9.arKOj { background-color: transparent !important; }
+  [id*="floating-ui-"] {
+    z-index: 9999 !important;
+  }
+
+  /* status bars on server cards */
+  .fwbDSe .status-bar { --ActiveColor: var(--statusOffline) }
+  .kVijQB .status-bar { --ActiveColor: var(--statusStarting) }
+  .fRwFrz .status-bar { --ActiveColor: var(--statusOnline) }
+  
+  /*error! and alerts/messagebox*/
+  .icGkbh {
+    border: none !important;
+    border-color: transparent !important;
+    padding: 1rem !important;
+  }
+  .ErrorBoundary___StyledDiv2-sc-gjlwx5-1.fqqyUj {
+    padding: 20px !important;
+    border-radius: var(--borderRadius) !important;
+    background-color: var(--pageBackground) !important;
+    color: var(--pageButtonDefault) !important
+  }
+  .MessageBox__Container-sc-1yg9bob-0 {
+    background: var(--pageSecondaryHover);
+    border: unset;
+    border-radius: var(--borderRadius);
+    padding: 15px;
+  }
+  .MessageBox___StyledSpan-sc-1yg9bob-2.kNkGJR.title { background: var(--pageSecondarySelected) !important }
+
+  /*texts*/
+  .hojpzx, .jeOYKC, .Button___StyledSpan-sc-1qu1gou-2 {
+    font-weight: 800 !important;
+    text-transform: capitalize !important;
+  }
+
+  /* switches */
+  .cDmYBr > label {
+    background-color: color-mix(in hsl, var(--pageSecondaryActive) 90%, white);
+    transition: background-color .3s;
+  }
+  .cDmYBr > input[type="checkbox"]:checked + label {
+    background-color: var(--pagePrimaryHover);
+  }
+
+  /*screenblock*/
+  .ScreenBlock___StyledDiv2-sc-1f87kcm-2 { background-color: transparent; width: 100%; box-shadow: none; }
+  .ScreenBlock___StyledH-sc-1f87kcm-5,
+  .ScreenBlock___StyledP-sc-1f87kcm-6 { color: white; }
+  .ScreenBlock___StyledImg-sc-1f87kcm-4 { max-width: 420px; }
+  .Button__ButtonStyle-sc-1qu1gou-0.cDkCmT.ScreenBlock__ActionButton-sc-1f87kcm-0 {
+    animation: unset !important;
+    width: auto;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .Button__ButtonStyle-sc-1qu1gou-0.cDkCmT.ScreenBlock__ActionButton-sc-1f87kcm-0 > .Button___StyledSpan-sc-1qu1gou-2::after {
+    content: 'Refresh';
+    margin-left: 6px;
+  }
+  .erSjDQ {
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    margin-left: unset !important;
+    margin-top: unset !important;
+    display: ruby;
+    width: 100%;
+  }
+  .ScreenBlock___StyledImg-sc-1f87kcm-4.fYzLIn {
+    margin-top: 72px !important
+  }
+  .ScreenBlock___StyledDiv2-sc-1f87kcm-2.iEOwcT {
+    margin: unset !important;
+    padding: unset !important;
+  }
+  
+  .WebsocketHandler___StyledDiv-sc-s2kfyl-0 {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 41;
+    border-radius: var(--borderRadius);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .style-module_3kBDV_wo, .cDkCmT {
+    --thisButtonColor: var(--pageButtonDefault); /*#474849*/
+    --tw-ring-opacity: 0 !important;
+    --tw-ring-color: #00000000 !important;
+    --tw-ring-offset-width: 0px !important;
+    background: none !important;
+        background-color: var(--thisButtonColor) !important;
+    border: none !important;
+        transition: background-color .4s !important;
+   }
+    .style-module_3kBDV_wo:hover, .cDkCmT:hover { --thisButtonColor: var(--pageButtonHover) } /*#525354*/
+  .style-module_Yp7-2Fw- { --thisButtonColor: var(--pageSecondaryHover) }
+  .style-module_Yp7-2Fw-:hover { background-color: var(--pageSecondaryActive) !important; }
+  
+  /* Modal 1 */
+  div.Modal___StyledDiv2-sc-9vzni8-3 { background-color: var(--pageSecondary) }
+  .bOwzFe { z-index: 101 !important }
+  /* Modal 2 */
+  div.style-module_1RnhIT0w div.flex.p-6.pb-0.overflow-y-auto { background-color: var(--pageSecondary) }
+  div.style-module_1RnhIT0w { background-color: var(--pageSecondary) }
+  div.px-6.py-3.bg-gray-700.flex.items-center.justify-end.space-x-3.rounded-b {
+    background-color: var(--pageSecondary);
+    padding-bottom: 1rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1.25rem !important;
+  }
+  div.style-module_1RnhIT0w { border: var(--pageSecondary) 5px solid; --tw-ring-shadow: none; }
+  div.fixed:nth-child(1) { background-color: #00000075 }
+  button.style-module_4LBM1DKx.style-module_3kBDV_wo.style-module_3xOG8K0n.style-module_2UCZLAAp.style-module_Yp7-2Fw-.group {
+    background-color: var(--pageSecondaryHover);
+  }
+  div#headlessui-portal-root div div div div.z-40 { z-index: 101 !important; }
+  div#headlessui-portal-root div div div > div.z-50 { z-index: 102 !important; }
+  .kztmyO { border-width: 0px !important; background-color: transparent !important; }
+  /* search modal */
+  a.fKxTnL[href*="/server/"] {
+    background-color: var(--pageSecondary);
+    transition: background-color .3s;
+    box-shadow: unset !important;
+    border: unset !important;
+    border-color: transparent !important;
+    border-width: 0px !important;
+    border-radius: var(--borderRadius);
+  }
+  a.fKxTnL[href*="/server/"]:hover {
+    background-color: var(--pageSecondaryHover);
+  }
+  .SearchModal___StyledSpan-sc-e8elnt-6.epzEyg {
+    background-color: var(--pageSecondaryHover) !important;
+  }
+
+  /* loading bar styling */
+  .CbttB {
+    box-shadow: unset !important;
+    background-color: var(--pagePrimaryHover);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 2px !important;
+    opacity: 1;
+    transition: 
+      opacity .4s,
+      width .5s !important;
+    z-index: 6 !important;
+  }
+  .CbttB.fade-exit {
+    opacity: 0 !important;
+  }
+  .fade-enter {
+    opacity: 0 !important;
+  }
+
+  /* spinners */
+  /* modal spinner */
+  .Modal___StyledDiv-sc-9vzni8-2:has(.Spinner__SpinnerComponent-sc-p63ahb-0) {
+    background: color-mix(in hsl, var(--pageSecondary) 80%, transparent) !important;
+    border-radius: var(--borderRadius) !important;
+  }
+  /* console/codemirror spinner */
+  .style-module_RcP2_Fvj.relative > .Fade__Container-sc-1p0gm8n-0.hcgQjy > .SpinnerOverlay___StyledDiv-sc-ee99c1-0:has(.Spinner__SpinnerComponent-sc-p63ahb-0),
+  .FileEditContainer___StyledDiv3-sc-48rzpu-7 > .Fade__Container-sc-1p0gm8n-0 > .SpinnerOverlay___StyledDiv-sc-ee99c1-0 {
+    background: color-mix(in hsl, var(--pageBackground) 40%, transparent) !important;
+    border-radius: var(--borderRadius) !important;
+  }
+
+  /* server list */
+  .dyLna-D:hover {
+    --tw-border-opacity: 0 !important;
+    border-color: var(--pageSecondaryHover);
+  }
+  .Pagination___StyledDiv-sc-7j9cqz-1 {
+    position: fixed;
+    z-index: 21 !important;
+    bottom: 20px;
+    right: 20px;
+  }
+  .Pagination__Block-sc-7j9cqz-0 {
+    border: none !important;
+    background-color: var(--pageSecondary);
+    box-shadow: var(--pageBackground) 0px 0px 61px 13px;
+  }
+  .Pagination__Block-sc-7j9cqz-0.cDkCmT {
+    background-color: var(--pagePrimaryHover) !important;
+  }
+  .Pagination__Block-sc-7j9cqz-0:hover {
+    background-color: var(--pageSecondaryHover) !important;
+  }
+
+  /* shadows begone */
+  .oLbNP, .ekHIsr { --tw-shadow: unset !important; }
+  /* pterodactyl home */
+  div.ServerRow___StyledDiv-sc-1ibsw91-3.ecJXa-d div.icon.mr-4 {
+    background-color: var(--pageSecondaryHover)
+  }
+  p { color: var(--pagePrimary) }
+  /* account 2fa codes */
+  #disable-totp-form .form-input.styles-module_S9h-xMSg.styles-module_AWe-iPIe,
+  .bg-gray-800.rounded.p-2.mt-6.cursor-pointer
+  { background: none; background-color: var(--pageSecondaryHover) !important }
+  /* account api key */
+  .ApiKeyModal___StyledPre-sc-s6pcab-2.irvYxA,
+  .AccountApiContainer___StyledCode-sc-1c4s3nm-10.lnIosn { background-color: var(--pageSecondaryHover) !important }
+  /* file manager */
+  div.style-module_35MPv1CD.active { margin-bottom: 0px; background-color: var(--pageSecondary); transition: background-color .5s; }
+  div.style-module_1WqkLT9X { margin-bottom: 7px; border-radius: var(--borderRadius); background-color: var(--pageSecondary); transition: background-color .5s; }
+  div.style-module_35MPv1CD.active:hover { background-color: var(--pageSecondaryHover) }
+  div.style-module_1WqkLT9X:hover { background-color: var(--pageSecondaryHover) }
+  
+  div.FileObjectRow___StyledDiv-sc-wrdnyp-0.cOiSgE,
+  div.FileObjectRow___StyledDiv2-sc-wrdnyp-1.fsKyNz,
+  div.FileObjectRow___StyledDiv4-sc-wrdnyp-3,
+  div.FileObjectRow___StyledDiv3-sc-wrdnyp-2
+  { 
+    color: var(--pagePrimary);
+    opacity: .85;
+  }
+
+  .style-module_1WqkLT9X .SelectFileCheckbox___StyledLabel-sc-1cv6gsl-1.diqvdw {
+    padding-bottom: 12px;
+  }
+
+  .CodeMirror.cm-s-ayu-mirage.CodeMirror-wrap.CodeMirror-overlayscroll,
+  .CodeMirror-gutter.CodeMirror-foldgutter,
+  .CodeMirror-gutter.CodeMirror-linenumbers,
+  .FileEditContainer___StyledDiv4-sc-48rzpu-8.eDlcZT .Select-sc-17exaqp-0.dupyoa { background-color: var(--pageSecondary); border: none; }
+
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.FileManagerContainer___StyledFileActionCheckbox-sc-1ehiwhq-0.jqTCDz.uOUEk.fKOwuG {
+    appearance: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.FileManagerContainer___StyledFileActionCheckbox-sc-1ehiwhq-0.jqTCDz.uOUEk.fKOwuG:checked {
+    appearance: none;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.FileManagerContainer___StyledFileActionCheckbox-sc-1ehiwhq-0.jqTCDz.uOUEk.fKOwuG:checked::before {
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.FileManagerContainer___StyledFileActionCheckbox-sc-1ehiwhq-0.jqTCDz.uOUEk.fKOwuG:checked::after {
+    font-family: bootstrap-icons !important;
+    content: "\F26E";
+    color: #000000;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.jqTCDz.uOUEk {
+    appearance: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.jqTCDz.uOUEk:checked {
+    appearance: none;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.jqTCDz.uOUEk:checked::after {
+    font-family: bootstrap-icons !important;
+    content: "\F26E";
+    color: #000000;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* .pteroignore & New Directory Button, new file path -> woo */
+  .FileEditContainer___StyledDiv2-sc-48rzpu-2.eyfINz {
+    border-radius: var(--borderRadius);
+    background-color: var(--pageSecondary);
+    border-left: 0px;
+  }
+
+  .NewDirectoryButton___StyledSpan2-sc-e7hrah-3.eFSjGD {
+    transition: background-color .3s;
+    color: var(--pagePrimary);
+  }
+
+  /* mass action bar */
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1.haunnZ.fade-enter-done,
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1.haunnZ {
+    background-color: var(--pageSecondaryHover);
+    height: 50px;
+    border-radius: var(--borderRadius);
+    padding: 10px 10px !important;
+  }
+  /* mass action bar container */
+  div.fixed.bottom-0.mb-6.flex.justify-center.w-full.z-50 {
+    width: auto;
+    right: 150px;
+  }
+  /* mass action bar buttons */
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1 > button:nth-child(1),
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1 > button:nth-child(2),
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1 > button:nth-child(3) {
+    font-size: 0px;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    scale: 0.75 !important;
+    border-radius: var(--borderRadius) !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    background-color: #00000000 !important;
+  }
+
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1 > button:nth-child(1)::before {
+    font-size: 22px;
+    color: #c7c9cc;
+    font-family: bootstrap-icons !important;
+    content: "\F2E2";
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1 > button:nth-child(2)::before {
+    font-size: 22px;
+    color: #c7c9cc;
+    font-family: bootstrap-icons !important;
+    content: "\F10C";
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1 > button:nth-child(3)::before {
+    font-size: 22px;
+    color: #ff524c;
+    font-family: bootstrap-icons !important;
+    content: "\F78A";
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  
+  /* checkbox */
+  .jqTCDz[type="checkbox"]:checked, .jqTCDz[type="radio"]:checked {
+    background: hex(#3a3a3a00) !important;
+    background-color: #dddddd !important;
+    background-image: none;
+    border: none;
+    border-color: #00000000;
+  }
+  .jqTCDz[type="checkbox"], .jqTCDz[type="radio"] { background-color: transparent !important;border-color: #ffffff30; transition: border-color .3s, background-color .3s; border-radius: 5px; }
+  .jqTCDz[type="checkbox"]:hover, .jqTCDz[type="radio"]:hover { border-color: #ffffffaa; transition: border-color .3s, background-color .3s }
+
+  /* terminal */
+  div.style-module_2Vp6MaXq > div.style-module_1DtraXMW:has(.Icon___StyledSvg-sc-omsq29-0) {
+    backdrop-filter: unset !important;
+    background-color: transparent !important;
+    box-shadow: unset !important;
+    border: unset !important;
+    border-bottom: unset !important;
+  }
+  div.style-module_2Vp6MaXq {
+    background-color: var(--pageSecondary);
+    overflow: hidden;
+    color: #fff !important;
+  }
+  div.style-module_2XbmHEcn {
+    background-color: var(--pageSecondary);
+  }
+  .style-module_RcP2_Fvj .style-module_3TDo--Tn:focus {
+    border-color: var(--pagePrimaryHover) !important;
+  }
+
+  /* graphs */
+  div.style-module_2XbmHEcn:has(div > canvas) {
+    border-bottom-color: var(--pageSecondary) !important;
+    box-shadow: unset !important;
+  }
+
+
+  .xterm-screen + div:has(.svg-inline--fa.fa-bell) {
+    position: absolute !important;
+    right: 0.5rem !important;
+    bottom: 0.5rem !important;
+    padding: 0.5rem !important;
+    font-size: 1.25em !important; 
+    box-shadow: var(--pageBackground) 0px 0px 27px 0px !important;
+    background-color: var(--pageSecondaryHover) !important;
+    z-index: 999 !important;
+    cursor: pointer !important;
+    visibility: visible !important;
+    border-radius: 50px !important;
+    width: 39px !important;
+    padding-left: 12px !important;
+    padding-top: 11px !important;
+  }
+
+  .xterm-search-bar__addon {
+    position: absolute;
+    max-width: 1467px;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: #000;
+    box-shadow: var(--pageBackground) 0px 0px 27px 0px;
+    background-color: var(--pageSecondaryHover);
+    z-index: 999;
+    display: flex;
+    border-radius: 100px;
+    padding: 8px;
+  }
+  .xterm-search-bar__addon .search-bar__input {
+    background-color: color-mix(in hsl, var(--pageSecondaryActive) 96%, white);
+    color: #ccc;
+    border: 0;
+    padding: 2px;
+    height: 20px;
+    width: 227px;
+    border-radius: 100px;
+  }
+  .xterm-search-bar__addon .search-bar__input:focus-visible { outline: unset !important }
+  .xterm-search-bar__addon .search-bar__btn {
+    background-color: color-mix(in hsl, var(--pageSecondaryActive) 96%, white);
+    border-radius: 100px;
+    transition: background-color .2s;
+  }
+  .xterm-search-bar__addon .search-bar__btn.prev {
+    margin-left: 6px !important;
+    border-radius: 20px 0px 0px 20px !important;
+  }
+  .xterm-search-bar__addon .search-bar__btn.next {
+    margin-left: 0px !important;
+    border-radius: 0px 20px 20px 0px !important;
+  }
+  .xterm-search-bar__addon .search-bar__btn.close {
+    margin-left: 6px !important;
+  }
+  .xterm-search-bar__addon .search-bar__btn:hover {
+    background-color: color-mix(in hsl, var(--pageSecondaryActive) 86%, white);
+  }
+  
+  /* copy notification */
+  div.rounded-md.py-3.px-4.text-gray-200.bg-neutral-600\/95.shadow {
+    background-color: var(--pageSecondary) !important;
+  }
+
+
+  /* ICONS INSTEAD OF TEXT ON START/STOP/RESTART BUTTONS */
+      .PageContentBlock___StyledContentContainer-sc-kbxq2g-0 div.grid.grid-cols-4.gap-4.mb-4 div.col-span-4.sm\:col-span-2.lg\:col-span-1.self-end div.flex.sm\:justify-end.space-x-2 button.style-module_4LBM1DKx {
+      font-size: 0px !important;
+      background-color: transparent !important;
+      transition: background-color .3s !important;
+      border: none !important;
+      box-shadow: none !important;
+      width: 33.3% !important;
+      flex: unset !important;
+      border-radius: 100px !important;
+      color: var(--pagePrimary) !important;
+    }
+
+    #power-start { background-color: var(--statusOnline) !important; }
+    #power-restart { background-color: var(--statusStarting) !important; }
+    #power-stop { background-color: var(--statusError) !important; }
+
+    #power-start:hover { background-color: color-mix(in hsl, var(--statusOnline) 95%, white) !important; }
+    #power-restart:hover { background-color: color-mix(in hsl, var(--statusStarting) 95%, white) !important; }
+    #power-stop:hover { background-color: color-mix(in hsl, var(--statusError) 95%, white) !important; }
+    {}
+  #power-start::before {
+    font-family: bootstrap-icons !important;
+    font-size: 25px !important;
+    content: "\F4F4" !important;
+  }
+  #power-restart::before {
+    font-family: bootstrap-icons !important;
+    font-size: 21px !important;
+    content: "\F130" !important;
+  }
+  #power-stop::before {
+    font-family: bootstrap-icons !important;
+    font-size: 25px !important;
+    content: "\F592" !important;
+  }
+  
+
+  /* default status */
+  .Icon___StyledSvg-sc-omsq29-0.ejRaBu.text-gray-100,
+  /* warning status */
+  .style-module_1DtraXMW.bg-yellow-500 .Icon___StyledSvg-sc-omsq29-0.ejRaBu.text-gray-50,
+  /* danger status */
+  .style-module_1DtraXMW.bg-red-500 .Icon___StyledSvg-sc-omsq29-0.ejRaBu.text-gray-50 {
+    /* styles */
+    z-index: 4;
+    margin-right:25px;
+    scale: 4;
+    color: #ffffff12 !important;
+    transition: color .3s, scale .3s, background-color .3s;
+  }
+
+  .Icon___StyledSvg-sc-omsq29-0.ejRaBu.text-gray-100:hover {
+    z-index: 4;
+    color: #ffffff18 !important;
+  }
+
+  /* address */ div.style-module_2Vp6MaXq:nth-child(1) > div:nth-child(2) > svg:nth-child(1) {scale: 5 !important;rotate: -20deg !important;}
+  /* address hover */ div.style-module_2Vp6MaXq:nth-child(1):hover > div:nth-child(2) > svg:nth-child(1) {scale: 5.3 !important; color: #ffffff18 !important;}
+  
+  /* uptime */ div.style-module_2Vp6MaXq:nth-child(2) > div:nth-child(2) > svg:nth-child(1) {scale: 4.5 !important;rotate: -20deg !important; color: #ffffff12 !important; transition: color .3s, scale .3s, background-color .3s;}
+  /* uptime hover */ div.style-module_2Vp6MaXq:nth-child(2):hover > div:nth-child(2) > svg:nth-child(1) {scale: 4.8 !important; color: #ffffff18 !important;}
+
+  /* cpu */ div.style-module_2Vp6MaXq:nth-child(3) > div:nth-child(2) > svg:nth-child(1) {scale: 3.8 !important;rotate: -20deg !important;}
+  /* cpu hover */ div.style-module_2Vp6MaXq:nth-child(3):hover > div:nth-child(2) > svg:nth-child(1) {scale: 4.1 !important; color: #ffffff18 !important;}
+  
+  /* ram */ div.style-module_2Vp6MaXq:nth-child(4) > div:nth-child(2) > svg:nth-child(1) {scale: 4 !important;rotate: -20deg !important;}
+  /* ram hover */ div.style-module_2Vp6MaXq:nth-child(4):hover > div:nth-child(2) > svg:nth-child(1) {scale: 4.3 !important; color: #ffffff18 !important;}
+  
+  /* disk */ div.style-module_2Vp6MaXq:nth-child(5) > div:nth-child(2) > svg:nth-child(1) {scale: 4.5 !important;rotate: -20deg !important;}
+  /* disk hover */ div.style-module_2Vp6MaXq:nth-child(5):hover > div:nth-child(2) > svg:nth-child(1) {scale: 4.8 !important; color: #ffffff18 !important;}
+  
+  /* network in */ div.style-module_2Vp6MaXq:nth-child(6) > div:nth-child(2) > svg:nth-child(1) {scale: 4.5 !important;rotate: -20deg !important;}
+  /* network in hover */ div.style-module_2Vp6MaXq:nth-child(6):hover > div:nth-child(2) > svg:nth-child(1) {scale: 4.8 !important; color: #ffffff18 !important;}
+  
+  /* network out */ div.style-module_2Vp6MaXq:nth-child(7) > div:nth-child(2) > svg:nth-child(1) {scale: 4.5 !important;rotate: -20deg !important;}
+  /* network out hover */ div.style-module_2Vp6MaXq:nth-child(7):hover > div:nth-child(2) > svg:nth-child(1) {scale: 4.8 !important; color: #ffffff18 !important;}
+
+  /* xterm */
+  .relative.style-module_1AMtO9lt input { background: none; background-color: var(--pageSecondaryHover); }
+  .style-module_1n_DiqmT.style-module_1AMtO9lt, .xterm-screen, .xterm-viewport, .terminal.xterm { background: none !important; background-color: transparent !important; }
+
+  /* schedules */
+  .GreyRowBox-sc-1xo9c6v-0,
+  .flex.ScheduleEditContainer___StyledScheduleCronRow-sc-1fhsmlc-5.gLoyLu { background-color: var(--pageSecondary) }
+  div.ScheduleEditContainer___StyledDiv3-sc-1fhsmlc-7 { background-color: var(--pageSecondary); border-bottom: unset !important; margin-bottom: 1rem; }
+  div.ScheduleEditContainer___StyledDiv-sc-1fhsmlc-0.bWXUsX { background-color: var(--pageSecondary) }
+  div.ScheduleTaskRow___StyledDiv-sc-17r38ls-0.ipThkt { background: none !important; background-color: var(--pageSecondary) !important; border: none; margin-bottom: 5px; border-radius: 2.5px }
+  .ScheduleTaskRow___StyledDiv4-sc-17r38ls-6.cPagWz { background-color: var(--pageSecondaryHover); }
+  .ScheduleEditContainer___StyledDiv7-sc-1fhsmlc-18 { background: none !important; }
+
+  div.EditScheduleModal___StyledDiv2-sc-wh9db9-4,
+  div.EditScheduleModal___StyledDiv4-sc-wh9db9-6,
+  div.EditScheduleModal___StyledDiv5-sc-wh9db9-7,
+  div.TaskDetailsModal___StyledDiv5-sc-1b5dnyw-7 { background-color: var(--pageSecondaryHover); border: none; } /*create/edit schedule*/
+
+  div.EditScheduleModal___StyledDiv3-sc-wh9db9-5.hsBdEm,
+  div.EditScheduleModal___StyledDiv3-sc-wh9db9-5.hsBdEm * {
+    background-color: var(--pageSecondaryActive) !important;
+    border-radius: var(--borderRadius) !important;
+  }
+  div.EditScheduleModal___StyledDiv3-sc-wh9db9-5.hsBdEm {
+    margin-top: 15px;
+  }
+  .jpYRCT { box-shadow: none !important; }
+
+  /* settings */
+  .jRrWLs { border-bottom-width: 0 !important; }
+  .SettingsContainer___StyledTitledGreyBox-sc-1e5ycmz-3 > div:nth-child(2) > div:nth-child(1) > input:nth-child(2) { background-color: var(--pageSecondaryActive); border: none; }
+  .SettingsContainer___StyledDiv3-sc-1e5ycmz-4.keyYci .Input-sc-19rce1w-0.jqTCDz.cursor-pointer { background-color: var(--pageSecondaryActive); border: none; }
+  #name { background-color: var(--pageSecondaryActive); border: none; }
+  .Input__Textarea-sc-19rce1w-1 { background-color: var(--pageSecondaryActive); border: none; }
+  
+  div.RenameServerBox___StyledTitledGreyBox-sc-1bh2mfg-0 > div:nth-child(1),
+  div.SettingsContainer___StyledTitledGreyBox2-sc-1e5ycmz-10 > div:nth-child(1),
+  div.ReinstallServerBox___StyledTitledGreyBox-sc-1prmksw-0 > div:nth-child(1),
+  div.SettingsContainer___StyledTitledGreyBox-sc-1e5ycmz-3 > div:nth-child(1)
+  { background-color: var(--pageSecondary); border-bottom-width: 0 !important; }
+
+  .SettingsContainer___StyledCode-sc-1e5ycmz-12.EwfIk,
+  .SettingsContainer___StyledCode2-sc-1e5ycmz-14.izAmwE,
+  div.RenameServerBox___StyledTitledGreyBox-sc-1bh2mfg-0 > div:nth-child(2),
+  div.SettingsContainer___StyledTitledGreyBox2-sc-1e5ycmz-10 > div:nth-child(2),
+  div.ReinstallServerBox___StyledTitledGreyBox-sc-1prmksw-0 > div:nth-child(2),
+  div.SettingsContainer___StyledTitledGreyBox-sc-1e5ycmz-3 > div:nth-child(2),
+  .oLbNP,
+  .StartupContainer___StyledDiv-sc-163imy2-0.dUOPLC .TitledGreyBox___StyledDiv3-sc-gvsoy-4.fKIIIQ,
+  .StartupContainer___StyledDiv-sc-163imy2-0.dUOPLC .TitledGreyBox___StyledDiv2-sc-gvsoy-1.jRrWLs,
+  .StartupContainer___StyledDiv-sc-163imy2-0.dUOPLC .TitledGreyBox___StyledDiv-sc-gvsoy-0.oLbNP.StartupContainer___StyledTitledGreyBox-sc-163imy2-1.kRunTE,
+  .StartupContainer___StyledDiv-sc-163imy2-0.dUOPLC .TitledGreyBox___StyledDiv-sc-gvsoy-0.oLbNP.StartupContainer___StyledTitledGreyBox2-sc-163imy2-4.aRhRz,
+  .StartupContainer___StyledDiv3-sc-163imy2-8.gMWjQt .TitledGreyBox___StyledDiv2-sc-gvsoy-1.jRrWLs,
+  .StartupContainer___StyledDiv3-sc-163imy2-8.gMWjQt .TitledGreyBox___StyledDiv3-sc-gvsoy-4.fKIIIQ,
+  .StartupContainer___StyledDiv3-sc-163imy2-8.gMWjQt .TitledGreyBox___StyledDiv-sc-gvsoy-0.oLbNP
+  { background-color: var(--pageSecondary) }
+
+  .SettingsContainer___StyledDiv6-sc-1e5ycmz-7.bzLcIU {
+    border-radius: var(--borderRadius);
+    border-left: 0px;
+  }
+
+  .EditSubuserModal___StyledPermissionTitleBox-sc-1hon03w-8,
+  .EditSubuserModal___StyledPermissionTitleBox-sc-1hon03w-8 > .TitledGreyBox___StyledDiv2-sc-gvsoy-1 {
+    background-color: var(--pageSecondaryHover)
+  }
+  
+  /* activity  ACCOUNT + SERVER */
+  .ContentContainer-sc-x3r2dw-0.PageContentBlock___StyledContentContainer-sc-kbxq2g-0.jyeSuy.HeRWk > div.bg-gray-700 > div.grid {
+    background-color: var(--pageSecondary);
+    border-radius: var(--borderRadius);
+    border: none;
+    margin-bottom: 10px;
+  }
+  div.bg-gray-700:has(div.grid.grid-cols-10.py-4.border-b-2.border-gray-800.last\:rounded-b.last\:border-0.group),
+  div.ContentContainer-sc-x3r2dw-0:nth-child(2) {
+    background: none;
+    background-color: none;
+    transition: none;
+    animation: none;
+    border: none;
+    border-color: #00000000;
+  }
+  /* startup */
+  .StartupContainer___StyledDiv-sc-163imy2-0.dUOPLC .TitledGreyBox___StyledDiv-sc-gvsoy-0.oLbNP.StartupContainer___StyledTitledGreyBox2-sc-163imy2-4.aRhRz .TitledGreyBox___StyledDiv3-sc-gvsoy-4.fKIIIQ .Select-sc-17exaqp-0.dupyoa,
+  .StartupContainer___StyledDiv2-sc-163imy2-2.gMdcgi p { background-color: var(--pageSecondaryActive); border: none; }
+
+  .Label-sc-g780ms-0.eDArzA,
+  .StartupContainer___StyledDiv3-sc-163imy2-8.gMWjQt .Input-sc-19rce1w-0.jqTCDz { border: none; }
+  /* subusers */
+  .TitledGreyBox___StyledDiv3-sc-gvsoy-4.fKIIIQ .PermissionRow__Container-sc-1h899cn-0.icxFlO:hover { border-color: #00000000; border: none; background-color: var(--pageSecondaryActive) }
+  .TitledGreyBox___StyledDiv3-sc-gvsoy-4.fKIIIQ .PermissionRow__Container-sc-1h899cn-0.icxFlO { border-color: #00000000; border: none; }
+  /* backups */
+  .CreateBackupButton___StyledDiv2-sc-da8bqw-3.eDncUf { background-color: var(--pageSecondaryHover); border: none; }
+  
+  /* databases */
+  .Button__ButtonStyle-sc-1qu1gou-0[color="red"],
+  .Button__ButtonStyle-sc-1qu1gou-0.kztmyO,
+  .Button__ButtonStyle-sc-1qu1gou-0.jUQpfY {
+    border: unset;
+    background-color: var(--pageSecondaryHover) !important;
+  }
+  .Button__ButtonStyle-sc-1qu1gou-0[color="red"]:hover,
+  .Button__ButtonStyle-sc-1qu1gou-0.kztmyO:hover,
+  .Button__ButtonStyle-sc-1qu1gou-0.jUQpfY:hover { background-color: var(--pageSecondaryActive) !important; }
+
+  .DatabaseRow___StyledP3-sc-1t67zwr-18.jJXgtG.cursor-pointer,
+  .DatabaseRow___StyledP5-sc-1t67zwr-21.iGUSeG,
+  .DatabaseRow___StyledP7-sc-1t67zwr-24.bvwnyN.cursor-pointer {
+    background-color: var(--pageSecondaryActive);
+    padding: 4px 10px;
+    padding-top: 5px !important;
+    border-radius: var(--borderRadius);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+  }
+</style>
+  <div id="fileMode" class="file-manager-switch">
+  <div class="file-manager-switch-container">
+    <button id="filesGrid" class="file-manager-switch-grid" onclick="if (!window.__cfRLUnblockHandlers) return false; switchFilesLayout()" data-cf-modified-324681115882d2c062d5dc85-="">
+      <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" style="transform: ;msFilter:;"><path d="M10 7h4v4h-4zm6 0h4v4h-4zM4 7h4v4H4zm6 6h4v4h-4zm6 0h4v4h-4zM4 13h4v4H4z"></path></svg>
+    </button>
+    <button id="filesList" class="file-manager-switch-list" onclick="if (!window.__cfRLUnblockHandlers) return false; switchFilesLayout()" data-cf-modified-324681115882d2c062d5dc85-="">
+      <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" style="transform: ;msFilter:;"><path d="M4 6h2v2H4zm0 5h2v2H4zm0 5h2v2H4zm16-8V6H8.023v2H18.8zM8 11h12v2H8zm0 5h12v2H8z"></path></svg>
+    </button>
+  </div>
+</div>                                        <script src="/assets/bundle.594ba257.js" crossorigin="anonymous" type="324681115882d2c062d5dc85-text/javascript"></script>
+            </div>
+
+            
+        
+            <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="324681115882d2c062d5dc85-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"4c03e7aacac74d628f0c8d551ae4bf4a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.8/src/glowCookies.min.js" type="324681115882d2c062d5dc85-text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.8/src/glowCookies.min.js" type="324681115882d2c062d5dc85-text/javascript"></script>
+
+<script type="324681115882d2c062d5dc85-text/javascript">
+    glowCookies.start('en', {
+        style: 2,
+        analytics: 'G-EBD9PD51V2',
+        facebookPixel: '',
+        hideAfterClick: true,
+        policyLink: 'https://tickhosting.com/UserAgreement.html',
+        bannerBackground: '#251F30',
+        bannerColor: '#fafafa',
+        bannerHeading: '<h2>Cookies</h2>',
+        acceptBtnColor: 'white',
+        acceptBtnBackground: '#3B82F6',
+        rejectBtnBackground: '#2B2F3E',
+        rejectBtnColor: 'white',
+        manageColor: 'white',
+        manageBackground: 'blue',
+        manageText: 'cookies text'
+    });
+</script>
+
+<script type="324681115882d2c062d5dc85-text/javascript">
+
+    //run on page initialization
+    document.addEventListener("DOMContentLoaded", function() {
+        $('#header').remove();
+        $('#nav-bar').remove();
+    });
+</script>
+
+</body>
+</html>
