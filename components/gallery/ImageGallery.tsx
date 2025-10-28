@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 type GalleryImage = {
   src: string;
@@ -27,15 +27,19 @@ const blurPlaceholder =
 
 export default function ImageGallery({
   images,
-  thumbnailAspectClassName = 'aspect-[4/3]',
+  thumbnailAspectClassName = 'aspect-[3/2]',
   gridClassName
 }: ImageGalleryProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [failedImages, setFailedImages] = useState<Record<number, boolean>>({});
 
-  const openAt = useCallback((index: number) => {
-    if (images.length === 0) return;
-    setActiveIndex(index);
-  }, [images.length]);
+  const openAt = useCallback(
+    (index: number) => {
+      if (images.length === 0) return;
+      setActiveIndex(index);
+    },
+    [images.length]
+  );
 
   const close = useCallback(() => {
     setActiveIndex(null);
@@ -57,39 +61,47 @@ export default function ImageGallery({
     });
   }, [images.length]);
 
+  const markFailed = useCallback((index: number) => {
+    setFailedImages((prev) => (prev[index] ? prev : { ...prev, [index]: true }));
+  }, []);
+
+  // Když se změní vstupní seznam obrázků, smaž předchozí chybové flagy
   useEffect(() => {
-    if (activeIndex === null) {
-      return;
-    }
+    setFailedImages({});
+  }, [images]);
+
+  // Klávesová navigace pouze při otevřené galerii
+  useEffect(() => {
+    if (activeIndex === null) return;
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         event.preventDefault();
         close();
-      }
-
-      if (event.key === 'ArrowLeft') {
+      } else if (event.key === 'ArrowLeft') {
         event.preventDefault();
         showPrevious();
-      }
-
-      if (event.key === 'ArrowRight') {
+      } else if (event.key === 'ArrowRight') {
         event.preventDefault();
         showNext();
       }
     };
 
     window.addEventListener('keydown', onKeyDown);
-
-    return () => {
-      window.removeEventListener('keydown', onKeyDown);
-    };
+    return () => window.removeEventListener('keydown', onKeyDown);
   }, [activeIndex, close, showNext, showPrevious]);
 
   const isOpen = activeIndex !== null && images.length > 0;
   const aspectClass = thumbnailAspectClassName;
   const baseGridClasses = 'grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4';
   const gridClasses = [baseGridClasses, gridClassName].filter(Boolean).join(' ');
+
+  const activeImage = useMemo(() => {
+    if (activeIndex === null) return null;
+    return images[activeIndex] ?? null;
+  }, [activeIndex, images]);
+
+  const activeImageFailed = activeIndex === null ? false : Boolean(failedImages[activeIndex]);
 
   return (
     <>
@@ -103,25 +115,35 @@ export default function ImageGallery({
             aria-label={`Otevřít fotografii: ${image.alt}`}
           >
             <div className={`relative ${aspectClass} w-full`}>
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
-                className="object-cover transition duration-300 group-hover:scale-105"
-                placeholder="blur"
-                blurDataURL={blurPlaceholder}
-                priority={index === 0}
-              />
+              {failedImages[index] ? (
+                <div className="flex h-full w-full items-center justify-center rounded-2xl bg-slate-900/70 px-4 text-center text-sm font-medium text-slate-200">
+                  <span>{image.alt}</span>
+                </div>
+              ) : (
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                  className="object-cover transition duration-300 group-hover:scale-105"
+                  placeholder="blur"
+                  blurDataURL={blurPlaceholder}
+                  priority={index === 0}
+                  onError={() => markFailed(index)}
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
+                />
+              )}
             </div>
           </button>
         ))}
       </div>
 
-      {isOpen && activeIndex !== null && (
+      {isOpen && activeIndex !== null && activeImage && (
         <div
           role="dialog"
           aria-modal="true"
+          aria-label="Zobrazení fotografie v plné velikosti"
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 px-4 py-8 backdrop-blur-sm"
           onClick={close}
         >
@@ -153,15 +175,27 @@ export default function ImageGallery({
             className="relative flex w-full max-w-4xl items-center justify-center"
             onClick={(event) => event.stopPropagation()}
           >
-            <Image
-              src={images[activeIndex].src}
-              alt={images[activeIndex].alt}
-              width={images[activeIndex].width}
-              height={images[activeIndex].height}
-              className="h-auto max-h-[80vh] w-full rounded-3xl object-contain shadow-2xl"
-              sizes="(max-width: 768px) 100vw, 70vw"
-              priority
-            />
+            {activeImageFailed ? (
+              <div className="flex min-h-[320px] w-full flex-col items-center justify-center rounded-3xl border border-white/10 bg-slate-950/70 px-6 py-12 text-center text-slate-100 shadow-2xl">
+                <p className="text-lg font-semibold">Obrázek se nepodařilo načíst.</p>
+                <p className="mt-2 text-sm text-slate-300">
+                  Zkontrolujte prosím název souboru nebo cestu: {activeImage.alt}
+                </p>
+              </div>
+            ) : (
+              <Image
+                src={activeImage.src}
+                alt={activeImage.alt}
+                width={activeImage.width}
+                height={activeImage.height}
+                className="h-auto max-h-[80vh] w-full rounded-3xl object-contain shadow-2xl"
+                sizes="(max-width: 768px) 100vw, 70vw"
+                priority
+                onError={() => markFailed(activeIndex)}
+                loading="eager"
+                decoding="async"
+              />
+            )}
           </div>
 
           <button
@@ -176,6 +210,7 @@ export default function ImageGallery({
             ›
           </button>
 
+          {/* Mobilní ovládání */}
           <div className="absolute bottom-6 left-1/2 flex w-full max-w-md -translate-x-1/2 items-center justify-between gap-3 sm:hidden">
             <button
               type="button"
