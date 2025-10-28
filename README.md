@@ -59,8 +59,9 @@ Projekt je připraven pro Vercel/edge prostředí (`runtime = 'edge'`). Po build
 2. V sekci **Build settings** nastavte:
    - **Build command:** `pnpm build`
    - **Publish directory:** `.next`
-3. V **Environment variables** přidejte požadované proměnné (Site settings → Build & deploy → Environment) a ujistěte se, že jejich hodnoty odpovídají lokální konfiguraci.
-4. Při prvním deployi Netlify automaticky nainstaluje `pnpm` podle `packageManager` a použije Node.js 20 dle `netlify.toml`.
+3. Netlify z detekovaného `netlify.toml` automaticky aktivuje plugin `@netlify/next` (sekce `[[plugins]]`).
+4. V **Environment variables** přidejte požadované proměnné (Site settings → Build & deploy → Environment) a ujistěte se, že jejich hodnoty odpovídají lokální konfiguraci.
+5. Při prvním deployi Netlify automaticky nainstaluje `pnpm` podle `packageManager` a použije Node.js 20 dle `netlify.toml`.
 
 ### FAQ
 - **Jaká verze Node.js / pnpm se používá?** Deploy běží na Node.js 20 a pnpm 8.15.5, jak je definováno v `netlify.toml`.
@@ -68,6 +69,7 @@ Projekt je připraven pro Vercel/edge prostředí (`runtime = 'edge'`). Po build
 - **Funguje ISR?** Ano, ISR a revalidace běží automaticky přes Netlify Next.js Runtime.
 - **Co middleware a edge runtime?** Existující `runtime = 'edge'` exports jsou nasazeny jako Edge Functions bez dalších úprav.
 - **Jak jsou podporovány Route Handlers?** API routy a route handlers jsou převáděny na Netlify Functions v rámci pluginu `@netlify/next`.
+- **Je potřeba něco dělat s Netlify pluginy?** Ne, `netlify.toml` již obsahuje sekci `[[plugins]]` s `@netlify/next`, takže se runtime zapne bez dalších kroků.
 
 ## Licence
 © 2024 U Fandy. Všechna práva vyhrazena.
