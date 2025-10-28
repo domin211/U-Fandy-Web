@@ -33,10 +33,13 @@ export default function ImageGallery({
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [failedImages, setFailedImages] = useState<Record<number, boolean>>({});
 
-  const openAt = useCallback((index: number) => {
-    if (images.length === 0) return;
-    setActiveIndex(index);
-  }, [images.length]);
+  const openAt = useCallback(
+    (index: number) => {
+      if (images.length === 0) return;
+      setActiveIndex(index);
+    },
+    [images.length]
+  );
 
   const close = useCallback(() => {
     setActiveIndex(null);
@@ -59,56 +62,45 @@ export default function ImageGallery({
   }, [images.length]);
 
   const markFailed = useCallback((index: number) => {
-    setFailedImages((prev) => {
-      if (prev[index]) {
-        return prev;
-      }
-
-      return { ...prev, [index]: true };
-    });
+    setFailedImages((prev) => (prev[index] ? prev : { ...prev, [index]: true }));
   }, []);
 
+  // Když se změní vstupní seznam obrázků, smaž předchozí chybové flagy
   useEffect(() => {
     setFailedImages({});
   }, [images]);
 
+  // Klávesová navigace pouze při otevřené galerii
   useEffect(() => {
-    if (activeIndex === null) {
-      return;
-    }
+    if (activeIndex === null) return;
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         event.preventDefault();
         close();
-      }
-
-      if (event.key === 'ArrowLeft') {
+      } else if (event.key === 'ArrowLeft') {
         event.preventDefault();
         showPrevious();
-      }
-
-      if (event.key === 'ArrowRight') {
+      } else if (event.key === 'ArrowRight') {
         event.preventDefault();
         showNext();
       }
     };
 
     window.addEventListener('keydown', onKeyDown);
-
-    return () => {
-      window.removeEventListener('keydown', onKeyDown);
-    };
+    return () => window.removeEventListener('keydown', onKeyDown);
   }, [activeIndex, close, showNext, showPrevious]);
 
   const isOpen = activeIndex !== null && images.length > 0;
   const aspectClass = thumbnailAspectClassName;
   const baseGridClasses = 'grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4';
   const gridClasses = [baseGridClasses, gridClassName].filter(Boolean).join(' ');
+
   const activeImage = useMemo(() => {
     if (activeIndex === null) return null;
     return images[activeIndex] ?? null;
   }, [activeIndex, images]);
+
   const activeImageFailed = activeIndex === null ? false : Boolean(failedImages[activeIndex]);
 
   return (
@@ -151,6 +143,7 @@ export default function ImageGallery({
         <div
           role="dialog"
           aria-modal="true"
+          aria-label="Zobrazení fotografie v plné velikosti"
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 px-4 py-8 backdrop-blur-sm"
           onClick={close}
         >
@@ -185,7 +178,9 @@ export default function ImageGallery({
             {activeImageFailed ? (
               <div className="flex min-h-[320px] w-full flex-col items-center justify-center rounded-3xl border border-white/10 bg-slate-950/70 px-6 py-12 text-center text-slate-100 shadow-2xl">
                 <p className="text-lg font-semibold">Obrázek se nepodařilo načíst.</p>
-                <p className="mt-2 text-sm text-slate-300">Zkontrolujte prosím název souboru nebo cestu: {activeImage.alt}</p>
+                <p className="mt-2 text-sm text-slate-300">
+                  Zkontrolujte prosím název souboru nebo cestu: {activeImage.alt}
+                </p>
               </div>
             ) : (
               <Image
@@ -215,6 +210,7 @@ export default function ImageGallery({
             ›
           </button>
 
+          {/* Mobilní ovládání */}
           <div className="absolute bottom-6 left-1/2 flex w-full max-w-md -translate-x-1/2 items-center justify-between gap-3 sm:hidden">
             <button
               type="button"

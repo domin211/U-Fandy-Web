@@ -8,14 +8,15 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: 'Bowling',
-  description: 'Čtyři profesionální bowlingové dráhy, neon bar a vlastní scoring systém. Přijďte zažít večer plný energie.'
+  description:
+    'Čtyři profesionální bowlingové dráhy, neon bar a vlastní scoring systém. Přijďte zažít večer plný energie.',
 };
 
 const galleryImages = [
   { src: '/images/bowling/bowling1.webp', alt: 'Bowlingová dráha s barem', width: 1200, height: 800 },
   { src: '/images/bowling/bowling2.webp', alt: 'Rozsvícené bowlingové dráhy', width: 1200, height: 800 },
   { src: '/images/bowling/bowling3.webp', alt: 'Bowlingová herna s posezením', width: 1200, height: 800 },
-  { src: '/images/bowling/bowling4.webp', alt: 'Bowlingová herna s mantinelem', width: 1200, height: 800 }
+  { src: '/images/bowling/bowling4.webp', alt: 'Bowlingová herna s mantinelem', width: 1200, height: 800 },
 ];
 
 const vybaveni = [
@@ -23,12 +24,13 @@ const vybaveni = [
   'Soukromý salonek pro team-buildingy a oslavy',
   'Neonový bar s autorskými koktejly',
   'Sound system s možností vlastních playlistů',
-  'Pronájem trenéra pro firemní turnaje'
+  'Pronájem trenéra pro firemní turnaje',
 ];
 
 export default function BowlingPage() {
   return (
     <div className="mx-auto max-w-6xl space-y-16 px-4 py-16 text-slate-100 sm:px-6">
+      {/* Hero */}
       <section className="space-y-6 rounded-3xl border border-white/10 bg-slate-950/70 p-8 text-center shadow-xl sm:p-12">
         <p className="text-xs uppercase tracking-[0.45em] text-brand-light sm:text-sm">Bowling</p>
         <h1 className="text-3xl font-semibold uppercase text-white sm:text-4xl">
@@ -40,6 +42,7 @@ export default function BowlingPage() {
         </p>
       </section>
 
+      {/* Galerie */}
       <section className="rounded-3xl border border-white/10 bg-slate-950/60 p-4 shadow-xl sm:p-6">
         <ImageGallery images={galleryImages} gridClassName="sm:grid-cols-2 lg:grid-cols-4" />
         <p className="mt-4 text-center text-sm text-slate-300">
@@ -47,12 +50,16 @@ export default function BowlingPage() {
         </p>
       </section>
 
+      {/* Sekční nadpis */}
       <SectionHeading
         eyebrow="Bowling"
         title="Sportovní zážitek s atmosférou klubu"
         description="Moderní technologie, ambientní osvětlení a bar přímo u drah. Perfektní místo pro přátele i firemní akce."
       />
+
+      {/* Dvě sloupce */}
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
+        {/* Vybavení + Rezervace */}
         <div className="space-y-6 text-sm leading-relaxed">
           <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-8 shadow-xl">
             <p>
@@ -70,17 +77,24 @@ export default function BowlingPage() {
               ))}
             </ul>
           </div>
+
           <div className="rounded-3xl border border-brand/40 bg-brand/10 p-8 text-brand-light shadow-lg">
             <h2 className="text-lg font-semibold text-white">Rezervujte dráhu</h2>
             <p className="mt-4 text-slate-100">
-              Zavolejte na +420 000 000 000 nebo napište na{' '}
+              Zavolejte na{' '}
+              <a href="tel:+420000000000" className="font-semibold underline decoration-brand-light">
+                +420 000 000 000
+              </a>{' '}
+              nebo napište na{' '}
               <a href="mailto:bowling@u-fandy.cz" className="font-semibold underline decoration-brand-light">
                 bowling@u-fandy.cz
-              </a>{' '}
-              a my se ozveme zpět s potvrzením.
+              </a>
+              . Ozveme se s potvrzením.
             </p>
           </div>
         </div>
+
+        {/* Otevírací doba + Firemní turnaje */}
         <div className="space-y-6">
           <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-6 shadow-xl">
             <HoursTable title="Otevírací doba" rows={hours.bowling} />
