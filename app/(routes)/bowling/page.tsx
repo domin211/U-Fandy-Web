@@ -9,7 +9,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: 'Bowling',
   description:
-    'Čtyři profesionální bowlingové dráhy, neon bar a vlastní scoring systém. Přijďte zažít večer plný energie.',
+    'Bowling – dvě moderní dráhy s možností dětských mantinelů a pohodovým zázemím pro celou rodinu.',
 };
 
 const galleryImages = [
@@ -34,11 +34,11 @@ export default function BowlingPage() {
       <section className="space-y-6 rounded-3xl border border-white/10 bg-slate-950/70 p-8 text-center shadow-xl sm:p-12">
         <p className="text-xs uppercase tracking-[0.45em] text-brand-light sm:text-sm">Bowling</p>
         <h1 className="text-3xl font-semibold uppercase text-white sm:text-4xl">
-          Přijďte si zahrát na moderní dráhy
+          PŘIJĎTE SI ZAHRÁT NA MODERNÍ DRÁHY
         </h1>
         <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-200">
-          Čtyři profesionální bowlingové dráhy, ambientní osvětlení a bar přímo v herně. Připravili jsme prostředí, kde se
-          budou dobře bavit jak úplní začátečníci, tak ostřílení hráči.
+          Přijďte si zahrát na dvě moderní bowlingové dráhy. Nabízíme dvě špičkové dráhy, kde jedna z drah může být
+          upravena pro Vaše děti pomocí výsuvného mantinelu, který zabraňuje vypadnutí koule do žlabu.
         </p>
       </section>
 
