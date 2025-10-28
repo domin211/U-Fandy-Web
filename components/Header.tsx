@@ -140,6 +140,7 @@ export default function Header() {
                     isActive ? 'bg-white text-topbar shadow-soft' : 'hover:border-brand hover:text-brand'
                   }`
                 }
+                variant="list"
               />
             </div>
           </nav>
