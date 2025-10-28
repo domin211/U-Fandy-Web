@@ -316,6 +316,118 @@ const sk: Messages = {
       { src: '/images/bowling/bowling4.webp', alt: 'Bowlingová dráha s mantinelom', width: 1200, height: 800 }
     ]
   },
+  wellness: {
+    metadata: {
+      title: 'Wellness',
+      description: 'Súkromné wellness s fínskou saunou, parnou kabínou a vírivkou v U Fandy. Rezervujte si spa len pre seba.'
+    },
+    hero: {
+      eyebrow: 'Wellness',
+      title: 'Pokoj hôr v privátnom spa',
+      description:
+        'Zarezervujte si fínsku saunu, parnú kabínu a vírivku iba pre vašu skupinu. Uteráky, aromaterapia a prosecco sú pripravené.'
+    },
+    highlights: [
+      {
+        title: 'Fínska aj bylinná sauna',
+        description: 'Cedrové drevo s chromoterapiou dopĺňa bylinná parná kabína pre jemnú regeneráciu.'
+      },
+      {
+        title: 'Vírivka s výhľadom',
+        description: 'Vyhrievaná vírivka až pre šesť hostí s masážnymi tryskami a atmosférickým svetlom.'
+      },
+      {
+        title: 'Relax zóna',
+        description: 'Pohodlné ležadlá, atmosféra krbu a playlisty na hlboké uvoľnenie.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    rituals: [
+      {
+        title: 'Súkromný vstup pre 6 osôb',
+        description: 'Celá wellness zóna vrátane šatní je iba pre vašu skupinu.'
+      },
+      {
+        title: 'Občerstvenie na želanie',
+        description: 'Objednajte si prosecco, sezónne ovocie alebo domáce limonády priamo do spa.'
+      },
+      {
+        title: 'Masáže a rituály',
+        description: 'Zabezpečíme profesionálne masáže a telové rituály pri objednávke aspoň 24 hodín vopred.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    ritualsTitle: 'Rituály na mieru',
+    amenities: [
+      {
+        title: 'Otváracie hodiny',
+        description: 'Denne 10:00–22:00. Posledný vstup o 20:30, aby ste si užili plných 90 minút.'
+      },
+      {
+        title: 'Vybavenie',
+        description: 'Pre každého hosťa sú pripravené uteráky, prestieradlá, kozmetika aj fén.'
+      },
+      {
+        title: 'Rezervácie',
+        description: 'Kontaktujte recepciu na +420 000 000 000 alebo info@u-fandy.cz. Ozveme sa do 24 hodín.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    amenitiesTitle: 'Čo je zahrnuté',
+    cta: {
+      title: 'Rezervujte si privátne spa',
+      description: 'Napíšte nám preferovaný termín a prispôsobíme rituál vašim želaniam.',
+      buttonLabel: 'Dopytovať termín'
+    },
+    gallery: [
+      { src: '/images/hero/bazen.webp', alt: 'Wellness bazén s jemným osvetlením', width: 1200, height: 800 },
+      { src: '/images/placeholders/hero.svg', alt: 'Výhľad na hory z relax zóny', width: 1200, height: 800 },
+      { src: '/images/placeholders/room.svg', alt: 'Vyhrievané ležadlá v privátnom spa', width: 1200, height: 800 },
+      { src: '/images/placeholders/restaurant.svg', alt: 'Občerstvenie s proseccem vo wellness', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling2.webp', alt: 'Atmosférické osvetlenie večerného rituálu', width: 1200, height: 800 },
+      { src: '/images/placeholders/hall.svg', alt: 'Relax lounge pripravená pre páry', width: 1200, height: 800 }
+    ] satisfies readonly { src: string; alt: string; width: number; height: number }[]
+  },
+  gallery: {
+    metadata: {
+      title: 'Galéria',
+      description: 'Pozrite si fotografie izieb, gastronómie, wellness aj podujatí v hoteli U Fandy.'
+    },
+    heading: {
+      eyebrow: 'Galéria',
+      title: 'Nazrite k U Fandy',
+      description: 'Výber momentiek z ubytovania, gastronómie a zážitkov v Malej Morave.'
+    },
+    info: [
+      {
+        title: 'Dizajnové ubytovanie',
+        description: 'Izby inšpirované horami, prírodné materiály a panoramatické výhľady.'
+      },
+      {
+        title: 'Gastronómia',
+        description: 'Sezónne menu, otvorená kuchyňa a degustácie vín s naším someliérom.'
+      },
+      {
+        title: 'Wellness & šport',
+        description: 'Privátne spa, vírivka a bowlingové dráhy pre aktívny relax.'
+      },
+      {
+        title: 'Podujatia & oslavy',
+        description: 'Banketová sála, terasa a výzdoba na mieru svadbám aj firemným večierkom.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    images: [
+      { src: '/images/hero/bazen.webp', alt: 'Súkromné wellness s bazénom a ležadlami', width: 1200, height: 800 },
+      { src: '/images/hero/pizza.webp', alt: 'Reštaurácia pripravená na večeru', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling1.webp', alt: 'Bowlingová lounge s atmosférickým osvetlením', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling2.webp', alt: 'Farebne nasvietené bowlingové dráhy', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling3.webp', alt: 'Posedenie pri bowlingových dráhach', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling4.webp', alt: 'Bowlingová dráha s detskými mantinelmi', width: 1200, height: 800 },
+      { src: '/images/placeholders/room.svg', alt: 'Dizajnová hotelová izba s drevenými detailmi', width: 1200, height: 800 },
+      { src: '/images/placeholders/restaurant.svg', alt: 'Šéfkuchár servíruje sezónne jedlo', width: 1200, height: 800 },
+      { src: '/images/placeholders/hall.svg', alt: 'Sála vyzdobená na oslavu', width: 1200, height: 800 },
+      { src: '/images/placeholders/bowling.svg', alt: 'Ilustrácia bowlingového zážitku', width: 1200, height: 800 },
+      { src: '/images/placeholders/hero.svg', alt: 'Exteriér hotela U Fandy medzi stromami', width: 1200, height: 800 },
+      { src: '/images/placeholders/career.svg', alt: 'Tím U Fandy usmiaty na recepcii', width: 1200, height: 800 }
+    ] satisfies readonly { src: string; alt: string; width: number; height: number }[]
+  },
   hall: {
     metadata: {
       title: 'Spoločenská sála',

@@ -4,11 +4,14 @@ const routes = [
   '/',
   '/ubytovani',
   '/restaurace',
+  '/wellness',
+  '/galerie',
   '/bowling',
   '/sal',
   '/kariera',
   '/kontakt',
   '/rezervace',
+  '/rezervovat-pobyt',
   '/cookies',
   '/zasady-ochrany-osobnich-udaju'
 ];

@@ -316,6 +316,118 @@ const en: Messages = {
       { src: '/images/bowling/bowling4.webp', alt: 'Bowling alley with bumper system', width: 1200, height: 800 }
     ]
   },
+  wellness: {
+    metadata: {
+      title: 'Wellness',
+      description: 'Private wellness with Finnish sauna, steam cabin and whirlpool at U Fandy. Reserve the spa just for your group.'
+    },
+    hero: {
+      eyebrow: 'Wellness',
+      title: 'Mountain calm in a private spa',
+      description:
+        'Book the Finnish sauna, steam cabin and whirlpool exclusively for your party. Towels, aromatherapy and prosecco are prepared for every visit.'
+    },
+    highlights: [
+      {
+        title: 'Finnish & herbal sauna',
+        description: 'Cedar wood sauna with chromotherapy complemented by a herbal steam cabin for gentle regeneration.'
+      },
+      {
+        title: 'Whirlpool with a view',
+        description: 'Heated whirlpool for up to six guests with massage jets and intimate lighting.'
+      },
+      {
+        title: 'Relaxation lounge',
+        description: 'Comfortable loungers, fireplace ambience and playlists curated for deep relaxation.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    rituals: [
+      {
+        title: 'Private entry for up to 6 guests',
+        description: 'The entire wellness zone including changing rooms is reserved only for your group.'
+      },
+      {
+        title: 'Refreshments on request',
+        description: 'Order sparkling wine, seasonal fruit or homemade lemonades directly to the spa.'
+      },
+      {
+        title: 'Massage treatments',
+        description: 'We arrange professional massages and body rituals with at least 24 hours notice.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    ritualsTitle: 'Tailored rituals',
+    amenities: [
+      {
+        title: 'Opening hours',
+        description: 'Daily 10:00–22:00. Last entry at 20:30 so you can enjoy a full 90-minute ritual.'
+      },
+      {
+        title: 'Equipment',
+        description: 'Towels, sheets, cosmetics and hair dryers are prepared for every guest.'
+      },
+      {
+        title: 'Reservations',
+        description: 'Contact reception at +420 000 000 000 or info@u-fandy.cz. We confirm within 24 hours.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    amenitiesTitle: 'Included in every visit',
+    cta: {
+      title: 'Book your private spa',
+      description: 'Send us your preferred date and we will tailor the ritual to your wishes.',
+      buttonLabel: 'Request a date'
+    },
+    gallery: [
+      { src: '/images/hero/bazen.webp', alt: 'Wellness pool with soft lighting', width: 1200, height: 800 },
+      { src: '/images/placeholders/hero.svg', alt: 'Mountain view from the relaxation zone', width: 1200, height: 800 },
+      { src: '/images/placeholders/room.svg', alt: 'Heated loungers in the private spa', width: 1200, height: 800 },
+      { src: '/images/placeholders/restaurant.svg', alt: 'Refreshments with prosecco served in wellness', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling2.webp', alt: 'Ambient lighting for the evening ritual', width: 1200, height: 800 },
+      { src: '/images/placeholders/hall.svg', alt: 'Relaxation lounge prepared for couples', width: 1200, height: 800 }
+    ] satisfies readonly { src: string; alt: string; width: number; height: number }[]
+  },
+  gallery: {
+    metadata: {
+      title: 'Gallery',
+      description: 'Browse photos of rooms, gastronomy, wellness and events at Hotel U Fandy.'
+    },
+    heading: {
+      eyebrow: 'Gallery',
+      title: 'Peek inside U Fandy',
+      description: 'A curated selection from our accommodation, gastronomy and leisure experiences in Malá Morava.'
+    },
+    info: [
+      {
+        title: 'Design accommodation',
+        description: 'Rooms with mountain-inspired design, natural materials and panoramic views.'
+      },
+      {
+        title: 'Gastronomy',
+        description: 'Seasonal menus, open kitchen moments and wine tastings from our sommelier.'
+      },
+      {
+        title: 'Wellness & sport',
+        description: 'Private spa, whirlpool and bowling lanes for active relaxation.'
+      },
+      {
+        title: 'Events & celebrations',
+        description: 'Banquet hall, terrace and decorations tailored to weddings and corporate events.'
+      }
+    ] satisfies readonly { title: string; description: string }[],
+    images: [
+      { src: '/images/hero/bazen.webp', alt: 'Private wellness with pool and loungers', width: 1200, height: 800 },
+      { src: '/images/hero/pizza.webp', alt: 'Restaurant terrace prepared for dinner service', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling1.webp', alt: 'Bowling lounge with ambient bar lighting', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling2.webp', alt: 'Colourfully lit bowling lanes', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling3.webp', alt: 'Seating area next to bowling lanes', width: 1200, height: 800 },
+      { src: '/images/bowling/bowling4.webp', alt: 'Bowling lane with child friendly bumpers', width: 1200, height: 800 },
+      { src: '/images/placeholders/room.svg', alt: 'Design hotel room with wooden details', width: 1200, height: 800 },
+      { src: '/images/placeholders/restaurant.svg', alt: 'Chef plating a seasonal dish', width: 1200, height: 800 },
+      { src: '/images/placeholders/hall.svg', alt: 'Event hall decorated for celebration', width: 1200, height: 800 },
+      { src: '/images/placeholders/bowling.svg', alt: 'Illustration of the bowling experience', width: 1200, height: 800 },
+      { src: '/images/placeholders/hero.svg', alt: 'Exterior of Hotel U Fandy among trees', width: 1200, height: 800 },
+      { src: '/images/placeholders/career.svg', alt: 'U Fandy team smiling at reception', width: 1200, height: 800 }
+    ] satisfies readonly { src: string; alt: string; width: number; height: number }[]
+  },
   hall: {
     metadata: {
       title: 'Event Hall',
