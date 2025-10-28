@@ -32,11 +32,13 @@ export default function BowlingPage() {
       </section>
 
       {/* Galerie */}
-      <section className="rounded-3xl border border-white/10 bg-slate-950/60 p-4 shadow-xl sm:p-6">
-        <ImageGallery images={galleryImages} gridClassName="sm:grid-cols-2 lg:grid-cols-4" />
-        <p className="mt-4 text-center text-sm text-slate-300">
-          Kliknutím otevřete fotografii na celou obrazovku, procházejte šipkami nebo přejetím prstu.
-        </p>
+      <section className="space-y-4">
+        <ImageGallery
+          images={galleryImages}
+          gridClassName="gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          thumbnailButtonClassName="rounded-none border-none bg-transparent p-0 shadow-none focus:ring-brand/40"
+          thumbnailImageClassName="rounded-none"
+        />
       </section>
     </div>
   );
