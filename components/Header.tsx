@@ -28,10 +28,6 @@ export default function Header() {
             className="h-[71px] w-auto transition group-hover:opacity-90"
           />
           <span className="sr-only">U Fandy Hotel &amp; Restaurant</span>
-          <span className="hidden flex-col leading-none text-white sm:flex">
-            <span className="text-2xl font-semibold tracking-[0.25em]">U Fandy</span>
-            <span className="text-xs uppercase tracking-[0.32em] text-white/60">Hotel &amp; Restaurant</span>
-          </span>
         </Link>
         <nav className="hidden items-center gap-6 text-xs font-semibold uppercase tracking-[0.32em] text-slate-200 lg:flex">
           {navLinks.map((link) => (
