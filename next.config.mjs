@@ -22,6 +22,10 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: false
+  },
+  webpack: (config) => {
+    config.resolve.alias['next-intl/config'] = path.resolve('./next-intl.config.ts');
+    return config;
   }
 };
 
