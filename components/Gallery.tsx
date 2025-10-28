@@ -11,7 +11,7 @@ export interface GalleryImage {
 }
 
 interface GalleryProps {
-  images: GalleryImage[];
+  images: ReadonlyArray<GalleryImage>;
 }
 
 const BLUR_DATA_URL =
