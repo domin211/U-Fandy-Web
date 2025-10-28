@@ -7,11 +7,18 @@ import Gallery from '@/components/Gallery';
 import HoursTable from '@/components/HoursTable';
 import ReservationForm from '@/components/ReservationForm';
 import HeroBackgroundSlideshow from '@/components/HeroBackgroundSlideshow';
+import { Playfair_Display } from 'next/font/google';
 
 import roomsData from '@/data/rooms';
 import menuData from '@/data/menu';
 import hoursData from '@/data/hours';
 import heroBackgroundsData from '@/data/hero-backgrounds';
+
+const heroDisplay = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap'
+});
 
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import type { Locale } from '@/lib/i18n/config';
@@ -33,25 +40,10 @@ export default async function HomePage() {
     <div className="space-y-24 pb-24">
       <section className="relative isolate overflow-hidden rounded-b-[56px] bg-topbar text-white">
         <HeroBackgroundSlideshow images={heroBackgrounds} />
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 py-24 sm:px-6 lg:py-32">
-          <div className="max-w-3xl space-y-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">{home.hero.eyebrow}</p>
-            <h1 className="text-4xl font-semibold text-white sm:text-5xl">{home.hero.title}</h1>
-            <p className="text-base text-white/80 sm:text-lg">{home.hero.description}</p>
-          </div>
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <a
-              href="#rezervace"
-              className="inline-flex w-full items-center justify-center rounded-full bg-brand px-8 py-3 text-sm font-semibold text-topbar shadow-soft transition hover:bg-brand-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:w-auto"
-            >
-              {home.hero.primaryCta}
-            </a>
-            <a
-              href="/restaurace"
-              className="inline-flex w-full items-center justify-center rounded-full border border-white/40 px-8 py-3 text-sm font-semibold text-white transition hover:border-brand hover:bg-brand hover:text-topbar focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:w-auto"
-            >
-              {home.hero.secondaryCta}
-            </a>
+        <div className="relative mx-auto flex max-w-4xl flex-col items-center px-4 py-24 text-center sm:px-6 lg:py-32">
+          <div className="flex w-full max-w-3xl flex-col gap-4 rounded-[32px] border border-white/10 bg-black/35 px-8 py-10 text-white shadow-[0_18px_45px_rgba(0,0,0,0.4)] backdrop-blur-sm">
+            <h1 className={`${heroDisplay.className} text-shadow text-4xl font-semibold sm:text-6xl`}>{home.hero.title}</h1>
+            <p className="text-shadow text-lg sm:text-2xl">{home.hero.subtitle}</p>
           </div>
         </div>
       </section>

@@ -82,12 +82,8 @@ const en: Messages = {
   },
   home: {
     hero: {
-      eyebrow: 'Welcome to U Fandy',
-      title: 'A modern mountain hideaway for food lovers, travellers and athletes',
-      description:
-        'We combine hotel comfort, signature cuisine and top-tier activities. Enjoy fresh mountain air without compromising on service quality.',
-      primaryCta: 'Book your stay',
-      secondaryCta: 'Explore the restaurant'
+      title: 'A perfect stay in the heart of the Beskids',
+      subtitle: 'Wonderful relaxation, pleasant rejuvenation.'
     },
     onlineReservation: {
       eyebrow: 'Online reservation',

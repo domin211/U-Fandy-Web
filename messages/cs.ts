@@ -82,12 +82,8 @@ const cs: Messages = {
   },
   home: {
     hero: {
-      eyebrow: 'Vítejte u Fandy',
-      title: 'Moderní útočiště v Malé Moravě pro gurmány, cestovatele i sportovce',
-      description:
-        'Spojujeme hotelové pohodlí, autorskou kuchyni a špičkové sportovní vyžití. Užijte si horský vzduch bez kompromisů v kvalitě služeb.',
-      primaryCta: 'Rezervovat pobyt',
-      secondaryCta: 'Prozkoumat restauraci'
+      title: 'Dokonalý pobyt v srdci Beskyd',
+      subtitle: 'Skvělý odpočinek, příjemná relaxace.'
     },
     onlineReservation: {
       eyebrow: 'Online rezervace',
