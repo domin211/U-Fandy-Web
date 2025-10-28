@@ -1,6 +1,6 @@
 import type { Messages, NavLink } from './schema';
 
-const dictionary = {
+const de: Messages = {
   common: {
     brandName: 'U Fandy',
     skipToContent: 'Zum Inhalt springen',
