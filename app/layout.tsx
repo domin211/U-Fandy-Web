@@ -3,7 +3,7 @@ import { getLocale } from 'next-intl/server';
 import './globals.css';
 import 'react-day-picker/style.css';
 import { Inter } from 'next/font/google';
-import { headers } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { DictionaryProvider } from '@/lib/i18n/dictionary-context';
@@ -65,7 +65,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const locale = (await getLocale()) as Locale;
   const dictionary = await getDictionary(locale);
   const structured = dictionary.layout.structuredData;
-  const nonce = headers().get('x-nonce') ?? undefined;
+  const nonce = headers().get('x-nonce') ?? cookies().get('x-nonce')?.value ?? undefined;
 
   const organizationLd = {
     '@context': 'https://schema.org',
