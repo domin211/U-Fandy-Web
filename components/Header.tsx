@@ -2,16 +2,24 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { Montserrat } from 'next/font/google';
 import { useEffect, useRef } from 'react';
 
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap'
+});
+
 const navLinks = [
-  { href: '/', label: 'Domů' },
+  { href: '/', label: 'Domů', hasDropdown: true },
   { href: '/ubytovani', label: 'Ubytování' },
   { href: '/restaurace', label: 'Restaurace' },
+  { href: '/galerie', label: 'Galerie' },
+  { href: '/wellness', label: 'Wellness' },
   { href: '/bowling', label: 'Bowling' },
   { href: '/sal', label: 'Sál' },
-  { href: '/kariera', label: 'Kariéra' },
-  { href: '/kontakt', label: 'Kontakt' }
+  { href: '/rezervovat-pobyt', label: 'Rezervovat pobyt', variant: 'cta' as const }
 ];
 
 export default function Header() {
@@ -59,9 +67,9 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-40 w-full border-b border-black/10 bg-topbar/95 text-white backdrop-blur"
+      className="sticky top-0 z-40 w-full bg-black/90 text-white"
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-5 sm:px-6">
         <Link
           href="/"
           className="group flex items-center gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
@@ -72,56 +80,62 @@ export default function Header() {
             width={190}
             height={71}
             priority
-            className="h-[71px] w-auto transition group-hover:opacity-90"
+            className="h-[66px] w-auto transition group-hover:opacity-90"
           />
           <span className="sr-only">U Fandy Hotel &amp; Restaurant</span>
         </Link>
-        <nav className="hidden items-center gap-6 text-xs font-semibold uppercase tracking-[0.32em] text-white/70 lg:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav
+          className={`hidden items-center lg:flex ${montserrat.className}`}
+          aria-label="Hlavní navigace"
+        >
+          <ul className="flex items-center">
+            {navLinks.map((link) => (
+              <li key={link.href} className="mx-[3px]">
+                <Link
+                  href={link.href}
+                  className={`group relative flex items-center gap-1 px-[10px] py-3 text-[15px] font-normal uppercase text-[#969696] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${
+                    link.variant === 'cta'
+                      ? 'outline outline-1 outline-brand text-[#bebebe] hover:bg-brand hover:text-white'
+                      : 'hover:text-brand'
+                  }`}
+                >
+                  <span>{link.label}</span>
+                  {link.hasDropdown ? (
+                    <span className="mt-[1px] text-[9px] text-white/60 transition-colors group-hover:text-brand">▼</span>
+                  ) : null}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
-        <div className="flex items-center gap-4">
-          <Link
-            href="/darkovy-poukaz"
-            className="hidden rounded-full border border-white/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-white transition hover:border-brand hover:bg-brand hover:text-topbar focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand lg:inline-flex"
-          >
-            Dárkový poukaz
-          </Link>
-          <details className="relative lg:hidden">
-            <summary className="inline-flex cursor-pointer items-center justify-center rounded-full border border-white/20 p-2 text-white/80 transition hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
-              Menu
-            </summary>
-            <nav className="absolute right-0 mt-3 w-56 rounded-3xl border border-black/10 bg-topbar p-4 shadow-soft">
-              <ul className="space-y-3 text-sm font-medium text-white/80">
-                {navLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="block rounded-2xl px-3 py-2 transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-                <li>
+        <details className={`relative lg:hidden ${montserrat.className}`}>
+          <summary className="inline-flex cursor-pointer items-center justify-center rounded-full border border-white/20 px-4 py-2 text-sm font-medium uppercase text-white/80 transition hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
+            Menu
+          </summary>
+          <nav className="absolute right-0 mt-3 w-64 rounded-3xl border border-black/70 bg-black/90 p-4 shadow-soft">
+            <ul className="space-y-3 text-sm font-medium uppercase text-white/80">
+              {navLinks.map((link) => (
+                <li key={link.href}>
                   <Link
-                    href="/darkovy-poukaz"
-                    className="block rounded-2xl border border-white/20 px-3 py-2 text-center font-semibold text-white transition hover:border-brand hover:bg-brand hover:text-topbar"
+                    href={link.href}
+                    className={`block rounded-2xl px-3 py-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${
+                      link.variant === 'cta'
+                        ? 'border border-brand text-[#bebebe] hover:bg-brand hover:text-white'
+                        : 'hover:bg-white/10 hover:text-brand'
+                    }`}
                   >
-                    Dárkový poukaz
+                    <span className="flex items-center gap-1">
+                      <span>{link.label}</span>
+                      {link.hasDropdown ? (
+                        <span className="text-[10px] text-white/60">▼</span>
+                      ) : null}
+                    </span>
                   </Link>
                 </li>
-              </ul>
-            </nav>
-          </details>
-        </div>
+              ))}
+            </ul>
+          </nav>
+        </details>
       </div>
     </header>
   );
