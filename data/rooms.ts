@@ -1,127 +1,111 @@
 import type { Locale } from '@/lib/i18n/config';
 
 export interface RoomInfo {
-  name: string;
-  description: string;
-  capacity: string;
-  price: string;
-  image: string;
+  title: string;
+  priceFrom: string;
+  imageSrc: string;
+  href: string;
 }
 
 const rooms: Record<Locale, RoomInfo[]> = {
   cs: [
     {
-      name: 'Apartmán Panorama',
-      description: 'Prostorný apartmán s výhledem na hory, privátním wellness koutkem a balkónem.',
-      capacity: '2–4 osoby',
-      price: 'od — Kč',
-      image: '/images/placeholders/room.svg'
+      title: 'Dvoulůžkový pokoj',
+      priceFrom: 'od 1900 Kč/noc',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/dvouluzkovy-pokoj'
     },
     {
-      name: 'Rodinné studio',
-      description: 'Dvoupokojové studio s dětským koutkem, kuchyňským zázemím a moderní koupelnou.',
-      capacity: 'až 5 osob',
-      price: 'od — Kč',
-      image: '/images/placeholders/room.svg'
+      title: 'Třílůžkový pokoj',
+      priceFrom: 'od 2500 Kč/noc',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/triluzkovy-pokoj'
     },
     {
-      name: 'Designový pokoj Loft',
-      description: 'Vzdušný loft s industriálními prvky, krbem a chytrým ovládáním světel.',
-      capacity: '2 osoby',
-      price: 'od — Kč',
-      image: '/images/placeholders/room.svg'
+      title: 'Pokoj Deluxe',
+      priceFrom: 'od 2500 Kč/noc',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/pokoj-deluxe'
     }
   ],
   en: [
     {
-      name: 'Panorama Apartment',
-      description: 'Spacious apartment with mountain views, a private wellness nook and balcony.',
-      capacity: '2–4 guests',
-      price: 'from — CZK',
-      image: '/images/placeholders/room.svg'
+      title: 'Double Room',
+      priceFrom: 'from 1900 CZK/night',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/dvouluzkovy-pokoj'
     },
     {
-      name: 'Family Studio',
-      description: 'Two-room studio with a kids’ corner, kitchenette and modern bathroom.',
-      capacity: 'up to 5 guests',
-      price: 'from — CZK',
-      image: '/images/placeholders/room.svg'
+      title: 'Triple Room',
+      priceFrom: 'from 2500 CZK/night',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/triluzkovy-pokoj'
     },
     {
-      name: 'Loft Design Room',
-      description: 'Airy loft with industrial touches, a fireplace and smart lighting control.',
-      capacity: '2 guests',
-      price: 'from — CZK',
-      image: '/images/placeholders/room.svg'
+      title: 'Deluxe Room',
+      priceFrom: 'from 2500 CZK/night',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/pokoj-deluxe'
     }
   ],
   pl: [
     {
-      name: 'Apartament Panorama',
-      description: 'Przestronny apartament z widokiem na góry, prywatną strefą wellness i balkonem.',
-      capacity: '2–4 osoby',
-      price: 'od — CZK',
-      image: '/images/placeholders/room.svg'
+      title: 'Pokój dwuosobowy',
+      priceFrom: 'od 1900 CZK/noc',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/dvouluzkovy-pokoj'
     },
     {
-      name: 'Studio rodzinne',
-      description: 'Dwupokojowe studio z kącikiem dla dzieci, aneksem kuchennym i nowoczesną łazienką.',
-      capacity: 'do 5 osób',
-      price: 'od — CZK',
-      image: '/images/placeholders/room.svg'
+      title: 'Pokój trzyosobowy',
+      priceFrom: 'od 2500 CZK/noc',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/triluzkovy-pokoj'
     },
     {
-      name: 'Pokój Loft Design',
-      description: 'Przestronny loft z industrialnymi detalami, kominkiem i inteligentnym oświetleniem.',
-      capacity: '2 osoby',
-      price: 'od — CZK',
-      image: '/images/placeholders/room.svg'
+      title: 'Pokój Deluxe',
+      priceFrom: 'od 2500 CZK/noc',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/pokoj-deluxe'
     }
   ],
   de: [
     {
-      name: 'Panorama Apartment',
-      description: 'Großzügiges Apartment mit Bergblick, privater Wellness-Ecke und Balkon.',
-      capacity: '2–4 Personen',
-      price: 'ab — CZK',
-      image: '/images/placeholders/room.svg'
+      title: 'Doppelzimmer',
+      priceFrom: 'ab 1900 CZK/Nacht',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/dvouluzkovy-pokoj'
     },
     {
-      name: 'Familienstudio',
-      description: 'Zweiraum-Studio mit Kinderecke, Kitchenette und modernem Bad.',
-      capacity: 'bis zu 5 Personen',
-      price: 'ab — CZK',
-      image: '/images/placeholders/room.svg'
+      title: 'Dreibettzimmer',
+      priceFrom: 'ab 2500 CZK/Nacht',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/triluzkovy-pokoj'
     },
     {
-      name: 'Designzimmer Loft',
-      description: 'Luftiges Loft mit industriellen Akzenten, Kamin und smarter Lichtsteuerung.',
-      capacity: '2 Personen',
-      price: 'ab — CZK',
-      image: '/images/placeholders/room.svg'
+      title: 'Deluxe Zimmer',
+      priceFrom: 'ab 2500 CZK/Nacht',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/pokoj-deluxe'
     }
   ],
   sk: [
     {
-      name: 'Apartmán Panorama',
-      description: 'Priestranný apartmán s výhľadom na hory, súkromným wellness kútikom a balkónom.',
-      capacity: '2–4 hostia',
-      price: 'od — CZK',
-      image: '/images/placeholders/room.svg'
+      title: 'Dvojlôžková izba',
+      priceFrom: 'od 1900 CZK/noc',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/dvouluzkovy-pokoj'
     },
     {
-      name: 'Rodinné štúdio',
-      description: 'Dvojizbové štúdio s detským kútikom, kuchynským zázemím a modernou kúpeľňou.',
-      capacity: 'až 5 hostí',
-      price: 'od — CZK',
-      image: '/images/placeholders/room.svg'
+      title: 'Trojlôžková izba',
+      priceFrom: 'od 2500 CZK/noc',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/triluzkovy-pokoj'
     },
     {
-      name: 'Dizajnová izba Loft',
-      description: 'Vzdušný loft s industriálnymi prvkami, krbom a inteligentným ovládaním svetiel.',
-      capacity: '2 hostia',
-      price: 'od — CZK',
-      image: '/images/placeholders/room.svg'
+      title: 'Deluxe izba',
+      priceFrom: 'od 2500 CZK/noc',
+      imageSrc: '/images/placeholders/room.svg',
+      href: '/ubytovani/pokoj-deluxe'
     }
   ]
 };
