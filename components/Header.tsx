@@ -51,12 +51,7 @@ export default function Header() {
       updateOffset();
     };
 
-    const handleScroll = () => {
-      setHasShadow(window.scrollY > 10);
-    };
-
     window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll, { passive: true });
 
     let resizeObserver: ResizeObserver | undefined;
 
@@ -68,11 +63,8 @@ export default function Header() {
       resizeObserver.observe(headerElement);
     }
 
-    handleScroll();
-
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
       resizeObserver?.disconnect();
       document.documentElement.style.removeProperty('--header-offset');
     };
