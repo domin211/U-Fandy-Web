@@ -120,7 +120,7 @@ export function OnlineReservationForm() {
   };
 
   return (
-    <div className="flex w-full flex-col gap-3 sm:max-w-3xl">
+    <div className="flex w-full flex-col gap-3 sm:max-w-readable">
       <form
         onSubmit={handleSubmit}
         className="flex w-full flex-col gap-3 sm:flex-row sm:items-center"
@@ -132,7 +132,7 @@ export function OnlineReservationForm() {
         />
         <button
           type="submit"
-          className="inline-flex w-full items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-brand transition hover:bg-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-dark sm:w-auto"
+          className="btn w-full px-8 uppercase tracking-[0.25em] bg-white text-brand hover:bg-brand hover:text-white sm:w-auto"
         >
           Volné pokoje
           <span aria-hidden className="ml-2">→</span>

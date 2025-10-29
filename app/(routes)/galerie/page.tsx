@@ -23,11 +23,11 @@ export default async function GaleriePage() {
   const content = dictionary.gallery;
 
   return (
-    <div className="mx-auto max-w-6xl space-y-16 px-4 py-16 text-slate-100 sm:px-6">
+    <div className="mx-auto max-w-layout space-y-16 px-4 py-16 text-slate-100 sm:px-6">
       <section className="space-y-6 rounded-3xl border border-white/10 bg-slate-950/70 p-8 text-center shadow-xl sm:p-12">
         <p className="text-xs uppercase tracking-[0.45em] text-brand-light sm:text-sm">{content.heading.eyebrow}</p>
         <h1 className="text-3xl font-semibold uppercase text-white sm:text-4xl">{content.heading.title}</h1>
-        <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-200">{content.heading.description}</p>
+        <p className="mx-auto max-w-readable text-base leading-relaxed text-slate-200">{content.heading.description}</p>
       </section>
 
       <section className="grid gap-6 lg:grid-cols-2">

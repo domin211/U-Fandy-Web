@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full border border-transparent bg-brand px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:cursor-not-allowed disabled:opacity-70;
+  }
+
+  .btn-outline {
+    @apply border border-current bg-transparent shadow-none hover:bg-white hover:text-topbar;
+  }
+}
+
 :root {
   --header-offset: 6rem;
 }

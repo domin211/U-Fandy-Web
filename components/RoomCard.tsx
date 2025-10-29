@@ -13,41 +13,26 @@ const BLUR_DATA_URL =
 
 export default function RoomCard({ title, priceFrom, imageSrc, href }: RoomCardProps) {
   return (
-    <article className="group h-full overflow-hidden rounded-3xl bg-canvas-200 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-card">
-      <Link
-        href={href}
-        className="flex h-full flex-col focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
+    <Link href={href} className="group block focus-visible:outline-none">
+      <article
+        className="flex h-full flex-col overflow-hidden rounded-3xl border border-black/5 bg-canvas-200 shadow-soft transition duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-xl group-focus-visible:-translate-y-1 group-focus-visible:ring-2 group-focus-visible:ring-brand group-focus-visible:ring-offset-4 group-focus-visible:ring-offset-canvas-200"
       >
-        <div className="relative h-60 w-full overflow-hidden">
+        <div className="relative aspect-[4/3] w-full overflow-hidden">
           <Image
             src={imageSrc}
             alt={title}
             fill
-            className="object-cover transition duration-500 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+            className="object-cover transition duration-500 ease-out group-hover:scale-105"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             placeholder="blur"
             blurDataURL={BLUR_DATA_URL}
           />
         </div>
-        <div className="flex flex-1 flex-col gap-4 p-6">
-          <h3 className="text-xl font-semibold text-topbar">{title}</h3>
-          <p className="text-xs font-medium uppercase tracking-wide text-topbar/60">{priceFrom}</p>
-          <span className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-brand transition group-hover:gap-3">
-            Detail pokoje
-            <svg
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              className="h-4 w-4"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="m9 5 7 7-7 7" />
-            </svg>
-          </span>
+        <div className="space-y-2 p-6">
+          <h3 className="text-lg font-semibold text-topbar">{title}</h3>
+          <p className="text-sm text-topbar/60">{priceFrom}</p>
         </div>
-      </Link>
-    </article>
+      </article>
+    </Link>
   );
 }

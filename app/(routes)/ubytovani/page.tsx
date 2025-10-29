@@ -35,14 +35,14 @@ export default async function UbytovaniPage() {
   }));
 
   return (
-    <div className="mx-auto max-w-6xl space-y-16 px-4 py-16 sm:px-6">
+    <div className="mx-auto max-w-layout space-y-16 px-4 py-16 sm:px-6">
       <SectionHeading
         eyebrow={content.heading.eyebrow}
         title={content.heading.title}
         description={content.heading.description}
       />
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {roomCards.map((room) => (
+        {rooms.map((room) => (
           <RoomCard key={room.title} {...room} />
         ))}
       </div>

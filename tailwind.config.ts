@@ -8,10 +8,10 @@ const config: Config = {
       center: true,
       padding: {
         DEFAULT: '1.5rem',
-        lg: '2.5rem'
+        sm: '2rem'
       },
       screens: {
-        '2xl': '1280px'
+        '2xl': '1200px'
       }
     },
     extend: {
@@ -30,12 +30,11 @@ const config: Config = {
         }
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'Inter', 'system-ui', 'sans-serif'],
-        display: ['Montserrat', 'var(--font-sans)', 'system-ui', 'sans-serif']
+        sans: ['var(--font-sans)', 'sans-serif']
       },
-      letterSpacing: {
-        nav: '0.24em',
-        wide: '0.18em'
+      maxWidth: {
+        layout: '1200px',
+        readable: '70ch'
       },
       boxShadow: {
         soft: '0 12px 34px rgba(15, 15, 15, 0.08)',

@@ -21,12 +21,12 @@ export default async function CookiesPage() {
   const content = dictionary.cookies;
 
   return (
-    <div className="mx-auto max-w-4xl space-y-12 px-4 py-16 sm:px-6">
-      <header className="space-y-4">
+    <div className="mx-auto max-w-layout space-y-12 px-4 py-16 sm:px-6">
+      <header className="mx-auto max-w-readable space-y-4">
         <h1 className="text-3xl font-semibold text-white">{content.metadata.title}</h1>
         <p className="text-sm text-slate-300">{content.intro}</p>
       </header>
-      <div className="space-y-6 text-sm text-slate-200">
+      <div className="mx-auto max-w-readable space-y-6 text-sm text-slate-200">
         {content.sections.map((section) => (
           <section key={section.title} className="space-y-2">
             <h2 className="text-lg font-semibold text-white">{section.title}</h2>
