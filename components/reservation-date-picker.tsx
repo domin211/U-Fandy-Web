@@ -47,10 +47,10 @@ export function ReservationDatePicker({
   const arrivalLabel = hasFrom ? formattedFrom : "Vyberte příjezd";
   const departureLabel = hasTo ? formattedTo : "Vyberte odjezd";
   const arrivalTextClass = `text-sm font-semibold leading-5 ${
-    hasFrom ? "" : "text-white/70"
+    hasFrom ? "text-brand" : "text-brand/60"
   }`;
   const departureTextClass = `text-sm font-semibold leading-5 ${
-    hasTo ? "" : "text-white/70"
+    hasTo ? "text-brand" : "text-brand/60"
   }`;
 
   useEffect(() => {
@@ -120,23 +120,23 @@ export function ReservationDatePicker({
         aria-label={buttonLabel}
         aria-haspopup="dialog"
         aria-expanded={isOpen}
-        className="group inline-flex w-full items-center justify-between rounded-full border border-white/20 bg-white/10 px-6 py-3 text-left text-white shadow-soft outline-none transition focus:border-white/60 focus:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        className="group inline-flex w-full items-center justify-between rounded-full bg-white px-6 py-3 text-left text-brand shadow-soft outline-none transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-dark"
       >
         <span className="flex w-full items-center gap-4">
           <span className="flex flex-1 flex-col">
-            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/60">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand/60">
               Příjezd
             </span>
             <span className={arrivalTextClass}>{arrivalLabel}</span>
           </span>
           <span
             aria-hidden
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-lg font-semibold text-white"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-lg font-semibold text-white shadow-soft"
           >
             →
           </span>
           <span className="flex flex-1 flex-col">
-            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/60">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand/60">
               Odjezd
             </span>
             <span className={departureTextClass}>{departureLabel}</span>
@@ -144,7 +144,7 @@ export function ReservationDatePicker({
         </span>
         <span
           aria-hidden
-          className="ml-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/30 text-white transition group-hover:border-white/60 group-focus:border-white/60"
+          className="ml-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-brand/30 text-brand transition group-hover:border-brand/60 group-focus:border-brand/60"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

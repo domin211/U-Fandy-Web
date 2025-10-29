@@ -24,6 +24,25 @@ const formatForTrevlix = (value: string) => {
   return `${day}.${month}.${year}`;
 };
 
+const buildTrevlixUrl = (arrival: Date, departure: Date) => {
+  const params = new URLSearchParams({
+    date_from: formatForTrevlix(toInputDateValue(arrival)),
+    date_to: formatForTrevlix(toInputDateValue(departure)),
+    cid: TREVLIX_CID,
+    mode: "window",
+  });
+
+  return `${TREVLIX_BASE_URL}?${params.toString()}`;
+};
+
+const redirectToTrevlix = (arrival: Date, departure: Date) => {
+  const reservationUrl = buildTrevlixUrl(arrival, departure);
+
+  if (typeof window !== "undefined") {
+    window.location.href = reservationUrl;
+  }
+};
+
 export function OnlineReservationForm() {
   const today = useMemo(() => startOfDay(new Date()), []);
 
@@ -62,6 +81,7 @@ export function OnlineReservationForm() {
 
     setSelectedRange({ from: normalizedFrom, to: normalizedTo });
     setError(null);
+    redirectToTrevlix(normalizedFrom, normalizedTo);
   };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -82,20 +102,11 @@ export function OnlineReservationForm() {
 
     setError(null);
 
-    const params = new URLSearchParams({
-      date_from: formatForTrevlix(toInputDateValue(arrival)),
-      date_to: formatForTrevlix(toInputDateValue(departure)),
-      cid: TREVLIX_CID,
-      mode: "window",
-    });
-
-    const reservationUrl = `${TREVLIX_BASE_URL}?${params.toString()}`;
-
-    window.open(reservationUrl, "_blank", "noopener");
+    redirectToTrevlix(arrival, departure);
   };
 
   return (
-    <div className="flex w-full flex-col gap-2 sm:max-w-xl">
+    <div className="flex w-full flex-col gap-3 sm:max-w-3xl">
       <form
         onSubmit={handleSubmit}
         className="flex w-full flex-col gap-3 sm:flex-row sm:items-center"
@@ -107,14 +118,14 @@ export function OnlineReservationForm() {
         />
         <button
           type="submit"
-          className="inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand transition hover:bg-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"
+          className="inline-flex w-full items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-brand transition hover:bg-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-dark sm:w-auto"
         >
           Volné pokoje
           <span aria-hidden className="ml-2">→</span>
         </button>
       </form>
       {error ? (
-        <p className="text-sm font-medium text-white" role="alert">
+        <p className="text-sm font-medium text-white/90" role="alert">
           {error}
         </p>
       ) : null}
