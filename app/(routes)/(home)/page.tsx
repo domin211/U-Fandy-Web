@@ -200,13 +200,15 @@ export default async function HomePage() {
             description={home.testimonials.description}
             align="center"
           />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {home.testimonials.items.map((testimonial) => (
-              <blockquote key={testimonial.name} className="flex h-full flex-col justify-between rounded-3xl bg-canvas-300 p-6 shadow-soft">
-                <p className="text-base text-topbar/80">„{testimonial.quote}“</p>
-                <footer className="mt-6">
-                  <p className="font-semibold text-topbar">{testimonial.name}</p>
-                  <p className="text-sm text-topbar/60">{testimonial.role}</p>
+          <div className="grid gap-8 md:grid-cols-2">
+            {home.testimonials.items.slice(0, 3).map((testimonial) => (
+              <blockquote
+                key={testimonial.name}
+                className="flex h-full flex-col justify-between gap-6 rounded-3xl bg-canvas-300 p-8 shadow-soft"
+              >
+                <p className="text-lg leading-relaxed text-topbar/80">„{testimonial.quote}“</p>
+                <footer className="text-sm font-semibold uppercase tracking-[0.2em] text-topbar/60">
+                  {testimonial.name} · {testimonial.role}
                 </footer>
               </blockquote>
             ))}
