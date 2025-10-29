@@ -5,7 +5,7 @@ import 'react-day-picker/style.css';
 import { Inter } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { DictionaryProvider } from '@/lib/i18n/dictionary-context';
+import { AppProviders } from '@/components/AppProviders';
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import type { Locale } from '@/lib/i18n/config';
 import { openGraphLocales } from '@/lib/i18n/config';
@@ -89,7 +89,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang={locale} className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
       <body className="bg-canvas-100 text-topbar antialiased">
-        <DictionaryProvider dictionary={dictionary} locale={locale}>
+        <AppProviders dictionary={dictionary} locale={locale}>
           <a
             href="#obsah"
             className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:m-4 focus:rounded-md focus:bg-canvas-200 focus:px-4 focus:py-2 focus:text-topbar"
@@ -110,7 +110,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             suppressHydrationWarning
             dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
           />
-        </DictionaryProvider>
+        </AppProviders>
       </body>
     </html>
   );
