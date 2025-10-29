@@ -57,6 +57,14 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <section className="px-4 sm:px-6">
+        <div className="prose prose-neutral mx-auto max-w-3xl text-center">
+          {home.intro.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
+      </section>
+
       <section className="bg-brand text-white">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-8 sm:flex-row sm:justify-between sm:gap-12 sm:px-6">
           <div className="text-center sm:text-left">
