@@ -149,14 +149,14 @@ const sk: Messages = {
       eyebrow: 'Reštaurácia & Bar',
       title: 'Sezónne menu z lokálnych surovín',
       description:
-        'Šéfkuchár spája tradičné recepty s modernou gastronómiou. Denne pečieme vlastné pečivo, pripravujeme dezerty a miešame signature koktejly.',
-      highlights: [
-        'Degustačné menu v piatich chodoch',
-        'Každodenné raňajky formou bufetu',
-        'Výberová káva a signature koktejly',
-        'Menu pre vegetariánov aj bezlepkových hostí'
+        'Večer patrí našej reštaurácii a baru. Sezónne suroviny dopĺňame domácim pečivom, výraznými omáčkami a autorskými kokteilmi.',
+      specials: [
+        'Pečené kačacie prsia · tekvicové pyré · karamelizovaná hruška',
+        'Pomaly dusené jahňacie ragú · červené víno · bylinková polenta',
+        'Pstruh na panvici · bylinkové maslo · chrumkavá zelenina',
+        'Teplý čokoládový fondant · slaný karamel · vanilková zmrzlina'
       ],
-      cta: 'Zistiť viac o reštaurácii',
+      cta: 'Denné menu',
       imageAlt: 'Reštaurácia U Fandy'
     },
     experienceSection: {
