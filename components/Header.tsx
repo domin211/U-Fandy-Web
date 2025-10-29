@@ -57,7 +57,7 @@ export default function Header() {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-40 w-full bg-black/90 text-white">
-      <div className="mx-auto flex w-full max-w-6xl items-center gap-4 px-4 py-5 sm:px-6">
+      <div className="mx-auto flex w-full max-w-layout items-center gap-4 px-4 py-5 sm:px-6">
         <Link
           href="/"
           className="group flex items-center gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
@@ -84,7 +84,7 @@ export default function Header() {
                 <li key={link.href} className="mx-[3px]">
                   <Link
                     href={link.href}
-                    className={`group relative inline-flex items-center justify-center gap-1 whitespace-nowrap px-[10px] py-3 text-[15px] font-normal uppercase text-[#969696] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand${
+                    className={`group relative inline-flex items-center justify-center gap-1 whitespace-nowrap px-[10px] py-3 text-[15px] font-semibold uppercase tracking-[.08em] text-[#969696] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand${
                       isCTA
                         ? ' outline outline-1 outline-brand text-[#bebebe] hover:bg-brand hover:text-white'
                         : ' hover:text-brand'

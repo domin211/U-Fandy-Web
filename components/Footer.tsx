@@ -11,8 +11,8 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-black/10 bg-topbar text-white">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 sm:px-6 lg:flex-row lg:justify-between lg:py-12">
-        <div className="max-w-md space-y-4">
+      <div className="mx-auto flex max-w-layout flex-col gap-8 px-4 py-10 sm:px-6 lg:flex-row lg:justify-between lg:py-12">
+        <div className="max-w-readable space-y-4">
           <p className="text-lg font-semibold">{brandName}</p>
           <p className="text-sm text-white/70">{footer.description}</p>
           <p className="text-sm text-white/60">{footer.rights.replace('{year}', currentYear.toString())}</p>

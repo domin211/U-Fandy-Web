@@ -29,7 +29,7 @@ export default async function UbytovaniPage() {
   const content = dictionary.accommodation;
 
   return (
-    <div className="mx-auto max-w-6xl space-y-16 px-4 py-16 sm:px-6">
+    <div className="mx-auto max-w-layout space-y-16 px-4 py-16 sm:px-6">
       <SectionHeading
         eyebrow={content.heading.eyebrow}
         title={content.heading.title}

@@ -23,7 +23,7 @@ export default async function SalPage() {
   const content = dictionary.hall;
 
   return (
-    <div className="mx-auto max-w-5xl space-y-16 px-4 py-16 sm:px-6">
+    <div className="mx-auto max-w-layout space-y-16 px-4 py-16 sm:px-6">
       <SectionHeading
         eyebrow={content.heading.eyebrow}
         title={content.heading.title}

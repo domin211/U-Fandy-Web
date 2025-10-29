@@ -48,7 +48,7 @@ export default async function HomePage() {
           <HeroBackgroundSlideshow images={heroBackgrounds} />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-4 py-16 text-center sm:px-6 lg:py-24">
-              <div className="flex w-full max-w-3xl flex-col gap-4 rounded-[32px] border border-white/10 bg-black/35 px-8 py-10 text-white shadow-[0_18px_45px_rgba(0,0,0,0.4)] backdrop-blur-sm">
+              <div className="flex w-full max-w-readable flex-col gap-4 rounded-[32px] border border-white/10 bg-black/35 px-8 py-10 text-white shadow-[0_18px_45px_rgba(0,0,0,0.4)] backdrop-blur-sm">
                 <h1 className={`${heroDisplay.className} text-shadow text-4xl font-semibold sm:text-6xl`}>{home.hero.title}</h1>
                 <p className="text-shadow text-lg sm:text-2xl">{home.hero.subtitle}</p>
               </div>
@@ -58,7 +58,7 @@ export default async function HomePage() {
       </section>
 
       <section className="bg-brand text-white">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-8 sm:flex-row sm:justify-between sm:gap-12 sm:px-6">
+        <div className="mx-auto flex max-w-layout flex-col items-center gap-6 px-4 py-8 sm:flex-row sm:justify-between sm:gap-12 sm:px-6">
           <div className="text-center sm:text-left">
             <p className="text-2xl font-semibold sm:text-3xl">{home.onlineReservation.eyebrow}</p>
             <p className="sr-only">{home.onlineReservation.title}</p>
@@ -68,7 +68,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 sm:px-6">
+      <section className="mx-auto max-w-layout px-4 sm:px-6">
         <div className="grid gap-8 overflow-hidden rounded-3xl bg-canvas-200 p-8 shadow-soft lg:grid-cols-[1.1fr_1fr]">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-canvas-300">
             <Image
@@ -111,7 +111,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl space-y-8 px-4 sm:px-6">
+      <section className="mx-auto max-w-layout space-y-8 px-4 sm:px-6">
         <div className="grid gap-6 sm:grid-cols-3">
           {home.hotelHighlights.map((highlight) => (
             <article key={highlight.title} className="space-y-4 rounded-3xl bg-canvas-300 p-6 shadow-soft">
@@ -123,7 +123,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl space-y-12 px-4 sm:px-6">
+      <section className="mx-auto max-w-layout space-y-12 px-4 sm:px-6">
         <SectionHeading
           eyebrow={home.roomsSection.eyebrow}
           title={home.roomsSection.title}
@@ -136,7 +136,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl space-y-12 px-4 sm:px-6">
+      <section className="mx-auto max-w-layout space-y-12 px-4 sm:px-6">
         <div className="grid gap-10 overflow-hidden rounded-3xl bg-canvas-200 p-8 shadow-soft lg:grid-cols-[1fr_1.2fr]">
           <div className="space-y-6">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-dark">{home.restaurantSection.eyebrow}</p>
@@ -150,10 +150,7 @@ export default async function HomePage() {
                 </li>
               ))}
             </ul>
-            <Link
-              href="/restaurace"
-              className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-topbar shadow-soft transition hover:bg-brand-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-            >
+            <Link href="/restaurace" className="btn gap-2">
               {home.restaurantSection.cta}
             </Link>
           </div>
@@ -183,7 +180,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl space-y-12 px-4 sm:px-6">
+      <section className="mx-auto max-w-layout space-y-12 px-4 sm:px-6">
         <SectionHeading
           eyebrow={home.experienceSection.eyebrow}
           title={home.experienceSection.title}
@@ -192,7 +189,7 @@ export default async function HomePage() {
         <Gallery images={home.experienceSection.gallery} />
       </section>
 
-      <section className="mx-auto max-w-6xl space-y-8 px-4 sm:px-6">
+      <section className="mx-auto max-w-layout space-y-8 px-4 sm:px-6">
         <div className="space-y-6 rounded-3xl bg-canvas-200 p-8 shadow-soft">
           <SectionHeading
             eyebrow={home.testimonials.eyebrow}
@@ -214,7 +211,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl grid gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1fr]">
+      <section className="mx-auto max-w-layout grid gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1fr]">
         <div className="space-y-6 rounded-3xl bg-canvas-200 p-8 shadow-soft">
           <SectionHeading
             eyebrow={home.wellness.eyebrow}
@@ -241,7 +238,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl grid gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_1.1fr]">
+      <section className="mx-auto max-w-layout grid gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_1.1fr]">
         <div className="space-y-6 rounded-3xl bg-canvas-200 p-8 shadow-soft">
           <SectionHeading
             eyebrow={home.location.eyebrow}
@@ -269,7 +266,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl space-y-10 px-4 sm:px-6" id="rezervace">
+      <section className="mx-auto max-w-layout space-y-10 px-4 sm:px-6" id="rezervace">
         <SectionHeading
           eyebrow={home.reservation.eyebrow}
           title={home.reservation.title}
