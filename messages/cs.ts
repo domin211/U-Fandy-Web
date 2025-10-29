@@ -85,6 +85,10 @@ const cs: Messages = {
       title: 'Dokonalý pobyt v srdci Beskyd',
       subtitle: 'Skvělý odpočinek, příjemná relaxace.'
     },
+    intro: [
+      'U Fandy spojuje moderní ubytování s klidným wellness a restaurací inspirovanou Jeseníky.',
+      'Jen pár kroků od lesů načerpáte síly v bylinných saunách a užijete si sezónní menu pro příjemné večery.'
+    ],
     onlineReservation: {
       eyebrow: 'Online rezervace',
       title: 'Připraveno pro váš další útěk do hor',

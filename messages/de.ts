@@ -85,6 +85,10 @@ const de: Messages = {
       title: 'Perfekter Aufenthalt im Herzen der Beskiden',
       subtitle: 'Große Erholung, angenehme Entspannung.'
     },
+    intro: [
+      'U Fandy verbindet zeitgemäße Unterkunft mit einem ruhigen Wellnessbereich und einer Küche aus den Jeseníky.',
+      'Nach Tagen in der Natur entspannen Sie in wohltuenden Saunen und genießen saisonale Menüs in unserem Restaurant.'
+    ],
     onlineReservation: {
       eyebrow: 'Online-Reservierung',
       title: 'Bereit für Ihren nächsten Ausflug in die Berge',

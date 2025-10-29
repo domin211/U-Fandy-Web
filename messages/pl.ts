@@ -85,6 +85,10 @@ const pl: Messages = {
       title: 'Doskonały pobyt w sercu Beskidów',
       subtitle: 'Świetny odpoczynek, przyjemny relaks.'
     },
+    intro: [
+      'U Fandy łączy nowoczesne zakwaterowanie z kameralnym wellness i restauracją inspirowaną Jesionikami.',
+      'Po dniu na szlakach odprężysz się w ziołowych saunach i spróbujesz sezonowego menu przygotowanego na długie wieczory.'
+    ],
     onlineReservation: {
       eyebrow: 'Rezerwacja online',
       title: 'Gotowi na twój kolejny wypad w góry',

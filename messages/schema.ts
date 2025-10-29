@@ -85,6 +85,7 @@ export type Messages = {
       title: string;
       subtitle: string;
     };
+    intro: ReadonlyArray<string>;
     onlineReservation: {
       eyebrow: string;
       title: string;

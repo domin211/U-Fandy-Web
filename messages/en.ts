@@ -85,6 +85,10 @@ const en: Messages = {
       title: 'A perfect stay in the heart of the Beskids',
       subtitle: 'Wonderful relaxation, pleasant rejuvenation.'
     },
+    intro: [
+      'U Fandy blends contemporary accommodation with a calm wellness retreat and a restaurant rooted in Jeseníky flavours.',
+      'Stay steps from forest trails, recharge in herbal saunas, and share seasonal menus crafted for lingering evenings.'
+    ],
     onlineReservation: {
       eyebrow: 'Online reservation',
       title: 'Ready for your next escape to the mountains',
