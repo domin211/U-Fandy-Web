@@ -63,6 +63,18 @@ export default function LanguageSwitcher({
     };
   }, [closeDropdown, isOpen, variant]);
 
+  useEffect(() => {
+    if (!isOpen) {
+      return undefined;
+    }
+
+    const frame = requestAnimationFrame(() => {
+      closeDropdown();
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [closeDropdown, isOpen, pathname]);
+
   const defaultListLinkClassName = useCallback(
     (isActive: boolean) =>
       `rounded-full px-3 py-1 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${
