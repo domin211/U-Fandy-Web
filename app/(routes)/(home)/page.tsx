@@ -7,6 +7,7 @@ import MenuItemCard from '@/components/MenuItemCard';
 import Footer from '@/components/Footer';
 import HeroSlider from '@/components/HeroBackgroundSlideshow';
 import { Playfair_Display } from 'next/font/google';
+import { OnlineReservationForm } from '@/components/online-reservation-form';
 
 import roomsData from '@/data/rooms';
 import menuData from '@/data/menu';
