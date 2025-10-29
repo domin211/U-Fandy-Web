@@ -112,23 +112,35 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl space-y-12 px-4 sm:px-6">
-        <div className="grid gap-10 overflow-hidden rounded-3xl bg-canvas-200 p-8 shadow-soft lg:grid-cols-[1fr_1.2fr]">
-          <div className="space-y-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-dark">{home.restaurantSection.eyebrow}</p>
-            <h2 className="text-3xl font-semibold text-topbar sm:text-4xl">{home.restaurantSection.title}</h2>
-            <p className="text-base text-topbar/80">{home.restaurantSection.description}</p>
-            <ul className="space-y-3 text-sm text-topbar/80">
-              {home.restaurantSection.highlights.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-brand" aria-hidden="true" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+      <section className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="grid gap-10 overflow-hidden rounded-3xl bg-canvas-200 p-8 shadow-soft lg:grid-cols-[1.1fr_1fr] lg:items-center">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-canvas-300">
+            <Image
+              src="/images/placeholders/restaurant.svg"
+              alt={home.restaurantSection.imageAlt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 55vw"
+            />
+          </div>
+          <div className="flex flex-col gap-6">
+            <div className="space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-dark">{home.restaurantSection.eyebrow}</p>
+              <h2 className="text-3xl font-semibold text-topbar sm:text-4xl">{home.restaurantSection.title}</h2>
+              <p className="text-base text-topbar/80">{home.restaurantSection.description}</p>
+            </div>
+            <div className="rounded-3xl border border-white/50 bg-white/80 p-6 shadow-soft backdrop-blur-sm">
+              <ul className="list-none divide-y divide-topbar/10 text-sm text-topbar">
+                {home.restaurantSection.specials.map((item) => (
+                  <li key={item} className="py-3 first:pt-0 last:pb-0">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
             <Link
               href="/restaurace"
-              className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-topbar shadow-soft transition hover:bg-brand-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              className="inline-flex w-fit items-center justify-center rounded-full border border-topbar/20 px-5 py-2 text-sm font-semibold text-topbar transition hover:border-brand hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               {home.restaurantSection.cta}
             </Link>

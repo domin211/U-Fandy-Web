@@ -153,14 +153,14 @@ const cs: Messages = {
       eyebrow: 'Restaurace & Bar',
       title: 'Sezonní menu z lokálních surovin',
       description:
-        'Šéfkuchař propojuje tradiční recepty s moderní gastronomií. Každý den pečeme vlastní pečivo, připravujeme domácí dezerty a v baru mícháme signature koktejly.',
-      highlights: [
-        'Degustační menu v pěti chodech',
-        'Každodenní snídaně formou bufetu',
-        'Výběrová káva a signature koktejly',
-        'Menu pro vegetariány i bezlepkové hosty'
+        'Večer u nás patří restauraci a baru. Sezonní suroviny doplňujeme domácím pečivem, poctivými omáčkami a autorskými koktejly.',
+      specials: [
+        'Pečená kachní prsa · dýňové pyré · hrušky v karamelu',
+        'Jehněčí ragú · červené víno · bylinková polenta',
+        'Čerstvý pstruh · bylinkové máslo · křupavá zelenina',
+        'Čokoládový fondant · slaný karamel · vanilka'
       ],
-      cta: 'Zjistit více o restauraci',
+      cta: 'Denní menu',
       imageAlt: 'Restaurace U Fandy'
     },
     experienceSection: {

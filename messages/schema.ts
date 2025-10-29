@@ -121,7 +121,7 @@ export type Messages = {
       eyebrow: string;
       title: string;
       description: string;
-      highlights: ReadonlyArray<string>;
+      specials: ReadonlyArray<string>;
       cta: string;
       imageAlt: string;
     };

@@ -153,14 +153,14 @@ const de: Messages = {
       eyebrow: 'Restaurant & Bar',
       title: 'Saisonale Menüs aus regionalen Zutaten',
       description:
-        'Der Chefkoch verbindet traditionelle Rezepte mit moderner Küche. Täglich backen wir Brot, kreieren Desserts und mixen Signature-Cocktails.',
-      highlights: [
-        'Fünf-Gänge-Degustationsmenü',
-        'Tägliches Frühstücksbuffet',
-        'Spezialitätenkaffee und Signature-Cocktails',
-        'Optionen für Vegetarier und glutenfreie Gäste'
+        'Die Abende gehören unserem Restaurant und der Bar: saisonale Zutaten, hausgebackenes Brot, kräftige Saucen und Signature-Cocktails.',
+      specials: [
+        'Gebratene Entenbrust · Kürbispüree · karamellisierte Birne',
+        'Langsam geschmortes Lammragout · Rotweinjus · Kräuterpolenta',
+        'Gebratene Forelle · Kräuterbutter · knackiges Gartengemüse',
+        'Warmer Schokoladenfondant · Salzkaramell · Vanilleeis'
       ],
-      cta: 'Mehr über das Restaurant',
+      cta: 'Tagesmenü',
       imageAlt: 'Restaurant U Fandy'
     },
     experienceSection: {
