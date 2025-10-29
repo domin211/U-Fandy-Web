@@ -1,14 +1,6 @@
-import dynamic from 'next/dynamic';
-import type { ComponentType } from 'react';
+'use client';
 
-const HeroSliderClient = dynamic(() => import('./HeroSlider.client'), {
-  ssr: false,
-  loading: () => (
-    <div className="relative w-full">
-      <div className="aspect-[16/9] w-full bg-black/40" aria-hidden />
-    </div>
-  )
-}) as ComponentType;
+import HeroSliderClient from './HeroSlider.client';
 
 export default function HeroSlider() {
   return (

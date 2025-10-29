@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { getLocale } from 'next-intl/server';
 import './globals.css';
 import 'react-day-picker/style.css';
-import { Inter } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { AppProviders } from '@/components/AppProviders';
@@ -14,6 +14,12 @@ const inter = Inter({
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
   variable: '--font-sans'
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin', 'latin-ext'],
+  display: 'swap',
+  variable: '--font-display'
 });
 
 const metadataBase = new URL('https://www.u-fandy.cz');
@@ -87,7 +93,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   };
 
   return (
-    <html lang={locale} className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
+    <html lang={locale} className={`${inter.variable} ${playfair.variable} scroll-smooth`} suppressHydrationWarning>
       <body className="bg-canvas-100 text-topbar antialiased">
         <AppProviders dictionary={dictionary} locale={locale}>
           <a

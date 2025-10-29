@@ -30,7 +30,8 @@ const config: Config = {
         }
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'sans-serif']
+        sans: ['var(--font-sans)', 'sans-serif'],
+        display: ['var(--font-display)', 'serif']
       },
       maxWidth: {
         layout: '1200px',
