@@ -63,6 +63,20 @@ export function OnlineReservationForm() {
 
     const normalizedFrom = startOfDay(range.from);
 
+    if (range.to && selectedRange?.to) {
+      const previousFrom = selectedRange.from;
+      const isRestartingRange =
+        previousFrom &&
+        previousFrom.getTime() !== range.from.getTime() &&
+        selectedRange.to.getTime() === range.to.getTime();
+
+      if (isRestartingRange) {
+        setSelectedRange({ from: normalizedFrom });
+        setError(null);
+        return;
+      }
+    }
+
     if (!range.to) {
       setSelectedRange({ from: normalizedFrom });
       setError(null);
