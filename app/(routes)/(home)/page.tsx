@@ -1,61 +1,18 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { getLocale } from 'next-intl/server';
-import HeroSlider, { type HeroSlide } from '@/components/HeroSlider';
+import HeroBackgroundSlideshow from '@/components/HeroBackgroundSlideshow';
 import RoomCard from '@/components/RoomCard';
 import MenuItemCard from '@/components/MenuItemCard';
-import Footer from '@/components/Footer';
-import HeroSlider from '@/components/HeroBackgroundSlideshow';
-import { Playfair_Display } from 'next/font/google';
+import SectionHeading from '@/components/SectionHeading';
 import { OnlineReservationForm } from '@/components/online-reservation-form';
 
 import roomsData from '@/data/rooms';
 import menuData from '@/data/menu';
 import heroBackgroundsData from '@/data/hero-backgrounds';
 
-const heroDisplay = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap'
-});
-
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import type { Locale } from '@/lib/i18n/config';
-
-const roomTeasers: Record<Locale, { title: string; priceFrom: string; imageSrc: string; href: string }[]> = {
-  cs: [
-    { title: 'Dvoulůžkový pokoj', priceFrom: 'od 2 490 Kč / noc', imageSrc: '/images/placeholders/room.svg', href: '/ubytovani' },
-    { title: 'Třílůžkový pokoj', priceFrom: 'od 2 890 Kč / noc', imageSrc: '/images/placeholders/hall.svg', href: '/ubytovani' },
-    { title: 'Pokoj Deluxe', priceFrom: 'od 3 490 Kč / noc', imageSrc: '/images/placeholders/hero.svg', href: '/ubytovani' }
-  ],
-  en: [
-    { title: 'Double Room', priceFrom: 'from 2 490 CZK / night', imageSrc: '/images/placeholders/room.svg', href: '/ubytovani' },
-    { title: 'Triple Room', priceFrom: 'from 2 890 CZK / night', imageSrc: '/images/placeholders/hall.svg', href: '/ubytovani' },
-    { title: 'Deluxe Room', priceFrom: 'from 3 490 CZK / night', imageSrc: '/images/placeholders/hero.svg', href: '/ubytovani' }
-  ],
-  pl: [
-    { title: 'Pokój dwuosobowy', priceFrom: 'od 2 490 CZK / noc', imageSrc: '/images/placeholders/room.svg', href: '/ubytovani' },
-    { title: 'Pokój trzyosobowy', priceFrom: 'od 2 890 CZK / noc', imageSrc: '/images/placeholders/hall.svg', href: '/ubytovani' },
-    { title: 'Pokój Deluxe', priceFrom: 'od 3 490 CZK / noc', imageSrc: '/images/placeholders/hero.svg', href: '/ubytovani' }
-  ],
-  de: [
-    { title: 'Doppelzimmer', priceFrom: 'ab 2 490 CZK / Nacht', imageSrc: '/images/placeholders/room.svg', href: '/ubytovani' },
-    { title: 'Dreibettzimmer', priceFrom: 'ab 2 890 CZK / Nacht', imageSrc: '/images/placeholders/hall.svg', href: '/ubytovani' },
-    { title: 'Deluxe Zimmer', priceFrom: 'ab 3 490 CZK / Nacht', imageSrc: '/images/placeholders/hero.svg', href: '/ubytovani' }
-  ],
-  sk: [
-    { title: 'Dvojlôžková izba', priceFrom: 'od 2 490 CZK / noc', imageSrc: '/images/placeholders/room.svg', href: '/ubytovani' },
-    { title: 'Trojlôžková izba', priceFrom: 'od 2 890 CZK / noc', imageSrc: '/images/placeholders/hall.svg', href: '/ubytovani' },
-    { title: 'Izba Deluxe', priceFrom: 'od 3 490 CZK / noc', imageSrc: '/images/placeholders/hero.svg', href: '/ubytovani' }
-  ]
-};
-
-const heroCtas: Record<Locale, { primary: string; secondary: string }> = {
-  cs: { primary: 'Online rezervace', secondary: 'Volné pokoje' },
-  en: { primary: 'Online reservation', secondary: 'Available rooms' },
-  pl: { primary: 'Rezerwacja online', secondary: 'Wolne pokoje' },
-  de: { primary: 'Online-Reservierung', secondary: 'Freie Zimmer' },
-  sk: { primary: 'Online rezervácia', secondary: 'Voľné izby' }
-};
 
 export const revalidate = 3600;
 
@@ -63,52 +20,11 @@ export default async function HomePage() {
   const locale = (await getLocale()) as Locale;
   const dictionary = await getDictionary(locale);
 
-  const rooms = roomsData[locale];
-  const menu = menuData[locale];
-  const heroBackgrounds = heroBackgroundsData[locale];
+  const rooms = roomsData[locale] ?? roomsData.cs;
+  const menu = menuData[locale] ?? menuData.cs;
+  const heroBackgrounds = heroBackgroundsData[locale] ?? heroBackgroundsData.cs;
 
   const home = dictionary.home;
-  const ctas = heroCtas[locale] ?? heroCtas.cs;
-
-  const heroSlides: HeroSlide[] = [
-    {
-      imageSrc: '/images/hero/bazen.webp',
-      imageAlt: 'Bazén hotelu U Fandy po západu slunce',
-      caption: home.hotelHighlights[0]?.title ?? home.hero.subtitle
-    },
-    {
-      imageSrc: '/images/hero/pizza.webp',
-      imageAlt: 'Restaurace U Fandy s čerstvě upečenou pizzou',
-      caption: home.restaurantSection.title
-    },
-    {
-      imageSrc: '/images/bowling/bowling3.webp',
-      imageAlt: 'Bowlingové dráhy U Fandy připravené na večerní program',
-      caption: home.testimonials.title
-    },
-    {
-      imageSrc: '/images/bowling/bowling2.webp',
-      imageAlt: 'Atmosféra bowling baru U Fandy',
-      caption: home.wellness.title
-    }
-  ];
-
-  const introParagraphs = (() => {
-    const sentences = home.destination.description.split('. ').filter(Boolean);
-    if (sentences.length <= 2) {
-      return [home.destination.description, home.restaurantSection.description];
-    }
-
-    const firstParagraph = sentences.slice(0, 2).join('. ').trim();
-    const secondParagraph = sentences.slice(2).join('. ').trim();
-
-    return [
-      firstParagraph.endsWith('.') ? firstParagraph : `${firstParagraph}.`,
-      secondParagraph.endsWith('.') ? secondParagraph : `${secondParagraph}.`
-    ];
-  })();
-
-  const rooms = roomTeasers[locale] ?? roomTeasers.cs;
 
   return (
     <div className="space-y-24 pb-24">
@@ -117,11 +33,11 @@ export default async function HomePage() {
         style={{ marginTop: 'calc(var(--header-offset, 6rem) * -1)' }}
       >
         <div className="relative aspect-[1920/1100] w-full min-h-[28rem] sm:min-h-[36rem] lg:min-h-[48rem]">
-          <HeroSlider images={heroBackgrounds} />
+          <HeroBackgroundSlideshow images={heroBackgrounds} />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-4 py-16 text-center sm:px-6 lg:py-24">
               <div className="flex w-full max-w-readable flex-col gap-4 rounded-[32px] border border-white/10 bg-black/35 px-8 py-10 text-white shadow-[0_18px_45px_rgba(0,0,0,0.4)] backdrop-blur-sm">
-                <h1 className={`${heroDisplay.className} text-shadow text-4xl font-semibold sm:text-6xl`}>{home.hero.title}</h1>
+                <h1 className="font-display text-shadow text-4xl font-semibold sm:text-6xl">{home.hero.title}</h1>
                 <p className="text-shadow text-lg sm:text-2xl">{home.hero.subtitle}</p>
               </div>
             </div>
@@ -271,8 +187,6 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
