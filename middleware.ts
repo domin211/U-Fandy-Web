@@ -6,7 +6,7 @@ import { defaultLocale, locales } from '@/lib/i18n/config';
 const intlMiddleware = createMiddleware({
   locales,
   defaultLocale,
-  localeDetection: true,
+  localeDetection: false,
   localePrefix: 'as-needed'
 });
 

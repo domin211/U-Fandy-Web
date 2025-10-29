@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Locale } from '@/lib/i18n/config';
-import { localeLabels, locales } from '@/lib/i18n/config';
+import { defaultLocale, localeLabels, locales } from '@/lib/i18n/config';
 import { useCurrentLocale, useDictionary } from '@/lib/i18n/dictionary-context';
 
 interface LanguageSwitcherProps {
@@ -63,10 +63,6 @@ export default function LanguageSwitcher({
     };
   }, [closeDropdown, isOpen, variant]);
 
-  useEffect(() => {
-    closeDropdown();
-  }, [closeDropdown, pathname]);
-
   const defaultListLinkClassName = useCallback(
     (isActive: boolean) =>
       `rounded-full px-3 py-1 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${
@@ -91,13 +87,49 @@ export default function LanguageSwitcher({
     return variant === 'dropdown' ? defaultDropdownLinkClassName : defaultListLinkClassName;
   }, [defaultDropdownLinkClassName, defaultListLinkClassName, linkClassName, variant]);
 
+  const normalizedPathname = useMemo(() => {
+    if (!pathname) {
+      return '/';
+    }
+
+    const segments = pathname.split('/');
+    const maybeLocale = segments[1];
+
+    if (locales.includes(maybeLocale as Locale)) {
+      const restSegments = segments.slice(2).filter((segment) => segment.length > 0);
+      return restSegments.length > 0 ? `/${restSegments.join('/')}` : '/';
+    }
+
+    return pathname === '' ? '/' : pathname;
+  }, [pathname]);
+
+  const getHrefForLocale = useCallback(
+    (locale: Locale) => {
+      if (locale === defaultLocale) {
+        return normalizedPathname;
+      }
+
+      if (normalizedPathname === '/') {
+        return `/${locale}`;
+      }
+
+      return `/${locale}${normalizedPathname}`;
+    },
+    [normalizedPathname]
+  );
+
   if (variant === 'list') {
     return (
       <div className={className} aria-label={dictionary.common.header.localeSwitcherLabel}>
         {locales.map((locale) => {
           const isActive = locale === activeLocale;
           return (
-            <Link key={locale} href={pathname || '/'} locale={locale} className={resolveLinkClassName(isActive)}>
+            <Link
+              key={locale}
+              href={getHrefForLocale(locale)}
+              locale={false}
+              className={resolveLinkClassName(isActive)}
+            >
               <span className="flex items-center gap-2">
                 <span aria-hidden className="text-lg leading-none">{localeFlags[locale]}</span>
                 <span>{localeLabels[locale]}</span>
@@ -152,8 +184,8 @@ export default function LanguageSwitcher({
             return (
               <li key={locale}>
                 <Link
-                  href={pathname || '/'}
-                  locale={locale}
+                  href={getHrefForLocale(locale)}
+                  locale={false}
                   className={resolveLinkClassName(isActive)}
                   onClick={closeDropdown}
                 >
