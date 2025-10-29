@@ -6,7 +6,6 @@ import { Montserrat } from 'next/font/google';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
-import { defaultLocale } from '@/lib/i18n/config';
 import type { NavLink } from '@/messages/schema';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useDictionary } from '@/lib/i18n/dictionary-context';
@@ -84,14 +83,19 @@ export default function Header() {
     };
   }, []);
 
-  const resolveHref = (href: string) => {
-    const localePrefix = locale === defaultLocale ? '' : `/${locale}`;
+  const localePrefix = `/${locale}`;
 
-    if (href === '/') {
-      return localePrefix || '/';
+  const resolveHref = (href: string) => {
+    if (!href.startsWith('/')) {
+      return href;
     }
 
-    return `${localePrefix}${href}`;
+    if (href === '/') {
+      return localePrefix;
+    }
+
+    const normalized = href.replace(/^\/+/, '');
+    return `${localePrefix}/${normalized}`;
   };
 
   const isActive = (href: string) => {
