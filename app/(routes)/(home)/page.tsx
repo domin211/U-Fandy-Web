@@ -4,16 +4,12 @@ import { getLocale } from 'next-intl/server';
 import SectionHeading from '@/components/SectionHeading';
 import RoomCard from '@/components/RoomCard';
 import MenuItemCard from '@/components/MenuItemCard';
-import Gallery from '@/components/Gallery';
-import HoursTable from '@/components/HoursTable';
-import ReservationForm from '@/components/ReservationForm';
-import HeroBackgroundSlideshow from '@/components/HeroBackgroundSlideshow';
-import { OnlineReservationForm } from '@/components/online-reservation-form';
+import Footer from '@/components/Footer';
+import HeroSlider from '@/components/HeroBackgroundSlideshow';
 import { Playfair_Display } from 'next/font/google';
 
 import roomsData from '@/data/rooms';
 import menuData from '@/data/menu';
-import hoursData from '@/data/hours';
 import heroBackgroundsData from '@/data/hero-backgrounds';
 
 const heroDisplay = Playfair_Display({
@@ -33,7 +29,6 @@ export default async function HomePage() {
 
   const rooms = roomsData[locale];
   const menu = menuData[locale];
-  const hours = hoursData[locale];
   const heroBackgrounds = heroBackgroundsData[locale];
 
   const home = dictionary.home;
@@ -45,7 +40,7 @@ export default async function HomePage() {
         style={{ marginTop: 'calc(var(--header-offset, 6rem) * -1)' }}
       >
         <div className="relative aspect-[1920/1100] w-full min-h-[28rem] sm:min-h-[36rem] lg:min-h-[48rem]">
-          <HeroBackgroundSlideshow images={heroBackgrounds} />
+          <HeroSlider images={heroBackgrounds} />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-4 py-16 text-center sm:px-6 lg:py-24">
               <div className="flex w-full max-w-3xl flex-col gap-4 rounded-[32px] border border-white/10 bg-black/35 px-8 py-10 text-white shadow-[0_18px_45px_rgba(0,0,0,0.4)] backdrop-blur-sm">
@@ -92,42 +87,15 @@ export default async function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-dark">{home.destination.eyebrow}</p>
             <h2 className="text-3xl font-semibold text-topbar sm:text-4xl">{home.destination.title}</h2>
             <p className="text-base text-topbar/80">{home.destination.description}</p>
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-sm text-topbar/80">
               {home.destination.features.map((feature) => (
-                <li key={feature.title} className="flex gap-4">
-                  <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-brand/10 text-brand-dark">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m5 13 4 4L19 7" />
-                    </svg>
-                  </span>
-                  <div>
-                    <p className="font-semibold text-topbar">{feature.title}</p>
-                    <p className="text-sm text-topbar/70">{feature.description}</p>
-                  </div>
+                <li key={feature.title}>
+                  <p className="font-semibold text-topbar">{feature.title}</p>
+                  <p className="text-topbar/70">{feature.description}</p>
                 </li>
               ))}
             </ul>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-              {home.destination.stats.map((stat) => (
-                <div key={stat.label} className="rounded-2xl bg-canvas-300 px-4 py-3 text-center shadow-soft">
-                  <p className="text-2xl font-semibold text-topbar">{stat.value}</p>
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-topbar/60">{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl space-y-8 px-4 sm:px-6">
-        <div className="grid gap-6 sm:grid-cols-3">
-          {home.hotelHighlights.map((highlight) => (
-            <article key={highlight.title} className="space-y-4 rounded-3xl bg-canvas-300 p-6 shadow-soft">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-dark/90">{highlight.eyebrow}</p>
-              <h3 className="text-xl font-semibold text-topbar">{highlight.title}</h3>
-              <p className="text-sm text-topbar/70">{highlight.description}</p>
-            </article>
-          ))}
         </div>
       </section>
 
@@ -176,8 +144,8 @@ export default async function HomePage() {
               />
             </div>
             <div className="space-y-5">
-              {menu.sections.map((section) => (
-                <div key={section.title} className="space-y-5">
+              {menu.sections.slice(0, 2).map((section) => (
+                <div key={section.title} className="space-y-4">
                   <h3 className="text-lg font-semibold text-topbar">{section.title}</h3>
                   <div className="space-y-4">
                     {section.items.map((item) => (
@@ -189,15 +157,6 @@ export default async function HomePage() {
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl space-y-12 px-4 sm:px-6">
-        <SectionHeading
-          eyebrow={home.experienceSection.eyebrow}
-          title={home.experienceSection.title}
-          description={home.experienceSection.description}
-        />
-        <Gallery images={home.experienceSection.gallery} />
       </section>
 
       <section className="mx-auto max-w-6xl space-y-8 px-4 sm:px-6">
@@ -224,77 +183,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl grid gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1fr]">
-        <div className="space-y-6 rounded-3xl bg-canvas-200 p-8 shadow-soft">
-          <SectionHeading
-            eyebrow={home.wellness.eyebrow}
-            title={home.wellness.title}
-            description={home.wellness.description}
-          />
-          <ul className="space-y-4">
-            {home.wellness.highlights.map((item) => (
-              <li key={item.title} className="rounded-3xl bg-canvas-300 p-5 shadow-soft">
-                <p className="font-semibold text-topbar">{item.title}</p>
-                <p className="text-sm text-topbar/70">{item.description}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="relative overflow-hidden rounded-3xl bg-canvas-300 shadow-soft">
-          <Image
-            src="/images/placeholders/hall.svg"
-            alt={home.wellness.imageAlt}
-            width={900}
-            height={700}
-            className="h-full w-full object-cover"
-          />
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl grid gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_1.1fr]">
-        <div className="space-y-6 rounded-3xl bg-canvas-200 p-8 shadow-soft">
-          <SectionHeading
-            eyebrow={home.location.eyebrow}
-            title={home.location.title}
-            description={home.location.description}
-          />
-          <p className="text-sm text-topbar/80">{home.location.note}</p>
-          <dl className="grid gap-4 text-sm text-topbar/80 sm:grid-cols-2">
-            {home.location.highlights.map((item) => (
-              <div key={item.label} className="rounded-3xl bg-canvas-300 p-5 shadow-soft">
-                <dt className="text-xs font-semibold uppercase tracking-[0.25em] text-topbar/60">{item.label}</dt>
-                <dd className="mt-1 text-lg font-semibold text-topbar">{item.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-        <div className="overflow-hidden rounded-3xl bg-canvas-300 shadow-soft">
-          <Image
-            src="/images/placeholders/contact.svg"
-            alt={home.location.mapAlt}
-            width={1000}
-            height={700}
-            className="h-full w-full object-cover"
-          />
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl space-y-10 px-4 sm:px-6" id="rezervace">
-        <SectionHeading
-          eyebrow={home.reservation.eyebrow}
-          title={home.reservation.title}
-          description={home.reservation.description}
-          align="center"
-        />
-        <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr]">
-          <ReservationForm />
-          <div className="space-y-6">
-            <HoursTable title={home.reservation.hotelHoursTitle} rows={hours.hotel} />
-            <HoursTable title={home.reservation.restaurantHoursTitle} rows={hours.restaurant} />
-            <HoursTable title={home.reservation.bowlingHoursTitle} rows={hours.bowling} />
-          </div>
-        </div>
-      </section>
+      <Footer />
     </div>
   );
 }
