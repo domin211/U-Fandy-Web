@@ -64,8 +64,16 @@ export default function LanguageSwitcher({
   }, [closeDropdown, isOpen, variant]);
 
   useEffect(() => {
-    closeDropdown();
-  }, [closeDropdown, pathname]);
+    if (!isOpen) {
+      return undefined;
+    }
+
+    const frame = requestAnimationFrame(() => {
+      closeDropdown();
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [closeDropdown, isOpen, pathname]);
 
   const defaultListLinkClassName = useCallback(
     (isActive: boolean) =>
