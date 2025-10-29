@@ -93,6 +93,7 @@ const cs: Messages = {
       eyebrow: 'Online rezervace',
       title: 'Připraveno pro váš další útěk do hor',
       description: 'Náš tým recepce reaguje do 24 hodin a pomůže s výběrem pokoje i doplňkových služeb.',
+      loadingMessage: 'Načítání rezervačního formuláře…',
       callCta: 'Zavolejte nám',
       emailCta: 'info@u-fandy.cz'
     },

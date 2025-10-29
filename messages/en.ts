@@ -93,6 +93,7 @@ const en: Messages = {
       eyebrow: 'Online reservation',
       title: 'Ready for your next escape to the mountains',
       description: 'Our reception replies within 24 hours and helps you choose the right room and extras.',
+      loadingMessage: 'Loading the reservation form…',
       callCta: 'Call us',
       emailCta: 'info@u-fandy.cz'
     },
