@@ -93,6 +93,7 @@ const de: Messages = {
       eyebrow: 'Online-Reservierung',
       title: 'Bereit für Ihren nächsten Ausflug in die Berge',
       description: 'Unsere Rezeption antwortet innerhalb von 24 Stunden und hilft bei der Wahl des passenden Zimmers und Extras.',
+      loadingMessage: 'Reservierungsformular wird geladen…',
       callCta: 'Rufen Sie uns an',
       emailCta: 'info@u-fandy.cz'
     },

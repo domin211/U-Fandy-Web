@@ -178,3 +178,41 @@
 .rdp-theme .rdp-day_outside {
   color: rgba(255, 255, 255, 0.28);
 }
+
+.hero-slideshow-image {
+  opacity: 0;
+  animation-name: hero-slideshow-fade;
+  animation-duration: var(--hero-slideshow-duration, 60000ms);
+  animation-delay: var(--hero-slideshow-delay, 0ms);
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.hero-slideshow-image[data-slideshow-single='true'] {
+  animation: none;
+  opacity: 1;
+}
+
+@keyframes hero-slideshow-fade {
+  0%,
+  10% {
+    opacity: 1;
+  }
+
+  20%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slideshow-image {
+    animation: none !important;
+    opacity: 0;
+  }
+
+  .hero-slideshow-image:first-child {
+    opacity: 1;
+  }
+}

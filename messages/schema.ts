@@ -90,6 +90,7 @@ export type Messages = {
       eyebrow: string;
       title: string;
       description: string;
+      loadingMessage: string;
       callCta: string;
       emailCta: string;
     };

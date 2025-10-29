@@ -93,6 +93,7 @@ const pl: Messages = {
       eyebrow: 'Rezerwacja online',
       title: 'Gotowi na twój kolejny wypad w góry',
       description: 'Recepcja odpowiada w ciągu 24 godzin i pomoże wybrać pokój oraz dodatki.',
+      loadingMessage: 'Ładowanie formularza rezerwacji…',
       callCta: 'Zadzwoń do nas',
       emailCta: 'info@u-fandy.cz'
     },
