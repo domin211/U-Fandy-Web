@@ -8,6 +8,7 @@ import Gallery from '@/components/Gallery';
 import HoursTable from '@/components/HoursTable';
 import ReservationForm from '@/components/ReservationForm';
 import HeroBackgroundSlideshow from '@/components/HeroBackgroundSlideshow';
+import { OnlineReservationForm } from '@/components/online-reservation-form';
 import { Playfair_Display } from 'next/font/google';
 
 import roomsData from '@/data/rooms';
@@ -57,26 +58,13 @@ export default async function HomePage() {
       </section>
 
       <section className="bg-brand text-white">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 sm:flex-row sm:items-start sm:justify-between sm:px-6">
-          <div className="space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">{home.onlineReservation.eyebrow}</p>
-            <h2 className="text-2xl font-semibold">{home.onlineReservation.title}</h2>
-            <p className="text-sm text-white/80">{home.onlineReservation.description}</p>
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-8 sm:flex-row sm:justify-between sm:gap-12 sm:px-6">
+          <div className="text-center sm:text-left">
+            <p className="text-2xl font-semibold sm:text-3xl">{home.onlineReservation.eyebrow}</p>
+            <p className="sr-only">{home.onlineReservation.title}</p>
+            <p className="sr-only">{home.onlineReservation.description}</p>
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
-              href="tel:+420000000000"
-              className="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white hover:text-topbar focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              {home.onlineReservation.callCta}
-            </a>
-            <a
-              href="mailto:info@u-fandy.cz"
-              className="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white hover:text-topbar focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              {home.onlineReservation.emailCta}
-            </a>
-          </div>
+          <OnlineReservationForm />
         </div>
       </section>
 
