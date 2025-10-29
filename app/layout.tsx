@@ -88,7 +88,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang={locale} className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
-      <body className="bg-canvas-100 text-topbar antialiased">
+      <body className="bg-canvas-100 text-topbar antialiased font-sans">
         <DictionaryProvider dictionary={dictionary} locale={locale}>
           <a
             href="#obsah"

@@ -27,6 +27,12 @@ export default async function UbytovaniPage() {
   const rooms = roomsData[locale];
   const hours = hoursData[locale];
   const content = dictionary.accommodation;
+  const roomCards = rooms.map((room) => ({
+    title: room.name,
+    priceFrom: room.price,
+    imageSrc: room.image,
+    href: '/rezervovat-pobyt'
+  }));
 
   return (
     <div className="mx-auto max-w-6xl space-y-16 px-4 py-16 sm:px-6">
@@ -36,8 +42,8 @@ export default async function UbytovaniPage() {
         description={content.heading.description}
       />
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {rooms.map((room) => (
-          <RoomCard key={room.name} {...room} />
+        {roomCards.map((room) => (
+          <RoomCard key={room.title} {...room} />
         ))}
       </div>
       <section className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
