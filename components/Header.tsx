@@ -13,7 +13,7 @@ import { useDictionary } from '@/lib/i18n/dictionary-context';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['500', '600', '700'],
   display: 'swap'
 });
 
@@ -51,7 +51,12 @@ export default function Header() {
       updateOffset();
     };
 
+    const handleScroll = () => {
+      setHasShadow(window.scrollY > 10);
+    };
+
     window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     let resizeObserver: ResizeObserver | undefined;
 
@@ -63,8 +68,11 @@ export default function Header() {
       resizeObserver.observe(headerElement);
     }
 
+    handleScroll();
+
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
       resizeObserver?.disconnect();
       document.documentElement.style.removeProperty('--header-offset');
     };
@@ -116,13 +124,14 @@ export default function Header() {
           <Image
             src="/images/logo.webp"
             alt="U Fandy Hotel & Restaurant"
-            width={190}
-            height={71}
+            width={172}
+            height={64}
             priority
-            className="h-[66px] w-auto transition group-hover:opacity-90"
+            className="h-14 w-auto transition group-hover:opacity-90"
           />
           <span className="sr-only">U Fandy Hotel &amp; Restaurant</span>
         </Link>
+
         <nav
           className={`flex flex-1 justify-center overflow-x-auto ${montserrat.className}`}
           aria-label={dictionary.common.header.navigationLabel}

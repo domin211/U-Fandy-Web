@@ -27,6 +27,12 @@ export default async function UbytovaniPage() {
   const rooms = roomsData[locale];
   const hours = hoursData[locale];
   const content = dictionary.accommodation;
+  const roomCards = rooms.map((room) => ({
+    title: room.name,
+    priceFrom: room.price,
+    imageSrc: room.image,
+    href: '/rezervovat-pobyt'
+  }));
 
   return (
     <div className="mx-auto max-w-layout space-y-16 px-4 py-16 sm:px-6">
