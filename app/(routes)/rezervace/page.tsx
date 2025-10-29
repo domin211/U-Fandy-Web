@@ -32,7 +32,7 @@ export default async function RezervacePage() {
   const content = dictionary.reservationPage;
 
   return (
-    <div className="mx-auto max-w-3xl space-y-12 px-4 py-16 sm:px-6">
+    <div className="mx-auto max-w-layout space-y-12 px-4 py-16 sm:px-6">
       <SectionHeading
         eyebrow={content.heading.eyebrow}
         title={content.heading.title}

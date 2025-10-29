@@ -17,7 +17,7 @@ export default function SectionHeading({ eyebrow, title, description, align = 'l
   const resolvedAlign: Align = align;
 
   return (
-    <header className={`mx-auto flex max-w-3xl flex-col space-y-3 ${alignClass[resolvedAlign]}`}>
+    <header className={`mx-auto flex max-w-readable flex-col space-y-3 ${alignClass[resolvedAlign]}`}>
       {eyebrow ? (
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-dark/80">{eyebrow}</p>
       ) : null}

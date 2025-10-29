@@ -3,6 +3,16 @@ import type { Config } from 'tailwindcss';
 const config: Config = {
   content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1.5rem',
+        sm: '2rem'
+      },
+      screens: {
+        '2xl': '1200px'
+      }
+    },
     extend: {
       colors: {
         brand: {
@@ -19,7 +29,11 @@ const config: Config = {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif']
+        sans: ['var(--font-sans)', 'sans-serif']
+      },
+      maxWidth: {
+        layout: '1200px',
+        readable: '70ch'
       },
       boxShadow: {
         soft: '0 10px 30px rgba(20, 20, 20, 0.08)'

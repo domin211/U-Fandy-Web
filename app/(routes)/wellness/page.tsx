@@ -24,11 +24,11 @@ export default async function WellnessPage() {
   const content = dictionary.wellness;
 
   return (
-    <div className="mx-auto max-w-6xl space-y-16 px-4 py-16 text-slate-100 sm:px-6">
+    <div className="mx-auto max-w-layout space-y-16 px-4 py-16 text-slate-100 sm:px-6">
       <section className="space-y-6 rounded-3xl border border-white/10 bg-slate-950/70 p-8 text-center shadow-xl sm:p-12">
         <p className="text-xs uppercase tracking-[0.45em] text-brand-light sm:text-sm">{content.hero.eyebrow}</p>
         <h1 className="text-3xl font-semibold uppercase text-white sm:text-4xl">{content.hero.title}</h1>
-        <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-200">{content.hero.description}</p>
+        <p className="mx-auto max-w-readable text-base leading-relaxed text-slate-200">{content.hero.description}</p>
       </section>
 
       <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -74,10 +74,7 @@ export default async function WellnessPage() {
           <p className="text-sm leading-relaxed text-slate-100/80">{content.cta.description}</p>
         </div>
         <div className="flex justify-center">
-          <Link
-            href="/rezervovat-pobyt"
-            className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-topbar shadow-soft transition hover:bg-brand-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-          >
+          <Link href="/rezervovat-pobyt" className="btn gap-2">
             {content.cta.buttonLabel}
           </Link>
         </div>
