@@ -57,7 +57,7 @@ function SlideshowContent({ images }: { images: HeroBackgroundImage[] }) {
             alt={image.alt}
             fill
             priority={index === 0}
-            sizes="100vw"
+            sizes="(min-width: 1280px) 1920px, 100vw"
             className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-out ${
               index === activeIndex ? 'opacity-100' : 'opacity-0'
             }`}

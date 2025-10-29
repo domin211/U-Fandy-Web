@@ -43,11 +43,15 @@ export default async function HomePage() {
         className="relative isolate overflow-hidden rounded-b-[56px] bg-topbar text-white"
         style={{ marginTop: 'calc(var(--header-offset, 6rem) * -1)' }}
       >
-        <HeroBackgroundSlideshow images={heroBackgrounds} />
-        <div className="relative mx-auto flex max-w-4xl flex-col items-center px-4 py-24 text-center sm:px-6 lg:py-32">
-          <div className="flex w-full max-w-3xl flex-col gap-4 rounded-[32px] border border-white/10 bg-black/35 px-8 py-10 text-white shadow-[0_18px_45px_rgba(0,0,0,0.4)] backdrop-blur-sm">
-            <h1 className={`${heroDisplay.className} text-shadow text-4xl font-semibold sm:text-6xl`}>{home.hero.title}</h1>
-            <p className="text-shadow text-lg sm:text-2xl">{home.hero.subtitle}</p>
+        <div className="relative aspect-[1920/1100] w-full min-h-[28rem] sm:min-h-[36rem] lg:min-h-[48rem]">
+          <HeroBackgroundSlideshow images={heroBackgrounds} />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-4 py-16 text-center sm:px-6 lg:py-24">
+              <div className="flex w-full max-w-3xl flex-col gap-4 rounded-[32px] border border-white/10 bg-black/35 px-8 py-10 text-white shadow-[0_18px_45px_rgba(0,0,0,0.4)] backdrop-blur-sm">
+                <h1 className={`${heroDisplay.className} text-shadow text-4xl font-semibold sm:text-6xl`}>{home.hero.title}</h1>
+                <p className="text-shadow text-lg sm:text-2xl">{home.hero.subtitle}</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
