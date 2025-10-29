@@ -37,7 +37,7 @@ export default async function UbytovaniPage() {
       />
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {rooms.map((room) => (
-          <RoomCard key={room.name} {...room} />
+          <RoomCard key={room.title} {...room} />
         ))}
       </div>
       <section className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
