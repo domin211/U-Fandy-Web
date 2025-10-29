@@ -85,6 +85,10 @@ const pl: Messages = {
       title: 'Doskonały pobyt w sercu Beskidów',
       subtitle: 'Świetny odpoczynek, przyjemny relaks.'
     },
+    intro: [
+      'U Fandy łączy nowoczesne zakwaterowanie z kameralnym wellness i restauracją inspirowaną Jesionikami.',
+      'Po dniu na szlakach odprężysz się w ziołowych saunach i spróbujesz sezonowego menu przygotowanego na długie wieczory.'
+    ],
     onlineReservation: {
       eyebrow: 'Rezerwacja online',
       title: 'Gotowi na twój kolejny wypad w góry',
@@ -149,14 +153,14 @@ const pl: Messages = {
       eyebrow: 'Restauracja i Bar',
       title: 'Sezonowe menu z lokalnych produktów',
       description:
-        'Szef kuchni łączy tradycyjne receptury z nowoczesną gastronomią. Codziennie pieczemy własne pieczywo, przygotowujemy desery i mieszamy autorskie koktajle.',
-      highlights: [
-        'Degustacyjne menu pięciodaniowe',
-        'Codzienne śniadanie w formie bufetu',
-        'Wyborna kawa i autorskie koktajle',
-        'Opcje dla wegetarian i bez glutenu'
+        'Wieczory należą do naszej restauracji i baru. Sezonowe produkty łączymy z domowym pieczywem, wyrazistymi sosami i autorskimi koktajlami.',
+      specials: [
+        'Pieczona pierś z kaczki · puree z dyni · karmelizowana gruszka',
+        'Długo duszony gulasz z jagnięciny · sos z czerwonego wina · ziołowa polenta',
+        'Pstrąg z patelni · masło ziołowe · chrupiące warzywa ogrodowe',
+        'Ciepły fondant czekoladowy · słony karmel · lody waniliowe'
       ],
-      cta: 'Dowiedz się więcej o restauracji',
+      cta: 'Menu dnia',
       imageAlt: 'Restauracja U Fandy'
     },
     experienceSection: {

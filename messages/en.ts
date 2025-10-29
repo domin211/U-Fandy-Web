@@ -85,6 +85,10 @@ const en: Messages = {
       title: 'A perfect stay in the heart of the Beskids',
       subtitle: 'Wonderful relaxation, pleasant rejuvenation.'
     },
+    intro: [
+      'U Fandy blends contemporary accommodation with a calm wellness retreat and a restaurant rooted in Jeseníky flavours.',
+      'Stay steps from forest trails, recharge in herbal saunas, and share seasonal menus crafted for lingering evenings.'
+    ],
     onlineReservation: {
       eyebrow: 'Online reservation',
       title: 'Ready for your next escape to the mountains',
@@ -149,14 +153,14 @@ const en: Messages = {
       eyebrow: 'Restaurant & Bar',
       title: 'Seasonal menus from local ingredients',
       description:
-        'Our chef blends traditional recipes with modern gastronomy. We bake our own bread, craft desserts and shake signature cocktails every day.',
-      highlights: [
-        'Five-course tasting menu',
-        'Daily breakfast buffet',
-        'Specialty coffee and signature cocktails',
-        'Vegetarian and gluten-free options'
+        'Evenings belong to our restaurant and bar, where seasonal ingredients meet house-made breads, rich sauces and signature cocktails.',
+      specials: [
+        'Roasted duck breast · pumpkin purée · caramelized pear',
+        'Slow-cooked lamb ragout · red wine jus · herb polenta',
+        'Pan-seared trout · herb butter · crisp garden vegetables',
+        'Warm chocolate fondant · salted caramel · vanilla bean ice cream'
       ],
-      cta: 'Learn more about the restaurant',
+      cta: 'Daily menu',
       imageAlt: 'Restaurant U Fandy'
     },
     experienceSection: {
