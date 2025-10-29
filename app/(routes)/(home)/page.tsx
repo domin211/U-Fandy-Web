@@ -52,6 +52,25 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <section className="px-4 sm:px-6">
+        <div className="prose prose-neutral mx-auto max-w-3xl text-center">
+          {home.intro.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-brand text-white">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-8 sm:flex-row sm:justify-between sm:gap-12 sm:px-6">
+          <div className="text-center sm:text-left">
+            <p className="text-2xl font-semibold sm:text-3xl">{home.onlineReservation.eyebrow}</p>
+            <p className="sr-only">{home.onlineReservation.title}</p>
+            <p className="sr-only">{home.onlineReservation.description}</p>
+          </div>
+          <OnlineReservationForm />
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid gap-8 overflow-hidden rounded-3xl bg-canvas-200 p-8 shadow-soft lg:grid-cols-[1.1fr_1fr]">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-canvas-300">
@@ -88,7 +107,7 @@ export default async function HomePage() {
         />
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {rooms.map((room) => (
-            <RoomCard key={room.name} {...room} />
+            <RoomCard key={room.title} {...room} />
           ))}
         </div>
       </section>
@@ -148,13 +167,15 @@ export default async function HomePage() {
             description={home.testimonials.description}
             align="center"
           />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {home.testimonials.items.map((testimonial) => (
-              <blockquote key={testimonial.name} className="flex h-full flex-col justify-between rounded-3xl bg-canvas-300 p-6 shadow-soft">
-                <p className="text-base text-topbar/80">„{testimonial.quote}“</p>
-                <footer className="mt-6">
-                  <p className="font-semibold text-topbar">{testimonial.name}</p>
-                  <p className="text-sm text-topbar/60">{testimonial.role}</p>
+          <div className="grid gap-8 md:grid-cols-2">
+            {home.testimonials.items.slice(0, 3).map((testimonial) => (
+              <blockquote
+                key={testimonial.name}
+                className="flex h-full flex-col justify-between gap-6 rounded-3xl bg-canvas-300 p-8 shadow-soft"
+              >
+                <p className="text-lg leading-relaxed text-topbar/80">„{testimonial.quote}“</p>
+                <footer className="text-sm font-semibold uppercase tracking-[0.2em] text-topbar/60">
+                  {testimonial.name} · {testimonial.role}
                 </footer>
               </blockquote>
             ))}
