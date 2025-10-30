@@ -97,6 +97,15 @@ const pl: Messages = {
       callCta: 'Zadzwoń do nas',
       emailCta: 'info@u-fandy.cz'
     },
+    wellnessHighlight: {
+      eyebrow: 'Wellness',
+      title: 'Odkryj najbardziej czarujące wellness w Beskidach!',
+      description:
+        'Wellness & Restaurant U Fandy położone jest w naturalnym sercu przedgórza Beskidów, w malowniczej miejscowości Lobodice. Czeka na ciebie wyjątkowy górski komfort z restauracją serwującą tradycyjne i nowoczesne specjały, a także relaksujące strefy wellness i zaplecze do aktywnego lub spokojnego wypoczynku pod opieką naszego doświadczonego zespołu. Nasze beskidzkie wellness to idealne miejsce dla gości szukających spokoju, piękna natury i pełnego odprężenia — na pobyt klasy premium lub tematyczną degustację z Beskidów.',
+      note:
+        'W sprawie prywatnych rytuałów lub rezerwacji całej strefy wellness skontaktuj się z recepcją: info@u-fandy.cz.',
+      imageAlt: 'Strefa wellness z basenem i widokiem na góry'
+    },
     destination: {
       eyebrow: 'Destynacja',
       title: 'Najbardziej magiczne miejsce w Malá Morava',

@@ -88,6 +88,30 @@ export default async function HomePage() {
       </section>
 
       <section className="mx-auto max-w-layout px-4 sm:px-6">
+        <div className="grid gap-8 overflow-hidden rounded-none bg-canvas-200 p-8 shadow-soft lg:grid-cols-[1.05fr_1fr] lg:items-center">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-none bg-canvas-300">
+            <Image
+              src="/images/home/wellness-highlight.jpg"
+              alt={home.wellnessHighlight.imageAlt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+          <div className="space-y-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-dark">
+              {home.wellnessHighlight.eyebrow}
+            </p>
+            <h2 className="text-3xl font-semibold text-topbar sm:text-4xl">
+              {home.wellnessHighlight.title}
+            </h2>
+            <p className="text-base text-topbar/80">{home.wellnessHighlight.description}</p>
+            <p className="text-sm text-topbar/70">{home.wellnessHighlight.note}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-layout px-4 sm:px-6">
         <div className="grid gap-8 overflow-hidden rounded-none bg-canvas-200 p-8 shadow-soft lg:grid-cols-[1.1fr_1fr]">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-none bg-canvas-300">
             <Image
