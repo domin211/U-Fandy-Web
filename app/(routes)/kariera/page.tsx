@@ -32,11 +32,11 @@ export default async function KarieraPage() {
         {content.positions.map((position) => (
           <article
             key={position.title}
-            className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200 shadow-soft"
+            className="rounded-none border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200 shadow-soft"
           >
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <h2 className="text-xl font-semibold text-white">{position.title}</h2>
-              <span className="rounded-full bg-brand/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-light">
+              <span className="rounded-none bg-brand/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-light">
                 {position.type}
               </span>
             </div>
@@ -47,7 +47,7 @@ export default async function KarieraPage() {
           </article>
         ))}
       </div>
-      <div className="rounded-3xl border border-brand/30 bg-brand/10 p-6 text-sm text-brand-light">
+      <div className="rounded-none border border-brand/30 bg-brand/10 p-6 text-sm text-brand-light">
         <h2 className="text-lg font-semibold text-white">{content.openCall.title}</h2>
         <p className="mt-3 text-slate-100">{content.openCall.description}</p>
       </div>

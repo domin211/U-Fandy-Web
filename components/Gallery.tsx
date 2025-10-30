@@ -65,7 +65,7 @@ export default function Gallery({ images }: GalleryProps) {
         <button
           key={image.src}
           type="button"
-          className="group relative overflow-hidden rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+          className="group relative overflow-hidden rounded-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           onClick={() => setActiveIndex(index)}
         >
           <span className="sr-only">Zobrazit fotografii {image.alt}</span>
@@ -92,7 +92,7 @@ export default function Gallery({ images }: GalleryProps) {
           <button
             type="button"
             onClick={close}
-            className="absolute right-6 top-6 rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="absolute right-6 top-6 rounded-none bg-white/10 p-2 text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             aria-label="Zavřít galerii"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6">
@@ -115,14 +115,14 @@ export default function Gallery({ images }: GalleryProps) {
               onClick={() =>
                 setActiveIndex((prev) => (prev === null ? prev : (prev - 1 + orderedImages.length) % orderedImages.length))
               }
-              className="rounded-full border border-white/20 px-4 py-2 hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              className="rounded-none border border-white/20 px-4 py-2 hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               Předchozí
             </button>
             <button
               type="button"
               onClick={() => setActiveIndex((prev) => (prev === null ? prev : (prev + 1) % orderedImages.length))}
-              className="rounded-full border border-white/20 px-4 py-2 hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              className="rounded-none border border-white/20 px-4 py-2 hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               Další
             </button>

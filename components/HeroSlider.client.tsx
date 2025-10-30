@@ -90,13 +90,13 @@ export default function HeroSliderClient() {
                   <div className="flex flex-wrap gap-4">
                     <Link
                       href="/rezervace"
-                      className="inline-flex items-center justify-center rounded-full bg-brand px-6 py-3 text-sm font-semibold uppercase tracking-wide text-black transition hover:bg-brand/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                      className="inline-flex items-center justify-center rounded-none bg-brand px-6 py-3 text-sm font-semibold uppercase tracking-wide text-black transition hover:bg-brand/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                     >
                       Online rezervace
                     </Link>
                     <Link
                       href="/pokoje"
-                      className="inline-flex items-center justify-center rounded-full border border-white/70 bg-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                      className="inline-flex items-center justify-center rounded-none border border-white/70 bg-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                     >
                       Volné pokoje
                     </Link>

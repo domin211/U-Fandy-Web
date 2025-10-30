@@ -120,7 +120,7 @@ export function ReservationDatePicker({
         aria-label={buttonLabel}
         aria-haspopup="dialog"
         aria-expanded={isOpen}
-        className="group inline-flex w-full items-center justify-between rounded-full bg-white px-6 py-3 text-left text-brand shadow-soft outline-none transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-dark"
+        className="group inline-flex w-full items-center justify-between rounded-none bg-white px-6 py-3 text-left text-brand shadow-soft outline-none transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-dark"
       >
         <span className="flex w-full items-center gap-4">
           <span className="flex flex-1 flex-col">
@@ -131,7 +131,7 @@ export function ReservationDatePicker({
           </span>
           <span
             aria-hidden
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-lg font-semibold text-white shadow-soft"
+            className="flex h-9 w-9 items-center justify-center rounded-none bg-brand text-lg font-semibold text-white shadow-soft"
           >
             →
           </span>
@@ -144,7 +144,7 @@ export function ReservationDatePicker({
         </span>
         <span
           aria-hidden
-          className="ml-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-brand/30 text-brand transition group-hover:border-brand/60 group-focus:border-brand/60"
+          className="ml-4 inline-flex h-9 w-9 items-center justify-center rounded-none border border-brand/30 text-brand transition group-hover:border-brand/60 group-focus:border-brand/60"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +165,7 @@ export function ReservationDatePicker({
         <div
           role="dialog"
           aria-modal="false"
-          className="absolute left-0 right-0 z-50 mt-3 origin-top overflow-hidden rounded-3xl border border-white/20 bg-brand/95 p-4 text-white shadow-xl backdrop-blur"
+          className="absolute left-0 right-0 z-50 mt-3 origin-top overflow-hidden rounded-none border border-white/20 bg-brand/95 p-4 text-white shadow-xl backdrop-blur"
         >
           <DayPicker
             mode="range"
@@ -185,7 +185,7 @@ export function ReservationDatePicker({
             <button
               type="button"
               onClick={handleClear}
-              className="rounded-full border border-white/40 px-3 py-1 font-semibold uppercase tracking-[0.2em] text-[10px] text-white transition hover:border-white/70 hover:bg-white/10"
+              className="rounded-none border border-white/40 px-3 py-1 font-semibold uppercase tracking-[0.2em] text-[10px] text-white transition hover:border-white/70 hover:bg-white/10"
             >
               Vymazat
             </button>

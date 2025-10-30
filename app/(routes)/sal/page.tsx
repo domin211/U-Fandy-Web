@@ -38,7 +38,7 @@ export default async function SalPage() {
             ))}
           </ul>
         </div>
-        <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200">
+        <div className="rounded-none border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200">
           <h2 className="text-lg font-semibold text-white">{content.concierge.title}</h2>
           <p className="mt-3">{content.concierge.description}</p>
         </div>

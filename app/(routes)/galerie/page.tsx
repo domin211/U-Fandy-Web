@@ -24,7 +24,7 @@ export default async function GaleriePage() {
 
   return (
     <div className="mx-auto max-w-layout space-y-16 px-4 py-16 text-slate-100 sm:px-6">
-      <section className="space-y-6 rounded-3xl border border-white/10 bg-slate-950/70 p-8 text-center shadow-xl sm:p-12">
+      <section className="space-y-6 rounded-none border border-white/10 bg-slate-950/70 p-8 text-center shadow-xl sm:p-12">
         <p className="text-xs uppercase tracking-[0.45em] text-brand-light sm:text-sm">{content.heading.eyebrow}</p>
         <h1 className="text-3xl font-semibold uppercase text-white sm:text-4xl">{content.heading.title}</h1>
         <p className="mx-auto max-w-readable text-base leading-relaxed text-slate-200">{content.heading.description}</p>
@@ -34,7 +34,7 @@ export default async function GaleriePage() {
         {content.info.map((item) => (
           <article
             key={item.title}
-            className="space-y-3 rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200 shadow-xl"
+            className="space-y-3 rounded-none border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200 shadow-xl"
           >
             <h2 className="text-lg font-semibold text-white">{item.title}</h2>
             <p className="leading-relaxed">{item.description}</p>

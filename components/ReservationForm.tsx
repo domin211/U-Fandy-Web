@@ -33,7 +33,7 @@ export default function ReservationForm() {
   const [state, formAction] = useFormState(createReservation, initialState);
 
   return (
-    <form action={formAction} className="space-y-6 rounded-3xl border border-black/5 bg-canvas-200 p-6 shadow-soft">
+    <form action={formAction} className="space-y-6 rounded-none border border-black/5 bg-canvas-200 p-6 shadow-soft">
       <input type="hidden" name="locale" value={locale} />
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
@@ -45,7 +45,7 @@ export default function ReservationForm() {
             name="jmeno"
             type="text"
             autoComplete="name"
-            className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-topbar shadow-inner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="w-full rounded-none border border-black/10 bg-white px-4 py-3 text-sm text-topbar shadow-inner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             aria-invalid={Boolean(state.fieldErrors?.jmeno)}
             aria-describedby={state.fieldErrors?.jmeno ? 'jmeno-error' : undefined}
           />
@@ -64,7 +64,7 @@ export default function ReservationForm() {
             name="email"
             type="email"
             autoComplete="email"
-            className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-topbar shadow-inner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="w-full rounded-none border border-black/10 bg-white px-4 py-3 text-sm text-topbar shadow-inner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             aria-invalid={Boolean(state.fieldErrors?.email)}
             aria-describedby={state.fieldErrors?.email ? 'email-error' : undefined}
           />
@@ -83,7 +83,7 @@ export default function ReservationForm() {
             name="telefon"
             type="tel"
             autoComplete="tel"
-            className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-topbar shadow-inner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="w-full rounded-none border border-black/10 bg-white px-4 py-3 text-sm text-topbar shadow-inner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             aria-invalid={Boolean(state.fieldErrors?.telefon)}
             aria-describedby={state.fieldErrors?.telefon ? 'telefon-error' : undefined}
           />
@@ -101,7 +101,7 @@ export default function ReservationForm() {
             id="datum"
             name="datum"
             type="date"
-            className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-topbar shadow-inner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="w-full rounded-none border border-black/10 bg-white px-4 py-3 text-sm text-topbar shadow-inner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             aria-invalid={Boolean(state.fieldErrors?.datum)}
             aria-describedby={state.fieldErrors?.datum ? 'datum-error' : undefined}
           />
@@ -122,7 +122,7 @@ export default function ReservationForm() {
             min={1}
             max={12}
             inputMode="numeric"
-            className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-topbar shadow-inner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="w-full rounded-none border border-black/10 bg-white px-4 py-3 text-sm text-topbar shadow-inner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             aria-invalid={Boolean(state.fieldErrors?.hoste)}
             aria-describedby={state.fieldErrors?.hoste ? 'hoste-error' : undefined}
           />
@@ -141,7 +141,7 @@ export default function ReservationForm() {
           id="zprava"
           name="zprava"
           rows={4}
-          className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-topbar shadow-inner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+          className="w-full rounded-none border border-black/10 bg-white px-4 py-3 text-sm text-topbar shadow-inner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           aria-invalid={Boolean(state.fieldErrors?.zprava)}
           aria-describedby={state.fieldErrors?.zprava ? 'zprava-error' : undefined}
         />

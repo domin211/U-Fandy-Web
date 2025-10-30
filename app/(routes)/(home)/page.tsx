@@ -29,14 +29,14 @@ export default async function HomePage() {
   return (
     <div className="space-y-24 pb-24">
       <section
-        className="relative isolate overflow-hidden rounded-b-[56px] bg-topbar text-white"
+        className="relative isolate overflow-hidden rounded-none bg-topbar text-white"
         style={{ marginTop: 'calc(var(--header-offset, 6rem) * -1)' }}
       >
         <div className="relative aspect-[1920/1100] w-full min-h-[28rem] sm:min-h-[36rem] lg:min-h-[48rem]">
           <HeroBackgroundSlideshow images={heroBackgrounds} />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-4 py-16 text-center sm:px-6 lg:py-24">
-              <div className="flex w-full max-w-readable flex-col gap-4 rounded-[32px] border border-white/10 bg-black/35 px-8 py-10 text-white shadow-[0_18px_45px_rgba(0,0,0,0.4)] backdrop-blur-sm">
+              <div className="flex w-full max-w-readable flex-col gap-4 rounded-none border border-white/10 bg-black/35 px-8 py-10 text-white shadow-[0_18px_45px_rgba(0,0,0,0.4)] backdrop-blur-sm">
                 <h1 className="font-display text-shadow text-4xl font-semibold sm:text-6xl">{home.hero.title}</h1>
                 <p className="text-shadow text-lg sm:text-2xl">{home.hero.subtitle}</p>
               </div>
@@ -65,8 +65,8 @@ export default async function HomePage() {
       </section>
 
       <section className="mx-auto max-w-layout px-4 sm:px-6">
-        <div className="grid gap-8 overflow-hidden rounded-3xl bg-canvas-200 p-8 shadow-soft lg:grid-cols-[1.1fr_1fr]">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-canvas-300">
+        <div className="grid gap-8 overflow-hidden rounded-none bg-canvas-200 p-8 shadow-soft lg:grid-cols-[1.1fr_1fr]">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-none bg-canvas-300">
             <Image
               src="/images/placeholders/room.svg"
               alt={home.destination.imageAlt}
@@ -106,8 +106,8 @@ export default async function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="grid gap-10 overflow-hidden rounded-3xl bg-canvas-200 p-8 shadow-soft lg:grid-cols-[1.1fr_1fr] lg:items-center">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-canvas-300">
+        <div className="grid gap-10 overflow-hidden rounded-none bg-canvas-200 p-8 shadow-soft lg:grid-cols-[1.1fr_1fr] lg:items-center">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-none bg-canvas-300">
             <Image
               src="/images/placeholders/restaurant.svg"
               alt={home.restaurantSection.imageAlt}
@@ -122,7 +122,7 @@ export default async function HomePage() {
               <h2 className="text-3xl font-semibold text-topbar sm:text-4xl">{home.restaurantSection.title}</h2>
               <p className="text-base text-topbar/80">{home.restaurantSection.description}</p>
             </div>
-            <div className="rounded-3xl border border-white/50 bg-white/80 p-6 shadow-soft backdrop-blur-sm">
+            <div className="rounded-none border border-white/50 bg-white/80 p-6 shadow-soft backdrop-blur-sm">
               <ul className="list-none divide-y divide-topbar/10 text-sm text-topbar">
                 {home.restaurantSection.specials.map((item) => (
                   <li key={item} className="py-3 first:pt-0 last:pb-0">
@@ -133,13 +133,13 @@ export default async function HomePage() {
             </div>
             <Link
               href="/restaurace"
-              className="inline-flex w-fit items-center justify-center rounded-full border border-topbar/20 px-5 py-2 text-sm font-semibold text-topbar transition hover:border-brand hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              className="inline-flex w-fit items-center justify-center rounded-none border border-topbar/20 px-5 py-2 text-sm font-semibold text-topbar transition hover:border-brand hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               {home.restaurantSection.cta}
             </Link>
           </div>
           <div className="space-y-6">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-canvas-300">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-none bg-canvas-300">
               <Image
                 src="/images/placeholders/restaurant.svg"
                 alt={home.restaurantSection.imageAlt}
@@ -165,7 +165,7 @@ export default async function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl space-y-8 px-4 sm:px-6">
-        <div className="space-y-6 rounded-3xl bg-canvas-200 p-8 shadow-soft">
+        <div className="space-y-6 rounded-none bg-canvas-200 p-8 shadow-soft">
           <SectionHeading
             eyebrow={home.testimonials.eyebrow}
             title={home.testimonials.title}
@@ -176,7 +176,7 @@ export default async function HomePage() {
             {home.testimonials.items.slice(0, 3).map((testimonial) => (
               <blockquote
                 key={testimonial.name}
-                className="flex h-full flex-col justify-between gap-6 rounded-3xl bg-canvas-300 p-8 shadow-soft"
+                className="flex h-full flex-col justify-between gap-6 rounded-none bg-canvas-300 p-8 shadow-soft"
               >
                 <p className="text-lg leading-relaxed text-topbar/80">„{testimonial.quote}“</p>
                 <footer className="text-sm font-semibold uppercase tracking-[0.2em] text-topbar/60">

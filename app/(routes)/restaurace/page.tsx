@@ -49,11 +49,11 @@ export default async function RestauracePage() {
         </div>
         <aside className="space-y-6">
           <HoursTable title={content.openingTitle} rows={hours.restaurant} />
-          <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200">
+          <div className="rounded-none border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200">
             <h3 className="text-lg font-semibold text-white">{content.tasting.title}</h3>
             <p className="mt-3">{content.tasting.description}</p>
           </div>
-          <div className="rounded-3xl border border-brand/30 bg-brand/10 p-6 text-sm text-brand-light">
+          <div className="rounded-none border border-brand/30 bg-brand/10 p-6 text-sm text-brand-light">
             <h3 className="text-lg font-semibold text-white">{content.reservation.title}</h3>
             <p className="mt-3 text-slate-100">{content.reservation.description}</p>
           </div>

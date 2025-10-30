@@ -101,7 +101,7 @@ function GalleryContent({
   const baseGridClasses = 'grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4';
   const gridClasses = [baseGridClasses, gridClassName].filter(Boolean).join(' ');
   const baseButtonClasses =
-    'group relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/40 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-brand/60';
+    'group relative overflow-hidden rounded-none border border-white/10 bg-slate-900/40 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-brand/60';
   const buttonClasses = [baseButtonClasses, thumbnailButtonClassName].filter(Boolean).join(' ');
   const baseImageClasses = 'object-cover transition duration-300 group-hover:scale-105';
   const imageClasses = [baseImageClasses, thumbnailImageClassName].filter(Boolean).join(' ');
@@ -160,7 +160,7 @@ function GalleryContent({
           <button
             type="button"
             aria-label="Zavřít galerii"
-            className="absolute right-5 top-5 rounded-full bg-black/60 p-2 text-2xl text-white transition hover:bg-black/80 focus:outline-none focus:ring-2 focus:ring-white"
+            className="absolute right-5 top-5 rounded-none bg-black/60 p-2 text-2xl text-white transition hover:bg-black/80 focus:outline-none focus:ring-2 focus:ring-white"
             onClick={(event) => {
               event.stopPropagation();
               close();
@@ -172,7 +172,7 @@ function GalleryContent({
           <button
             type="button"
             aria-label="Předchozí fotografie"
-            className="absolute left-4 top-1/2 hidden -translate-y-1/2 rounded-full bg-black/60 p-3 text-2xl text-white transition hover:bg-black/80 focus:outline-none focus:ring-2 focus:ring-white sm:flex"
+            className="absolute left-4 top-1/2 hidden -translate-y-1/2 rounded-none bg-black/60 p-3 text-2xl text-white transition hover:bg-black/80 focus:outline-none focus:ring-2 focus:ring-white sm:flex"
             onClick={(event) => {
               event.stopPropagation();
               showPrevious();
@@ -186,7 +186,7 @@ function GalleryContent({
             onClick={(event) => event.stopPropagation()}
           >
             {activeImageFailed ? (
-              <div className="flex min-h-[320px] w-full flex-col items-center justify-center rounded-3xl border border-white/10 bg-slate-950/70 px-6 py-12 text-center text-slate-100 shadow-2xl">
+              <div className="flex min-h-[320px] w-full flex-col items-center justify-center rounded-none border border-white/10 bg-slate-950/70 px-6 py-12 text-center text-slate-100 shadow-2xl">
                 <p className="text-lg font-semibold">Obrázek se nepodařilo načíst.</p>
                 <p className="mt-2 text-sm text-slate-300">
                   Zkontrolujte prosím název souboru nebo cestu: {activeImage.alt}
@@ -198,7 +198,7 @@ function GalleryContent({
                 alt={activeImage.alt}
                 width={activeImage.width}
                 height={activeImage.height}
-                className="h-auto max-h-[80vh] w-full rounded-3xl object-contain shadow-2xl"
+                className="h-auto max-h-[80vh] w-full rounded-none object-contain shadow-2xl"
                 sizes="(max-width: 768px) 100vw, 70vw"
                 priority
                 onError={() => markFailed(activeIndex)}
@@ -211,7 +211,7 @@ function GalleryContent({
           <button
             type="button"
             aria-label="Další fotografie"
-            className="absolute right-4 top-1/2 hidden -translate-y-1/2 rounded-full bg-black/60 p-3 text-2xl text-white transition hover:bg-black/80 focus:outline-none focus:ring-2 focus:ring-white sm:flex"
+            className="absolute right-4 top-1/2 hidden -translate-y-1/2 rounded-none bg-black/60 p-3 text-2xl text-white transition hover:bg-black/80 focus:outline-none focus:ring-2 focus:ring-white sm:flex"
             onClick={(event) => {
               event.stopPropagation();
               showNext();
@@ -225,7 +225,7 @@ function GalleryContent({
             <button
               type="button"
               aria-label="Předchozí fotografie"
-              className="flex-1 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
+              className="flex-1 rounded-none bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
               onClick={(event) => {
                 event.stopPropagation();
                 showPrevious();
@@ -236,7 +236,7 @@ function GalleryContent({
             <button
               type="button"
               aria-label="Další fotografie"
-              className="flex-1 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
+              className="flex-1 rounded-none bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
               onClick={(event) => {
                 event.stopPropagation();
                 showNext();

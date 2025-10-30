@@ -95,7 +95,7 @@ export default function Footer() {
                 <li key={social.href}>
                   <a
                     href={social.href}
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition hover:border-brand-light hover:text-brand-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-none border border-white/20 text-white transition hover:border-brand-light hover:text-brand-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light"
                     aria-label={social.label}
                   >
                     <span className="sr-only">{social.label}</span>
