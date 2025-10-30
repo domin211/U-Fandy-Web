@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation';
 import type { NavLink } from '@/messages/schema';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useDictionary } from '@/lib/i18n/dictionary-context';
+import { defaultLocale } from '@/lib/i18n/config';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -83,7 +84,7 @@ export default function Header() {
     };
   }, []);
 
-  const localePrefix = `/${locale}`;
+  const localePrefix = locale === defaultLocale ? '' : `/${locale}`;
 
   const resolveHref = (href: string) => {
     if (!href.startsWith('/')) {
@@ -91,11 +92,11 @@ export default function Header() {
     }
 
     if (href === '/') {
-      return localePrefix;
+      return localePrefix || '/';
     }
 
     const normalized = href.replace(/^\/+/, '');
-    return `${localePrefix}/${normalized}`;
+    return localePrefix ? `${localePrefix}/${normalized}` : `/${normalized}`;
   };
 
   const isActive = (href: string) => {
