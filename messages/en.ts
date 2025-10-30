@@ -94,6 +94,22 @@ const en: Messages = {
       title: 'Ready for your next escape to the mountains',
       description: 'Our reception replies within 24 hours and helps you choose the right room and extras.',
       loadingMessage: 'Loading the reservation form…',
+      submitCta: 'Book now',
+      datePicker: {
+        arrivalLabel: 'Arrival date',
+        arrivalPlaceholder: 'Select a date',
+        departureLabel: 'Departure date',
+        departurePlaceholder: 'Select a date',
+        helperText: 'Choose both an arrival and departure date.',
+        clearLabel: 'Clear',
+        buttonLabelEmpty: 'Select arrival and departure dates',
+        buttonLabelFrom: 'Arrival {from}, choose a departure date',
+        buttonLabelRange: 'Stay from {from} to {to}'
+      },
+      errors: {
+        incompleteRange: 'Please select both an arrival and departure date.',
+        invalidRange: 'Departure has to be after arrival.',
+      },
       callCta: 'Call us',
       emailCta: 'info@u-fandy.cz'
     },

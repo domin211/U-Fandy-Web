@@ -3,6 +3,8 @@
 import { FormEvent, useMemo, useState } from "react";
 import { DateRange } from "react-day-picker";
 
+import { useDictionary } from "@/lib/i18n/dictionary-context";
+
 import { ReservationDatePicker } from "./reservation-date-picker";
 
 const TREVLIX_BASE_URL = "https://book.trevlix.com/book/app/";
@@ -44,6 +46,10 @@ const redirectToTrevlix = (arrival: Date, departure: Date) => {
 };
 
 export function OnlineReservationForm() {
+  const dictionary = useDictionary();
+  const content = dictionary.home.onlineReservation;
+  const { datePicker, errors } = content;
+
   const today = useMemo(() => startOfDay(new Date()), []);
 
   const [selectedRange, setSelectedRange] = useState<DateRange | undefined>(() => {
@@ -63,20 +69,6 @@ export function OnlineReservationForm() {
 
     const normalizedFrom = startOfDay(range.from);
 
-    if (range.to && selectedRange?.to) {
-      const previousFrom = selectedRange.from;
-      const isRestartingRange =
-        previousFrom &&
-        previousFrom.getTime() !== range.from.getTime() &&
-        selectedRange.to.getTime() === range.to.getTime();
-
-      if (isRestartingRange) {
-        setSelectedRange({ from: normalizedFrom });
-        setError(null);
-        return;
-      }
-    }
-
     if (!range.to) {
       setSelectedRange({ from: normalizedFrom });
       setError(null);
@@ -86,23 +78,20 @@ export function OnlineReservationForm() {
     const normalizedTo = startOfDay(range.to);
 
     if (normalizedTo <= normalizedFrom) {
-      const adjustedDeparture = new Date(normalizedFrom);
-      adjustedDeparture.setDate(adjustedDeparture.getDate() + 1);
-      setSelectedRange({ from: normalizedFrom, to: adjustedDeparture });
-      setError(null);
+      setSelectedRange({ from: normalizedFrom });
+      setError(errors.invalidRange);
       return;
     }
 
     setSelectedRange({ from: normalizedFrom, to: normalizedTo });
     setError(null);
-    redirectToTrevlix(normalizedFrom, normalizedTo);
   };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (!selectedRange?.from || !selectedRange?.to) {
-      setError("Vyberte prosím datum příjezdu i odjezdu.");
+      setError(errors.incompleteRange);
       return;
     }
 
@@ -110,7 +99,7 @@ export function OnlineReservationForm() {
     const departure = selectedRange.to;
 
     if (arrival >= departure) {
-      setError("Datum odjezdu musí následovat po datu příjezdu.");
+      setError(errors.invalidRange);
       return;
     }
 
@@ -120,21 +109,22 @@ export function OnlineReservationForm() {
   };
 
   return (
-    <div className="flex w-full flex-col gap-3 sm:max-w-readable">
+    <div className="flex w-full flex-col gap-3">
       <form
         onSubmit={handleSubmit}
-        className="flex w-full flex-col gap-3 sm:flex-row sm:items-center"
+        className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center"
       >
         <ReservationDatePicker
           selectedRange={selectedRange}
           onSelect={handleRangeSelect}
           minDate={today}
+          labels={datePicker}
         />
         <button
           type="submit"
-          className="btn w-full px-8 uppercase tracking-[0.25em] bg-white text-brand-dark hover:bg-brand-dark hover:text-white sm:w-auto"
+          className="inline-flex h-[4.25rem] w-full items-center justify-center rounded-md bg-white px-8 text-sm font-semibold uppercase tracking-[0.3em] text-brand-dark shadow-soft transition hover:bg-white/90 hover:text-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"
         >
-          Volné pokoje
+          {content.submitCta}
           <span aria-hidden className="ml-2">→</span>
         </button>
       </form>

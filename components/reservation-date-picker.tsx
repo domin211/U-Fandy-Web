@@ -23,12 +23,24 @@ type ReservationDatePickerProps = {
   selectedRange: DateRange | undefined;
   onSelect: (range: DateRange | undefined) => void;
   minDate: Date;
+  labels: {
+    arrivalLabel: string;
+    arrivalPlaceholder: string;
+    departureLabel: string;
+    departurePlaceholder: string;
+    helperText: string;
+    clearLabel: string;
+    buttonLabelEmpty: string;
+    buttonLabelFrom: string;
+    buttonLabelRange: string;
+  };
 };
 
 export function ReservationDatePicker({
   selectedRange,
   onSelect,
   minDate,
+  labels,
 }: ReservationDatePickerProps) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -44,14 +56,15 @@ export function ReservationDatePicker({
 
   const hasFrom = Boolean(formattedFrom);
   const hasTo = Boolean(formattedTo);
-  const arrivalLabel = hasFrom ? formattedFrom : "Vyberte příjezd";
-  const departureLabel = hasTo ? formattedTo : "Vyberte odjezd";
-  const arrivalTextClass = `text-sm font-semibold leading-5 ${
-    hasFrom ? "text-brand-dark" : "text-topbar/60"
+  const arrivalLabel = hasFrom ? formattedFrom : labels.arrivalPlaceholder;
+  const departureLabel = hasTo ? formattedTo : labels.departurePlaceholder;
+  const arrivalTextClass = `text-base font-semibold leading-6 ${
+    hasFrom ? "text-topbar" : "text-topbar/50"
   }`;
-  const departureTextClass = `text-sm font-semibold leading-5 ${
-    hasTo ? "text-brand-dark" : "text-topbar/60"
+  const departureTextClass = `text-base font-semibold leading-6 ${
+    hasTo ? "text-topbar" : "text-topbar/50"
   }`;
+  const { buttonLabelEmpty, buttonLabelFrom, buttonLabelRange } = labels;
 
   useEffect(() => {
     if (!isOpen) {
@@ -85,15 +98,17 @@ export function ReservationDatePicker({
 
   const buttonLabel = useMemo(() => {
     if (formattedFrom && formattedTo) {
-      return `Pobyt od ${formattedFrom} do ${formattedTo}`;
+      return buttonLabelRange
+        .replace("{from}", formattedFrom)
+        .replace("{to}", formattedTo);
     }
 
     if (formattedFrom) {
-      return `Příjezd ${formattedFrom}, vyberte datum odjezdu`;
+      return buttonLabelFrom.replace("{from}", formattedFrom);
     }
 
-    return "Vyberte datum příjezdu a odjezdu";
-  }, [formattedFrom, formattedTo]);
+    return buttonLabelEmpty;
+  }, [buttonLabelEmpty, buttonLabelFrom, buttonLabelRange, formattedFrom, formattedTo]);
 
   const handleToggle = () => {
     setIsOpen((previous) => !previous);
@@ -120,44 +135,25 @@ export function ReservationDatePicker({
         aria-label={buttonLabel}
         aria-haspopup="dialog"
         aria-expanded={isOpen}
-        className="group inline-flex w-full items-center justify-between rounded-full bg-white px-6 py-3 text-left text-brand-dark shadow-soft outline-none transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-dark"
+        className="group inline-flex h-[4.25rem] w-full items-stretch gap-3 rounded-md text-left outline-none transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
-        <span className="flex w-full items-center gap-4">
-          <span className="flex flex-1 flex-col">
-            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-topbar/60">
-              Příjezd
-            </span>
-            <span className={arrivalTextClass}>{arrivalLabel}</span>
+        <span className="flex h-full flex-1 flex-col justify-center rounded-md bg-white px-4 py-2 text-brand-dark shadow-soft">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-topbar/50">
+            {labels.arrivalLabel}
           </span>
-          <span
-            aria-hidden
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-dark text-lg font-semibold text-white shadow-soft"
-          >
-            →
-          </span>
-          <span className="flex flex-1 flex-col">
-            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-topbar/60">
-              Odjezd
-            </span>
-            <span className={departureTextClass}>{departureLabel}</span>
-          </span>
+          <span className={arrivalTextClass}>{arrivalLabel}</span>
         </span>
         <span
           aria-hidden
-          className="ml-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-brand-dark/40 text-brand-dark transition group-hover:border-brand-dark/60 group-focus:border-brand-dark/60"
+          className="flex h-full items-center justify-center px-1 text-2xl font-semibold text-white/80 transition group-hover:text-white"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="h-4 w-4"
-          >
-            <path
-              fillRule="evenodd"
-              d="M5.22 7.22a.75.75 0 0 1 1.06 0L10 10.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 8.28a.75.75 0 0 1 0-1.06Z"
-              clipRule="evenodd"
-            />
-          </svg>
+          →
+        </span>
+        <span className="flex h-full flex-1 flex-col justify-center rounded-md bg-white px-4 py-2 text-brand-dark shadow-soft">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-topbar/50">
+            {labels.departureLabel}
+          </span>
+          <span className={departureTextClass}>{departureLabel}</span>
         </span>
       </button>
 
@@ -165,7 +161,7 @@ export function ReservationDatePicker({
         <div
           role="dialog"
           aria-modal="false"
-          className="absolute left-0 right-0 z-50 mt-3 origin-top overflow-hidden rounded-none border border-white/20 bg-brand/95 p-4 text-white shadow-xl backdrop-blur"
+          className="absolute left-0 right-0 z-50 mt-3 origin-top overflow-hidden rounded-md border border-white/40 bg-white p-4 text-brand-dark shadow-xl"
         >
           <DayPicker
             mode="range"
@@ -180,14 +176,14 @@ export function ReservationDatePicker({
             fromMonth={minDate}
             showOutsideDays
           />
-          <div className="mt-3 flex items-center justify-between text-xs text-white/80">
-            <p>Vyberte datum příjezdu i odjezdu.</p>
+          <div className="mt-3 flex items-center justify-between text-xs text-topbar/70">
+            <p>{labels.helperText}</p>
             <button
               type="button"
               onClick={handleClear}
-              className="rounded-none border border-white/40 px-3 py-1 font-semibold uppercase tracking-[0.2em] text-[10px] text-white transition hover:border-white/70 hover:bg-white/10"
+              className="rounded-md border border-brand-dark/20 px-3 py-1 font-semibold uppercase tracking-[0.2em] text-[10px] text-topbar transition hover:border-brand-dark/40 hover:bg-brand-dark/5"
             >
-              Vymazat
+              {labels.clearLabel}
             </button>
           </div>
         </div>
