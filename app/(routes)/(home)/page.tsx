@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 import { getLocale } from 'next-intl/server';
 import HeroBackgroundSlideshow from '@/components/HeroBackgroundSlideshow';
 import RoomCard from '@/components/RoomCard';
 import MenuItemCard from '@/components/MenuItemCard';
 import SectionHeading from '@/components/SectionHeading';
-import { OnlineReservationForm } from '@/components/online-reservation-form';
 
 import roomsData from '@/data/rooms';
 import menuData from '@/data/menu';
@@ -13,6 +14,33 @@ import heroBackgroundsData from '@/data/hero-backgrounds';
 
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import type { Locale } from '@/lib/i18n/config';
+
+const OnlineReservationForm = dynamic(
+  () =>
+    import('@/components/online-reservation-form').then(
+      (mod) => mod.OnlineReservationForm
+    ),
+  {
+    ssr: false,
+    suspense: true,
+  }
+);
+
+function OnlineReservationFormFallback({ message }: { message: string }) {
+  return (
+    <div
+      className="flex w-full flex-col gap-3 sm:max-w-readable"
+      role="status"
+      aria-live="polite"
+    >
+      <div className="flex w-full flex-col gap-3 sm:flex-row sm:items-center">
+        <div className="hidden h-[3.5rem] flex-1 rounded-full bg-white/40 sm:block" />
+        <div className="h-[3.5rem] w-full rounded-full bg-white/40 sm:w-40" />
+      </div>
+      <p className="text-sm font-medium text-white/80">{message}</p>
+    </div>
+  );
+}
 
 export const revalidate = 3600;
 
@@ -60,7 +88,13 @@ export default async function HomePage() {
             <p className="sr-only">{home.onlineReservation.title}</p>
             <p className="sr-only">{home.onlineReservation.description}</p>
           </div>
-          <OnlineReservationForm />
+          <Suspense
+            fallback={
+              <OnlineReservationFormFallback message={home.onlineReservation.loadingMessage} />
+            }
+          >
+            <OnlineReservationForm />
+          </Suspense>
         </div>
       </section>
 

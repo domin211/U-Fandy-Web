@@ -132,7 +132,7 @@ export function OnlineReservationForm() {
         />
         <button
           type="submit"
-          className="btn w-full px-8 uppercase tracking-[0.25em] bg-white text-brand hover:bg-brand hover:text-white sm:w-auto"
+          className="btn w-full px-8 uppercase tracking-[0.25em] bg-white text-brand-dark hover:bg-brand-dark hover:text-white sm:w-auto"
         >
           Volné pokoje
           <span aria-hidden className="ml-2">→</span>
