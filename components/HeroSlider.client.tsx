@@ -76,18 +76,16 @@ export default function HeroSliderClient() {
                 sizes="100vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10" />
-              <div className="absolute inset-0 flex items-center">
-                <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 text-white sm:px-12">
-                  <div className="max-w-xl">
-                    <h1 className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
-                      Dokonalý pobyt v srdci Beskyd
-                    </h1>
-                    <p className="mt-4 text-base text-white/80 sm:text-lg">
-                      Nechte se hýčkat prvotřídní gastronomií, relaxem a aktivitami, na které jen tak nezapomenete.
-                    </p>
-                  </div>
-                  <div className="flex flex-wrap gap-4">
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
+              <div className="absolute inset-0 flex items-center justify-center px-6 py-10 sm:px-12">
+                <div className="mx-auto flex w-full max-w-4xl flex-col items-center text-center text-white">
+                  <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+                    Dokonalý pobyt v srdci Beskyd
+                  </h1>
+                  <p className="mt-3 text-lg font-light italic text-white sm:mt-4 sm:text-xl">
+                    pizza a pivéčko z místního pivovaru skvělá kombinace...
+                  </p>
+                  <div className="mt-8 flex flex-wrap justify-center gap-4">
                     <Link
                       href="/rezervace"
                       className="inline-flex items-center justify-center rounded-none bg-brand px-6 py-3 text-sm font-semibold uppercase tracking-wide text-black transition hover:bg-brand/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
@@ -96,7 +94,7 @@ export default function HeroSliderClient() {
                     </Link>
                     <Link
                       href="/pokoje"
-                      className="inline-flex items-center justify-center rounded-none border border-white/70 bg-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                      className="inline-flex items-center justify-center rounded-none border border-white/80 bg-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                     >
                       Volné pokoje
                     </Link>
