@@ -94,6 +94,22 @@ const sk: Messages = {
       title: 'Pripravení na váš ďalší útek do hôr',
       description: 'Recepcia odpovedá do 24 hodín a pomôže vybrať izbu aj doplnkové služby.',
       loadingMessage: 'Načítavam rezervačný formulár…',
+      submitCta: 'Rezervovať teraz',
+      datePicker: {
+        arrivalLabel: 'Dátum príchodu',
+        arrivalPlaceholder: 'Vyberte dátum',
+        departureLabel: 'Dátum odchodu',
+        departurePlaceholder: 'Vyberte dátum',
+        helperText: 'Vyberte dátum príchodu aj odchodu.',
+        clearLabel: 'Vymazať',
+        buttonLabelEmpty: 'Vyberte dátum príchodu a odchodu',
+        buttonLabelFrom: 'Príchod {from}, vyberte dátum odchodu',
+        buttonLabelRange: 'Pobyt od {from} do {to}'
+      },
+      errors: {
+        incompleteRange: 'Prosím, vyberte dátum príchodu aj odchodu.',
+        invalidRange: 'Dátum odchodu musí nasledovať po dátume príchodu.'
+      },
       callCta: 'Zavolajte nám',
       emailCta: 'info@u-fandy.cz'
     },
