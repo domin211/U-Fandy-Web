@@ -97,6 +97,15 @@ const de: Messages = {
       callCta: 'Rufen Sie uns an',
       emailCta: 'info@u-fandy.cz'
     },
+    wellnessHighlight: {
+      eyebrow: 'Wellness',
+      title: 'Entdecken Sie das bezauberndste Wellness in den Beskiden!',
+      description:
+        'Wellness & Restaurant U Fandy liegt im natürlichen Herzen des Vorlands der Beskiden, im malerischen Dorf Lobodice. Genießen Sie großzügigen Komfort inmitten der Natur mit einem Restaurant, das traditionelle und moderne Spezialitäten serviert, ergänzt durch entspannende Wellnessbereiche und Räume für aktive oder ruhige Erholung unter der Betreuung unseres erfahrenen Teams. Unser Beskiden-Wellness ist ideal für Gäste, die Ruhe, Naturschönheit und vollkommene Entspannung suchen – perfekt für einen Aufenthalt der Spitzenklasse oder eine thematische Beskiden-Verkostung.',
+      note:
+        'Für private Rituale oder die exklusive Buchung des Wellnessbereichs kontaktieren Sie bitte die Rezeption unter info@u-fandy.cz.',
+      imageAlt: 'Wellnessbereich mit Pool und Bergblick'
+    },
     destination: {
       eyebrow: 'Destination',
       title: 'Der magischste Ort in Malá Morava',

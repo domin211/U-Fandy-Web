@@ -94,6 +94,13 @@ export type Messages = {
       callCta: string;
       emailCta: string;
     };
+    wellnessHighlight: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      note: string;
+      imageAlt: string;
+    };
     destination: {
       eyebrow: string;
       title: string;

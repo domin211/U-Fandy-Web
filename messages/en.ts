@@ -97,6 +97,15 @@ const en: Messages = {
       callCta: 'Call us',
       emailCta: 'info@u-fandy.cz'
     },
+    wellnessHighlight: {
+      eyebrow: 'Wellness',
+      title: 'Discover the most enchanting wellness in the Beskids!',
+      description:
+        'Wellness & Restaurant U Fandy is nestled in the natural heart of the Beskids foothills, in the picturesque village of Lobodice. Enjoy generous mountain comfort with a restaurant serving both traditional and modern specialties, complemented by relaxing wellness facilities and spaces for active or peaceful rest under the care of our expert team. Our Beskid wellness is perfect for guests seeking tranquillity, natural beauty, and complete relaxation—ideal for a first-class stay or a themed Beskid tasting experience.',
+      note:
+        'To arrange a private ritual or wellness rental, please contact reception at info@u-fandy.cz.',
+      imageAlt: 'Wellness area with a pool and mountain views'
+    },
     destination: {
       eyebrow: 'Destination',
       title: 'The most magical spot in Malá Morava',
