@@ -91,6 +91,22 @@ export type Messages = {
       title: string;
       description: string;
       loadingMessage: string;
+      submitCta: string;
+      datePicker: {
+        arrivalLabel: string;
+        arrivalPlaceholder: string;
+        departureLabel: string;
+        departurePlaceholder: string;
+        helperText: string;
+        clearLabel: string;
+        buttonLabelEmpty: string;
+        buttonLabelFrom: string;
+        buttonLabelRange: string;
+      };
+      errors: {
+        incompleteRange: string;
+        invalidRange: string;
+      };
       callCta: string;
       emailCta: string;
     };

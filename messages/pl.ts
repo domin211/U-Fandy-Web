@@ -94,6 +94,22 @@ const pl: Messages = {
       title: 'Gotowi na twój kolejny wypad w góry',
       description: 'Recepcja odpowiada w ciągu 24 godzin i pomoże wybrać pokój oraz dodatki.',
       loadingMessage: 'Ładowanie formularza rezerwacji…',
+      submitCta: 'Zarezerwuj teraz',
+      datePicker: {
+        arrivalLabel: 'Data przyjazdu',
+        arrivalPlaceholder: 'Wybierz datę',
+        departureLabel: 'Data wyjazdu',
+        departurePlaceholder: 'Wybierz datę',
+        helperText: 'Wybierz daty przyjazdu i wyjazdu.',
+        clearLabel: 'Wyczyść',
+        buttonLabelEmpty: 'Wybierz daty przyjazdu i wyjazdu',
+        buttonLabelFrom: 'Przyjazd {from}, wybierz datę wyjazdu',
+        buttonLabelRange: 'Pobyt od {from} do {to}'
+      },
+      errors: {
+        incompleteRange: 'Proszę wybrać daty przyjazdu i wyjazdu.',
+        invalidRange: 'Data wyjazdu musi być późniejsza niż data przyjazdu.'
+      },
       callCta: 'Zadzwoń do nas',
       emailCta: 'info@u-fandy.cz'
     },

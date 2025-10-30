@@ -94,6 +94,22 @@ const de: Messages = {
       title: 'Bereit für Ihren nächsten Ausflug in die Berge',
       description: 'Unsere Rezeption antwortet innerhalb von 24 Stunden und hilft bei der Wahl des passenden Zimmers und Extras.',
       loadingMessage: 'Reservierungsformular wird geladen…',
+      submitCta: 'Jetzt buchen',
+      datePicker: {
+        arrivalLabel: 'Anreisedatum',
+        arrivalPlaceholder: 'Datum auswählen',
+        departureLabel: 'Abreisedatum',
+        departurePlaceholder: 'Datum auswählen',
+        helperText: 'Wählen Sie sowohl ein Anreise- als auch ein Abreisedatum.',
+        clearLabel: 'Löschen',
+        buttonLabelEmpty: 'Anreise- und Abreisedatum auswählen',
+        buttonLabelFrom: 'Anreise {from}, wählen Sie ein Abreisedatum',
+        buttonLabelRange: 'Aufenthalt von {from} bis {to}'
+      },
+      errors: {
+        incompleteRange: 'Bitte wählen Sie sowohl ein Anreise- als auch ein Abreisedatum.',
+        invalidRange: 'Die Abreise muss nach der Anreise liegen.'
+      },
       callCta: 'Rufen Sie uns an',
       emailCta: 'info@u-fandy.cz'
     },
