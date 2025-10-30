@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useLocale } from 'next-intl';
 
 import { useDictionary } from '@/lib/i18n/dictionary-context';
+import { defaultLocale } from '@/lib/i18n/config';
 
 function resolveContactItem(item: string) {
   const trimmed = item.trim();
@@ -31,18 +32,18 @@ export default function Footer() {
   const focusStyles =
     'transition hover:text-brand-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light';
 
-  const localePrefix = `/${locale}`;
+  const localePrefix = locale === defaultLocale ? '' : `/${locale}`;
   const localizeHref = (href: string) => {
     if (!href.startsWith('/')) {
       return href;
     }
 
     if (href === '/') {
-      return localePrefix;
+      return localePrefix || '/';
     }
 
     const normalized = href.replace(/^\/+/, '');
-    return `${localePrefix}/${normalized}`;
+    return localePrefix ? `${localePrefix}/${normalized}` : `/${normalized}`;
   };
 
   const rightsText = footer.rights.replace('{year}', currentYear.toString());
