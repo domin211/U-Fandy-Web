@@ -98,7 +98,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <AppProviders dictionary={dictionary} locale={locale}>
           <a
             href="#obsah"
-            className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:m-4 focus:rounded-md focus:bg-canvas-200 focus:px-4 focus:py-2 focus:text-topbar"
+            className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:m-4 focus:rounded-none focus:bg-canvas-200 focus:px-4 focus:py-2 focus:text-topbar"
           >
             {dictionary.common.skipToContent}
           </a>

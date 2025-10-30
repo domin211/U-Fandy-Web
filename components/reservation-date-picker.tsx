@@ -165,7 +165,7 @@ export function ReservationDatePicker({
         <div
           role="dialog"
           aria-modal="false"
-          className="absolute left-0 right-0 z-50 mt-3 origin-top overflow-hidden rounded-3xl border border-white/20 bg-brand/95 p-4 text-white shadow-xl backdrop-blur"
+          className="absolute left-0 right-0 z-50 mt-3 origin-top overflow-hidden rounded-none border border-white/20 bg-brand/95 p-4 text-white shadow-xl backdrop-blur"
         >
           <DayPicker
             mode="range"
@@ -185,7 +185,7 @@ export function ReservationDatePicker({
             <button
               type="button"
               onClick={handleClear}
-              className="rounded-full border border-white/40 px-3 py-1 font-semibold uppercase tracking-[0.2em] text-[10px] text-white transition hover:border-white/70 hover:bg-white/10"
+              className="rounded-none border border-white/40 px-3 py-1 font-semibold uppercase tracking-[0.2em] text-[10px] text-white transition hover:border-white/70 hover:bg-white/10"
             >
               Vymazat
             </button>

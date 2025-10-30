@@ -50,7 +50,7 @@ export default async function UbytovaniPage() {
         </div>
         <div className="space-y-6">
           <HoursTable title={content.receptionHoursTitle} rows={hours.hotel} />
-          <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200">
+          <div className="rounded-none border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200">
             <h3 className="text-lg font-semibold text-white">{content.checkin.title}</h3>
             <p className="mt-3">{content.checkin.description}</p>
           </div>

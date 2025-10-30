@@ -15,7 +15,7 @@ export default function RoomCard({ title, priceFrom, imageSrc, href }: RoomCardP
   return (
     <Link href={href} className="group block focus-visible:outline-none">
       <article
-        className="flex h-full flex-col overflow-hidden rounded-3xl border border-black/5 bg-canvas-200 shadow-soft transition duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-xl group-focus-visible:-translate-y-1 group-focus-visible:ring-2 group-focus-visible:ring-brand group-focus-visible:ring-offset-4 group-focus-visible:ring-offset-canvas-200"
+        className="flex h-full flex-col overflow-hidden rounded-none border border-black/5 bg-canvas-200 shadow-soft transition duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-xl group-focus-visible:-translate-y-1 group-focus-visible:ring-2 group-focus-visible:ring-brand group-focus-visible:ring-offset-4 group-focus-visible:ring-offset-canvas-200"
       >
         <div className="relative aspect-[4/3] w-full overflow-hidden">
           <Image

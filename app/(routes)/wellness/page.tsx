@@ -25,7 +25,7 @@ export default async function WellnessPage() {
 
   return (
     <div className="mx-auto max-w-layout space-y-16 px-4 py-16 text-slate-100 sm:px-6">
-      <section className="space-y-6 rounded-3xl border border-white/10 bg-slate-950/70 p-8 text-center shadow-xl sm:p-12">
+      <section className="space-y-6 rounded-none border border-white/10 bg-slate-950/70 p-8 text-center shadow-xl sm:p-12">
         <p className="text-xs uppercase tracking-[0.45em] text-brand-light sm:text-sm">{content.hero.eyebrow}</p>
         <h1 className="text-3xl font-semibold uppercase text-white sm:text-4xl">{content.hero.title}</h1>
         <p className="mx-auto max-w-readable text-base leading-relaxed text-slate-200">{content.hero.description}</p>
@@ -35,7 +35,7 @@ export default async function WellnessPage() {
         {content.highlights.map((item) => (
           <article
             key={item.title}
-            className="space-y-3 rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200 shadow-xl"
+            className="space-y-3 rounded-none border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200 shadow-xl"
           >
             <h2 className="text-lg font-semibold text-white">{item.title}</h2>
             <p className="leading-relaxed">{item.description}</p>
@@ -48,7 +48,7 @@ export default async function WellnessPage() {
           <h2 className="text-2xl font-semibold text-white">{content.ritualsTitle}</h2>
           <ul className="space-y-3 text-sm text-slate-200">
             {content.rituals.map((item) => (
-              <li key={item.title} className="rounded-3xl border border-white/10 bg-slate-950/50 p-4">
+              <li key={item.title} className="rounded-none border border-white/10 bg-slate-950/50 p-4">
                 <p className="text-base font-semibold text-white">{item.title}</p>
                 <p className="mt-2 text-sm leading-relaxed text-slate-200">{item.description}</p>
               </li>
@@ -59,7 +59,7 @@ export default async function WellnessPage() {
           <h2 className="text-2xl font-semibold text-white">{content.amenitiesTitle}</h2>
           <ul className="space-y-3 text-sm text-slate-200">
             {content.amenities.map((item) => (
-              <li key={item.title} className="rounded-3xl border border-white/10 bg-slate-950/50 p-4">
+              <li key={item.title} className="rounded-none border border-white/10 bg-slate-950/50 p-4">
                 <p className="text-base font-semibold text-white">{item.title}</p>
                 <p className="mt-2 text-sm leading-relaxed text-slate-200">{item.description}</p>
               </li>
@@ -68,7 +68,7 @@ export default async function WellnessPage() {
         </div>
       </section>
 
-      <section className="grid gap-6 rounded-3xl border border-brand/30 bg-brand/10 p-8 text-center text-slate-100 shadow-xl sm:p-10">
+      <section className="grid gap-6 rounded-none border border-brand/30 bg-brand/10 p-8 text-center text-slate-100 shadow-xl sm:p-10">
         <div className="space-y-3">
           <h2 className="text-2xl font-semibold text-white">{content.cta.title}</h2>
           <p className="text-sm leading-relaxed text-slate-100/80">{content.cta.description}</p>

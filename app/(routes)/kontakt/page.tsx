@@ -38,7 +38,7 @@ export default async function KontaktPage() {
               const hasHref = 'href' in contact && typeof contact.href === 'string';
 
               return (
-                <li key={contact.label} className="rounded-3xl border border-white/10 bg-slate-950/60 p-6">
+                <li key={contact.label} className="rounded-none border border-white/10 bg-slate-950/60 p-6">
                   <p className="text-xs uppercase tracking-[0.2em] text-slate-400">{contact.label}</p>
                   {hasHref ? (
                     <a href={contact.href} className="mt-2 block text-lg font-semibold text-white">
@@ -51,7 +51,7 @@ export default async function KontaktPage() {
               );
             })}
           </ul>
-          <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200">
+          <div className="rounded-none border border-white/10 bg-slate-950/60 p-6 text-sm text-slate-200">
             <h2 className="text-lg font-semibold text-white">{content.billing.title}</h2>
             {content.billing.description.split('\n').map((line) => (
               <p key={line} className="mt-3">

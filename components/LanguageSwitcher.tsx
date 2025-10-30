@@ -77,7 +77,7 @@ export default function LanguageSwitcher({
 
   const defaultListLinkClassName = useCallback(
     (isActive: boolean) =>
-      `rounded-full px-3 py-1 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${
+      `rounded-none px-3 py-1 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${
         isActive ? 'bg-white text-topbar shadow-soft' : 'hover:bg-white/10'
       }`,
     []
@@ -162,7 +162,7 @@ export default function LanguageSwitcher({
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-white/70 transition hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+        className="inline-flex items-center gap-2 rounded-none border border-white/20 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-white/70 transition hover:border-brand hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
         aria-haspopup="listbox"
         aria-expanded={isOpen}
       >
@@ -185,7 +185,7 @@ export default function LanguageSwitcher({
         </svg>
       </button>
       <div
-        className={`absolute right-0 z-50 mt-3 w-52 overflow-hidden rounded-3xl border border-black/60 bg-black/90 shadow-soft backdrop-blur ${
+        className={`absolute right-0 z-50 mt-3 w-52 overflow-hidden rounded-none border border-black/60 bg-black/90 shadow-soft backdrop-blur ${
           isOpen ? 'block' : 'hidden'
         }`}
       >

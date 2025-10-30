@@ -156,7 +156,7 @@ export default function Header() {
           <LanguageSwitcher className="flex-shrink-0" />
           <Link
             href={resolveHref(reservationLink.href)}
-            className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:border-white/40 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="inline-flex items-center rounded-none border border-white/20 bg-white/10 px-6 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:border-white/40 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             {reservationLink.label.toUpperCase()}
           </Link>
