@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import { getLocale } from 'next-intl/server';
 import HeroBackgroundSlideshow from '@/components/HeroBackgroundSlideshow';
 import RoomCard from '@/components/RoomCard';
 import MenuItemCard from '@/components/MenuItemCard';
 import SectionHeading from '@/components/SectionHeading';
+import { OnlineReservationForm } from '@/components/online-reservation-form';
 
 import roomsData from '@/data/rooms';
 import menuData from '@/data/menu';
@@ -14,17 +14,6 @@ import heroBackgroundsData from '@/data/hero-backgrounds';
 
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import type { Locale } from '@/lib/i18n/config';
-
-const OnlineReservationForm = dynamic(
-  () =>
-    import('@/components/online-reservation-form').then(
-      (mod) => mod.OnlineReservationForm
-    ),
-  {
-    ssr: false,
-    suspense: true,
-  }
-);
 
 function OnlineReservationFormFallback({ message }: { message: string }) {
   return (
