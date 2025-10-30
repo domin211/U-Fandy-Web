@@ -18,13 +18,13 @@ import type { Locale } from '@/lib/i18n/config';
 function OnlineReservationFormFallback({ message }: { message: string }) {
   return (
     <div
-      className="flex w-full flex-col gap-3 sm:max-w-readable"
+      className="flex w-full flex-col gap-3"
       role="status"
       aria-live="polite"
     >
       <div className="flex w-full flex-col gap-3 sm:flex-row sm:items-center">
-        <div className="hidden h-[3.5rem] flex-1 rounded-full bg-white/40 sm:block" />
-        <div className="h-[3.5rem] w-full rounded-full bg-white/40 sm:w-40" />
+        <div className="hidden h-[4.25rem] flex-1 rounded-md bg-white/40 sm:block" />
+        <div className="h-[4.25rem] w-full rounded-md bg-white/40 sm:w-44" />
       </div>
       <p className="text-sm font-medium text-white/80">{message}</p>
     </div>
@@ -70,10 +70,12 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="bg-brand text-white">
-        <div className="mx-auto flex max-w-layout flex-col items-center gap-6 px-4 py-8 sm:flex-row sm:justify-between sm:gap-12 sm:px-6">
+      <section className="bg-[#f04d52] text-white">
+        <div className="mx-auto flex max-w-layout flex-col items-center gap-6 px-4 py-8 sm:flex-row sm:justify-between sm:gap-10 sm:px-6">
           <div className="text-center sm:text-left">
-            <p className="text-2xl font-semibold sm:text-3xl">{home.onlineReservation.eyebrow}</p>
+            <p className="font-display text-2xl font-semibold italic sm:text-3xl">
+              {home.onlineReservation.eyebrow}
+            </p>
             <p className="sr-only">{home.onlineReservation.title}</p>
             <p className="sr-only">{home.onlineReservation.description}</p>
           </div>
