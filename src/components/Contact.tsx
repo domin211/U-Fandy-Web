@@ -43,10 +43,11 @@ export default function ContactSection() {
 
         <div className="rounded-3xl overflow-hidden shadow-lg h-80">
           <iframe
-            title="Mapa Penzion U Fandy"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2617.656335318217!2d14.785217077069572!3d48.792387604966295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47731b71ea180e67%3A0xa60161de54078a68!2sPenzion%20U%20Fandy!5e0!3m2!1scs!2scz!4v1709145600000!5m2!1scs!2scz"
+            title="Mapa Wellness & Restaurant U Fandy"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2586.581585863923!2d18.2967673!3d49.5984537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713f4f796152535%3A0x3d288a69ac44444a!2sWellness%20%26%20Restaurant%20U%20Fandy!5e0!3m2!1scs!2scz!4v1709647200000!5m2!1scs!2scz"
             width="100%"
             height="100%"
+            style={{ border: 0 }}
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
