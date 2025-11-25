@@ -115,42 +115,42 @@ export const translations: Record<Language, Translation> = {
       contact: 'Kontakt'
     },
     footer: {
-      claim: 'Penzion, restaurace a wellness U Fandy',
-      address: 'Novohradská 136, 373 33 Nové Hrady',
-      phone: '+420 602 184 540',
+      claim: 'Wellness & Restaurant U Fandy',
+      address: 'Lhotka 180, 739 47 Lhotka',
+      phone: '+420 733 644 655',
       email: 'info@u-fandy.cz',
-      opening: 'Otevřeno denně dle aktuální nabídky a rezervací.',
+      opening: 'Otevřeno denně. Bowling a wellness na objednání.',
       newsHeading: 'Novinky',
       newsText:
-        'Sledujte nás na sociálních sítích, aby vám neunikly víkendové speciality, degustační menu ani zvýhodněné balíčky.',
+        'Sledujte nás na Facebooku pro aktuální polední menu a informace o víkendových akcích a grilování.',
       rights: 'Všechna práva vyhrazena.'
     },
     home: {
       hero: {
-        title: 'Penzion U Fandy',
+        title: 'Wellness & Restaurant U Fandy',
         subtitle:
-          'Rodinný penzion v historických Nových Hradech s pohodlným ubytováním, poctivou kuchyní a privátním wellness.',
+          'Relaxace v srdci Beskyd. Komfortní ubytování, skvělá gastronomie, bowling a wellness centrum pod masívem Ondřejníku.',
         ctaPrimary: 'Rezervovat pobyt',
         ctaSecondary: 'Naše služby'
       },
       intro: {
-        heading: 'Vítejte u Fandy',
+        heading: 'Vítejte v Beskydech',
         paragraphs: [
-          'U Fandy je útulný penzion nacházející se v centru Nových Hradů, jen pár kroků od renesančního zámku a ticha Novohradských hor.',
-          'Nabízíme stylově zařízené pokoje, domácí kuchyni zaměřenou na regionální suroviny a relaxaci ve vlastním wellness. O vaši pohodovou dovolenou se stará rodina, která penzion provozuje s láskou a respektem k místní tradici.'
+          'Nacházíme se v malebné obci Lhotka pod Ondřejníkem. Jsme ideálním místem pro rodinnou dovolenou, romantický víkend i firemní teambuilding.',
+          'Kromě stylového ubytování u nás najdete restauraci s pravou italskou pecí na pizzu, dvě bowlingové dráhy a moderní wellness centrum s bazénem.'
         ],
         highlights: [
           {
             title: 'Komfortní ubytování',
-            description: 'Dvoulůžkové pokoje i rodinné apartmány s vlastní koupelnou, Wi‑Fi a bohatou snídaní.'
+            description: 'Moderní pokoje s vlastní koupelnou, Wi-Fi a výhledem na hory. Kapacita až 60 lůžek.'
           },
           {
-            title: 'Domácí kuchyně',
-            description: 'Restaurace s českými klasikami, sezónními specialitami a víny od českých vinařů.'
+            title: 'Gastronomie & Pizza',
+            description: 'Poctivá česká kuchyně, burgery a pizza přímo z pece na dřevo. Venkovní posezení s hřištěm.'
           },
           {
-            title: 'Privátní wellness',
-            description: 'Vířivka, sauna i masáže jen pro vás. Dopřejte si chvíli klidu po výletech po Novohradsku.'
+            title: 'Wellness & Zábava',
+            description: 'Vnitřní bazén, vířivka, sauny a dvě profesionální bowlingové dráhy pro vaši zábavu.'
           }
         ]
       }
@@ -158,104 +158,109 @@ export const translations: Record<Language, Translation> = {
     accommodation: {
       heading: 'Ubytování',
       intro: [
-        'Pokoje penzionu U Fandy jsou zařízené v příjemném venkovském stylu s důrazem na pohodlí a praktické detaily.',
-        'Všichni hosté mají v ceně bohatou snídani, připojení k Wi‑Fi a možnost využít privátní wellness. Po domluvě rádi připravíme dětskou postýlku i bezlepkové pečivo.'
+        'Nabízíme ubytování v nově zrekonstruovaných pokojích, které uspokojí páry, rodiny s dětmi i větší skupiny.',
+        'Součástí pobytu je snídaně a pro ubytované hosty nabízíme zvýhodněný vstup do našeho wellness centra.'
       ],
       rooms: [
         {
           name: 'Dvoulůžkové pokoje',
-          description: 'Ideální pro páry nebo jednotlivce. Pohodlné postele, vlastní koupelna se sprchou a výhledem do klidného dvora.',
-          amenities: ['manželská postel nebo dvě samostatná lůžka', 'koupelna se sprchou', 'televize a Wi‑Fi', 'snídaně v ceně']
+          description: 'Útulné pokoje ideální pro páry. Některé s balkonem a výhledem na Beskydy.',
+          amenities: ['manželská postel', 'koupelna se sprchou', 'TV a Wi-Fi', 'pracovní stůl']
         },
         {
-          name: 'Rodinný apartmán',
-          description: 'Prostorný apartmán se dvěma ložnicemi a obývacím koutem s pohovkou.',
-          amenities: ['maximálně čtyři osoby', 'kuchyňský kout s lednicí', 'koupelna s vanou', 'možnost přistýlky']
+          name: 'Pokoj Deluxe s vířivkou',
+          description: 'Pro náročnější hosty nebo romantické pobyty. Součástí pokoje je privátní hydromasážní vana.',
+          amenities: ['privátní vířivka', 'župany a pantofle', 'minibar', 'luxusní kosmetika']
         },
         {
-          name: 'Podkrovní studio',
-          description: 'Romantický pokoj s dřevěnými trámy a výhledem na novohradské náměstí.',
-          amenities: ['otevřený prostor s posezením', 'koupelna s vanou', 'klimatizace', 'privátní vstup do wellness']
+          name: 'Rodinné apartmány',
+          description: 'Víceprostorové pokoje vhodné pro rodiny s dětmi. Dostatek prostoru pro všechny.',
+          amenities: ['oddělené ložnice', 'možnost přistýlky', 'prostorná koupelna', 'dětská postýlka na vyžádání']
         }
       ],
-      note: 'Pro rezervaci ubytování nás kontaktujte telefonicky nebo e‑mailem. Pobyt na jednu noc je možný po domluvě.'
+      note: 'Rezervace přijímáme telefonicky nebo přes náš online formulář. Check-in od 14:00, check-out do 10:00.'
     },
     restaurant: {
       heading: 'Restaurace',
       intro: [
-        'Restaurace U Fandy navazuje na tradici jihočeské kuchyně. Vaříme z čerstvých surovin od místních farmářů a rádi připravujeme menu podle sezóny.',
-        'V nabídce nechybí domácí dezerty, polední menu ani moravská i zahraniční vína. Každý víkend pro vás chystáme tematické speciality.'
+        'Naše restaurace je vyhlášená nejen skvělou českou kuchyní, ale také pizzou, kterou pečeme v originální italské peci na dřevo.',
+        'V létě je k dispozici prostorná terasa s dětským hřištěm, v zimě vás zahřeje krb v hlavním sále.'
       ],
       sections: [
         {
-          title: 'Poctivá česká kuchyně',
-          description: 'Svíčková, vepřová pečeně i domácí knedlíky připravené podle rodinných receptů.'
+          title: 'Pizza z pece na dřevo',
+          description: 'Křupavé těsto, kvalitní suroviny a vůně dřeva. Připravujeme klasické i speciální druhy.'
         },
         {
-          title: 'Sezónní speciality',
-          description: 'V létě lehké saláty a bylinkové limonády, na podzim zvěřina a houbové menu.'
+          title: 'Polední menu a minutky',
+          description: 'Každý den čerstvé polední menu a stálý lístek plný steaků, salátů a těstovin.'
         },
         {
-          title: 'Sladká tečka',
-          description: 'Domácí koláče, lívance s tvarohem nebo náš vyhlášený jablečný štrúdl.'
+          title: 'Oslavy a svatby',
+          description: 'Zajistíme catering pro vaši rodinnou oslavu, svatbu nebo firemní večírek v našem sále.'
         }
       ],
-      reservationNote: 'Rezervace stolů přijímáme na telefonu +420 602 184 540. Rádi zajistíme oslavy i firemní večírky.'
+      reservationNote: 'Pro rezervaci stolu nebo objednávku pizzy sebou volejte +420 733 644 655.'
     },
     wellness: {
-      heading: 'Wellness',
+      heading: 'Wellness & Bowling',
       intro: [
-        'Po aktivním dni v Novohradských horách si dopřejte odpočinek v našem privátním wellness. V klidném prostoru kombinujeme vodní relaxaci, teplo sauny i profesionální masáže.',
-        'Wellness je určeno pouze pro ubytované hosty po předchozí rezervaci. Připravíme pro vás osušky, župany i drobné občerstvení.'
+        'Odpočiňte si v našem wellness centru nebo se pobavte při hře bowlingu. Nabízíme komplexní služby pro relaxaci i aktivní odpočinek.',
+        'Wellness zóna je přístupná i pro veřejnost (nutná rezervace předem).'
       ],
       experiences: [
         {
-          title: 'Vířivka s výhledem',
-          description: 'Hydromasážní vana pro dva až čtyři hosty s barevným podsvícením.'
+          title: 'Bazén a Whirlpool',
+          description: 'Vnitřní nerezový bazén s protiproudem a relaxační vířivka pro dokonalé uvolnění.'
         },
         {
-          title: 'Finská a infra sauna',
-          description: 'Střídání tepla a ochlazení posiluje imunitu a uvolňuje svaly po celodenním výletu.'
+          title: 'Saunový svět',
+          description: 'Finská sauna, parní sauna a ochlazovací bazének. Ideální regenerace po túře.'
         },
         {
-          title: 'Masáže na přání',
-          description: 'Klasická, sportovní i relaxační masáž v podání zkušených terapeutů.'
+          title: 'Bowling',
+          description: 'Dvě profesionální dráhy přímo v budově. Skvělá zábava k pivečku a pizze.'
         }
       ],
-      wellnessNote: 'Balíčky wellness služeb si můžete rezervovat společně s ubytováním.'
+      wellnessNote: 'Masáže a privátní pronájem wellness je nutné objednat minimálně 24 hodin předem.'
     },
     experiences: {
-      heading: 'Zážitky v okolí',
+      heading: 'Tipy na výlet',
       intro: [
-        'Novohradské hory nabízejí desítky kilometrů cyklotras, lesy plné hub a historické památky. Rádi vám poradíme, kam se vydat.',
-        'Penzion U Fandy je ideálním výchozím místem pro objevování přírody i kulturních zajímavostí regionu.'
+        'Lhotka je skvělým výchozím bodem pro turistiku v Beskydech. Ať už pěšky nebo na kole, nudit se nebudete.',
+        'Přímo kolem penzionu vedou cyklostezky a turistické trasy na okolní vrcholy.'
       ],
       tips: [
         {
-          title: 'Nové Hrady',
-          description: 'Renesanční zámek, klášter s knihovnou i přírodní park Terčino údolí.'
+          title: 'Ondřejník',
+          description: 'Oblíbený vrchol s krásnými výhledy na Lysou horu a Smrk, dostupný přímo od penzionu.'
         },
         {
-          title: 'Pohraniční opevnění',
-          description: 'Naučné stezky po stopách vojenské historie a výhledy do rakouského pohraničí.'
+          title: 'Hukvaldy',
+          description: 'Zřícenina hradu a krásná obora s daňky a liškou Bystrouškou, rodiště Leoše Janáčka.'
         },
         {
-          title: 'Cyklistika a turistika',
-          description: 'Dobře značené trasy pro rodiny i sportovce, možnost zapůjčení kol v penzionu.'
+          title: 'Pustevny a Radhošť',
+          description: 'Legendární socha Radegasta a jurkovičovy stavby, dostupné lanovkou z Trojanovic.'
         }
       ]
     },
     contact: {
       heading: 'Kontakt',
-      intro: 'Napište nebo zavolejte, rádi vám připravíme pobyt podle vašich představ.',
-      addressHeading: 'Najdete nás',
-      addressLines: ['Penzion U Fandy', 'Novohradská 136', '373 33 Nové Hrady'],
-      contactsHeading: 'Kontaktujte nás',
+      intro: 'Těšíme se na vaši návštěvu v Lhotce pod Ondřejníkem.',
+      addressHeading: 'Adresa',
+      addressLines: ['Wellness & Restaurant U Fandy', 'Lhotka 180', '739 47 Lhotka'],
+      contactsHeading: 'Recepce a rezervace',
       contacts: [
         {
-          label: 'Telefon',
-          value: '+420 602 184 540',
-          href: 'tel:+420602184540'
+          label: 'Restaurace a Bowling',
+          value: '+420 733 644 655',
+          href: 'tel:+420733644655'
+        },
+        {
+          label: 'Ubytování a Wellness',
+          value: '+420 733 644 659',
+          href: 'tel:+420733644659'
         },
         {
           label: 'E-mail',
@@ -263,8 +268,8 @@ export const translations: Record<Language, Translation> = {
           href: 'mailto:info@u-fandy.cz'
         }
       ],
-      openingHeading: 'Otevírací doba restaurace',
-      openingLines: ['Pondělí – Neděle: 11:00 – 22:00 (dle rezervací)', 'Snídaně pro hosty: 07:30 – 09:30']
+      openingHeading: 'Otevírací doba',
+      openingLines: ['Po-Čt: 11:00 – 22:00', 'Pá-So: 11:00 – 23:00', 'Ne: 11:00 – 21:00']
     },
     languageNames: {
       cs: 'Čeština',
@@ -277,46 +282,46 @@ export const translations: Record<Language, Translation> = {
       accommodation: 'Accommodation',
       restaurant: 'Restaurant',
       wellness: 'Wellness',
-      experiences: 'Experiences',
+      experiences: 'Trips',
       contact: 'Contact'
     },
     footer: {
-      claim: 'U Fandy Guesthouse, Restaurant & Wellness',
-      address: 'Novohradská 136, 373 33 Nové Hrady, Czechia',
-      phone: '+420 602 184 540',
+      claim: 'Wellness & Restaurant U Fandy',
+      address: 'Lhotka 180, 739 47 Lhotka, Czechia',
+      phone: '+420 733 644 655',
       email: 'info@u-fandy.cz',
-      opening: 'Open daily subject to current menu and reservations.',
+      opening: 'Open daily. Bowling and wellness upon reservation.',
       newsHeading: 'News',
       newsText:
-        'Follow us on social media to catch our weekend specials, tasting menus and seasonal wellness offers.',
+        'Follow us on Facebook for daily lunch menus and information about weekend grilling events.',
       rights: 'All rights reserved.'
     },
     home: {
       hero: {
-        title: 'Pension U Fandy',
+        title: 'Wellness & Restaurant U Fandy',
         subtitle:
-          'A family-run guesthouse in historic Nové Hrady with cosy rooms, honest local cuisine and a private wellness zone.',
-        ctaPrimary: 'Book your stay',
-        ctaSecondary: 'Discover our services'
+          'Relaxation in the heart of Beskydy. Comfortable accommodation, great gastronomy, bowling and wellness center under Ondřejník mountain.',
+        ctaPrimary: 'Book a stay',
+        ctaSecondary: 'Our services'
       },
       intro: {
-        heading: 'Welcome to U Fandy',
+        heading: 'Welcome to Beskydy',
         paragraphs: [
-          'U Fandy is a charming guesthouse located in the centre of Nové Hrady, just a few steps from the Renaissance chateau and the quiet countryside of the Novohradské Mountains.',
-          'We offer stylish rooms, a restaurant focused on regional produce and moments of rest in our private wellness. Our family looks after every detail to make your holiday carefree.'
+          'We are located in the picturesque village of Lhotka pod Ondřejníkem. We are the ideal place for a family holiday, romantic weekend, or corporate teambuilding.',
+          'Besides stylish accommodation, you will find a restaurant with a genuine Italian wood-fired pizza oven, two bowling lanes, and a modern wellness center with a pool.'
         ],
         highlights: [
           {
-            title: 'Comfortable rooms',
-            description: 'Double rooms and family apartments with private bathroom, Wi-Fi and generous breakfast.'
+            title: 'Comfortable Accommodation',
+            description: 'Modern rooms with private bathroom, Wi-Fi, and mountain views. Capacity up to 60 beds.'
           },
           {
-            title: 'Homestyle cuisine',
-            description: 'A restaurant serving Czech classics, seasonal specials and a curated wine list.'
+            title: 'Gastronomy & Pizza',
+            description: 'Honest Czech cuisine, burgers, and pizza straight from the wood oven. Outdoor seating with a playground.'
           },
           {
-            title: 'Private wellness',
-            description: 'Hot tub, sauna and massages just for you after a day of exploring the Novohradsko region.'
+            title: 'Wellness & Fun',
+            description: 'Indoor pool, whirlpool, saunas, and two professional bowling lanes for your entertainment.'
           }
         ]
       }
@@ -324,104 +329,109 @@ export const translations: Record<Language, Translation> = {
     accommodation: {
       heading: 'Accommodation',
       intro: [
-        'Rooms at Pension U Fandy follow a cosy country style with an emphasis on comfort and smart details.',
-        'Breakfast, Wi-Fi access and the option to book the private wellness are included for all guests. We are happy to provide a baby cot or gluten-free pastry upon request.'
+        'We offer accommodation in newly renovated rooms that satisfy couples, families with children, and larger groups.',
+        'Breakfast is included in the stay, and we offer discounted access to our wellness center for hotel guests.'
       ],
       rooms: [
         {
-          name: 'Double rooms',
-          description: 'Perfect for couples or solo travellers. Comfortable beds, private bathroom with shower and views of the peaceful courtyard.',
-          amenities: ['double or twin beds', 'bathroom with shower', 'TV and Wi-Fi', 'breakfast included']
+          name: 'Double Rooms',
+          description: 'Cozy rooms ideal for couples. Some with a balcony and views of the Beskydy mountains.',
+          amenities: ['double bed', 'bathroom with shower', 'TV and Wi-Fi', 'work desk']
         },
         {
-          name: 'Family apartment',
-          description: 'A spacious apartment with two bedrooms and a lounge area with sofa.',
-          amenities: ['up to four guests', 'kitchenette with fridge', 'bathroom with bathtub', 'extra bed available']
+          name: 'Deluxe Room with Whirlpool',
+          description: 'For demanding guests or romantic stays. The room includes a private hydromassage bathtub.',
+          amenities: ['private whirlpool', 'robes and slippers', 'minibar', 'luxury cosmetics']
         },
         {
-          name: 'Attic studio',
-          description: 'A romantic studio with wooden beams overlooking the main square of Nové Hrady.',
-          amenities: ['open-plan layout with seating', 'bathroom with bathtub', 'air conditioning', 'private wellness access']
+          name: 'Family Apartments',
+          description: 'Multi-room apartments suitable for families with children. Plenty of space for everyone.',
+          amenities: ['separate bedrooms', 'extra bed available', 'spacious bathroom', 'baby cot on request']
         }
       ],
-      note: 'Please contact us by phone or e-mail to arrange your reservation. One-night stays are available upon agreement.'
+      note: 'We accept reservations by phone or via our online form. Check-in from 14:00, check-out by 10:00.'
     },
     restaurant: {
       heading: 'Restaurant',
       intro: [
-        'The U Fandy restaurant continues the South Bohemian culinary tradition. We cook with fresh ingredients from local farmers and design our menu around the seasons.',
-        'Expect homemade desserts, daily lunch specials and a selection of Moravian and international wines. Every weekend we prepare themed menus for our guests.'
+        'Our restaurant is renowned not only for great Czech cuisine but also for pizza baked in an original Italian wood-fired oven.',
+        'In summer, a spacious terrace with a playground is available; in winter, the fireplace in the main hall will warm you up.'
       ],
       sections: [
         {
-          title: 'Honest Czech classics',
-          description: 'Beef sirloin in cream sauce, roast pork and dumplings made from treasured family recipes.'
+          title: 'Wood-fired Pizza',
+          description: 'Crispy dough, quality ingredients, and the scent of wood. We prepare classic and special types.'
         },
         {
-          title: 'Seasonal creations',
-          description: 'Light summer salads and herbal lemonades, autumn game dishes and mushroom feasts.'
+          title: 'Lunch Menu & A la Carte',
+          description: 'Fresh lunch menu every day and a permanent menu full of steaks, salads, and pasta.'
         },
         {
-          title: 'Sweet treats',
-          description: 'Homemade cakes, pancakes with curd cheese and our signature apple strudel.'
+          title: 'Celebrations & Weddings',
+          description: 'We can arrange catering for your family celebration, wedding, or corporate party in our hall.'
         }
       ],
-      reservationNote: 'Call +420 602 184 540 to book your table. We are happy to arrange celebrations or company dinners.'
+      reservationNote: 'To reserve a table or order takeaway pizza, call +420 733 644 655.'
     },
     wellness: {
-      heading: 'Wellness',
+      heading: 'Wellness & Bowling',
       intro: [
-        'After an active day in the Novohradské Mountains, unwind in our private wellness area. The calm space combines water relaxation, sauna heat and professional massages.',
-        'The wellness zone is reserved for house guests with prior booking. We prepare towels, robes and small refreshments for you.'
+        'Relax in our wellness center or have fun playing bowling. We offer comprehensive services for relaxation and active rest.',
+        'The wellness zone is also open to the public (reservation required in advance).'
       ],
       experiences: [
         {
-          title: 'Hot tub with a view',
-          description: 'Hydromassage tub for two to four guests with atmospheric lighting.'
+          title: 'Pool and Whirlpool',
+          description: 'Indoor stainless steel pool with counter-current and relaxing whirlpool for perfect relaxation.'
         },
         {
-          title: 'Finnish & infrared sauna',
-          description: 'Alternate heat and cooling to boost immunity and relax your muscles after a day outdoors.'
+          title: 'Sauna World',
+          description: 'Finnish sauna, steam sauna, and cooling pool. Ideal regeneration after a hike.'
         },
         {
-          title: 'Tailor-made massages',
-          description: 'Classic, sports and relaxing massages delivered by experienced therapists.'
+          title: 'Bowling',
+          description: 'Two professional lanes right in the building. Great fun with beer and pizza.'
         }
       ],
-      wellnessNote: 'You can reserve wellness packages together with your accommodation.'
+      wellnessNote: 'Massages and private wellness rental must be booked at least 24 hours in advance.'
     },
     experiences: {
-      heading: 'Things to do',
+      heading: 'Trip Tips',
       intro: [
-        'The Novohradsko region invites you to explore countless cycling paths, forests full of mushrooms and historical monuments. We are ready to recommend trips that suit your plans.',
-        'Pension U Fandy is the ideal base for discovering both the nature and culture of South Bohemia.'
+        'Lhotka is a great starting point for hiking in the Beskydy mountains. Whether on foot or by bike, you won\'t be bored.',
+        'Cycle paths and hiking trails to nearby peaks lead directly around the guesthouse.'
       ],
       tips: [
         {
-          title: 'Nové Hrady town',
-          description: 'Visit the Renaissance chateau, the monastery library and the romantic Terčino valley park.'
+          title: 'Ondřejník',
+          description: 'Popular peak with beautiful views of Lysá hora and Smrk, accessible directly from the guesthouse.'
         },
         {
-          title: 'Border fortifications',
-          description: 'Educational trails following the military history and views across the Austrian border.'
+          title: 'Hukvaldy',
+          description: 'Castle ruins and a beautiful game reserve with fallow deer, birthplace of Leoš Janáček.'
         },
         {
-          title: 'Cycling & hiking',
-          description: 'Well-marked routes for families and athletes, bike rental available at the guesthouse.'
+          title: 'Pustevny and Radhošť',
+          description: 'Legendary statue of Radegast and Jurkovič buildings, accessible by cable car from Trojanovice.'
         }
       ]
     },
     contact: {
       heading: 'Contact',
-      intro: 'Call or write to us and we will tailor a stay to match your wishes.',
-      addressHeading: 'Find us',
-      addressLines: ['Pension U Fandy', 'Novohradská 136', '373 33 Nové Hrady', 'Czech Republic'],
-      contactsHeading: 'Get in touch',
+      intro: 'We look forward to your visit in Lhotka pod Ondřejníkem.',
+      addressHeading: 'Address',
+      addressLines: ['Wellness & Restaurant U Fandy', 'Lhotka 180', '739 47 Lhotka', 'Czech Republic'],
+      contactsHeading: 'Reception & Reservations',
       contacts: [
         {
-          label: 'Phone',
-          value: '+420 602 184 540',
-          href: 'tel:+420602184540'
+          label: 'Restaurant & Bowling',
+          value: '+420 733 644 655',
+          href: 'tel:+420733644655'
+        },
+        {
+          label: 'Accommodation & Wellness',
+          value: '+420 733 644 659',
+          href: 'tel:+420733644659'
         },
         {
           label: 'E-mail',
@@ -429,8 +439,8 @@ export const translations: Record<Language, Translation> = {
           href: 'mailto:info@u-fandy.cz'
         }
       ],
-      openingHeading: 'Restaurant opening hours',
-      openingLines: ['Monday – Sunday: 11:00 – 22:00 (depending on reservations)', 'Breakfast for guests: 07:30 – 09:30']
+      openingHeading: 'Opening Hours',
+      openingLines: ['Mon-Thu: 11:00 – 22:00', 'Fri-Sat: 11:00 – 23:00', 'Sun: 11:00 – 21:00']
     },
     languageNames: {
       cs: 'Czech',
