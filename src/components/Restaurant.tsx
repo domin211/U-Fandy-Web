@@ -5,6 +5,12 @@ export default function RestaurantSection() {
     content: { restaurant }
   } = useLanguage();
 
+  const images = [
+    'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800', // Pizza
+    'https://images.unsplash.com/photo-1544025162-d76690b67f11?auto=format&fit=crop&q=80&w=800', // Steak/Food
+    'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800'  // Restaurant Interior/Celebration
+  ];
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -22,7 +28,7 @@ export default function RestaurantSection() {
             <article key={index} className="bg-gray-50 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
               <div className="h-48 mb-6 overflow-hidden rounded-2xl">
                 <img
-                  src={`https://source.unsplash.com/collection/1424340/${index + 1}`}
+                  src={images[index]}
                   alt={section.title}
                   className="w-full h-full object-cover"
                 />
