@@ -1,11 +1,11 @@
+import ExperiencesSection from '../components/Experiences';
 import AccommodationSection from '../components/Accommodation';
-import WellnessSection from '../components/Wellness';
 
-export default function Accommodation() {
+export default function Experiences() {
   return (
     <div>
+      <ExperiencesSection />
       <AccommodationSection />
-      <WellnessSection />
     </div>
   );
 }
